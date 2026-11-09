@@ -1,0 +1,51 @@
+{
+  "format": "maxxia-content-index",
+  "formatVersion": 1,
+  "definitions": [
+    {
+      "id": "core:race:human",
+      "kind": "race",
+      "visibility": "exported",
+      "file": "content/race-human.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "core:class:adventurer",
+      "kind": "class",
+      "visibility": "exported",
+      "file": "content/class-adventurer.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "core:ability:strike",
+      "kind": "ability",
+      "visibility": "exported",
+      "file": "content/ability-strike.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "core:item:sword",
+      "kind": "item",
+      "visibility": "exported",
+      "file": "content/item-sword.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "core:condition:poisoned",
+      "kind": "condition",
+      "visibility": "exported",
+      "file": "content/condition-poisoned.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    }
+  ]
+}

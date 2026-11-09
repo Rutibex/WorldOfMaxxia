@@ -1,0 +1,37 @@
+{
+  "format": "maxxia-authored-condition",
+  "formatVersion": 1,
+  "id": "effect_lab:condition:recovering",
+  "record": {
+    "name": "Recovering Shakes",
+    "description": "A CON save at each minute before poison damage; ends early on success.",
+    "clock": "minutes",
+    "maxDuration": 6,
+    "stacking": "refresh",
+    "maxStacks": 1,
+    "tags": [
+      "toxic"
+    ],
+    "immuneTags": [],
+    "dispelTags": [
+      "toxic",
+      "magic"
+    ],
+    "modifiers": {
+      "attack": -1,
+      "defense": -1,
+      "save": 0,
+      "resistance": {}
+    },
+    "periodic": {
+      "amount": 1,
+      "damageType": "poison"
+    },
+    "save": {
+      "ability": "CON",
+      "dc": 10,
+      "timing": "minute"
+    },
+    "id": "effect_lab:condition:recovering"
+  }
+}

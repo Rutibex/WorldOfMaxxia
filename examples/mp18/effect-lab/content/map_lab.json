@@ -1,0 +1,83 @@
+{
+  "format": "maxxia-authored-map",
+  "formatVersion": 2,
+  "id": "effect_lab:map:lab",
+  "record": {
+    "id": "map_effect_lab_lab",
+    "name": "MP18 Condition Laboratory",
+    "rows": [
+      "#######",
+      "#.....#",
+      "#.....#",
+      "#.....#",
+      "#.....#",
+      "#.....#",
+      "#######"
+    ],
+    "spawn": {
+      "x": 3,
+      "y": 4,
+      "facing": 0
+    },
+    "doors": [],
+    "props": [
+      {
+        "id": "instructions",
+        "kind": "marker",
+        "x": 1,
+        "y": 1,
+        "name": "Effect lab",
+        "description": "Use the basin or vial; inspect conditions in the character sheet. Information \u2192 Effects offers ward, cure, save tests and combat curse."
+      }
+    ],
+    "arrivals": [
+      {
+        "id": "entry",
+        "x": 3,
+        "y": 4,
+        "facing": 0
+      }
+    ],
+    "entities": [
+      {
+        "id": "effect_lab:object:basin",
+        "name": "Silt fever basin",
+        "description": "Use to gain an authored toxic condition. Its clock advances only with game time.",
+        "x": 3,
+        "y": 3,
+        "kind": "object",
+        "onUse": {
+          "routineId": "effect_lab:routine:basin",
+          "args": {}
+        }
+      },
+      {
+        "id": "effect_lab:object:wash",
+        "name": "Restorative fountain",
+        "description": "Dispel tagged conditions and heal20 HP.",
+        "x": 2,
+        "y": 4,
+        "kind": "object",
+        "onUse": {
+          "routineId": "effect_lab:routine:wash",
+          "args": {}
+        }
+      },
+      {
+        "id": "effect_lab:object:vial",
+        "name": "Fever vial box",
+        "description": "Contains the charged item version of the basin effect.",
+        "x": 4,
+        "y": 4,
+        "kind": "container",
+        "rewards": [
+          {
+            "itemId": "effect_lab:item:fever_vial",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "portals": []
+  }
+}

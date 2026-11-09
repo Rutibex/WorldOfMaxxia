@@ -1,0 +1,35 @@
+{
+  "format": "maxxia-pack",
+  "formatVersion": 1,
+  "packId": "mirror_lab",
+  "title": "The Counterfeit Gallery",
+  "version": "1.0.0",
+  "kind": "adventure",
+  "engine": {
+    "min": "0.72.0",
+    "maxExclusive": "1.0.0"
+  },
+  "rules": {
+    "id": "core:rules:classic",
+    "version": "1.0.0"
+  },
+  "dependencies": [
+    {
+      "packId": "core",
+      "versions": {
+        "min": "1.0.0",
+        "maxExclusive": "2.0.0"
+      },
+      "optional": false
+    }
+  ],
+  "contentIndex": "content/index.json",
+  "entry": {
+    "mapId": "mirror_lab:map:maze",
+    "arrivalId": "entry"
+  },
+  "credits": [
+    "By Michael Robinson",
+    "MP27 perception and puzzle proof; existing temporary art."
+  ]
+}

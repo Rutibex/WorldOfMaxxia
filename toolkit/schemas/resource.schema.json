@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maxxia.invalid/toolkit/mp04/resource.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "const": "maxxia-resource-alias"
+    },
+    "formatVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "maxLength": 160,
+      "pattern": "^[a-z][a-z0-9_]{0,47}:resource:[a-z][a-z0-9_]{0,79}$"
+    },
+    "sourceResourceId": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 160,
+          "pattern": "^[a-z][a-z0-9_]{0,47}:resource:[a-z][a-z0-9_]{0,79}$"
+        },
+        {
+          "type": "string",
+          "maxLength": 96,
+          "pattern": "^asset_[a-z0-9_]{1,89}$"
+        }
+      ]
+    }
+  },
+  "required": [
+    "format",
+    "formatVersion",
+    "id",
+    "sourceResourceId"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "format": "maxxia-authored-map",
+  "formatVersion": 2,
+  "id": "receiving:map:yard",
+  "record": {
+    "id": "map_receiving_yard",
+    "name": "Receiving Yard",
+    "rows": [
+      "#####",
+      "#...#",
+      "#...#",
+      "#...#",
+      "#####"
+    ],
+    "spawn": {
+      "x": 2,
+      "y": 3,
+      "facing": 0
+    },
+    "doors": [],
+    "props": [
+      {
+        "id": "marker_yard",
+        "kind": "marker",
+        "x": 1,
+        "y": 1,
+        "name": "Receiving fixture",
+        "description": "Import a Bellwarden into the reserve, use Reserve swap, activate the Buckler or Charm, search the hidden hinge, and spar with the echo."
+      }
+    ],
+    "arrivals": [
+      {
+        "id": "entry",
+        "x": 2,
+        "y": 3,
+        "facing": 0
+      }
+    ],
+    "entities": [
+      {
+        "id": "receiving:object:hinge",
+        "name": "Hidden test hinge",
+        "description": "Siltglass can reveal this eligible hidden mechanism when searched.",
+        "x": 2,
+        "y": 1,
+        "kind": "object",
+        "hidden": true,
+        "searchDC": 30
+      }
+    ],
+    "portals": []
+  }
+}

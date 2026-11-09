@@ -1,0 +1,66 @@
+{
+  "format": "maxxia-monsters",
+  "version": 1,
+  "monsters": [
+    {
+      "id": "dust_imp",
+      "name": "Dust Imp",
+      "hp": 9,
+      "defense": 10,
+      "attack": 2,
+      "damage": "1d3",
+      "speed": 11,
+      "xp": 35,
+      "gold": 12,
+      "symbol": "✦",
+      "attributes": {
+        "DEX": 13,
+        "WIS": 8,
+        "CON": 8
+      },
+      "undead": false,
+      "resistances": {},
+      "visualId": "dust_imp",
+      "aiPattern": "standard",
+      "abilities": [
+        {
+          "id": "basic",
+          "kind": "strike",
+          "weight": 1,
+          "when": "always",
+          "bonusDamage": 0
+        }
+      ]
+    },
+    {
+      "id": "stone_mite",
+      "name": "Stone Mite",
+      "hp": 12,
+      "defense": 11,
+      "attack": 2,
+      "damage": "1d4",
+      "speed": 7,
+      "xp": 45,
+      "gold": 14,
+      "symbol": "◆",
+      "attributes": {
+        "DEX": 6,
+        "WIS": 6,
+        "CON": 12
+      },
+      "undead": false,
+      "resistances": {},
+      "visualId": "stone_mite",
+      "aiPattern": "standard",
+      "abilities": [
+        {
+          "id": "basic",
+          "kind": "strike",
+          "weight": 1,
+          "when": "always",
+          "bonusDamage": 0
+        }
+      ]
+    }
+  ]
+}

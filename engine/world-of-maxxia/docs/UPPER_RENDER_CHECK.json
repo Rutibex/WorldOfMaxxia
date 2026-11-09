@@ -1,0 +1,11 @@
+{
+  "frames": 1008,
+  "facings": 4,
+  "stateVariants": 2,
+  "elapsedMs": 21816,
+  "fullOpaqueCoverage": true,
+  "mapUnchanged": true,
+  "stateUnchanged": true,
+  "samples": 8,
+  "renderer": "production UpperEnvironment on @napi-rs/canvas; not browser"
+}

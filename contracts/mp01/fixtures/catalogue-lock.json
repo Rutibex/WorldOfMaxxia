@@ -1,0 +1,16 @@
+{
+  "format": "maxxia-catalogue-lock",
+  "formatVersion": 1,
+  "rules": {
+    "id": "core:rules:classic",
+    "version": "1.0.0"
+  },
+  "engineVersion": "0.49.0",
+  "packs": [
+    {
+      "packId": "core",
+      "version": "1.0.0",
+      "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+  ]
+}

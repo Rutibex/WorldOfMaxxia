@@ -1,0 +1,13 @@
+{
+  "contentVersion": "0.5.0",
+  "roomId": "map_diagnostic_galleries",
+  "title": "The Upper Galleries",
+  "classes": [
+    "Myrmidon",
+    "Artificer",
+    "Mutant",
+    "Wizard",
+    "Priest",
+    "Witch"
+  ]
+}

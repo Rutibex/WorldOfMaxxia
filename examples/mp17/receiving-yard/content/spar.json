@@ -1,0 +1,40 @@
+{
+  "format": "maxxia-authored-encounter",
+  "formatVersion": 1,
+  "id": "receiving:encounter:spar",
+  "record": {
+    "id": "receiving:encounter:spar",
+    "name": "Practice echo",
+    "description": "Test the imported Bellwarden and Buckler through ordinary combat.",
+    "mapId": "receiving:map:yard",
+    "nativeMapId": "map_receiving_yard",
+    "x": 3,
+    "y": 3,
+    "range": 1,
+    "trigger": {
+      "kind": "proximity",
+      "interval": 1,
+      "table": "spar"
+    },
+    "weight": 1,
+    "members": [
+      {
+        "kindId": "dust_imp",
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "bribe": 0,
+    "avoidDC": 1,
+    "respawn": {
+      "kind": "never",
+      "minutes": 1
+    },
+    "phases": [
+      {
+        "title": "Sparring",
+        "healthPercent": 100
+      }
+    ]
+  }
+}

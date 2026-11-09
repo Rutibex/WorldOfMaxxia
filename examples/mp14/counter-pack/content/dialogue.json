@@ -1,0 +1,146 @@
+{
+  "format": "maxxia-authored-dialogue",
+  "formatVersion": 1,
+  "id": "mp14:dialogue:counter",
+  "record": {
+    "id": "mp14:dialogue:counter",
+    "entry": "entry",
+    "nodes": [
+      {
+        "id": "entry",
+        "text": "Welcome to the Brass Counter. Ask about the workshop, earn our trust, or use an available service.",
+        "choices": [
+          {
+            "id": "purpose",
+            "text": "Ask what the workshop needs",
+            "next": "entry",
+            "once": true,
+            "unavailable": "hide",
+            "effects": [
+              {
+                "op": "remember",
+                "fact": "purpose"
+              }
+            ]
+          },
+          {
+            "id": "polite",
+            "text": "Offer respectful assistance",
+            "next": "entry",
+            "once": true,
+            "effects": [
+              {
+                "op": "attitude",
+                "delta": 5
+              }
+            ]
+          },
+          {
+            "id": "insult",
+            "text": "Insult the counter staff",
+            "next": "entry",
+            "once": true,
+            "effects": [
+              {
+                "op": "attitude",
+                "delta": -10
+              }
+            ]
+          },
+          {
+            "id": "permit",
+            "text": "Request an inspection permit",
+            "next": "approved",
+            "once": true,
+            "condition": {
+              "all": [
+                {
+                  "op": "eq",
+                  "left": {
+                    "query": "fact",
+                    "fact": "purpose"
+                  },
+                  "right": true
+                },
+                {
+                  "op": "gte",
+                  "left": {
+                    "query": "attitude"
+                  },
+                  "right": 5
+                }
+              ]
+            },
+            "unavailableText": "Learn the workshop\u2019s purpose and reach attitude 5.",
+            "effects": [
+              {
+                "op": "give-item",
+                "itemId": "mp14:item:permit",
+                "count": 1
+              },
+              {
+                "op": "remember",
+                "fact": "approved"
+              }
+            ],
+            "routine": {
+              "routineId": "mp14:routine:approved",
+              "args": {}
+            }
+          },
+          {
+            "id": "refuse",
+            "text": "Refuse to get involved",
+            "next": "refused",
+            "effects": [
+              {
+                "op": "remember",
+                "fact": "refused"
+              },
+              {
+                "op": "attitude",
+                "delta": -2
+              }
+            ]
+          },
+          {
+            "id": "reconsider",
+            "text": "Apologize and reconsider",
+            "next": "entry",
+            "condition": {
+              "op": "eq",
+              "left": {
+                "query": "fact",
+                "fact": "refused"
+              },
+              "right": true
+            },
+            "unavailable": "hide",
+            "effects": [
+              {
+                "op": "forget",
+                "fact": "refused"
+              },
+              {
+                "op": "attitude",
+                "delta": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "approved",
+        "text": "Your inspection permit is signed. The workshop remembers your help. Return whenever you need supplies.",
+        "terminal": true,
+        "choices": []
+      },
+      {
+        "id": "refused",
+        "text": "Then we have nothing more to discuss today. You can speak again if you reconsider.",
+        "terminal": true,
+        "choices": []
+      }
+    ]
+  }
+}

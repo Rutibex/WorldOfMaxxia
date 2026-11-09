@@ -1,0 +1,40 @@
+{
+  "format": "maxxia-authored-encounter",
+  "formatVersion": 1,
+  "id": "effect_lab:encounter:sentinel",
+  "record": {
+    "name": "Practice Sentinel",
+    "description": "Fight this ordinary enemy and try Tremor from the Effects menu during your hero turn.",
+    "mapId": "effect_lab:map:lab",
+    "nativeMapId": "map_effect_lab_lab",
+    "x": 5,
+    "y": 2,
+    "range": 1,
+    "trigger": {
+      "kind": "proximity",
+      "interval": 1,
+      "table": "sentinel"
+    },
+    "weight": 1,
+    "members": [
+      {
+        "kindId": "dust_imp",
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "bribe": 0,
+    "avoidDC": 1,
+    "respawn": {
+      "kind": "never",
+      "minutes": 1
+    },
+    "phases": [
+      {
+        "title": "Practice",
+        "healthPercent": 100
+      }
+    ],
+    "id": "effect_lab:encounter:sentinel"
+  }
+}

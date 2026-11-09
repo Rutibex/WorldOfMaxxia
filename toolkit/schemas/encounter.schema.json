@@ -1,0 +1,223 @@
+{
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "maxxia-authored-encounter"
+    },
+    "formatVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "record": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]{0,15}:encounter:[a-z][a-z0-9_]{0,23}$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "mapId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "nativeMapId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "x": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 63
+        },
+        "y": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 63
+        },
+        "range": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "trigger": {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "enum": [
+                "proximity",
+                "clock",
+                "rest"
+              ]
+            },
+            "interval": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10080
+            },
+            "table": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 24
+            }
+          },
+          "required": [
+            "kind",
+            "interval",
+            "table"
+          ],
+          "additionalProperties": false
+        },
+        "weight": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "members": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "properties": {
+              "kindId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "dx": {
+                "type": "integer",
+                "minimum": -4,
+                "maximum": 4
+              },
+              "dy": {
+                "type": "integer",
+                "minimum": -4,
+                "maximum": 4
+              }
+            },
+            "required": [
+              "kindId",
+              "dx",
+              "dy"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "bribe": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100000
+            }
+          ]
+        },
+        "avoidDC": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 40
+            }
+          ]
+        },
+        "condition": {},
+        "respawn": {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "enum": [
+                "never",
+                "reentry",
+                "cooldown"
+              ]
+            },
+            "minutes": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10080
+            }
+          },
+          "required": [
+            "kind",
+            "minutes"
+          ],
+          "additionalProperties": false
+        },
+        "phases": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "healthPercent": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100
+              }
+            },
+            "required": [
+              "title",
+              "healthPercent"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "description",
+        "mapId",
+        "nativeMapId",
+        "x",
+        "y",
+        "range",
+        "trigger",
+        "weight",
+        "members",
+        "bribe",
+        "avoidDC",
+        "respawn",
+        "phases"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "format",
+    "formatVersion",
+    "id",
+    "record"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maxxia.invalid/toolkit/mp16/encounter.schema.json"
+}

@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maxxia.invalid/contracts/mp01/common.schema.json",
+  "$defs": {
+    "namespace": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 48,
+      "pattern": "^[a-z][a-z0-9_]{0,47}$"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 160,
+      "pattern": "^[a-z][a-z0-9_]{0,47}:(race|class|ability|item|recipe|spell|monster|condition|map|npc|dialogue|quest|routine|encounter|loot|environment|resource):[a-z][a-z0-9_]{0,79}$"
+    },
+    "version": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 20,
+      "pattern": "^(0|[1-9][0-9]{0,5})\\.(0|[1-9][0-9]{0,5})\\.(0|[1-9][0-9]{0,5})$"
+    },
+    "path": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 240,
+      "pattern": "^[a-zA-Z0-9_-]+(/[a-zA-Z0-9_-]+)*\\.[a-zA-Z0-9]+$"
+    },
+    "hash": {
+      "type": "string",
+      "minLength": 64,
+      "maxLength": 64,
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "range": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "min": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120,
+          "pattern": "^(0|[1-9][0-9]{0,5})\\.(0|[1-9][0-9]{0,5})\\.(0|[1-9][0-9]{0,5})$"
+        },
+        "maxExclusive": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120,
+          "pattern": "^(0|[1-9][0-9]{0,5})\\.(0|[1-9][0-9]{0,5})\\.(0|[1-9][0-9]{0,5})$"
+        }
+      },
+      "required": [
+        "min",
+        "maxExclusive"
+      ]
+    },
+    "packPin": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "packId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120,
+          "pattern": "^[a-z][a-z0-9_]{0,47}$"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120,
+          "pattern": "^(0|[1-9][0-9]{0,5})\\.(0|[1-9][0-9]{0,5})\\.(0|[1-9][0-9]{0,5})$"
+        },
+        "sha256": {
+          "type": "string",
+          "minLength": 64,
+          "maxLength": 64,
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "packId",
+        "version",
+        "sha256"
+      ]
+    }
+  }
+}

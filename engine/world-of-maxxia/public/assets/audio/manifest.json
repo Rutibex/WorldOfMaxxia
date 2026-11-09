@@ -1,0 +1,171 @@
+{
+  "music": [
+    {
+      "id": "title",
+      "title": "A Light Beyond the Mirror",
+      "url": "assets/audio/music/title.mid",
+      "bpm": 88,
+      "bars": 16,
+      "seconds": 43.636,
+      "programs": [
+        10,
+        48,
+        6,
+        32
+      ],
+      "origin": "Original score, authored for this demo; synthesized in-browser without external samples."
+    },
+    {
+      "id": "town",
+      "title": "Firstlight Promenade",
+      "url": "assets/audio/music/town.mid",
+      "bpm": 104,
+      "bars": 16,
+      "seconds": 36.923,
+      "programs": [
+        73,
+        48,
+        6,
+        32
+      ],
+      "origin": "Original score, authored for this demo; synthesized in-browser without external samples."
+    },
+    {
+      "id": "cistern",
+      "title": "Under Copper Bells",
+      "url": "assets/audio/music/cistern.mid",
+      "bpm": 70,
+      "bars": 16,
+      "seconds": 54.857,
+      "programs": [
+        11,
+        48,
+        6,
+        32
+      ],
+      "origin": "Original score, authored for this demo; synthesized in-browser without external samples."
+    },
+    {
+      "id": "vault",
+      "title": "The Sleeping Resonator",
+      "url": "assets/audio/music/vault.mid",
+      "bpm": 64,
+      "bars": 16,
+      "seconds": 60.0,
+      "programs": [
+        89,
+        48,
+        6,
+        32
+      ],
+      "origin": "Original score, authored for this demo; synthesized in-browser without external samples."
+    },
+    {
+      "id": "combat",
+      "title": "Steel in the Galleries",
+      "url": "assets/audio/music/combat.mid",
+      "bpm": 136,
+      "bars": 16,
+      "seconds": 28.235,
+      "programs": [
+        6,
+        48,
+        6,
+        32
+      ],
+      "origin": "Original score, authored for this demo; synthesized in-browser without external samples."
+    },
+    {
+      "id": "boss",
+      "title": "The Brass Heart Wakes",
+      "url": "assets/audio/music/boss.mid",
+      "bpm": 148,
+      "bars": 16,
+      "seconds": 25.946,
+      "programs": [
+        19,
+        48,
+        6,
+        32
+      ],
+      "origin": "Original score, authored for this demo; synthesized in-browser without external samples."
+    },
+    {
+      "id": "ending",
+      "title": "Water Returns to Firstlight",
+      "url": "assets/audio/music/ending.mid",
+      "bpm": 80,
+      "bars": 16,
+      "seconds": 48.0,
+      "programs": [
+        73,
+        48,
+        6,
+        32
+      ],
+      "origin": "Original score, authored for this demo; synthesized in-browser without external samples."
+    },
+    {
+      "id": "defeat",
+      "title": "A Candle in the Dark",
+      "url": "assets/audio/music/defeat.mid",
+      "bpm": 56,
+      "bars": 16,
+      "seconds": 68.571,
+      "programs": [
+        11,
+        48,
+        6,
+        32
+      ],
+      "origin": "Original score, authored for this demo; synthesized in-browser without external samples."
+    }
+  ],
+  "sfx": [
+    "ui",
+    "step_stone",
+    "step_town",
+    "door",
+    "chest",
+    "rest",
+    "coin",
+    "trap",
+    "attack",
+    "enemy",
+    "metal",
+    "ghost",
+    "shot",
+    "miss",
+    "cast_arcane",
+    "cast_fire",
+    "cast_cold",
+    "cast_lightning",
+    "cast_poison",
+    "cast_holy",
+    "cast_necrotic",
+    "cast_heal",
+    "cast_guard",
+    "hit_physical",
+    "hit_arcane",
+    "hit_fire",
+    "hit_cold",
+    "hit_lightning",
+    "hit_poison",
+    "hit_holy",
+    "hit_necrotic",
+    "hit_heal",
+    "hit_guard",
+    "victory",
+    "defeat",
+    "quest",
+    "boss_warning",
+    "boss_wave"
+  ],
+  "ambience": [
+    "town",
+    "cistern",
+    "vault"
+  ],
+  "license": "Original project assets. No third-party recordings or soundfont samples.",
+  "synth": "Built-in Web Audio MIDI renderer with original General-MIDI-inspired timbres; not a full General MIDI sound bank."
+}

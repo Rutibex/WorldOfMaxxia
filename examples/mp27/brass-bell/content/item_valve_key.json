@@ -1,0 +1,25 @@
+{
+  "format": "maxxia-authored-item",
+  "formatVersion": 1,
+  "id": "bell:item:valve_key",
+  "record": {
+    "id": "bell:item:valve_key",
+    "name": "Regulator Access Token",
+    "category": "misc",
+    "price": 0,
+    "maxDurability": 0,
+    "maxCharges": 0,
+    "effect": "none",
+    "power": 0,
+    "unique": false,
+    "slot": null,
+    "weight": null,
+    "armor": 0,
+    "dice": null,
+    "accuracy": 0,
+    "resistance": null,
+    "resistBonus": 0,
+    "description": "Regulator Access Token",
+    "portability": "campaign-bound"
+  }
+}

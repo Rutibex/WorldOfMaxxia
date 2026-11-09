@@ -1,0 +1,198 @@
+{
+  "id": "map_town",
+  "name": "Bellwether Quay (Firstlight Ward)",
+  "rows": [
+    "################",
+    "################",
+    "######......D.##",
+    "##............##",
+    "##...#..##..####",
+    "###.........####",
+    "###..........###",
+    "###.........####",
+    "###..........###",
+    "###.#.......####",
+    "###..##D.#..####",
+    "###..........###",
+    "###.........####",
+    "#######.########",
+    "################",
+    "################"
+  ],
+  "spawn": {
+    "x": 7,
+    "y": 12,
+    "facing": 0
+  },
+  "doors": [
+    {
+      "id": "town_north_gate",
+      "x": 12,
+      "y": 2
+    },
+    {
+      "id": "town_south_gate",
+      "x": 7,
+      "y": 10
+    }
+  ],
+  "props": [
+    {
+      "id": "sign_npc_tessa_bell",
+      "kind": "banner",
+      "x": 4,
+      "y": 11,
+      "name": "Silver Lantern Tavern",
+      "description": "Tessa Bell welcomes travellers to the Silver Lantern. A notice board asks after a missing ledger."
+    },
+    {
+      "id": "sign_npc_orro_vane",
+      "kind": "banner",
+      "x": 10,
+      "y": 11,
+      "name": "Vane Forge",
+      "description": "The forge hammers echo beneath the cobbles. A rack lies empty where the master tool-roll should be."
+    },
+    {
+      "id": "sign_npc_sister_vale",
+      "kind": "crystal",
+      "x": 4,
+      "y": 6,
+      "name": "Temple of the Lantern",
+      "description": "Sister Vale tends a small shrine filled with votive glass."
+    },
+    {
+      "id": "sign_npc_captain_brann",
+      "kind": "banner",
+      "x": 11,
+      "y": 6,
+      "name": "Training Court",
+      "description": "Captain Brann drills novices among painted targets."
+    },
+    {
+      "id": "sign_npc_pell_glass",
+      "kind": "mirror",
+      "x": 2,
+      "y": 3,
+      "name": "School of Glass",
+      "description": "Pell Glass teaches the precise art of wizardry."
+    },
+    {
+      "id": "sign_npc_nera_salt",
+      "kind": "crystal",
+      "x": 6,
+      "y": 3,
+      "name": "Tide Shrine",
+      "description": "Nera Salt listens to echoes trapped in bottles along the tide shrine."
+    },
+    {
+      "id": "sign_npc_aunt_vell",
+      "kind": "brazier",
+      "x": 10,
+      "y": 3,
+      "name": "Briar Hearth",
+      "description": "Aunt Vell reads the smoke of her green hearth."
+    },
+    {
+      "id": "sign_npc_iona_reed",
+      "kind": "mirror",
+      "x": 8,
+      "y": 8,
+      "name": "Cistern Office",
+      "description": "Iona Reed keeps the brass waterworks ledger. The pages mention a regulator and a bell beneath the village."
+    },
+    {
+      "id": "scene_old_foundry",
+      "x": 5,
+      "y": 5,
+      "kind": "banner",
+      "name": "Old Foundry Walk",
+      "description": "The old pipes were built into the town before anyone remembers. Their bronze lining rings at dusk."
+    },
+    {
+      "id": "scene_river_steps",
+      "x": 3,
+      "y": 9,
+      "kind": "crystal",
+      "name": "River Steps",
+      "description": "A dry river channel falls toward the cistern. Three scratches on the coping resemble musical notation."
+    },
+    {
+      "id": "scene_south_notice",
+      "x": 7,
+      "y": 13,
+      "kind": "banner",
+      "name": "South Gate Notice",
+      "description": "An ordinance warns visitors not to open the lower valves without the cistern keeper."
+    },
+    {
+      "id": "scene_north_clock",
+      "x": 7,
+      "y": 3,
+      "kind": "mirror",
+      "name": "Clock Arch",
+      "description": "The village clock is four minutes slow; its gears turn when the unseen bell sounds."
+    },
+    {
+      "id": "scene_market_stalls",
+      "x": 9,
+      "y": 11,
+      "kind": "banner",
+      "name": "Market Stalls",
+      "description": "The traders have shutters of blue-painted wood. A quiet market lies underneath the bell tower shadow."
+    },
+    {
+      "id": "scene_well",
+      "x": 7,
+      "y": 7,
+      "kind": "crystal",
+      "name": "Firstlight Well",
+      "description": "The well reflects a starless sky. The stonework carries a brass maker\u2019s mark from the old cistern."
+    },
+    {
+      "id": "scene_cistern_stair",
+      "x": 13,
+      "y": 2,
+      "kind": "brazier",
+      "name": "Cistern Stair",
+      "description": "A stair behind the north gate descends to the old pumping galleries."
+    },
+    {
+      "id": "scene_lantern_alley",
+      "x": 3,
+      "y": 4,
+      "kind": "brazier",
+      "name": "Lantern Alley",
+      "description": "Lantern oil mingles with an unfamiliar floral scent near the wizard and priest guilds."
+    },
+    {
+      "id": "scene_stone_marker",
+      "x": 11,
+      "y": 8,
+      "kind": "banner",
+      "name": "Survey Marker",
+      "description": "A weathered marker reads: water to the south, echoes to the north."
+    }
+  ],
+  "portals": [
+    {
+      "id": "portal_town_to_dungeon",
+      "x": 13,
+      "y": 2,
+      "targetMapId": "map_diagnostic_galleries",
+      "targetX": 2,
+      "targetY": 8,
+      "targetFacing": 1
+    }
+  ],
+  "fountains": [
+    {
+      "id": "town_well_spring",
+      "x": 7,
+      "y": 7,
+      "name": "Firstlight Well",
+      "heal": 5,
+      "sp": 2
+    }
+  ]
+}

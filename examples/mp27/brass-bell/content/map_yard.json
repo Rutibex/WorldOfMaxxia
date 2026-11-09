@@ -1,0 +1,240 @@
+{
+  "format": "maxxia-authored-map",
+  "formatVersion": 2,
+  "id": "bell:map:yard",
+  "record": {
+    "id": "map_bell_yard",
+    "name": "Brass Bell Village Yard",
+    "rows": [
+      "#########",
+      "#.......#",
+      "#.......#",
+      "####D####",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#########"
+    ],
+    "spawn": {
+      "x": 4,
+      "y": 5,
+      "facing": 0
+    },
+    "doors": [
+      {
+        "id": "door_well",
+        "x": 4,
+        "y": 3
+      }
+    ],
+    "props": [
+      {
+        "id": "marker_exit",
+        "kind": "marker",
+        "x": 4,
+        "y": 7,
+        "name": "Village arrival / exit",
+        "description": "Leave the expedition through the normal title/save controls."
+      }
+    ],
+    "arrivals": [
+      {
+        "id": "entry",
+        "x": 4,
+        "y": 5,
+        "facing": 0
+      },
+      {
+        "id": "return",
+        "x": 4,
+        "y": 2,
+        "facing": 2
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_down",
+        "x": 4,
+        "y": 1,
+        "targetMapId": "map_bell_cistern",
+        "targetX": 2,
+        "targetY": 10,
+        "targetFacing": 0,
+        "targetArrivalId": "entry"
+      }
+    ],
+    "entities": [
+      {
+        "id": "bell:object:edda",
+        "name": "Keeper Edda",
+        "description": "Keeper Edda",
+        "x": 3,
+        "y": 4,
+        "kind": "npc",
+        "npcId": "bell:npc:edda"
+      },
+      {
+        "id": "bell:object:mara",
+        "name": "Mara the Trader",
+        "description": "Mara the Trader",
+        "x": 5,
+        "y": 4,
+        "kind": "npc",
+        "npcId": "bell:npc:mara"
+      },
+      {
+        "id": "bell:object:well",
+        "name": "Sealed well entrance",
+        "description": "Edda\u2019s key, lockpicking or force can open this well door. The stair lies beyond.",
+        "x": 4,
+        "y": 3,
+        "kind": "door",
+        "doorId": "door_well",
+        "lock": {
+          "keyItemId": "bell:item:well_key",
+          "pickDC": 8,
+          "forceDC": 8
+        },
+        "capabilities": [
+          {
+            "id": "echo_unlock",
+            "label": "Echo Hand: unseal well",
+            "tag": "mechanism",
+            "outcome": "unlock",
+            "minutes": 2
+          },
+          {
+            "id": "echo_open",
+            "label": "Echo Hand: open well",
+            "tag": "mechanism",
+            "outcome": "open",
+            "minutes": 2
+          }
+        ]
+      }
+    ],
+    "workshops": [
+      {
+        "id": "yard_forge",
+        "x": 4,
+        "y": 5
+      }
+    ],
+    "environmentId": "bell:environment:night",
+    "spritePlacements": [
+      {
+        "id": "visual_edda",
+        "spriteId": "keeper",
+        "x": 3,
+        "y": 4,
+        "scale": 0.65,
+        "facing": 2,
+        "entityId": "bell:object:edda",
+        "stateAnimations": {
+          "idle": "idle"
+        },
+        "hotspot": {
+          "x": 0.08,
+          "y": 0.05,
+          "width": 0.84,
+          "height": 0.9
+        }
+      },
+      {
+        "id": "visual_mara",
+        "spriteId": "keeper",
+        "x": 5,
+        "y": 4,
+        "scale": 0.65,
+        "facing": 2,
+        "entityId": "bell:object:mara",
+        "stateAnimations": {
+          "idle": "idle"
+        },
+        "hotspot": {
+          "x": 0.08,
+          "y": 0.05,
+          "width": 0.84,
+          "height": 0.9
+        }
+      },
+      {
+        "id": "visual_marker_exit",
+        "spriteId": "brazier",
+        "x": 4,
+        "y": 7,
+        "scale": 0.55,
+        "facing": 0,
+        "propId": "marker_exit"
+      }
+    ],
+    "enemyAppearances": [
+      {
+        "kindId": "bell:monster:silt_rat",
+        "spriteId": "vermin",
+        "scale": 0.9,
+        "facing": 2,
+        "stateAnimations": {
+          "idle": "idle",
+          "active": "active",
+          "guarded": "guarded",
+          "attack": "attack",
+          "hurt": "hurt"
+        }
+      },
+      {
+        "kindId": "bell:monster:echo",
+        "spriteId": "vermin",
+        "scale": 0.9,
+        "facing": 2,
+        "stateAnimations": {
+          "idle": "idle",
+          "active": "active",
+          "guarded": "guarded",
+          "attack": "attack",
+          "hurt": "hurt"
+        }
+      },
+      {
+        "kindId": "bell:monster:sentinel",
+        "spriteId": "vermin",
+        "scale": 0.9,
+        "facing": 2,
+        "stateAnimations": {
+          "idle": "idle",
+          "active": "active",
+          "guarded": "guarded",
+          "attack": "attack",
+          "hurt": "hurt"
+        }
+      },
+      {
+        "kindId": "bell:monster:bell_heart",
+        "spriteId": "vermin",
+        "scale": 0.9,
+        "facing": 2,
+        "stateAnimations": {
+          "idle": "idle",
+          "active": "active",
+          "guarded": "guarded",
+          "attack": "attack",
+          "hurt": "hurt"
+        }
+      },
+      {
+        "kindId": "bell:monster:chime_wisp",
+        "spriteId": "vermin",
+        "scale": 0.9,
+        "facing": 2,
+        "stateAnimations": {
+          "idle": "idle",
+          "active": "active",
+          "guarded": "guarded",
+          "attack": "attack",
+          "hurt": "hurt"
+        }
+      }
+    ]
+  }
+}

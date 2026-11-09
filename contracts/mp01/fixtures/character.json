@@ -1,0 +1,52 @@
+{
+  "format": "maxxia-character",
+  "formatVersion": 1,
+  "characterId": "c_example",
+  "revision": 3,
+  "name": "Mira",
+  "compatibility": {
+    "rules": {
+      "id": "core:rules:classic",
+      "version": "1.0.0"
+    },
+    "requiredPacks": [
+      {
+        "packId": "core",
+        "version": "1.0.0",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    ]
+  },
+  "raceId": "core:race:human",
+  "classId": "core:class:adventurer",
+  "level": 2,
+  "xp": 600,
+  "abilities": [
+    "core:ability:strike"
+  ],
+  "items": [
+    {
+      "instanceId": "i_sword",
+      "definitionId": "core:item:sword",
+      "quantity": 1,
+      "charges": null,
+      "binding": "portable",
+      "originCampaignId": null,
+      "state": {}
+    }
+  ],
+  "equipment": {
+    "melee": "i_sword"
+  },
+  "conditions": [
+    {
+      "definitionId": "core:condition:poisoned",
+      "remaining": 3,
+      "unit": "minutes",
+      "portable": true,
+      "state": {}
+    }
+  ],
+  "resources": {},
+  "state": {}
+}

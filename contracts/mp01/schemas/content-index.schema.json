@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maxxia.invalid/contracts/mp01/content-index.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "const": "maxxia-content-index"
+    },
+    "formatVersion": {
+      "const": 1
+    },
+    "definitions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "$ref": "common.schema.json#/$defs/id"
+          },
+          "kind": {
+            "enum": [
+              "race",
+              "class",
+              "ability",
+              "item",
+              "recipe",
+              "spell",
+              "monster",
+              "condition",
+              "map",
+              "npc",
+              "dialogue",
+              "quest",
+              "routine",
+              "encounter",
+              "loot",
+              "environment",
+              "resource"
+            ]
+          },
+          "visibility": {
+            "enum": [
+              "local",
+              "exported"
+            ]
+          },
+          "file": {
+            "$ref": "common.schema.json#/$defs/path"
+          },
+          "placement": {
+            "enum": [
+              "none",
+              "authored",
+              "eligible"
+            ]
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[a-z][a-z0-9_:-]{0,79}$"
+            },
+            "minItems": 0,
+            "maxItems": 64
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "id": {
+                      "$ref": "common.schema.json#/$defs/id"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "id": {
+                      "$ref": "common.schema.json#/$defs/id"
+                    },
+                    "whenPackEnabled": {
+                      "$ref": "common.schema.json#/$defs/namespace"
+                    },
+                    "onAbsent": {
+                      "const": "skip"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "whenPackEnabled",
+                    "onAbsent"
+                  ]
+                }
+              ]
+            },
+            "minItems": 0,
+            "maxItems": 256
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "visibility",
+          "file",
+          "placement",
+          "tags",
+          "references"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 4096
+    }
+  },
+  "required": [
+    "format",
+    "formatVersion",
+    "definitions"
+  ]
+}

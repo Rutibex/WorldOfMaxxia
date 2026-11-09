@@ -1,0 +1,320 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maxxia.invalid/toolkit/mp22/monster.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "const": "maxxia-authored-monster"
+    },
+    "formatVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "maxLength": 160,
+      "pattern": "^[a-z][a-z0-9_]{0,47}:monster:[a-z][a-z0-9_]{0,79}$"
+    },
+    "record": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 160,
+          "pattern": "^[a-z][a-z0-9_]{0,47}:monster:[a-z][a-z0-9_]{0,79}$"
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "hp": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100000
+        },
+        "defense": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 200
+        },
+        "attack": {
+          "type": "integer",
+          "minimum": -100,
+          "maximum": 200
+        },
+        "damage": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "speed": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 200
+        },
+        "xp": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "gold": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "symbol": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "DEX": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100
+            },
+            "WIS": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100
+            },
+            "CON": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100
+            }
+          },
+          "required": [
+            "DEX",
+            "WIS",
+            "CON"
+          ]
+        },
+        "undead": {
+          "type": "boolean"
+        },
+        "resistances": {
+          "type": "object",
+          "maxProperties": 8,
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100
+          }
+        },
+        "visualId": {
+          "enum": [
+            "dust_imp",
+            "stone_mite",
+            "gallery_watcher",
+            "cistern_rat",
+            "sludge_leech",
+            "pipe_goblin",
+            "bell_wraith",
+            "valve_sentinel",
+            "bell_heart"
+          ]
+        },
+        "aiPattern": {
+          "enum": [
+            "standard",
+            "resonance"
+          ]
+        },
+        "abilities": {
+          "type": "array",
+          "maxItems": 8,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "maxLength": 2000
+              },
+              "kind": {
+                "enum": [
+                  "strike",
+                  "spectral"
+                ]
+              },
+              "weight": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100
+              },
+              "when": {
+                "enum": [
+                  "always",
+                  "odd_round",
+                  "even_round",
+                  "hurt",
+                  "healthy"
+                ]
+              },
+              "bonusDamage": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 100
+              }
+            },
+            "required": [
+              "id",
+              "kind",
+              "weight",
+              "when",
+              "bonusDamage"
+            ]
+          },
+          "minItems": 1
+        },
+        "guaranteedLootItemId": {
+          "type": "string",
+          "maxLength": 160,
+          "pattern": "^[a-z][a-z0-9_]{0,47}:item:[a-z][a-z0-9_]{0,79}$"
+        },
+        "behavior": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "rules"
+          ],
+          "properties": {
+            "rules": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 8,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "id",
+                  "priority",
+                  "when",
+                  "action"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{1,79}$"
+                  },
+                  "priority": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100
+                  },
+                  "when": {
+                    "enum": [
+                      "always",
+                      "hurt",
+                      "healthy",
+                      "adjacent",
+                      "distant",
+                      "odd_round",
+                      "even_round"
+                    ]
+                  },
+                  "action": {
+                    "enum": [
+                      "strike",
+                      "approach",
+                      "guard",
+                      "heal",
+                      "summon"
+                    ]
+                  },
+                  "amount": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 20
+                  },
+                  "kindId": {
+                    "type": "string",
+                    "maxLength": 160
+                  },
+                  "maxUses": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 3
+                  },
+                  "lifetimeRounds": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 6
+                  }
+                }
+              }
+            },
+            "phases": {
+              "type": "array",
+              "maxItems": 3,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "atOrBelowPercent",
+                  "title",
+                  "attackBonus",
+                  "defenseBonus",
+                  "damageBonus"
+                ],
+                "properties": {
+                  "atOrBelowPercent": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 100
+                  },
+                  "title": {
+                    "type": "string",
+                    "maxLength": 100
+                  },
+                  "attackBonus": {
+                    "type": "integer",
+                    "minimum": -5,
+                    "maximum": 5
+                  },
+                  "defenseBonus": {
+                    "type": "integer",
+                    "minimum": -5,
+                    "maximum": 5
+                  },
+                  "damageBonus": {
+                    "type": "integer",
+                    "minimum": -5,
+                    "maximum": 5
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "hp",
+        "defense",
+        "attack",
+        "damage",
+        "speed",
+        "xp",
+        "gold",
+        "symbol",
+        "attributes",
+        "undead",
+        "resistances",
+        "visualId",
+        "aiPattern",
+        "abilities"
+      ]
+    }
+  },
+  "required": [
+    "format",
+    "formatVersion",
+    "id",
+    "record"
+  ]
+}

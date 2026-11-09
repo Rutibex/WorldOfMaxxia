@@ -1,0 +1,20 @@
+/** Assemble a static GitHub Pages site. All runtime URLs are relative to /play/. */
+import {mkdir,cp,rm,readFile,stat,writeFile} from 'node:fs/promises';
+import {resolve,dirname,join} from 'node:path';
+import {fileURLToPath} from 'node:url';
+import assert from 'node:assert/strict';
+const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
+const site=resolve(root,'_site');
+const game=resolve(root,'engine/world-of-maxxia/dist');
+const front=resolve(root,'website');
+for(const f of ['index.html','build-info.json'])await stat(join(game,f));
+const html=await readFile(join(game,'index.html'),'utf8');
+assert(html.includes('assets/runtime-') || html.includes('assets/'), 'Expected a built browser entry point');
+await rm(site,{recursive:true,force:true});
+await mkdir(site,{recursive:true});
+await cp(front,site,{recursive:true,filter:p=>!p.endsWith('README.md')});
+await cp(game,resolve(site,'play'),{recursive:true});
+await writeFile(join(site,'.nojekyll'),'');
+await stat(join(site,'play/index.html'));
+await stat(join(site,'media/harbour.png'));
+console.log('Prepared GitHub Pages at _site/ (landing page /; playable game /play/).');

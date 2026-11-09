@@ -1,0 +1,51 @@
+{
+  "stone-mite": {
+    "frame_count": 16,
+    "illustrated_keyframes": 14,
+    "atlas": "assets/art/enemies/stone-mite.png"
+  },
+  "gallery-watcher": {
+    "frame_count": 16,
+    "illustrated_keyframes": 14,
+    "atlas": "assets/art/enemies/gallery-watcher.png"
+  },
+  "cistern-rat": {
+    "frame_count": 16,
+    "illustrated_keyframes": 14,
+    "atlas": "assets/art/enemies/cistern-rat.png"
+  },
+  "sludge-leech": {
+    "frame_count": 16,
+    "illustrated_keyframes": 12,
+    "atlas": "assets/art/enemies/sludge-leech.png"
+  },
+  "pipe-goblin": {
+    "frame_count": 16,
+    "illustrated_keyframes": 14,
+    "atlas": "assets/art/enemies/pipe-goblin.png"
+  },
+  "bell-wraith": {
+    "frame_count": 16,
+    "illustrated_keyframes": 14,
+    "atlas": "assets/art/enemies/bell-wraith.png"
+  },
+  "valve-sentinel": {
+    "frame_count": 16,
+    "illustrated_keyframes": 13,
+    "atlas": "assets/art/enemies/valve-sentinel.png"
+  },
+  "bell-heart": {
+    "frame_count": 16,
+    "illustrated_keyframes": 13,
+    "atlas": "assets/art/enemies/bell-heart.png"
+  },
+  "bell-heart-special": {
+    "frame_count": 16,
+    "clips": [
+      "telegraph",
+      "discharge",
+      "recovery"
+    ],
+    "atlas": "assets/art/enemies/bell-heart-special.png"
+  }
+}

@@ -1,0 +1,186 @@
+area,control_or_feature,contract,owner_phase,disposition
+Exploration,Shoot,Exact command-grid location and shortcut specified in contract; Dismiss directs to tavern,7,Included
+Exploration,Cast,Exact command-grid location and shortcut specified in contract; Dismiss directs to tavern,9,Included
+Exploration,Rest,Exact command-grid location and shortcut specified in contract; Dismiss directs to tavern,14,Included
+Exploration,Bash,Exact command-grid location and shortcut specified in contract; Dismiss directs to tavern,14,Included
+Exploration,Dismiss,Exact command-grid location and shortcut specified in contract; Dismiss directs to tavern,19,Included
+Exploration,Quests,Exact command-grid location and shortcut specified in contract; Dismiss directs to tavern,16,Included
+Exploration,Automap,Exact command-grid location and shortcut specified in contract; Dismiss directs to tavern,14,Included
+Exploration,Information,Exact command-grid location and shortcut specified in contract; Dismiss directs to tavern,14,Included
+Exploration,Quick Reference,Exact command-grid location and shortcut specified in contract; Dismiss directs to tavern,5,Included
+Movement,Turn Left,Tile/facing semantics and nearby-object range in specification,3,Included
+Movement,Forward,Tile/facing semantics and nearby-object range in specification,3,Included
+Movement,Turn Right,Tile/facing semantics and nearby-object range in specification,3,Included
+Movement,Strafe Left,Tile/facing semantics and nearby-object range in specification,3,Included
+Movement,Backward,Tile/facing semantics and nearby-object range in specification,3,Included
+Movement,Strafe Right,Tile/facing semantics and nearby-object range in specification,3,Included
+Movement,Space interaction,Tile/facing semantics and nearby-object range in specification,3,Included
+Combat,Quick Fight,Same dashboard; one committed actor action; whole-party Run replacement,8,Included
+Combat,Cast,Same dashboard; one committed actor action; whole-party Run replacement,9,Included
+Combat,Attack,Same dashboard; one committed actor action; whole-party Run replacement,7,Included
+Combat,Use,Same dashboard; one committed actor action; whole-party Run replacement,13,Included
+Combat,Run,Same dashboard; one committed actor action; whole-party Run replacement,7,Included
+Combat,Block,Same dashboard; one committed actor action; whole-party Run replacement,7,Included
+Combat,Quick Options,Same dashboard; one committed actor action; whole-party Run replacement,8,Included
+Combat,Information,Same dashboard; one committed actor action; whole-party Run replacement,14,Included
+Combat,Quick Reference,Same dashboard; one committed actor action; whole-party Run replacement,5,Included
+Combat,Targets 1–3,Same dashboard; one committed actor action; whole-party Run replacement,7,Included
+Character,Portrait click,Clickable details and contextual selection; no combat turn switching,5,Included
+Character,F1–F6,Clickable details and contextual selection; no combat turn switching,5,Included
+Character,Attribute details,Clickable details and contextual selection; no combat turn switching,5,Included
+Character,Level,Clickable details and contextual selection; no combat turn switching,5,Included
+Character,HP,Clickable details and contextual selection; no combat turn switching,5,Included
+Character,SP,Clickable details and contextual selection; no combat turn switching,5,Included
+Character,Defense,Clickable details and contextual selection; no combat turn switching,5,Included
+Character,Resistances,Clickable details and contextual selection; no combat turn switching,5,Included
+Character,XP,Clickable details and contextual selection; no combat turn switching,5,Included
+Character,Conditions,Clickable details and contextual selection; no combat turn switching,5,Included
+Character,Gold,Clickable details and contextual selection; no combat turn switching,5,Included
+Character,Food,Clickable details and contextual selection; no combat turn switching,5,Included
+Character,Items,Clickable details and contextual selection; no combat turn switching,5,Included
+Character,Quick,Clickable details and contextual selection; no combat turn switching,5,Included
+Character,Exchange,Clickable details and contextual selection; no combat turn switching,5,Included
+Character,Exit,Clickable details and contextual selection; no combat turn switching,5,Included
+Character,Seven attributes,Six attributes; Class Abilities; Supplies; cosmetic age only,5,Replacement
+Character,Skills,Six attributes; Class Abilities; Supplies; cosmetic age only,5,Replacement
+Character,Gems,Six attributes; Class Abilities; Supplies; cosmetic age only,5,Replacement
+Character,Age degradation,Six attributes; Class Abilities; Supplies; cosmetic age only,5,Replacement
+Character,Awards,Completed quest awards recorded per campaign with participating member IDs,16,Included
+Inventory,Weapons,"Nine-entry categories, explicit recipient mode, combat costs and validation",13,Included
+Inventory,Armor,"Nine-entry categories, explicit recipient mode, combat costs and validation",13,Included
+Inventory,Accessories,"Nine-entry categories, explicit recipient mode, combat costs and validation",13,Included
+Inventory,Misc,"Nine-entry categories, explicit recipient mode, combat costs and validation",13,Included
+Inventory,Equip,"Nine-entry categories, explicit recipient mode, combat costs and validation",13,Included
+Inventory,Use,"Nine-entry categories, explicit recipient mode, combat costs and validation",13,Included
+Inventory,Remove,"Nine-entry categories, explicit recipient mode, combat costs and validation",13,Included
+Inventory,Discard,"Nine-entry categories, explicit recipient mode, combat costs and validation",13,Included
+Inventory,Quest,"Nine-entry categories, explicit recipient mode, combat costs and validation",13,Included
+Inventory,Exit,"Nine-entry categories, explicit recipient mode, combat costs and validation",13,Included
+Inventory,Select row,"Nine-entry categories, explicit recipient mode, combat costs and validation",13,Included
+Inventory,Transfer,"Nine-entry categories, explicit recipient mode, combat costs and validation",13,Included
+Inventory,Class restrictions,"Nine-entry categories, explicit recipient mode, combat costs and validation",13,Included
+Inventory,Charges,"Nine-entry categories, explicit recipient mode, combat costs and validation",13,Included
+Inventory,Curses,"Nine-entry categories, explicit recipient mode, combat costs and validation",13,Included
+Inventory,Breakage,"Nine-entry categories, explicit recipient mode, combat costs and validation",13,Included
+Shop,Browse,Shared inventory shell with explicit owner and quote,15,Included
+Shop,Weapons,Shared inventory shell with explicit owner and quote,15,Included
+Shop,Armor,Shared inventory shell with explicit owner and quote,15,Included
+Shop,Accessories,Shared inventory shell with explicit owner and quote,15,Included
+Shop,Misc,Shared inventory shell with explicit owner and quote,15,Included
+Shop,Buy,Shared inventory shell with explicit owner and quote,15,Included
+Shop,Sell,Shared inventory shell with explicit owner and quote,15,Included
+Shop,Identify,Shared inventory shell with explicit owner and quote,15,Included
+Shop,Fix,Shared inventory shell with explicit owner and quote,15,Included
+Shop,Exit,Shared inventory shell with explicit owner and quote,15,Included
+Advanced item modes,Enchant Item,No dedicated item transformation interfaces in demo,13,Excluded
+Advanced item modes,Recharge Item,No dedicated item transformation interfaces in demo,13,Excluded
+Advanced item modes,Item to Gold,No dedicated item transformation interfaces in demo,13,Excluded
+Casting,Cast,Shared SP UI and validation,9,Included
+Casting,New,Shared SP UI and validation,9,Included
+Casting,Exit,Shared SP UI and validation,9,Included
+Casting,Caster selection,Shared SP UI and validation,9,Included
+Casting,Spell list navigation,Shared SP UI and validation,9,Included
+Casting,Ready,Shared SP UI and validation,9,Included
+Casting,Ally target,Shared SP UI and validation,9,Included
+Casting,Enemy target,Shared SP UI and validation,9,Included
+Casting,Party target,Shared SP UI and validation,9,Included
+Casting,World target,Shared SP UI and validation,9,Included
+Casting,Guild membership,Class sellers no membership; SP only; class-exclusive lists,9,Replacement
+Casting,Gem costs,Class sellers no membership; SP only; class-exclusive lists,9,Replacement
+Casting,Hybrid spell lists,Class sellers no membership; SP only; class-exclusive lists,9,Replacement
+Utility,Map,Visited map automatic; spell overlay does not discover cells,14,Included
+Utility,Minimap toggle,Visited map automatic; spell overlay does not discover cells,14,Included
+Utility,Facing indicator,Visited map automatic; spell overlay does not discover cells,14,Included
+Utility,Detection overlay,Visited map automatic; spell overlay does not discover cells,14,Included
+Journal,Quest Items,Quest objects outside ordinary inventory,16,Included
+Journal,Current Quests,Quest objects outside ordinary inventory,16,Included
+Journal,Auto Notes,Quest objects outside ordinary inventory,16,Included
+Journal,Up,Quest objects outside ordinary inventory,16,Included
+Journal,Down,Quest objects outside ordinary inventory,16,Included
+Journal,Exit,Quest objects outside ordinary inventory,16,Included
+System,Control Panel,System contract defines safe saves and recall penalty,32,Included
+System,Effects,System contract defines safe saves and recall penalty,31,Included
+System,Music,System contract defines safe saves and recall penalty,31,Included
+System,Load,System contract defines safe saves and recall penalty,6,Included
+System,Save,System contract defines safe saves and recall penalty,6,Included
+System,Save As,System contract defines safe saves and recall penalty,6,Included
+System,Main Menu,System contract defines safe saves and recall penalty,32,Included
+System,Emergency Recall,System contract defines safe saves and recall penalty,32,Included
+System,Help,System contract defines safe saves and recall penalty,32,Included
+System,Fullscreen,System contract defines safe saves and recall penalty,32,Included
+System,Scale,System contract defines safe saves and recall penalty,32,Included
+System,Reduce motion,System contract defines safe saves and recall penalty,32,Included
+New game,New Game,Fixed array instead of reroll; level 1 starters non-sellable,19,Included
+New game,Default Party,Fixed array instead of reroll; level 1 starters non-sellable,19,Included
+New game,Custom Party,Fixed array instead of reroll; level 1 starters non-sellable,19,Included
+New game,Portrait,Fixed array instead of reroll; level 1 starters non-sellable,19,Included
+New game,Name,Fixed array instead of reroll; level 1 starters non-sellable,19,Included
+New game,Class,Fixed array instead of reroll; level 1 starters non-sellable,19,Included
+New game,Attribute allocation,Fixed array instead of reroll; level 1 starters non-sellable,19,Included
+New game,Create,Fixed array instead of reroll; level 1 starters non-sellable,19,Included
+New game,Cancel,Fixed array instead of reroll; level 1 starters non-sellable,19,Included
+Roster,Up,24 stored maximum; tavern only,19,Included
+Roster,Down,24 stored maximum; tavern only,19,Included
+Roster,Delete,24 stored maximum; tavern only,19,Included
+Roster,Remove,24 stored maximum; tavern only,19,Included
+Roster,Create,24 stored maximum; tavern only,19,Included
+Roster,Exit,24 stored maximum; tavern only,19,Included
+Roster,Recruit,24 stored maximum; tavern only,19,Included
+Roster,Inspect,24 stored maximum; tavern only,19,Included
+Tavern,Drink,Quotes and autosave before roster changes,15,Included
+Tavern,Food,Quotes and autosave before roster changes,15,Included
+Tavern,Tip,Quotes and autosave before roster changes,15,Included
+Tavern,Rumors,Quotes and autosave before roster changes,15,Included
+Tavern,Sign In,Quotes and autosave before roster changes,15,Included
+Tavern,Rest,Quotes and autosave before roster changes,15,Included
+Tavern,Bank,Quotes and autosave before roster changes,15,Included
+Tavern,Exit,Quotes and autosave before roster changes,15,Included
+Bank,Deposit,Gold only; bank service embedded at tavern,15,Included
+Bank,Withdraw,Gold only; bank service embedded at tavern,15,Included
+Bank,Gold,Gold only; bank service embedded at tavern,15,Included
+Bank,Amount,Gold only; bank service embedded at tavern,15,Included
+Bank,Exit,Gold only; bank service embedded at tavern,15,Included
+Bank,Gems,Treasure gems sell as items; no bank interest in demo,15,Replacement
+Bank,Interest,Treasure gems sell as items; no bank interest in demo,15,Replacement
+Guild,Buy Spells,"Class and level checks, known-spell guard",15,Included
+Guild,Spell Info,"Class and level checks, known-spell guard",15,Included
+Guild,Exit,"Class and level checks, known-spell guard",15,Included
+Guild,Select character,"Class and level checks, known-spell guard",15,Included
+Temple,Heal,Itemized services and costs; revival not ordinary healing,15,Included
+Temple,Cure,Itemized services and costs; revival not ordinary healing,15,Included
+Temple,Revive,Itemized services and costs; revival not ordinary healing,15,Included
+Temple,Uncurse,Itemized services and costs; revival not ordinary healing,15,Included
+Temple,Donate,Itemized services and costs; revival not ordinary healing,15,Included
+Temple,Exit,Itemized services and costs; revival not ordinary healing,15,Included
+Trainer,Train,"XP threshold and gold, level cap 5",19,Included
+Trainer,Exit,"XP threshold and gold, level cap 5",19,Included
+Trainer,Growth selection,"XP threshold and gold, level cap 5",19,Included
+Generic,Yes,"Explicit eligibility/cost/range, cancel free",4,Included
+Generic,No,"Explicit eligibility/cost/range, cancel free",4,Included
+Generic,Who Will,"Explicit eligibility/cost/range, cancel free",4,Included
+Generic,Quantity,"Explicit eligibility/cost/range, cancel free",4,Included
+Generic,Password,"Explicit eligibility/cost/range, cancel free",4,Included
+Generic,Scroll Up,"Explicit eligibility/cost/range, cancel free",4,Included
+Generic,Scroll Down,"Explicit eligibility/cost/range, cancel free",4,Included
+Generic,Enter,"Explicit eligibility/cost/range, cancel free",4,Included
+Generic,Esc,"Explicit eligibility/cost/range, cancel free",4,Included
+World,Door,Persistent authored state with alternate mandatory solutions,14,Included
+World,Secret,Persistent authored state with alternate mandatory solutions,14,Included
+World,Trap,Persistent authored state with alternate mandatory solutions,14,Included
+World,Chest,Persistent authored state with alternate mandatory solutions,14,Included
+World,Fountain,Persistent authored state with alternate mandatory solutions,14,Included
+World,Key gate,Persistent authored state with alternate mandatory solutions,14,Included
+World,Puzzle,Persistent authored state with alternate mandatory solutions,14,Included
+World,Stairs,Persistent authored state with alternate mandatory solutions,14,Included
+Indicators,Health gem,Readable tooltip equivalents; inert when effect absent,32,Included
+Indicators,Actor highlight,Readable tooltip equivalents; inert when effect absent,32,Included
+Indicators,Protection gems,Readable tooltip equivalents; inert when effect absent,32,Included
+Indicators,Compass,Readable tooltip equivalents; inert when effect absent,32,Included
+Indicators,Danger mirror,Readable tooltip equivalents; inert when effect absent,32,Included
+Indicators,Secret book,Readable tooltip equivalents; inert when effect absent,32,Included
+Indicators,Wing ornament,Readable tooltip equivalents; inert when effect absent,32,Included
+Campaign,Overworld sides,Beyond one-town demo,34,Excluded
+Campaign,Mounts,Beyond one-town demo,34,Excluded
+Campaign,Strongholds,Beyond one-town demo,34,Excluded
+Campaign,Long-term aging,Beyond one-town demo,34,Excluded
+Campaign,Full secondary skill system,Beyond one-town demo,34,Excluded

@@ -1,0 +1,128 @@
+{
+  "format": "maxxia-authored-dialogue",
+  "formatVersion": 1,
+  "id": "lantern:dialogue:spirit",
+  "record": {
+    "entry": "entry",
+    "nodes": [
+      {
+        "id": "entry",
+        "text": "The maintenance echo guards the interlock. Bring my signed order, offer a torch, or challenge me. Each resolution releases the regulator; none decides which ending you must choose.",
+        "choices": [
+          {
+            "id": "spirit_question",
+            "text": "Question him using the signed record",
+            "next": "entry",
+            "routine": {
+              "routineId": "lantern:routine:spirit_question",
+              "args": {}
+            },
+            "condition": {
+              "op": "eq",
+              "left": {
+                "query": "state",
+                "address": {
+                  "scope": "campaign"
+                },
+                "kind": "flag",
+                "key": "lantern:flag:record"
+              },
+              "right": true
+            }
+          },
+          {
+            "id": "spirit_appease",
+            "text": "Offer one unequipped torch",
+            "next": "entry",
+            "routine": {
+              "routineId": "lantern:routine:spirit_appease",
+              "args": {}
+            },
+            "condition": {
+              "all": [
+                {
+                  "op": "eq",
+                  "left": {
+                    "query": "has-item",
+                    "item": "item_torch"
+                  },
+                  "right": true
+                },
+                {
+                  "not": {
+                    "any": [
+                      {
+                        "op": "eq",
+                        "left": {
+                          "query": "state",
+                          "address": {
+                            "scope": "campaign"
+                          },
+                          "kind": "flag",
+                          "key": "lantern:flag:spirit_clear"
+                        },
+                        "right": true
+                      },
+                      {
+                        "op": "contains",
+                        "left": {
+                          "query": "state",
+                          "address": {
+                            "scope": "campaign"
+                          },
+                          "kind": "collection",
+                          "key": "lantern:collection:e_spirit_status"
+                        },
+                        "right": "won"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "spirit_fight",
+            "text": "Challenge the maintenance echo",
+            "next": "entry",
+            "routine": {
+              "routineId": "lantern:routine:spirit_fight",
+              "args": {}
+            },
+            "condition": {
+              "not": {
+                "any": [
+                  {
+                    "op": "eq",
+                    "left": {
+                      "query": "state",
+                      "address": {
+                        "scope": "campaign"
+                      },
+                      "kind": "flag",
+                      "key": "lantern:flag:spirit_clear"
+                    },
+                    "right": true
+                  },
+                  {
+                    "op": "contains",
+                    "left": {
+                      "query": "state",
+                      "address": {
+                        "scope": "campaign"
+                      },
+                      "kind": "collection",
+                      "key": "lantern:collection:e_spirit_status"
+                    },
+                    "right": "won"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "id": "lantern:dialogue:spirit"
+  }
+}

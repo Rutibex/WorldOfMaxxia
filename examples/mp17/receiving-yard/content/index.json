@@ -1,0 +1,28 @@
+{
+  "format": "maxxia-content-index",
+  "formatVersion": 1,
+  "definitions": [
+    {
+      "id": "receiving:map:yard",
+      "kind": "map",
+      "visibility": "local",
+      "file": "content/yard.json",
+      "placement": "authored",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "receiving:encounter:spar",
+      "kind": "encounter",
+      "visibility": "local",
+      "file": "content/spar.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "receiving:map:yard"
+        }
+      ]
+    }
+  ]
+}

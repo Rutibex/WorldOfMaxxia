@@ -1,0 +1,21 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 2,
+  "id": "mp15:routine:inspect",
+  "parameters": {},
+  "actions": [
+    {
+      "op": "state",
+      "kind": "flag",
+      "address": {
+        "scope": "campaign"
+      },
+      "key": "mp15:flag:inspected",
+      "value": true
+    },
+    {
+      "op": "message",
+      "text": "The regulator can restore village water or power the infirmary. A key or the spirit\u2019s help will suffice."
+    }
+  ]
+}

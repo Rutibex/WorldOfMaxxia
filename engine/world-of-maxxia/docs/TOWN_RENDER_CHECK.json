@@ -1,0 +1,11 @@
+{
+  "frames": 784,
+  "gateVariants": 2,
+  "facings": 4,
+  "elapsedMs": 28479,
+  "mapUnchanged": true,
+  "stateUnchanged": true,
+  "completeOpaqueCoverage": true,
+  "samples": 8,
+  "renderer": "production TownEnvironment on @napi-rs/canvas; no browser"
+}

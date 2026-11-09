@@ -1,0 +1,19 @@
+{
+  "format": "maxxia-authored-ability",
+  "formatVersion": 1,
+  "id": "effect_lab:ability:fever",
+  "record": {
+    "name": "Apply Silt Fever",
+    "description": "Apply Silt Fever through the shared MP18 effect kernel.",
+    "target": "self",
+    "context": "exploration",
+    "operations": [
+      {
+        "op": "condition",
+        "conditionId": "effect_lab:condition:silt_fever",
+        "duration": 4
+      }
+    ],
+    "id": "effect_lab:ability:fever"
+  }
+}

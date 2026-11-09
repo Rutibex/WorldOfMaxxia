@@ -1,0 +1,279 @@
+{
+  "format": "maxxia-environments",
+  "version": 1,
+  "profiles": [
+    {
+      "id": "environment_default",
+      "name": "Classic masonry",
+      "skyResourceId": null,
+      "skyColor": "#192b35",
+      "fogColor": "#041018",
+      "fogStrength": 0.095,
+      "materials": [
+        {
+          "id": "material_floor_default",
+          "name": "Floor",
+          "surface": "floor",
+          "resourceId": null
+        },
+        {
+          "id": "material_wall_default",
+          "name": "Wall",
+          "surface": "wall",
+          "resourceId": null
+        },
+        {
+          "id": "material_ceiling_default",
+          "name": "Ceiling",
+          "surface": "ceiling",
+          "resourceId": null
+        }
+      ]
+    },
+    {
+      "id": "environment_courtyard",
+      "name": "Original Courtyard",
+      "skyResourceId": null,
+      "skyColor": "#192b35",
+      "fogColor": "#041018",
+      "fogStrength": 0.095,
+      "materials": [
+        {
+          "id": "material_floor_default",
+          "name": "Floor",
+          "surface": "floor",
+          "resourceId": null
+        },
+        {
+          "id": "material_wall_default",
+          "name": "Wall",
+          "surface": "wall",
+          "resourceId": null
+        },
+        {
+          "id": "material_ceiling_default",
+          "name": "Ceiling",
+          "surface": "ceiling",
+          "resourceId": null
+        }
+      ],
+      "scene": {
+        "renderer": "courtyard",
+        "legacyScenery": true,
+        "wallTexture": "house",
+        "floorTexture": "cobbles",
+        "doorTexture": "gate-closed",
+        "walls": [
+          {
+            "x": -1024,
+            "y": -1024,
+            "width": 1029,
+            "height": 1029,
+            "texture": "guild"
+          },
+          {
+            "x": 5,
+            "y": -1024,
+            "width": 4,
+            "height": 1029,
+            "texture": "shrine"
+          },
+          {
+            "x": 9,
+            "y": -1024,
+            "width": 1015,
+            "height": 1029,
+            "texture": "guild"
+          },
+          {
+            "x": -1024,
+            "y": 5,
+            "width": 1030,
+            "height": 3,
+            "texture": "shrine"
+          },
+          {
+            "x": 10,
+            "y": 5,
+            "width": 1014,
+            "height": 3,
+            "texture": "forge"
+          },
+          {
+            "x": 9,
+            "y": 10,
+            "width": 1015,
+            "height": 1014,
+            "texture": "forge"
+          }
+        ],
+        "floors": [],
+        "doors": {
+          "town_south_gate": "blue-door"
+        }
+      }
+    },
+    {
+      "id": "environment_waterworks",
+      "name": "Original Waterworks",
+      "skyResourceId": null,
+      "skyColor": "#192b35",
+      "fogColor": "#041018",
+      "fogStrength": 0.095,
+      "materials": [
+        {
+          "id": "material_floor_default",
+          "name": "Floor",
+          "surface": "floor",
+          "resourceId": null
+        },
+        {
+          "id": "material_wall_default",
+          "name": "Wall",
+          "surface": "wall",
+          "resourceId": null
+        },
+        {
+          "id": "material_ceiling_default",
+          "name": "Ceiling",
+          "surface": "ceiling",
+          "resourceId": null
+        }
+      ],
+      "scene": {
+        "renderer": "waterworks",
+        "legacyScenery": true,
+        "wallTexture": "wall",
+        "floorTexture": "floor",
+        "doorTexture": "oak-door",
+        "walls": [
+          {
+            "x": 10,
+            "y": -1024,
+            "width": 1014,
+            "height": 2048,
+            "texture": "pipe-wall"
+          },
+          {
+            "x": -1024,
+            "y": 9,
+            "width": 2048,
+            "height": 1015,
+            "texture": "moss-wall"
+          }
+        ],
+        "floors": [
+          {
+            "x": 10,
+            "y": 4,
+            "width": 1014,
+            "height": 1020,
+            "texture": "grate-floor"
+          }
+        ],
+        "doors": {
+          "door_north": "bronze-door",
+          "door_pump_grate": "iron-door",
+          "door_bell_archive": "bronze-door",
+          "door_tool_ward": "bronze-door"
+        }
+      }
+    },
+    {
+      "id": "environment_vault",
+      "name": "Original Vault",
+      "skyResourceId": null,
+      "skyColor": "#192b35",
+      "fogColor": "#041018",
+      "fogStrength": 0.095,
+      "materials": [
+        {
+          "id": "material_floor_default",
+          "name": "Floor",
+          "surface": "floor",
+          "resourceId": null
+        },
+        {
+          "id": "material_wall_default",
+          "name": "Wall",
+          "surface": "wall",
+          "resourceId": null
+        },
+        {
+          "id": "material_ceiling_default",
+          "name": "Ceiling",
+          "surface": "ceiling",
+          "resourceId": null
+        }
+      ],
+      "scene": {
+        "renderer": "vault",
+        "legacyScenery": true,
+        "wallTexture": "wall",
+        "floorTexture": "floor",
+        "doorTexture": "seal-door",
+        "walls": [
+          {
+            "x": 11,
+            "y": -1024,
+            "width": 1013,
+            "height": 1030,
+            "texture": "brass-wall"
+          },
+          {
+            "x": -1024,
+            "y": -1024,
+            "width": 1029,
+            "height": 2048,
+            "texture": "wet-wall"
+          },
+          {
+            "x": -1024,
+            "y": 12,
+            "width": 2048,
+            "height": 1012,
+            "texture": "wet-wall"
+          },
+          {
+            "x": -1024,
+            "y": 8,
+            "width": 2048,
+            "height": 1,
+            "texture": "wet-wall"
+          }
+        ],
+        "floors": [
+          {
+            "x": 11,
+            "y": -1024,
+            "width": 1013,
+            "height": 1030,
+            "texture": "grate-floor"
+          },
+          {
+            "x": -1024,
+            "y": 12,
+            "width": 2048,
+            "height": 1012,
+            "texture": "channel-floor"
+          },
+          {
+            "x": -1024,
+            "y": 8,
+            "width": 2048,
+            "height": 1,
+            "texture": "channel-floor"
+          },
+          {
+            "x": -1024,
+            "y": -1024,
+            "width": 1029,
+            "height": 1030,
+            "texture": "channel-floor"
+          }
+        ],
+        "doors": {}
+      }
+    }
+  ]
+}

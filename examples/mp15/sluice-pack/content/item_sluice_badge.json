@@ -1,0 +1,24 @@
+{
+  "format": "maxxia-authored-item",
+  "formatVersion": 1,
+  "id": "mp15:item:sluice_badge",
+  "record": {
+    "id": "mp15:item:sluice_badge",
+    "name": "Sluice Keeper\u2019s Badge",
+    "category": "misc",
+    "price": 30,
+    "maxDurability": 0,
+    "maxCharges": 0,
+    "effect": "none",
+    "power": 0,
+    "unique": false,
+    "slot": null,
+    "weight": null,
+    "armor": 0,
+    "dice": null,
+    "accuracy": 0,
+    "resistance": null,
+    "resistBonus": 0,
+    "description": "Sluice Keeper\u2019s Badge from the sluice adventure."
+  }
+}

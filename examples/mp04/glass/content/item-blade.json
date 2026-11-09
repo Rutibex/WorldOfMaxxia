@@ -1,0 +1,28 @@
+{
+  "format": "maxxia-authored-item",
+  "record": {
+    "id": "glass:item:blade",
+    "name": "Glass Ward Blade",
+    "category": "weapons",
+    "price": 75,
+    "maxDurability": 20,
+    "maxCharges": 0,
+    "effect": "none",
+    "power": 0,
+    "unique": false,
+    "slot": "melee",
+    "weight": null,
+    "armor": 0,
+    "dice": "1d8",
+    "accuracy": 0,
+    "resistance": null,
+    "resistBonus": 0,
+    "description": "A reliable weapon, subject to wear and repairs.",
+    "iconResourceId": "glass:resource:sword",
+    "equipmentTags": [
+      "melee:sword"
+    ]
+  },
+  "id": "glass:item:blade",
+  "formatVersion": 1
+}

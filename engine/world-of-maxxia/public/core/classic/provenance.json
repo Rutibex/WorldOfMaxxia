@@ -1,0 +1,28 @@
+{
+  "format": "maxxia-core-provenance",
+  "formatVersion": 1,
+  "rulesId": "core:rules:classic",
+  "rulesVersion": "1.0.0",
+  "legacyProjectId": "project_world_of_maxxia",
+  "coreDatabases": {
+    "classes": "7b94372682a5df1069490395621654b7c76e56fc5a47215828c762d11f8e7be3",
+    "items": "32528afb28e43d2de63ecdc43d862443b7858699862adcb767cadcfbbb076160",
+    "monsters": "2a0709bc17ea1a7e7d37bff9e0255bc828ceb43805b979e5832648d1ccbc2511",
+    "spells": "83edd5fa30f7968a5e3a0ee570d02c53f6740d12c25773dba802caf52dfb6086",
+    "conditions": "76bf0c345221a9f20a5fc4e6c27cac44ce5db0476464b88ac8d2c6e8ae388443",
+    "progression": "4ab07bd809c32c7bcfcb67c8b9708591ae2fb2b89e464ac12c4fa3a55a7ed806"
+  },
+  "legacyOverlay": {
+    "items": "6f8d3f8a1941735365bba7715db739f34ab1fd46b744d1033c9fabe032b91aa7",
+    "monsters": "bdc563dffbfdea61b3406b8efc4b9b616d59d8e53d6dcdfd8cf837c19c1ec4c6"
+  },
+  "originalDatabases": {
+    "classes": "7b94372682a5df1069490395621654b7c76e56fc5a47215828c762d11f8e7be3",
+    "items": "6bd978a010c5eff880cd82f8b5131eb9d76a8d5ce42406637d0e2b9d005d658b",
+    "monsters": "a9e827ab44a32f1577f103aa7bd5cac776a296667ab05979e3ae40ae97f9f209",
+    "spells": "83edd5fa30f7968a5e3a0ee570d02c53f6740d12c25773dba802caf52dfb6086",
+    "conditions": "76bf0c345221a9f20a5fc4e6c27cac44ce5db0476464b88ac8d2c6e8ae388443",
+    "progression": "4ab07bd809c32c7bcfcb67c8b9708591ae2fb2b89e464ac12c4fa3a55a7ed806"
+  },
+  "immutableLegacyIds": true
+}

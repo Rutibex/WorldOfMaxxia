@@ -1,0 +1,35 @@
+{
+  "format": "maxxia-authored-monster",
+  "formatVersion": 1,
+  "id": "mp16:monster:watchman",
+  "record": {
+    "id": "mp16:monster:watchman",
+    "name": "Waterlogged Watchman",
+    "hp": 3,
+    "defense": 10,
+    "attack": 2,
+    "damage": "1d3",
+    "speed": 11,
+    "xp": 8,
+    "gold": 2,
+    "symbol": "\u2726",
+    "attributes": {
+      "DEX": 13,
+      "WIS": 8,
+      "CON": 8
+    },
+    "undead": false,
+    "resistances": {},
+    "visualId": "dust_imp",
+    "aiPattern": "standard",
+    "abilities": [
+      {
+        "id": "basic",
+        "kind": "strike",
+        "weight": 1,
+        "when": "always",
+        "bonusDamage": 0
+      }
+    ]
+  }
+}

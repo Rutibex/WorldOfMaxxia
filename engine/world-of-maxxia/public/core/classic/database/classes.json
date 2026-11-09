@@ -1,0 +1,174 @@
+{
+  "format": "maxxia-classes",
+  "version": 1,
+  "classes": [
+    {
+      "name": "Myrmidon",
+      "primary": "STR",
+      "hpBase": 14,
+      "hpGain": 7,
+      "casting": null,
+      "role": "A martial adventurer who meets danger head-on.",
+      "features": "Prepared Measured Steel, Power Stroke or Bastion changes the normal Attack. Veteran strikes improve at levels 3 and 5.",
+      "equipmentTags": [
+        "melee:staff",
+        "melee:dagger",
+        "melee:mace",
+        "melee:sword",
+        "melee:general",
+        "ranged",
+        "shield",
+        "armor:light",
+        "armor:medium",
+        "armor:heavy",
+        "accessory"
+      ],
+      "traits": [
+        "martial_mastery"
+      ],
+      "preparedStyles": [
+        "measured",
+        "power",
+        "bastion"
+      ],
+      "id": "myrmidon",
+      "spBase": 0,
+      "spGain": 0,
+      "spAttributeMultiplier": 0
+    },
+    {
+      "name": "Artificer",
+      "primary": "DEX",
+      "hpBase": 11,
+      "hpGain": 5,
+      "casting": null,
+      "role": "An ingenious engineer, burglar and device user.",
+      "features": "Prepared Needle Device or Spark Coil uses DEX without SP, charges or items. Crossbow training improves ranged attacks.",
+      "equipmentTags": [
+        "melee:staff",
+        "melee:dagger",
+        "melee:mace",
+        "melee:general",
+        "ranged",
+        "shield",
+        "armor:light",
+        "armor:medium",
+        "accessory"
+      ],
+      "traits": [
+        "device_training"
+      ],
+      "preparedStyles": [
+        "needle",
+        "spark"
+      ],
+      "id": "artificer",
+      "spBase": 0,
+      "spGain": 0,
+      "spAttributeMultiplier": 0
+    },
+    {
+      "name": "Mutant",
+      "primary": "CON",
+      "hpBase": 16,
+      "hpGain": 8,
+      "casting": null,
+      "role": "An adaptable survivor whose body becomes a weapon.",
+      "features": "Prepared claws, carapace and thornhide benefit from natural mutations.",
+      "equipmentTags": [
+        "melee:staff",
+        "melee:dagger",
+        "melee:mace",
+        "melee:sword",
+        "melee:general",
+        "ranged",
+        "armor:light",
+        "armor:medium",
+        "accessory"
+      ],
+      "traits": [
+        "mutant_biology",
+        "thornhide"
+      ],
+      "preparedStyles": [
+        "claws",
+        "carapace"
+      ],
+      "id": "mutant",
+      "spBase": 0,
+      "spGain": 0,
+      "spAttributeMultiplier": 0
+    },
+    {
+      "name": "Wizard",
+      "primary": "INT",
+      "hpBase": 8,
+      "hpGain": 4,
+      "casting": "INT",
+      "role": "A scholar of elemental force and arcane utility.",
+      "features": "Shared SP casting and a twelve-spell Wizard catalogue.",
+      "equipmentTags": [
+        "melee:staff",
+        "melee:dagger",
+        "armor:light",
+        "accessory"
+      ],
+      "traits": [],
+      "preparedStyles": [
+        "standard"
+      ],
+      "id": "wizard",
+      "spBase": 8,
+      "spGain": 4,
+      "spAttributeMultiplier": 2
+    },
+    {
+      "name": "Priest",
+      "primary": "WIS",
+      "hpBase": 11,
+      "hpGain": 5,
+      "casting": "WIS",
+      "role": "A healer and guardian against supernatural threats.",
+      "features": "Shared SP spellcasting; twelve Priest spells.",
+      "equipmentTags": [
+        "melee:staff",
+        "melee:mace",
+        "armor:light",
+        "armor:medium",
+        "shield",
+        "accessory"
+      ],
+      "traits": [],
+      "preparedStyles": [
+        "standard"
+      ],
+      "id": "priest",
+      "spBase": 8,
+      "spGain": 4,
+      "spAttributeMultiplier": 2
+    },
+    {
+      "name": "Witch",
+      "primary": "CHA",
+      "hpBase": 10,
+      "hpGain": 5,
+      "casting": "CHA",
+      "role": "A worker of curses, draining magic and strange transformations.",
+      "features": "Shared SP spellcasting; twelve Witch spells.",
+      "equipmentTags": [
+        "melee:staff",
+        "melee:dagger",
+        "armor:light",
+        "accessory"
+      ],
+      "traits": [],
+      "preparedStyles": [
+        "standard"
+      ],
+      "id": "witch",
+      "spBase": 8,
+      "spGain": 4,
+      "spAttributeMultiplier": 2
+    }
+  ]
+}

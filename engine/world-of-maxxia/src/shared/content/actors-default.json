@@ -1,0 +1,292 @@
+{
+  "format": "maxxia-actors",
+  "version": 1,
+  "portraits": [
+    {
+      "id": "portrait_00",
+      "name": "Portrait 1",
+      "legacyIndex": 0,
+      "states": {
+        "normal": "asset_art_portraits_00_normal_png",
+        "hurt": "asset_art_portraits_00_hurt_png",
+        "afflicted": "asset_art_portraits_00_afflicted_png",
+        "dead": "asset_art_portraits_00_dead_png"
+      }
+    },
+    {
+      "id": "portrait_01",
+      "name": "Portrait 2",
+      "legacyIndex": 1,
+      "states": {
+        "normal": "asset_art_portraits_01_normal_png",
+        "hurt": "asset_art_portraits_01_hurt_png",
+        "afflicted": "asset_art_portraits_01_afflicted_png",
+        "dead": "asset_art_portraits_01_dead_png"
+      }
+    },
+    {
+      "id": "portrait_02",
+      "name": "Portrait 3",
+      "legacyIndex": 2,
+      "states": {
+        "normal": "asset_art_portraits_02_normal_png",
+        "hurt": "asset_art_portraits_02_hurt_png",
+        "afflicted": "asset_art_portraits_02_afflicted_png",
+        "dead": "asset_art_portraits_02_dead_png"
+      }
+    },
+    {
+      "id": "portrait_03",
+      "name": "Portrait 4",
+      "legacyIndex": 3,
+      "states": {
+        "normal": "asset_art_portraits_03_normal_png",
+        "hurt": "asset_art_portraits_03_hurt_png",
+        "afflicted": "asset_art_portraits_03_afflicted_png",
+        "dead": "asset_art_portraits_03_dead_png"
+      }
+    },
+    {
+      "id": "portrait_04",
+      "name": "Portrait 5",
+      "legacyIndex": 4,
+      "states": {
+        "normal": "asset_art_portraits_04_normal_png",
+        "hurt": "asset_art_portraits_04_hurt_png",
+        "afflicted": "asset_art_portraits_04_afflicted_png",
+        "dead": "asset_art_portraits_04_dead_png"
+      }
+    },
+    {
+      "id": "portrait_05",
+      "name": "Portrait 6",
+      "legacyIndex": 5,
+      "states": {
+        "normal": "asset_art_witch_normal_png",
+        "hurt": "asset_art_witch_hurt_png",
+        "afflicted": "asset_art_witch_afflicted_png",
+        "dead": "asset_art_witch_dead_png"
+      }
+    },
+    {
+      "id": "portrait_06",
+      "name": "Portrait 7",
+      "legacyIndex": 6,
+      "states": {
+        "normal": "asset_art_portraits_06_normal_png",
+        "hurt": "asset_art_portraits_06_hurt_png",
+        "afflicted": "asset_art_portraits_06_afflicted_png",
+        "dead": "asset_art_portraits_06_dead_png"
+      }
+    },
+    {
+      "id": "portrait_07",
+      "name": "Portrait 8",
+      "legacyIndex": 7,
+      "states": {
+        "normal": "asset_art_portraits_07_normal_png",
+        "hurt": "asset_art_portraits_07_hurt_png",
+        "afflicted": "asset_art_portraits_07_afflicted_png",
+        "dead": "asset_art_portraits_07_dead_png"
+      }
+    },
+    {
+      "id": "portrait_08",
+      "name": "Portrait 9",
+      "legacyIndex": 8,
+      "states": {
+        "normal": "asset_art_portraits_08_normal_png",
+        "hurt": "asset_art_portraits_08_hurt_png",
+        "afflicted": "asset_art_portraits_08_afflicted_png",
+        "dead": "asset_art_portraits_08_dead_png"
+      }
+    },
+    {
+      "id": "portrait_09",
+      "name": "Portrait 10",
+      "legacyIndex": 9,
+      "states": {
+        "normal": "asset_art_portraits_09_normal_png",
+        "hurt": "asset_art_portraits_09_hurt_png",
+        "afflicted": "asset_art_portraits_09_afflicted_png",
+        "dead": "asset_art_portraits_09_dead_png"
+      }
+    },
+    {
+      "id": "portrait_10",
+      "name": "Portrait 11",
+      "legacyIndex": 10,
+      "states": {
+        "normal": "asset_art_portraits_10_normal_png",
+        "hurt": "asset_art_portraits_10_hurt_png",
+        "afflicted": "asset_art_portraits_10_afflicted_png",
+        "dead": "asset_art_portraits_10_dead_png"
+      }
+    },
+    {
+      "id": "portrait_11",
+      "name": "Portrait 12",
+      "legacyIndex": 11,
+      "states": {
+        "normal": "asset_art_portraits_11_normal_png",
+        "hurt": "asset_art_portraits_11_hurt_png",
+        "afflicted": "asset_art_portraits_11_afflicted_png",
+        "dead": "asset_art_portraits_11_dead_png"
+      }
+    }
+  ],
+  "actors": [
+    {
+      "id": "hero_tarin",
+      "name": "Tarin",
+      "classId": "myrmidon",
+      "heritage": "Human",
+      "portrait": 0,
+      "age": 29,
+      "attributes": {
+        "STR": 16,
+        "DEX": 13,
+        "CON": 14,
+        "INT": 8,
+        "WIS": 12,
+        "CHA": 10
+      },
+      "portraitId": "portrait_00",
+      "equipment": {
+        "melee": "item_sword",
+        "ranged": null,
+        "body": "item_ring_mail",
+        "offhand": "item_round_shield",
+        "preferredAttack": "melee"
+      }
+    },
+    {
+      "id": "hero_vexa",
+      "name": "Vexa",
+      "classId": "artificer",
+      "heritage": "Human",
+      "portrait": 1,
+      "age": 26,
+      "attributes": {
+        "STR": 10,
+        "DEX": 16,
+        "CON": 13,
+        "INT": 14,
+        "WIS": 12,
+        "CHA": 8
+      },
+      "portraitId": "portrait_01",
+      "equipment": {
+        "melee": "item_dagger",
+        "ranged": "item_crossbow",
+        "body": "item_leather_coat",
+        "offhand": null,
+        "preferredAttack": "ranged"
+      }
+    },
+    {
+      "id": "hero_brindle",
+      "name": "Brindle",
+      "classId": "mutant",
+      "heritage": "Altered",
+      "portrait": 2,
+      "age": 34,
+      "attributes": {
+        "STR": 14,
+        "DEX": 12,
+        "CON": 16,
+        "INT": 8,
+        "WIS": 13,
+        "CHA": 10
+      },
+      "portraitId": "portrait_02",
+      "equipment": {
+        "melee": "item_spear",
+        "ranged": null,
+        "body": "item_leather_coat",
+        "offhand": null,
+        "preferredAttack": "melee"
+      }
+    },
+    {
+      "id": "hero_orrin",
+      "name": "Orrin",
+      "classId": "wizard",
+      "heritage": "Human",
+      "portrait": 3,
+      "age": 42,
+      "attributes": {
+        "STR": 8,
+        "DEX": 13,
+        "CON": 12,
+        "INT": 16,
+        "WIS": 14,
+        "CHA": 10
+      },
+      "portraitId": "portrait_03",
+      "equipment": {
+        "melee": "item_staff",
+        "ranged": null,
+        "body": "item_cloth_robe",
+        "offhand": null,
+        "preferredAttack": "melee"
+      }
+    },
+    {
+      "id": "hero_sera",
+      "name": "Sera",
+      "classId": "priest",
+      "heritage": "Human",
+      "portrait": 4,
+      "age": 31,
+      "attributes": {
+        "STR": 13,
+        "DEX": 10,
+        "CON": 14,
+        "INT": 8,
+        "WIS": 16,
+        "CHA": 12
+      },
+      "portraitId": "portrait_04",
+      "equipment": {
+        "melee": "item_mace",
+        "ranged": null,
+        "body": "item_ring_mail",
+        "offhand": "item_round_shield",
+        "preferredAttack": "melee"
+      }
+    },
+    {
+      "id": "hero_mora",
+      "name": "Mora",
+      "classId": "witch",
+      "heritage": "Human",
+      "portrait": 5,
+      "age": 27,
+      "attributes": {
+        "STR": 8,
+        "DEX": 14,
+        "CON": 12,
+        "INT": 13,
+        "WIS": 10,
+        "CHA": 16
+      },
+      "portraitId": "portrait_05",
+      "equipment": {
+        "melee": "item_dagger",
+        "ranged": null,
+        "body": "item_cloth_robe",
+        "offhand": null,
+        "preferredAttack": "melee"
+      }
+    }
+  ],
+  "startingParty": [
+    "hero_tarin",
+    "hero_vexa",
+    "hero_brindle",
+    "hero_orrin",
+    "hero_sera",
+    "hero_mora"
+  ]
+}

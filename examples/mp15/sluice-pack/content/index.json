@@ -1,0 +1,321 @@
+{
+  "format": "maxxia-content-index",
+  "formatVersion": 1,
+  "definitions": [
+    {
+      "id": "mp15:dialogue:edda",
+      "kind": "dialogue",
+      "visibility": "local",
+      "file": "content/dialogue_edda.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp15:item:tool_roll"
+        },
+        {
+          "id": "mp15:quest:broken_sluice"
+        },
+        {
+          "id": "mp15:quest:lost_tools"
+        },
+        {
+          "id": "mp15:routine:accept"
+        },
+        {
+          "id": "mp15:routine:accept_tools"
+        },
+        {
+          "id": "mp15:routine:divert"
+        },
+        {
+          "id": "mp15:routine:refuse"
+        },
+        {
+          "id": "mp15:routine:repair"
+        },
+        {
+          "id": "mp15:routine:return_tools"
+        },
+        {
+          "id": "mp15:routine:ruin"
+        }
+      ]
+    },
+    {
+      "id": "mp15:dialogue:spirit",
+      "kind": "dialogue",
+      "visibility": "local",
+      "file": "content/dialogue_spirit.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp15:quest:broken_sluice"
+        },
+        {
+          "id": "mp15:routine:spirit_help"
+        }
+      ]
+    },
+    {
+      "id": "mp15:item:ledger",
+      "kind": "item",
+      "visibility": "local",
+      "file": "content/item_ledger.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "mp15:item:repair_charm",
+      "kind": "item",
+      "visibility": "exported",
+      "file": "content/item_repair_charm.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "mp15:item:sluice_badge",
+      "kind": "item",
+      "visibility": "exported",
+      "file": "content/item_sluice_badge.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "mp15:item:sluice_key",
+      "kind": "item",
+      "visibility": "local",
+      "file": "content/item_sluice_key.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "mp15:item:tool_roll",
+      "kind": "item",
+      "visibility": "local",
+      "file": "content/item_tool_roll.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "mp15:quest:broken_sluice",
+      "kind": "quest",
+      "visibility": "local",
+      "file": "content/main.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp15:item:ledger"
+        },
+        {
+          "id": "mp15:item:sluice_badge"
+        },
+        {
+          "id": "mp15:item:sluice_key"
+        }
+      ]
+    },
+    {
+      "id": "mp15:map:sluice",
+      "kind": "map",
+      "visibility": "local",
+      "file": "content/map.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp15:item:ledger"
+        },
+        {
+          "id": "mp15:item:sluice_key"
+        },
+        {
+          "id": "mp15:item:tool_roll"
+        },
+        {
+          "id": "mp15:npc:edda"
+        },
+        {
+          "id": "mp15:npc:spirit"
+        },
+        {
+          "id": "mp15:routine:inspect"
+        }
+      ]
+    },
+    {
+      "id": "mp15:npc:edda",
+      "kind": "npc",
+      "visibility": "local",
+      "file": "content/npc_edda.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp15:dialogue:edda"
+        }
+      ]
+    },
+    {
+      "id": "mp15:npc:spirit",
+      "kind": "npc",
+      "visibility": "local",
+      "file": "content/npc_spirit.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp15:dialogue:spirit"
+        }
+      ]
+    },
+    {
+      "id": "mp15:quest:records",
+      "kind": "quest",
+      "visibility": "local",
+      "file": "content/records.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp15:item:ledger"
+        }
+      ]
+    },
+    {
+      "id": "mp15:routine:accept",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_accept.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp15:quest:broken_sluice"
+        }
+      ]
+    },
+    {
+      "id": "mp15:routine:accept_tools",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_accept_tools.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp15:quest:lost_tools"
+        }
+      ]
+    },
+    {
+      "id": "mp15:routine:divert",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_divert.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp15:quest:broken_sluice"
+        }
+      ]
+    },
+    {
+      "id": "mp15:routine:inspect",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_inspect.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "mp15:routine:refuse",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_refuse.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp15:quest:broken_sluice"
+        }
+      ]
+    },
+    {
+      "id": "mp15:routine:repair",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_repair.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp15:quest:broken_sluice"
+        }
+      ]
+    },
+    {
+      "id": "mp15:routine:return_tools",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_return_tools.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp15:quest:lost_tools"
+        }
+      ]
+    },
+    {
+      "id": "mp15:routine:ruin",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_ruin.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp15:quest:broken_sluice"
+        }
+      ]
+    },
+    {
+      "id": "mp15:routine:spirit_help",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_spirit_help.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "mp15:quest:lost_tools",
+      "kind": "quest",
+      "visibility": "local",
+      "file": "content/tools.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp15:item:repair_charm"
+        },
+        {
+          "id": "mp15:item:tool_roll"
+        },
+        {
+          "id": "mp15:quest:broken_sluice"
+        }
+      ]
+    }
+  ]
+}

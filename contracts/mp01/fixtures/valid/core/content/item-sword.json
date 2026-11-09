@@ -1,0 +1,5 @@
+{
+  "id": "core:item:sword",
+  "fixtureOnly": true,
+  "note": "Metadata contract fixture; not a playable or executable definition."
+}

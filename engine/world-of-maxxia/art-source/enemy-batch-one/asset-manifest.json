@@ -1,0 +1,42 @@
+{
+  "phase": 27,
+  "cell": 128,
+  "columns": 4,
+  "rows": 4,
+  "enemyKinds": [
+    "dust_imp",
+    "stone_mite",
+    "gallery_watcher"
+  ],
+  "newAtlases": [
+    "stone-mite",
+    "gallery-watcher"
+  ],
+  "clips": {
+    "idle": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "attack": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "hurt": [
+      10,
+      11
+    ],
+    "death": [
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "notes": "Deterministically authored original full-colour painted-pixel fantasy silhouettes. Existing Dust Imp master from Phase 20 retained unchanged."
+}

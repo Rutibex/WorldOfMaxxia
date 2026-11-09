@@ -1,0 +1,12 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 2,
+  "id": "bell:routine:clue",
+  "parameters": {},
+  "actions": [
+    {
+      "op": "message",
+      "text": "Complete valve instruction: turn INTAKE first, RETURN second, then BELL. Any wrong input vents1 damage per active hero and resets the sequence. Alternatively hand-prime the bypass for10 gold,1 food and20 minutes."
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+Portable Phaser 3.90.0 ESM vendor from the verified original build. MIT license retained in ../../licenses and THIRD_PARTY_NOTICES.md. build-offline.mjs copies these two files into a fresh dist; no old build or source maps are required. Standard Vite builds use npm dependencies instead.

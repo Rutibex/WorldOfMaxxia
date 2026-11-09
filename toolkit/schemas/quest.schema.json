@@ -1,0 +1,451 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maxxia.invalid/toolkit/mp15/quest.schema.json",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "maxxia-authored-quest"
+    },
+    "formatVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "record": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "initial": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 24
+        },
+        "states": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 24
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120
+              },
+              "status": {
+                "enum": [
+                  "hidden",
+                  "available",
+                  "active",
+                  "succeeded",
+                  "refused",
+                  "failed"
+                ]
+              },
+              "ending": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 120
+                  },
+                  "text": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 4000
+                  },
+                  "campaign": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "title",
+                  "text",
+                  "campaign"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "status"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 16
+        },
+        "objectives": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 24
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "states": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 24
+                },
+                "minItems": 1,
+                "maxItems": 16
+              },
+              "condition": {
+                "$ref": "https://maxxia.invalid/toolkit/mp12/routine.schema.json#/$defs/condition"
+              },
+              "optional": {
+                "type": "boolean"
+              },
+              "hidden": {
+                "type": "boolean"
+              },
+              "journalId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 24
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "description",
+              "states",
+              "condition"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 32
+        },
+        "journal": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 24
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "states": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 24
+                },
+                "minItems": 1,
+                "maxItems": 16
+              },
+              "condition": {
+                "$ref": "https://maxxia.invalid/toolkit/mp12/routine.schema.json#/$defs/condition"
+              }
+            },
+            "required": [
+              "id",
+              "text"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 64
+        },
+        "transitions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 24
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "from": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 24
+                },
+                "minItems": 1,
+                "maxItems": 16
+              },
+              "to": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 24
+              },
+              "condition": {
+                "$ref": "https://maxxia.invalid/toolkit/mp12/routine.schema.json#/$defs/condition"
+              },
+              "requirements": {
+                "type": "object",
+                "properties": {
+                  "all": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 24
+                    },
+                    "minItems": 0,
+                    "maxItems": 32
+                  },
+                  "any": {
+                    "type": "array",
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 24
+                      },
+                      "minItems": 1,
+                      "maxItems": 32
+                    },
+                    "minItems": 0,
+                    "maxItems": 16
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              },
+              "manual": {
+                "type": "boolean"
+              },
+              "minutes": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 60
+              },
+              "journal": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 24
+                },
+                "minItems": 0,
+                "maxItems": 16
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "from",
+              "to"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 64
+        },
+        "rewards": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 24
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "states": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 24
+                },
+                "minItems": 1,
+                "maxItems": 16
+              },
+              "condition": {
+                "$ref": "https://maxxia.invalid/toolkit/mp12/routine.schema.json#/$defs/condition"
+              },
+              "requirements": {
+                "type": "object",
+                "properties": {
+                  "all": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 24
+                    },
+                    "minItems": 0,
+                    "maxItems": 32
+                  },
+                  "any": {
+                    "type": "array",
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 24
+                      },
+                      "minItems": 1,
+                      "maxItems": 32
+                    },
+                    "minItems": 0,
+                    "maxItems": 16
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              },
+              "gold": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000000
+              },
+              "xp": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000000
+              },
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "itemId": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 128
+                    },
+                    "count": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 20
+                    }
+                  },
+                  "required": [
+                    "itemId",
+                    "count"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0,
+                "maxItems": 8
+              },
+              "consume": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "itemId": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 128
+                    },
+                    "count": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 20
+                    }
+                  },
+                  "required": [
+                    "itemId",
+                    "count"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0,
+                "maxItems": 8
+              },
+              "journalId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 24
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "states",
+              "gold",
+              "xp",
+              "items"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 16
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "description",
+        "initial",
+        "states",
+        "objectives",
+        "journal",
+        "transitions",
+        "rewards"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "format",
+    "formatVersion",
+    "id",
+    "record"
+  ],
+  "additionalProperties": false
+}

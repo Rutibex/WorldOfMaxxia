@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maxxia.invalid/contracts/mp01/catalogue-lock.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "const": "maxxia-catalogue-lock"
+    },
+    "formatVersion": {
+      "const": 1
+    },
+    "rules": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120,
+          "pattern": "^[a-z][a-z0-9_]{0,47}:rules:[a-z][a-z0-9_]{0,79}$"
+        },
+        "version": {
+          "$ref": "common.schema.json#/$defs/version"
+        }
+      },
+      "required": [
+        "id",
+        "version"
+      ]
+    },
+    "engineVersion": {
+      "$ref": "common.schema.json#/$defs/version"
+    },
+    "packs": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/packPin"
+      },
+      "minItems": 1,
+      "maxItems": 128
+    }
+  },
+  "required": [
+    "format",
+    "formatVersion",
+    "rules",
+    "engineVersion",
+    "packs"
+  ]
+}

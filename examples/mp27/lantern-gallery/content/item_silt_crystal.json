@@ -1,0 +1,25 @@
+{
+  "format": "maxxia-authored-item",
+  "formatVersion": 1,
+  "id": "lantern:item:silt_crystal",
+  "record": {
+    "id": "lantern:item:silt_crystal",
+    "name": "Silt Crystal",
+    "category": "misc",
+    "price": 12,
+    "maxDurability": 0,
+    "maxCharges": 0,
+    "effect": "none",
+    "power": 0,
+    "unique": false,
+    "slot": null,
+    "weight": null,
+    "armor": 0,
+    "dice": null,
+    "accuracy": 0,
+    "resistance": null,
+    "resistBonus": 0,
+    "description": "A clean siltglass crystal suitable for crafting.",
+    "portability": "exportable"
+  }
+}

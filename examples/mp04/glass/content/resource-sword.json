@@ -1,0 +1,6 @@
+{
+  "format": "maxxia-resource-alias",
+  "sourceResourceId": "brass:resource:sword",
+  "id": "glass:resource:sword",
+  "formatVersion": 1
+}

@@ -1,0 +1,2561 @@
+{
+  "format": "maxxia-resource-catalog",
+  "version": 1,
+  "resources": [
+    {
+      "id": "asset_phase30_art_preview_png",
+      "kind": "image",
+      "path": "PHASE30_ART_PREVIEW.png",
+      "legacyPath": "assets/PHASE30_ART_PREVIEW.png",
+      "name": "Phase30 Art Preview"
+    },
+    {
+      "id": "asset_phase30_rendered_art_preview_png",
+      "kind": "image",
+      "path": "PHASE30_RENDERED_ART_PREVIEW.png",
+      "legacyPath": "assets/PHASE30_RENDERED_ART_PREVIEW.png",
+      "name": "Phase30 Rendered Art Preview"
+    },
+    {
+      "id": "asset_art_conditions_asleep_png",
+      "kind": "image",
+      "path": "art/conditions/asleep.png",
+      "legacyPath": "assets/art/conditions/asleep.png",
+      "name": "Asleep"
+    },
+    {
+      "id": "asset_art_conditions_cursed_png",
+      "kind": "image",
+      "path": "art/conditions/cursed.png",
+      "legacyPath": "assets/art/conditions/cursed.png",
+      "name": "Cursed"
+    },
+    {
+      "id": "asset_art_conditions_drunk_png",
+      "kind": "image",
+      "path": "art/conditions/drunk.png",
+      "legacyPath": "assets/art/conditions/drunk.png",
+      "name": "Drunk"
+    },
+    {
+      "id": "asset_art_conditions_frightened_png",
+      "kind": "image",
+      "path": "art/conditions/frightened.png",
+      "legacyPath": "assets/art/conditions/frightened.png",
+      "name": "Frightened"
+    },
+    {
+      "id": "asset_art_conditions_hungry_png",
+      "kind": "image",
+      "path": "art/conditions/hungry.png",
+      "legacyPath": "assets/art/conditions/hungry.png",
+      "name": "Hungry"
+    },
+    {
+      "id": "asset_art_conditions_poisoned_png",
+      "kind": "image",
+      "path": "art/conditions/poisoned.png",
+      "legacyPath": "assets/art/conditions/poisoned.png",
+      "name": "Poisoned"
+    },
+    {
+      "id": "asset_art_dust_imp_png",
+      "kind": "image",
+      "path": "art/dust-imp.png",
+      "legacyPath": "assets/art/dust-imp.png",
+      "name": "Dust Imp"
+    },
+    {
+      "id": "asset_art_effects_burst_arcane_png",
+      "kind": "image",
+      "path": "art/effects/burst_arcane.png",
+      "legacyPath": "assets/art/effects/burst_arcane.png",
+      "name": "Burst Arcane"
+    },
+    {
+      "id": "asset_art_effects_burst_firefan_png",
+      "kind": "image",
+      "path": "art/effects/burst_firefan.png",
+      "legacyPath": "assets/art/effects/burst_firefan.png",
+      "name": "Burst Firefan"
+    },
+    {
+      "id": "asset_art_effects_burst_heal_png",
+      "kind": "image",
+      "path": "art/effects/burst_heal.png",
+      "legacyPath": "assets/art/effects/burst_heal.png",
+      "name": "Burst Heal"
+    },
+    {
+      "id": "asset_art_effects_burst_holy_png",
+      "kind": "image",
+      "path": "art/effects/burst_holy.png",
+      "legacyPath": "assets/art/effects/burst_holy.png",
+      "name": "Burst Holy"
+    },
+    {
+      "id": "asset_art_effects_burst_poison_png",
+      "kind": "image",
+      "path": "art/effects/burst_poison.png",
+      "legacyPath": "assets/art/effects/burst_poison.png",
+      "name": "Burst Poison"
+    },
+    {
+      "id": "asset_art_effects_burst_portal_png",
+      "kind": "image",
+      "path": "art/effects/burst_portal.png",
+      "legacyPath": "assets/art/effects/burst_portal.png",
+      "name": "Burst Portal"
+    },
+    {
+      "id": "asset_art_effects_burst_shadow_png",
+      "kind": "image",
+      "path": "art/effects/burst_shadow.png",
+      "legacyPath": "assets/art/effects/burst_shadow.png",
+      "name": "Burst Shadow"
+    },
+    {
+      "id": "asset_art_effects_burst_starfall_png",
+      "kind": "image",
+      "path": "art/effects/burst_starfall.png",
+      "legacyPath": "assets/art/effects/burst_starfall.png",
+      "name": "Burst Starfall"
+    },
+    {
+      "id": "asset_art_effects_burst_storm_png",
+      "kind": "image",
+      "path": "art/effects/burst_storm.png",
+      "legacyPath": "assets/art/effects/burst_storm.png",
+      "name": "Burst Storm"
+    },
+    {
+      "id": "asset_art_effects_burst_ward_png",
+      "kind": "image",
+      "path": "art/effects/burst_ward.png",
+      "legacyPath": "assets/art/effects/burst_ward.png",
+      "name": "Burst Ward"
+    },
+    {
+      "id": "asset_art_effects_missile_arcane_png",
+      "kind": "image",
+      "path": "art/effects/missile_arcane.png",
+      "legacyPath": "assets/art/effects/missile_arcane.png",
+      "name": "Missile Arcane"
+    },
+    {
+      "id": "asset_art_effects_missile_arrow_png",
+      "kind": "image",
+      "path": "art/effects/missile_arrow.png",
+      "legacyPath": "assets/art/effects/missile_arrow.png",
+      "name": "Missile Arrow"
+    },
+    {
+      "id": "asset_art_effects_missile_bind_png",
+      "kind": "image",
+      "path": "art/effects/missile_bind.png",
+      "legacyPath": "assets/art/effects/missile_bind.png",
+      "name": "Missile Bind"
+    },
+    {
+      "id": "asset_art_effects_missile_fire_png",
+      "kind": "image",
+      "path": "art/effects/missile_fire.png",
+      "legacyPath": "assets/art/effects/missile_fire.png",
+      "name": "Missile Fire"
+    },
+    {
+      "id": "asset_art_effects_missile_frost_png",
+      "kind": "image",
+      "path": "art/effects/missile_frost.png",
+      "legacyPath": "assets/art/effects/missile_frost.png",
+      "name": "Missile Frost"
+    },
+    {
+      "id": "asset_art_effects_missile_holy_png",
+      "kind": "image",
+      "path": "art/effects/missile_holy.png",
+      "legacyPath": "assets/art/effects/missile_holy.png",
+      "name": "Missile Holy"
+    },
+    {
+      "id": "asset_art_effects_missile_lightning_png",
+      "kind": "image",
+      "path": "art/effects/missile_lightning.png",
+      "legacyPath": "assets/art/effects/missile_lightning.png",
+      "name": "Missile Lightning"
+    },
+    {
+      "id": "asset_art_effects_missile_shadow_png",
+      "kind": "image",
+      "path": "art/effects/missile_shadow.png",
+      "legacyPath": "assets/art/effects/missile_shadow.png",
+      "name": "Missile Shadow"
+    },
+    {
+      "id": "asset_art_enemies_bell_heart_special_png",
+      "kind": "image",
+      "path": "art/enemies/bell-heart-special.png",
+      "legacyPath": "assets/art/enemies/bell-heart-special.png",
+      "name": "Bell Heart Special"
+    },
+    {
+      "id": "asset_art_enemies_bell_heart_png",
+      "kind": "image",
+      "path": "art/enemies/bell-heart.png",
+      "legacyPath": "assets/art/enemies/bell-heart.png",
+      "name": "Bell Heart"
+    },
+    {
+      "id": "asset_art_enemies_bell_wraith_png",
+      "kind": "image",
+      "path": "art/enemies/bell-wraith.png",
+      "legacyPath": "assets/art/enemies/bell-wraith.png",
+      "name": "Bell Wraith"
+    },
+    {
+      "id": "asset_art_enemies_cistern_rat_png",
+      "kind": "image",
+      "path": "art/enemies/cistern-rat.png",
+      "legacyPath": "assets/art/enemies/cistern-rat.png",
+      "name": "Cistern Rat"
+    },
+    {
+      "id": "asset_art_enemies_gallery_watcher_png",
+      "kind": "image",
+      "path": "art/enemies/gallery-watcher.png",
+      "legacyPath": "assets/art/enemies/gallery-watcher.png",
+      "name": "Gallery Watcher"
+    },
+    {
+      "id": "asset_art_enemies_pipe_goblin_png",
+      "kind": "image",
+      "path": "art/enemies/pipe-goblin.png",
+      "legacyPath": "assets/art/enemies/pipe-goblin.png",
+      "name": "Pipe Goblin"
+    },
+    {
+      "id": "asset_art_enemies_sludge_leech_png",
+      "kind": "image",
+      "path": "art/enemies/sludge-leech.png",
+      "legacyPath": "assets/art/enemies/sludge-leech.png",
+      "name": "Sludge Leech"
+    },
+    {
+      "id": "asset_art_enemies_stone_mite_png",
+      "kind": "image",
+      "path": "art/enemies/stone-mite.png",
+      "legacyPath": "assets/art/enemies/stone-mite.png",
+      "name": "Stone Mite"
+    },
+    {
+      "id": "asset_art_enemies_valve_sentinel_png",
+      "kind": "image",
+      "path": "art/enemies/valve-sentinel.png",
+      "legacyPath": "assets/art/enemies/valve-sentinel.png",
+      "name": "Valve Sentinel"
+    },
+    {
+      "id": "asset_art_feedback_arcane_png",
+      "kind": "image",
+      "path": "art/feedback/arcane.png",
+      "legacyPath": "assets/art/feedback/arcane.png",
+      "name": "Arcane"
+    },
+    {
+      "id": "asset_art_feedback_attack_png",
+      "kind": "image",
+      "path": "art/feedback/attack.png",
+      "legacyPath": "assets/art/feedback/attack.png",
+      "name": "Attack"
+    },
+    {
+      "id": "asset_art_feedback_bind_png",
+      "kind": "image",
+      "path": "art/feedback/bind.png",
+      "legacyPath": "assets/art/feedback/bind.png",
+      "name": "Bind"
+    },
+    {
+      "id": "asset_art_feedback_cold_png",
+      "kind": "image",
+      "path": "art/feedback/cold.png",
+      "legacyPath": "assets/art/feedback/cold.png",
+      "name": "Cold"
+    },
+    {
+      "id": "asset_art_feedback_cure_png",
+      "kind": "image",
+      "path": "art/feedback/cure.png",
+      "legacyPath": "assets/art/feedback/cure.png",
+      "name": "Cure"
+    },
+    {
+      "id": "asset_art_feedback_debuff_png",
+      "kind": "image",
+      "path": "art/feedback/debuff.png",
+      "legacyPath": "assets/art/feedback/debuff.png",
+      "name": "Debuff"
+    },
+    {
+      "id": "asset_art_feedback_fire_png",
+      "kind": "image",
+      "path": "art/feedback/fire.png",
+      "legacyPath": "assets/art/feedback/fire.png",
+      "name": "Fire"
+    },
+    {
+      "id": "asset_art_feedback_guard_png",
+      "kind": "image",
+      "path": "art/feedback/guard.png",
+      "legacyPath": "assets/art/feedback/guard.png",
+      "name": "Guard"
+    },
+    {
+      "id": "asset_art_feedback_heal_png",
+      "kind": "image",
+      "path": "art/feedback/heal.png",
+      "legacyPath": "assets/art/feedback/heal.png",
+      "name": "Heal"
+    },
+    {
+      "id": "asset_art_feedback_holy_png",
+      "kind": "image",
+      "path": "art/feedback/holy.png",
+      "legacyPath": "assets/art/feedback/holy.png",
+      "name": "Holy"
+    },
+    {
+      "id": "asset_art_feedback_lightning_png",
+      "kind": "image",
+      "path": "art/feedback/lightning.png",
+      "legacyPath": "assets/art/feedback/lightning.png",
+      "name": "Lightning"
+    },
+    {
+      "id": "asset_art_feedback_miss_png",
+      "kind": "image",
+      "path": "art/feedback/miss.png",
+      "legacyPath": "assets/art/feedback/miss.png",
+      "name": "Miss"
+    },
+    {
+      "id": "asset_art_feedback_necrotic_png",
+      "kind": "image",
+      "path": "art/feedback/necrotic.png",
+      "legacyPath": "assets/art/feedback/necrotic.png",
+      "name": "Necrotic"
+    },
+    {
+      "id": "asset_art_feedback_poison_png",
+      "kind": "image",
+      "path": "art/feedback/poison.png",
+      "legacyPath": "assets/art/feedback/poison.png",
+      "name": "Poison"
+    },
+    {
+      "id": "asset_art_feedback_revive_png",
+      "kind": "image",
+      "path": "art/feedback/revive.png",
+      "legacyPath": "assets/art/feedback/revive.png",
+      "name": "Revive"
+    },
+    {
+      "id": "asset_art_feedback_run_png",
+      "kind": "image",
+      "path": "art/feedback/run.png",
+      "legacyPath": "assets/art/feedback/run.png",
+      "name": "Run"
+    },
+    {
+      "id": "asset_art_feedback_sleep_png",
+      "kind": "image",
+      "path": "art/feedback/sleep.png",
+      "legacyPath": "assets/art/feedback/sleep.png",
+      "name": "Sleep"
+    },
+    {
+      "id": "asset_art_feedback_special_png",
+      "kind": "image",
+      "path": "art/feedback/special.png",
+      "legacyPath": "assets/art/feedback/special.png",
+      "name": "Special"
+    },
+    {
+      "id": "asset_art_feedback_ward_png",
+      "kind": "image",
+      "path": "art/feedback/ward.png",
+      "legacyPath": "assets/art/feedback/ward.png",
+      "name": "Ward"
+    },
+    {
+      "id": "asset_art_ground_corpse_png",
+      "kind": "image",
+      "path": "art/ground/corpse.png",
+      "legacyPath": "assets/art/ground/corpse.png",
+      "name": "Corpse"
+    },
+    {
+      "id": "asset_art_impacts_impact_arcane_png",
+      "kind": "image",
+      "path": "art/impacts/impact_arcane.png",
+      "legacyPath": "assets/art/impacts/impact_arcane.png",
+      "name": "Impact Arcane"
+    },
+    {
+      "id": "asset_art_impacts_impact_cold_png",
+      "kind": "image",
+      "path": "art/impacts/impact_cold.png",
+      "legacyPath": "assets/art/impacts/impact_cold.png",
+      "name": "Impact Cold"
+    },
+    {
+      "id": "asset_art_impacts_impact_fire_png",
+      "kind": "image",
+      "path": "art/impacts/impact_fire.png",
+      "legacyPath": "assets/art/impacts/impact_fire.png",
+      "name": "Impact Fire"
+    },
+    {
+      "id": "asset_art_impacts_impact_guard_png",
+      "kind": "image",
+      "path": "art/impacts/impact_guard.png",
+      "legacyPath": "assets/art/impacts/impact_guard.png",
+      "name": "Impact Guard"
+    },
+    {
+      "id": "asset_art_impacts_impact_heal_png",
+      "kind": "image",
+      "path": "art/impacts/impact_heal.png",
+      "legacyPath": "assets/art/impacts/impact_heal.png",
+      "name": "Impact Heal"
+    },
+    {
+      "id": "asset_art_impacts_impact_holy_png",
+      "kind": "image",
+      "path": "art/impacts/impact_holy.png",
+      "legacyPath": "assets/art/impacts/impact_holy.png",
+      "name": "Impact Holy"
+    },
+    {
+      "id": "asset_art_impacts_impact_lightning_png",
+      "kind": "image",
+      "path": "art/impacts/impact_lightning.png",
+      "legacyPath": "assets/art/impacts/impact_lightning.png",
+      "name": "Impact Lightning"
+    },
+    {
+      "id": "asset_art_impacts_impact_necrotic_png",
+      "kind": "image",
+      "path": "art/impacts/impact_necrotic.png",
+      "legacyPath": "assets/art/impacts/impact_necrotic.png",
+      "name": "Impact Necrotic"
+    },
+    {
+      "id": "asset_art_impacts_impact_physical_png",
+      "kind": "image",
+      "path": "art/impacts/impact_physical.png",
+      "legacyPath": "assets/art/impacts/impact_physical.png",
+      "name": "Impact Physical"
+    },
+    {
+      "id": "asset_art_impacts_impact_poison_png",
+      "kind": "image",
+      "path": "art/impacts/impact_poison.png",
+      "legacyPath": "assets/art/impacts/impact_poison.png",
+      "name": "Impact Poison"
+    },
+    {
+      "id": "asset_art_items_item_acid_flask_png",
+      "kind": "image",
+      "path": "art/items/item_acid_flask.png",
+      "legacyPath": "assets/art/items/item_acid_flask.png",
+      "name": "Item Acid Flask"
+    },
+    {
+      "id": "asset_art_items_item_antidote_png",
+      "kind": "image",
+      "path": "art/items/item_antidote.png",
+      "legacyPath": "assets/art/items/item_antidote.png",
+      "name": "Item Antidote"
+    },
+    {
+      "id": "asset_art_items_item_axe_png",
+      "kind": "image",
+      "path": "art/items/item_axe.png",
+      "legacyPath": "assets/art/items/item_axe.png",
+      "name": "Item Axe"
+    },
+    {
+      "id": "asset_art_items_item_bellkeeper_blade_png",
+      "kind": "image",
+      "path": "art/items/item_bellkeeper_blade.png",
+      "legacyPath": "assets/art/items/item_bellkeeper_blade.png",
+      "name": "Item Bellkeeper Blade"
+    },
+    {
+      "id": "asset_art_items_item_buckler_png",
+      "kind": "image",
+      "path": "art/items/item_buckler.png",
+      "legacyPath": "assets/art/items/item_buckler.png",
+      "name": "Item Buckler"
+    },
+    {
+      "id": "asset_art_items_item_cistern_carapace_png",
+      "kind": "image",
+      "path": "art/items/item_cistern_carapace.png",
+      "legacyPath": "assets/art/items/item_cistern_carapace.png",
+      "name": "Item Cistern Carapace"
+    },
+    {
+      "id": "asset_art_items_item_cloth_robe_png",
+      "kind": "image",
+      "path": "art/items/item_cloth_robe.png",
+      "legacyPath": "assets/art/items/item_cloth_robe.png",
+      "name": "Item Cloth Robe"
+    },
+    {
+      "id": "asset_art_items_item_copper_ring_png",
+      "kind": "image",
+      "path": "art/items/item_copper_ring.png",
+      "legacyPath": "assets/art/items/item_copper_ring.png",
+      "name": "Item Copper Ring"
+    },
+    {
+      "id": "asset_art_items_item_courage_tonic_png",
+      "kind": "image",
+      "path": "art/items/item_courage_tonic.png",
+      "legacyPath": "assets/art/items/item_courage_tonic.png",
+      "name": "Item Courage Tonic"
+    },
+    {
+      "id": "asset_art_items_item_crossbow_png",
+      "kind": "image",
+      "path": "art/items/item_crossbow.png",
+      "legacyPath": "assets/art/items/item_crossbow.png",
+      "name": "Item Crossbow"
+    },
+    {
+      "id": "asset_art_items_item_custodian_seal_png",
+      "kind": "image",
+      "path": "art/items/item_custodian_seal.png",
+      "legacyPath": "assets/art/items/item_custodian_seal.png",
+      "name": "Item Custodian Seal"
+    },
+    {
+      "id": "asset_art_items_item_dagger_png",
+      "kind": "image",
+      "path": "art/items/item_dagger.png",
+      "legacyPath": "assets/art/items/item_dagger.png",
+      "name": "Item Dagger"
+    },
+    {
+      "id": "asset_art_items_item_echo_staff_png",
+      "kind": "image",
+      "path": "art/items/item_echo_staff.png",
+      "legacyPath": "assets/art/items/item_echo_staff.png",
+      "name": "Item Echo Staff"
+    },
+    {
+      "id": "asset_art_items_item_ember_ring_png",
+      "kind": "image",
+      "path": "art/items/item_ember_ring.png",
+      "legacyPath": "assets/art/items/item_ember_ring.png",
+      "name": "Item Ember Ring"
+    },
+    {
+      "id": "asset_art_items_item_empty_bottle_png",
+      "kind": "image",
+      "path": "art/items/item_empty_bottle.png",
+      "legacyPath": "assets/art/items/item_empty_bottle.png",
+      "name": "Item Empty Bottle"
+    },
+    {
+      "id": "asset_art_items_item_frost_ring_png",
+      "kind": "image",
+      "path": "art/items/item_frost_ring.png",
+      "legacyPath": "assets/art/items/item_frost_ring.png",
+      "name": "Item Frost Ring"
+    },
+    {
+      "id": "asset_art_items_item_glass_lens_png",
+      "kind": "image",
+      "path": "art/items/item_glass_lens.png",
+      "legacyPath": "assets/art/items/item_glass_lens.png",
+      "name": "Item Glass Lens"
+    },
+    {
+      "id": "asset_art_items_item_glass_thorn_png",
+      "kind": "image",
+      "path": "art/items/item_glass_thorn.png",
+      "legacyPath": "assets/art/items/item_glass_thorn.png",
+      "name": "Item Glass Thorn"
+    },
+    {
+      "id": "asset_art_items_item_greater_healing_draught_png",
+      "kind": "image",
+      "path": "art/items/item_greater_healing_draught.png",
+      "legacyPath": "assets/art/items/item_greater_healing_draught.png",
+      "name": "Item Greater Healing Draught"
+    },
+    {
+      "id": "asset_art_items_item_greatsword_png",
+      "kind": "image",
+      "path": "art/items/item_greatsword.png",
+      "legacyPath": "assets/art/items/item_greatsword.png",
+      "name": "Item Greatsword"
+    },
+    {
+      "id": "asset_art_items_item_healing_draught_png",
+      "kind": "image",
+      "path": "art/items/item_healing_draught.png",
+      "legacyPath": "assets/art/items/item_healing_draught.png",
+      "name": "Item Healing Draught"
+    },
+    {
+      "id": "asset_art_items_item_healing_scroll_png",
+      "kind": "image",
+      "path": "art/items/item_healing_scroll.png",
+      "legacyPath": "assets/art/items/item_healing_scroll.png",
+      "name": "Item Healing Scroll"
+    },
+    {
+      "id": "asset_art_items_item_heavy_crossbow_png",
+      "kind": "image",
+      "path": "art/items/item_heavy_crossbow.png",
+      "legacyPath": "assets/art/items/item_heavy_crossbow.png",
+      "name": "Item Heavy Crossbow"
+    },
+    {
+      "id": "asset_art_items_item_iron_belt_png",
+      "kind": "image",
+      "path": "art/items/item_iron_belt.png",
+      "legacyPath": "assets/art/items/item_iron_belt.png",
+      "name": "Item Iron Belt"
+    },
+    {
+      "id": "asset_art_items_item_leather_coat_png",
+      "kind": "image",
+      "path": "art/items/item_leather_coat.png",
+      "legacyPath": "assets/art/items/item_leather_coat.png",
+      "name": "Item Leather Coat"
+    },
+    {
+      "id": "asset_art_items_item_lucky_token_png",
+      "kind": "image",
+      "path": "art/items/item_lucky_token.png",
+      "legacyPath": "assets/art/items/item_lucky_token.png",
+      "name": "Item Lucky Token"
+    },
+    {
+      "id": "asset_art_items_item_mace_png",
+      "kind": "image",
+      "path": "art/items/item_mace.png",
+      "legacyPath": "assets/art/items/item_mace.png",
+      "name": "Item Mace"
+    },
+    {
+      "id": "asset_art_items_item_pilgrim_charm_png",
+      "kind": "image",
+      "path": "art/items/item_pilgrim_charm.png",
+      "legacyPath": "assets/art/items/item_pilgrim_charm.png",
+      "name": "Item Pilgrim Charm"
+    },
+    {
+      "id": "asset_art_items_item_plate_harness_png",
+      "kind": "image",
+      "path": "art/items/item_plate_harness.png",
+      "legacyPath": "assets/art/items/item_plate_harness.png",
+      "name": "Item Plate Harness"
+    },
+    {
+      "id": "asset_art_items_item_quayward_charm_png",
+      "kind": "image",
+      "path": "art/items/item_quayward_charm.png",
+      "legacyPath": "assets/art/items/item_quayward_charm.png",
+      "name": "Item Quayward Charm"
+    },
+    {
+      "id": "asset_art_items_item_recall_token_png",
+      "kind": "image",
+      "path": "art/items/item_recall_token.png",
+      "legacyPath": "assets/art/items/item_recall_token.png",
+      "name": "Item Recall Token"
+    },
+    {
+      "id": "asset_art_items_item_regulator_lens_png",
+      "kind": "image",
+      "path": "art/items/item_regulator_lens.png",
+      "legacyPath": "assets/art/items/item_regulator_lens.png",
+      "name": "Item Regulator Lens"
+    },
+    {
+      "id": "asset_art_items_item_ring_mail_png",
+      "kind": "image",
+      "path": "art/items/item_ring_mail.png",
+      "legacyPath": "assets/art/items/item_ring_mail.png",
+      "name": "Item Ring Mail"
+    },
+    {
+      "id": "asset_art_items_item_round_shield_png",
+      "kind": "image",
+      "path": "art/items/item_round_shield.png",
+      "legacyPath": "assets/art/items/item_round_shield.png",
+      "name": "Item Round Shield"
+    },
+    {
+      "id": "asset_art_items_item_scale_coat_png",
+      "kind": "image",
+      "path": "art/items/item_scale_coat.png",
+      "legacyPath": "assets/art/items/item_scale_coat.png",
+      "name": "Item Scale Coat"
+    },
+    {
+      "id": "asset_art_items_item_shortbow_png",
+      "kind": "image",
+      "path": "art/items/item_shortbow.png",
+      "legacyPath": "assets/art/items/item_shortbow.png",
+      "name": "Item Shortbow"
+    },
+    {
+      "id": "asset_art_items_item_smoke_bomb_png",
+      "kind": "image",
+      "path": "art/items/item_smoke_bomb.png",
+      "legacyPath": "assets/art/items/item_smoke_bomb.png",
+      "name": "Item Smoke Bomb"
+    },
+    {
+      "id": "asset_art_items_item_spark_capsule_png",
+      "kind": "image",
+      "path": "art/items/item_spark_capsule.png",
+      "legacyPath": "assets/art/items/item_spark_capsule.png",
+      "name": "Item Spark Capsule"
+    },
+    {
+      "id": "asset_art_items_item_spear_png",
+      "kind": "image",
+      "path": "art/items/item_spear.png",
+      "legacyPath": "assets/art/items/item_spear.png",
+      "name": "Item Spear"
+    },
+    {
+      "id": "asset_art_items_item_staff_png",
+      "kind": "image",
+      "path": "art/items/item_staff.png",
+      "legacyPath": "assets/art/items/item_staff.png",
+      "name": "Item Staff"
+    },
+    {
+      "id": "asset_art_items_item_sword_png",
+      "kind": "image",
+      "path": "art/items/item_sword.png",
+      "legacyPath": "assets/art/items/item_sword.png",
+      "name": "Item Sword"
+    },
+    {
+      "id": "asset_art_items_item_tessa_silver_brooch_png",
+      "kind": "image",
+      "path": "art/items/item_tessa_silver_brooch.png",
+      "legacyPath": "assets/art/items/item_tessa_silver_brooch.png",
+      "name": "Item Tessa Silver Brooch"
+    },
+    {
+      "id": "asset_art_items_item_torch_png",
+      "kind": "image",
+      "path": "art/items/item_torch.png",
+      "legacyPath": "assets/art/items/item_torch.png",
+      "name": "Item Torch"
+    },
+    {
+      "id": "asset_art_items_item_tower_shield_png",
+      "kind": "image",
+      "path": "art/items/item_tower_shield.png",
+      "legacyPath": "assets/art/items/item_tower_shield.png",
+      "name": "Item Tower Shield"
+    },
+    {
+      "id": "asset_art_items_item_treasure_gem_png",
+      "kind": "image",
+      "path": "art/items/item_treasure_gem.png",
+      "legacyPath": "assets/art/items/item_treasure_gem.png",
+      "name": "Item Treasure Gem"
+    },
+    {
+      "id": "asset_art_items_item_venom_flask_png",
+      "kind": "image",
+      "path": "art/items/item_venom_flask.png",
+      "legacyPath": "assets/art/items/item_venom_flask.png",
+      "name": "Item Venom Flask"
+    },
+    {
+      "id": "asset_art_items_item_wake_salts_png",
+      "kind": "image",
+      "path": "art/items/item_wake_salts.png",
+      "legacyPath": "assets/art/items/item_wake_salts.png",
+      "name": "Item Wake Salts"
+    },
+    {
+      "id": "asset_art_items_item_ward_ring_png",
+      "kind": "image",
+      "path": "art/items/item_ward_ring.png",
+      "legacyPath": "assets/art/items/item_ward_ring.png",
+      "name": "Item Ward Ring"
+    },
+    {
+      "id": "asset_art_npcs_brann_loop_png",
+      "kind": "image",
+      "path": "art/npcs/brann-loop.png",
+      "legacyPath": "assets/art/npcs/brann-loop.png",
+      "name": "Brann Loop"
+    },
+    {
+      "id": "asset_art_npcs_iona_loop_png",
+      "kind": "image",
+      "path": "art/npcs/iona-loop.png",
+      "legacyPath": "assets/art/npcs/iona-loop.png",
+      "name": "Iona Loop"
+    },
+    {
+      "id": "asset_art_npcs_nera_loop_png",
+      "kind": "image",
+      "path": "art/npcs/nera-loop.png",
+      "legacyPath": "assets/art/npcs/nera-loop.png",
+      "name": "Nera Loop"
+    },
+    {
+      "id": "asset_art_npcs_orro_loop_png",
+      "kind": "image",
+      "path": "art/npcs/orro-loop.png",
+      "legacyPath": "assets/art/npcs/orro-loop.png",
+      "name": "Orro Loop"
+    },
+    {
+      "id": "asset_art_npcs_pell_loop_png",
+      "kind": "image",
+      "path": "art/npcs/pell-loop.png",
+      "legacyPath": "assets/art/npcs/pell-loop.png",
+      "name": "Pell Loop"
+    },
+    {
+      "id": "asset_art_npcs_vale_loop_png",
+      "kind": "image",
+      "path": "art/npcs/vale-loop.png",
+      "legacyPath": "assets/art/npcs/vale-loop.png",
+      "name": "Vale Loop"
+    },
+    {
+      "id": "asset_art_npcs_vell_loop_png",
+      "kind": "image",
+      "path": "art/npcs/vell-loop.png",
+      "legacyPath": "assets/art/npcs/vell-loop.png",
+      "name": "Vell Loop"
+    },
+    {
+      "id": "asset_art_portraits_00_afflicted_png",
+      "kind": "image",
+      "path": "art/portraits/00-afflicted.png",
+      "legacyPath": "assets/art/portraits/00-afflicted.png",
+      "name": "00 Afflicted"
+    },
+    {
+      "id": "asset_art_portraits_00_dead_png",
+      "kind": "image",
+      "path": "art/portraits/00-dead.png",
+      "legacyPath": "assets/art/portraits/00-dead.png",
+      "name": "00 Dead"
+    },
+    {
+      "id": "asset_art_portraits_00_hurt_png",
+      "kind": "image",
+      "path": "art/portraits/00-hurt.png",
+      "legacyPath": "assets/art/portraits/00-hurt.png",
+      "name": "00 Hurt"
+    },
+    {
+      "id": "asset_art_portraits_00_normal_png",
+      "kind": "image",
+      "path": "art/portraits/00-normal.png",
+      "legacyPath": "assets/art/portraits/00-normal.png",
+      "name": "00 Normal"
+    },
+    {
+      "id": "asset_art_portraits_01_afflicted_png",
+      "kind": "image",
+      "path": "art/portraits/01-afflicted.png",
+      "legacyPath": "assets/art/portraits/01-afflicted.png",
+      "name": "01 Afflicted"
+    },
+    {
+      "id": "asset_art_portraits_01_dead_png",
+      "kind": "image",
+      "path": "art/portraits/01-dead.png",
+      "legacyPath": "assets/art/portraits/01-dead.png",
+      "name": "01 Dead"
+    },
+    {
+      "id": "asset_art_portraits_01_hurt_png",
+      "kind": "image",
+      "path": "art/portraits/01-hurt.png",
+      "legacyPath": "assets/art/portraits/01-hurt.png",
+      "name": "01 Hurt"
+    },
+    {
+      "id": "asset_art_portraits_01_normal_png",
+      "kind": "image",
+      "path": "art/portraits/01-normal.png",
+      "legacyPath": "assets/art/portraits/01-normal.png",
+      "name": "01 Normal"
+    },
+    {
+      "id": "asset_art_portraits_02_afflicted_png",
+      "kind": "image",
+      "path": "art/portraits/02-afflicted.png",
+      "legacyPath": "assets/art/portraits/02-afflicted.png",
+      "name": "02 Afflicted"
+    },
+    {
+      "id": "asset_art_portraits_02_dead_png",
+      "kind": "image",
+      "path": "art/portraits/02-dead.png",
+      "legacyPath": "assets/art/portraits/02-dead.png",
+      "name": "02 Dead"
+    },
+    {
+      "id": "asset_art_portraits_02_hurt_png",
+      "kind": "image",
+      "path": "art/portraits/02-hurt.png",
+      "legacyPath": "assets/art/portraits/02-hurt.png",
+      "name": "02 Hurt"
+    },
+    {
+      "id": "asset_art_portraits_02_normal_png",
+      "kind": "image",
+      "path": "art/portraits/02-normal.png",
+      "legacyPath": "assets/art/portraits/02-normal.png",
+      "name": "02 Normal"
+    },
+    {
+      "id": "asset_art_portraits_03_afflicted_png",
+      "kind": "image",
+      "path": "art/portraits/03-afflicted.png",
+      "legacyPath": "assets/art/portraits/03-afflicted.png",
+      "name": "03 Afflicted"
+    },
+    {
+      "id": "asset_art_portraits_03_dead_png",
+      "kind": "image",
+      "path": "art/portraits/03-dead.png",
+      "legacyPath": "assets/art/portraits/03-dead.png",
+      "name": "03 Dead"
+    },
+    {
+      "id": "asset_art_portraits_03_hurt_png",
+      "kind": "image",
+      "path": "art/portraits/03-hurt.png",
+      "legacyPath": "assets/art/portraits/03-hurt.png",
+      "name": "03 Hurt"
+    },
+    {
+      "id": "asset_art_portraits_03_normal_png",
+      "kind": "image",
+      "path": "art/portraits/03-normal.png",
+      "legacyPath": "assets/art/portraits/03-normal.png",
+      "name": "03 Normal"
+    },
+    {
+      "id": "asset_art_portraits_04_afflicted_png",
+      "kind": "image",
+      "path": "art/portraits/04-afflicted.png",
+      "legacyPath": "assets/art/portraits/04-afflicted.png",
+      "name": "04 Afflicted"
+    },
+    {
+      "id": "asset_art_portraits_04_dead_png",
+      "kind": "image",
+      "path": "art/portraits/04-dead.png",
+      "legacyPath": "assets/art/portraits/04-dead.png",
+      "name": "04 Dead"
+    },
+    {
+      "id": "asset_art_portraits_04_hurt_png",
+      "kind": "image",
+      "path": "art/portraits/04-hurt.png",
+      "legacyPath": "assets/art/portraits/04-hurt.png",
+      "name": "04 Hurt"
+    },
+    {
+      "id": "asset_art_portraits_04_normal_png",
+      "kind": "image",
+      "path": "art/portraits/04-normal.png",
+      "legacyPath": "assets/art/portraits/04-normal.png",
+      "name": "04 Normal"
+    },
+    {
+      "id": "asset_art_portraits_06_afflicted_png",
+      "kind": "image",
+      "path": "art/portraits/06-afflicted.png",
+      "legacyPath": "assets/art/portraits/06-afflicted.png",
+      "name": "06 Afflicted"
+    },
+    {
+      "id": "asset_art_portraits_06_dead_png",
+      "kind": "image",
+      "path": "art/portraits/06-dead.png",
+      "legacyPath": "assets/art/portraits/06-dead.png",
+      "name": "06 Dead"
+    },
+    {
+      "id": "asset_art_portraits_06_hurt_png",
+      "kind": "image",
+      "path": "art/portraits/06-hurt.png",
+      "legacyPath": "assets/art/portraits/06-hurt.png",
+      "name": "06 Hurt"
+    },
+    {
+      "id": "asset_art_portraits_06_normal_png",
+      "kind": "image",
+      "path": "art/portraits/06-normal.png",
+      "legacyPath": "assets/art/portraits/06-normal.png",
+      "name": "06 Normal"
+    },
+    {
+      "id": "asset_art_portraits_07_afflicted_png",
+      "kind": "image",
+      "path": "art/portraits/07-afflicted.png",
+      "legacyPath": "assets/art/portraits/07-afflicted.png",
+      "name": "07 Afflicted"
+    },
+    {
+      "id": "asset_art_portraits_07_dead_png",
+      "kind": "image",
+      "path": "art/portraits/07-dead.png",
+      "legacyPath": "assets/art/portraits/07-dead.png",
+      "name": "07 Dead"
+    },
+    {
+      "id": "asset_art_portraits_07_hurt_png",
+      "kind": "image",
+      "path": "art/portraits/07-hurt.png",
+      "legacyPath": "assets/art/portraits/07-hurt.png",
+      "name": "07 Hurt"
+    },
+    {
+      "id": "asset_art_portraits_07_normal_png",
+      "kind": "image",
+      "path": "art/portraits/07-normal.png",
+      "legacyPath": "assets/art/portraits/07-normal.png",
+      "name": "07 Normal"
+    },
+    {
+      "id": "asset_art_portraits_08_afflicted_png",
+      "kind": "image",
+      "path": "art/portraits/08-afflicted.png",
+      "legacyPath": "assets/art/portraits/08-afflicted.png",
+      "name": "08 Afflicted"
+    },
+    {
+      "id": "asset_art_portraits_08_dead_png",
+      "kind": "image",
+      "path": "art/portraits/08-dead.png",
+      "legacyPath": "assets/art/portraits/08-dead.png",
+      "name": "08 Dead"
+    },
+    {
+      "id": "asset_art_portraits_08_hurt_png",
+      "kind": "image",
+      "path": "art/portraits/08-hurt.png",
+      "legacyPath": "assets/art/portraits/08-hurt.png",
+      "name": "08 Hurt"
+    },
+    {
+      "id": "asset_art_portraits_08_normal_png",
+      "kind": "image",
+      "path": "art/portraits/08-normal.png",
+      "legacyPath": "assets/art/portraits/08-normal.png",
+      "name": "08 Normal"
+    },
+    {
+      "id": "asset_art_portraits_09_afflicted_png",
+      "kind": "image",
+      "path": "art/portraits/09-afflicted.png",
+      "legacyPath": "assets/art/portraits/09-afflicted.png",
+      "name": "09 Afflicted"
+    },
+    {
+      "id": "asset_art_portraits_09_dead_png",
+      "kind": "image",
+      "path": "art/portraits/09-dead.png",
+      "legacyPath": "assets/art/portraits/09-dead.png",
+      "name": "09 Dead"
+    },
+    {
+      "id": "asset_art_portraits_09_hurt_png",
+      "kind": "image",
+      "path": "art/portraits/09-hurt.png",
+      "legacyPath": "assets/art/portraits/09-hurt.png",
+      "name": "09 Hurt"
+    },
+    {
+      "id": "asset_art_portraits_09_normal_png",
+      "kind": "image",
+      "path": "art/portraits/09-normal.png",
+      "legacyPath": "assets/art/portraits/09-normal.png",
+      "name": "09 Normal"
+    },
+    {
+      "id": "asset_art_portraits_10_afflicted_png",
+      "kind": "image",
+      "path": "art/portraits/10-afflicted.png",
+      "legacyPath": "assets/art/portraits/10-afflicted.png",
+      "name": "10 Afflicted"
+    },
+    {
+      "id": "asset_art_portraits_10_dead_png",
+      "kind": "image",
+      "path": "art/portraits/10-dead.png",
+      "legacyPath": "assets/art/portraits/10-dead.png",
+      "name": "10 Dead"
+    },
+    {
+      "id": "asset_art_portraits_10_hurt_png",
+      "kind": "image",
+      "path": "art/portraits/10-hurt.png",
+      "legacyPath": "assets/art/portraits/10-hurt.png",
+      "name": "10 Hurt"
+    },
+    {
+      "id": "asset_art_portraits_10_normal_png",
+      "kind": "image",
+      "path": "art/portraits/10-normal.png",
+      "legacyPath": "assets/art/portraits/10-normal.png",
+      "name": "10 Normal"
+    },
+    {
+      "id": "asset_art_portraits_11_afflicted_png",
+      "kind": "image",
+      "path": "art/portraits/11-afflicted.png",
+      "legacyPath": "assets/art/portraits/11-afflicted.png",
+      "name": "11 Afflicted"
+    },
+    {
+      "id": "asset_art_portraits_11_dead_png",
+      "kind": "image",
+      "path": "art/portraits/11-dead.png",
+      "legacyPath": "assets/art/portraits/11-dead.png",
+      "name": "11 Dead"
+    },
+    {
+      "id": "asset_art_portraits_11_hurt_png",
+      "kind": "image",
+      "path": "art/portraits/11-hurt.png",
+      "legacyPath": "assets/art/portraits/11-hurt.png",
+      "name": "11 Hurt"
+    },
+    {
+      "id": "asset_art_portraits_11_normal_png",
+      "kind": "image",
+      "path": "art/portraits/11-normal.png",
+      "legacyPath": "assets/art/portraits/11-normal.png",
+      "name": "11 Normal"
+    },
+    {
+      "id": "asset_art_spells_spell_priest_blessing_png",
+      "kind": "image",
+      "path": "art/spells/spell_priest_blessing.png",
+      "legacyPath": "assets/art/spells/spell_priest_blessing.png",
+      "name": "Spell Priest Blessing"
+    },
+    {
+      "id": "asset_art_spells_spell_priest_break_malison_png",
+      "kind": "image",
+      "path": "art/spells/spell_priest_break_malison.png",
+      "legacyPath": "assets/art/spells/spell_priest_break_malison.png",
+      "name": "Spell Priest Break Malison"
+    },
+    {
+      "id": "asset_art_spells_spell_priest_cleanse_venom_png",
+      "kind": "image",
+      "path": "art/spells/spell_priest_cleanse_venom.png",
+      "legacyPath": "assets/art/spells/spell_priest_cleanse_venom.png",
+      "name": "Spell Priest Cleanse Venom"
+    },
+    {
+      "id": "asset_art_spells_spell_priest_dawn_judgment_png",
+      "kind": "image",
+      "path": "art/spells/spell_priest_dawn_judgment.png",
+      "legacyPath": "assets/art/spells/spell_priest_dawn_judgment.png",
+      "name": "Spell Priest Dawn Judgment"
+    },
+    {
+      "id": "asset_art_spells_spell_priest_healing_chorus_png",
+      "kind": "image",
+      "path": "art/spells/spell_priest_healing_chorus.png",
+      "legacyPath": "assets/art/spells/spell_priest_healing_chorus.png",
+      "name": "Spell Priest Healing Chorus"
+    },
+    {
+      "id": "asset_art_spells_spell_priest_mend_flesh_png",
+      "kind": "image",
+      "path": "art/spells/spell_priest_mend_flesh.png",
+      "legacyPath": "assets/art/spells/spell_priest_mend_flesh.png",
+      "name": "Spell Priest Mend Flesh"
+    },
+    {
+      "id": "asset_art_spells_spell_priest_pilgrim_light_png",
+      "kind": "image",
+      "path": "art/spells/spell_priest_pilgrim_light.png",
+      "legacyPath": "assets/art/spells/spell_priest_pilgrim_light.png",
+      "name": "Spell Priest Pilgrim Light"
+    },
+    {
+      "id": "asset_art_spells_spell_priest_return_breath_png",
+      "kind": "image",
+      "path": "art/spells/spell_priest_return_breath.png",
+      "legacyPath": "assets/art/spells/spell_priest_return_breath.png",
+      "name": "Spell Priest Return Breath"
+    },
+    {
+      "id": "asset_art_spells_spell_priest_sacred_ember_png",
+      "kind": "image",
+      "path": "art/spells/spell_priest_sacred_ember.png",
+      "legacyPath": "assets/art/spells/spell_priest_sacred_ember.png",
+      "name": "Spell Priest Sacred Ember"
+    },
+    {
+      "id": "asset_art_spells_spell_priest_sheltering_hand_png",
+      "kind": "image",
+      "path": "art/spells/spell_priest_sheltering_hand.png",
+      "legacyPath": "assets/art/spells/spell_priest_sheltering_hand.png",
+      "name": "Spell Priest Sheltering Hand"
+    },
+    {
+      "id": "asset_art_spells_spell_priest_steadfast_png",
+      "kind": "image",
+      "path": "art/spells/spell_priest_steadfast.png",
+      "legacyPath": "assets/art/spells/spell_priest_steadfast.png",
+      "name": "Spell Priest Steadfast"
+    },
+    {
+      "id": "asset_art_spells_spell_priest_turn_the_hollow_png",
+      "kind": "image",
+      "path": "art/spells/spell_priest_turn_the_hollow.png",
+      "legacyPath": "assets/art/spells/spell_priest_turn_the_hollow.png",
+      "name": "Spell Priest Turn The Hollow"
+    },
+    {
+      "id": "asset_art_spells_spell_witch_black_moon_png",
+      "kind": "image",
+      "path": "art/spells/spell_witch_black_moon.png",
+      "legacyPath": "assets/art/spells/spell_witch_black_moon.png",
+      "name": "Spell Witch Black Moon"
+    },
+    {
+      "id": "asset_art_spells_spell_witch_borrowed_face_png",
+      "kind": "image",
+      "path": "art/spells/spell_witch_borrowed_face.png",
+      "legacyPath": "assets/art/spells/spell_witch_borrowed_face.png",
+      "name": "Spell Witch Borrowed Face"
+    },
+    {
+      "id": "asset_art_spells_spell_witch_bottle_the_echo_png",
+      "kind": "image",
+      "path": "art/spells/spell_witch_bottle_the_echo.png",
+      "legacyPath": "assets/art/spells/spell_witch_bottle_the_echo.png",
+      "name": "Spell Witch Bottle The Echo"
+    },
+    {
+      "id": "asset_art_spells_spell_witch_briar_mantle_png",
+      "kind": "image",
+      "path": "art/spells/spell_witch_briar_mantle.png",
+      "legacyPath": "assets/art/spells/spell_witch_briar_mantle.png",
+      "name": "Spell Witch Briar Mantle"
+    },
+    {
+      "id": "asset_art_spells_spell_witch_crooked_bones_png",
+      "kind": "image",
+      "path": "art/spells/spell_witch_crooked_bones.png",
+      "legacyPath": "assets/art/spells/spell_witch_crooked_bones.png",
+      "name": "Spell Witch Crooked Bones"
+    },
+    {
+      "id": "asset_art_spells_spell_witch_hearth_thread_png",
+      "kind": "image",
+      "path": "art/spells/spell_witch_hearth_thread.png",
+      "legacyPath": "assets/art/spells/spell_witch_hearth_thread.png",
+      "name": "Spell Witch Hearth Thread"
+    },
+    {
+      "id": "asset_art_spells_spell_witch_ill_omen_png",
+      "kind": "image",
+      "path": "art/spells/spell_witch_ill_omen.png",
+      "legacyPath": "assets/art/spells/spell_witch_ill_omen.png",
+      "name": "Spell Witch Ill Omen"
+    },
+    {
+      "id": "asset_art_spells_spell_witch_leech_kiss_png",
+      "kind": "image",
+      "path": "art/spells/spell_witch_leech_kiss.png",
+      "legacyPath": "assets/art/spells/spell_witch_leech_kiss.png",
+      "name": "Spell Witch Leech Kiss"
+    },
+    {
+      "id": "asset_art_spells_spell_witch_malice_rain_png",
+      "kind": "image",
+      "path": "art/spells/spell_witch_malice_rain.png",
+      "legacyPath": "assets/art/spells/spell_witch_malice_rain.png",
+      "name": "Spell Witch Malice Rain"
+    },
+    {
+      "id": "asset_art_spells_spell_witch_rat_whisper_png",
+      "kind": "image",
+      "path": "art/spells/spell_witch_rat_whisper.png",
+      "legacyPath": "assets/art/spells/spell_witch_rat_whisper.png",
+      "name": "Spell Witch Rat Whisper"
+    },
+    {
+      "id": "asset_art_spells_spell_witch_sleep_of_thorns_png",
+      "kind": "image",
+      "path": "art/spells/spell_witch_sleep_of_thorns.png",
+      "legacyPath": "assets/art/spells/spell_witch_sleep_of_thorns.png",
+      "name": "Spell Witch Sleep Of Thorns"
+    },
+    {
+      "id": "asset_art_spells_spell_witch_withering_word_png",
+      "kind": "image",
+      "path": "art/spells/spell_witch_withering_word.png",
+      "legacyPath": "assets/art/spells/spell_witch_withering_word.png",
+      "name": "Spell Witch Withering Word"
+    },
+    {
+      "id": "asset_art_spells_spell_wizard_binding_thread_png",
+      "kind": "image",
+      "path": "art/spells/spell_wizard_binding_thread.png",
+      "legacyPath": "assets/art/spells/spell_wizard_binding_thread.png",
+      "name": "Spell Wizard Binding Thread"
+    },
+    {
+      "id": "asset_art_spells_spell_wizard_burning_fan_png",
+      "kind": "image",
+      "path": "art/spells/spell_wizard_burning_fan.png",
+      "legacyPath": "assets/art/spells/spell_wizard_burning_fan.png",
+      "name": "Spell Wizard Burning Fan"
+    },
+    {
+      "id": "asset_art_spells_spell_wizard_fold_step_png",
+      "kind": "image",
+      "path": "art/spells/spell_wizard_fold_step.png",
+      "legacyPath": "assets/art/spells/spell_wizard_fold_step.png",
+      "name": "Spell Wizard Fold Step"
+    },
+    {
+      "id": "asset_art_spells_spell_wizard_frost_needle_png",
+      "kind": "image",
+      "path": "art/spells/spell_wizard_frost_needle.png",
+      "legacyPath": "assets/art/spells/spell_wizard_frost_needle.png",
+      "name": "Spell Wizard Frost Needle"
+    },
+    {
+      "id": "asset_art_spells_spell_wizard_glass_eye_png",
+      "kind": "image",
+      "path": "art/spells/spell_wizard_glass_eye.png",
+      "legacyPath": "assets/art/spells/spell_wizard_glass_eye.png",
+      "name": "Spell Wizard Glass Eye"
+    },
+    {
+      "id": "asset_art_spells_spell_wizard_lantern_globe_png",
+      "kind": "image",
+      "path": "art/spells/spell_wizard_lantern_globe.png",
+      "legacyPath": "assets/art/spells/spell_wizard_lantern_globe.png",
+      "name": "Spell Wizard Lantern Globe"
+    },
+    {
+      "id": "asset_art_spells_spell_wizard_mirror_ward_png",
+      "kind": "image",
+      "path": "art/spells/spell_wizard_mirror_ward.png",
+      "legacyPath": "assets/art/spells/spell_wizard_mirror_ward.png",
+      "name": "Spell Wizard Mirror Ward"
+    },
+    {
+      "id": "asset_art_spells_spell_wizard_spark_lance_png",
+      "kind": "image",
+      "path": "art/spells/spell_wizard_spark_lance.png",
+      "legacyPath": "assets/art/spells/spell_wizard_spark_lance.png",
+      "name": "Spell Wizard Spark Lance"
+    },
+    {
+      "id": "asset_art_spells_spell_wizard_starfall_png",
+      "kind": "image",
+      "path": "art/spells/spell_wizard_starfall.png",
+      "legacyPath": "assets/art/spells/spell_wizard_starfall.png",
+      "name": "Spell Wizard Starfall"
+    },
+    {
+      "id": "asset_art_spells_spell_wizard_stone_skin_png",
+      "kind": "image",
+      "path": "art/spells/spell_wizard_stone_skin.png",
+      "legacyPath": "assets/art/spells/spell_wizard_stone_skin.png",
+      "name": "Spell Wizard Stone Skin"
+    },
+    {
+      "id": "asset_art_spells_spell_wizard_storm_arc_png",
+      "kind": "image",
+      "path": "art/spells/spell_wizard_storm_arc.png",
+      "legacyPath": "assets/art/spells/spell_wizard_storm_arc.png",
+      "name": "Spell Wizard Storm Arc"
+    },
+    {
+      "id": "asset_art_spells_spell_wizard_unseal_png",
+      "kind": "image",
+      "path": "art/spells/spell_wizard_unseal.png",
+      "legacyPath": "assets/art/spells/spell_wizard_unseal.png",
+      "name": "Spell Wizard Unseal"
+    },
+    {
+      "id": "asset_art_tessa_loop_png",
+      "kind": "image",
+      "path": "art/tessa-loop.png",
+      "legacyPath": "assets/art/tessa-loop.png",
+      "name": "Tessa Loop"
+    },
+    {
+      "id": "asset_art_tessa_png",
+      "kind": "image",
+      "path": "art/tessa.png",
+      "legacyPath": "assets/art/tessa.png",
+      "name": "Tessa"
+    },
+    {
+      "id": "asset_art_town_blue_door_png",
+      "kind": "image",
+      "path": "art/town/blue-door.png",
+      "legacyPath": "assets/art/town/blue-door.png",
+      "name": "Blue Door"
+    },
+    {
+      "id": "asset_art_town_cistern_stair_png",
+      "kind": "image",
+      "path": "art/town/cistern-stair.png",
+      "legacyPath": "assets/art/town/cistern-stair.png",
+      "name": "Cistern Stair"
+    },
+    {
+      "id": "asset_art_town_clock_png",
+      "kind": "image",
+      "path": "art/town/clock.png",
+      "legacyPath": "assets/art/town/clock.png",
+      "name": "Clock"
+    },
+    {
+      "id": "asset_art_town_cobbles_png",
+      "kind": "image",
+      "path": "art/town/cobbles.png",
+      "legacyPath": "assets/art/town/cobbles.png",
+      "name": "Cobbles"
+    },
+    {
+      "id": "asset_art_town_forge_png",
+      "kind": "image",
+      "path": "art/town/forge.png",
+      "legacyPath": "assets/art/town/forge.png",
+      "name": "Forge"
+    },
+    {
+      "id": "asset_art_town_foundry_png",
+      "kind": "image",
+      "path": "art/town/foundry.png",
+      "legacyPath": "assets/art/town/foundry.png",
+      "name": "Foundry"
+    },
+    {
+      "id": "asset_art_town_gate_closed_png",
+      "kind": "image",
+      "path": "art/town/gate-closed.png",
+      "legacyPath": "assets/art/town/gate-closed.png",
+      "name": "Gate Closed"
+    },
+    {
+      "id": "asset_art_town_gate_open_png",
+      "kind": "image",
+      "path": "art/town/gate-open.png",
+      "legacyPath": "assets/art/town/gate-open.png",
+      "name": "Gate Open"
+    },
+    {
+      "id": "asset_art_town_guild_png",
+      "kind": "image",
+      "path": "art/town/guild.png",
+      "legacyPath": "assets/art/town/guild.png",
+      "name": "Guild"
+    },
+    {
+      "id": "asset_art_town_house_png",
+      "kind": "image",
+      "path": "art/town/house.png",
+      "legacyPath": "assets/art/town/house.png",
+      "name": "House"
+    },
+    {
+      "id": "asset_art_town_lantern_png",
+      "kind": "image",
+      "path": "art/town/lantern.png",
+      "legacyPath": "assets/art/town/lantern.png",
+      "name": "Lantern"
+    },
+    {
+      "id": "asset_art_town_marker_png",
+      "kind": "image",
+      "path": "art/town/marker.png",
+      "legacyPath": "assets/art/town/marker.png",
+      "name": "Marker"
+    },
+    {
+      "id": "asset_art_town_market_png",
+      "kind": "image",
+      "path": "art/town/market.png",
+      "legacyPath": "assets/art/town/market.png",
+      "name": "Market"
+    },
+    {
+      "id": "asset_art_town_notice_png",
+      "kind": "image",
+      "path": "art/town/notice.png",
+      "legacyPath": "assets/art/town/notice.png",
+      "name": "Notice"
+    },
+    {
+      "id": "asset_art_town_river_steps_png",
+      "kind": "image",
+      "path": "art/town/river-steps.png",
+      "legacyPath": "assets/art/town/river-steps.png",
+      "name": "River Steps"
+    },
+    {
+      "id": "asset_art_town_roof_png",
+      "kind": "image",
+      "path": "art/town/roof.png",
+      "legacyPath": "assets/art/town/roof.png",
+      "name": "Roof"
+    },
+    {
+      "id": "asset_art_town_shrine_png",
+      "kind": "image",
+      "path": "art/town/shrine.png",
+      "legacyPath": "assets/art/town/shrine.png",
+      "name": "Shrine"
+    },
+    {
+      "id": "asset_art_town_sign_forge_png",
+      "kind": "image",
+      "path": "art/town/sign-forge.png",
+      "legacyPath": "assets/art/town/sign-forge.png",
+      "name": "Sign Forge"
+    },
+    {
+      "id": "asset_art_town_sign_office_png",
+      "kind": "image",
+      "path": "art/town/sign-office.png",
+      "legacyPath": "assets/art/town/sign-office.png",
+      "name": "Sign Office"
+    },
+    {
+      "id": "asset_art_town_sign_priest_png",
+      "kind": "image",
+      "path": "art/town/sign-priest.png",
+      "legacyPath": "assets/art/town/sign-priest.png",
+      "name": "Sign Priest"
+    },
+    {
+      "id": "asset_art_town_sign_tavern_png",
+      "kind": "image",
+      "path": "art/town/sign-tavern.png",
+      "legacyPath": "assets/art/town/sign-tavern.png",
+      "name": "Sign Tavern"
+    },
+    {
+      "id": "asset_art_town_sign_temple_png",
+      "kind": "image",
+      "path": "art/town/sign-temple.png",
+      "legacyPath": "assets/art/town/sign-temple.png",
+      "name": "Sign Temple"
+    },
+    {
+      "id": "asset_art_town_sign_training_png",
+      "kind": "image",
+      "path": "art/town/sign-training.png",
+      "legacyPath": "assets/art/town/sign-training.png",
+      "name": "Sign Training"
+    },
+    {
+      "id": "asset_art_town_sign_witch_png",
+      "kind": "image",
+      "path": "art/town/sign-witch.png",
+      "legacyPath": "assets/art/town/sign-witch.png",
+      "name": "Sign Witch"
+    },
+    {
+      "id": "asset_art_town_sign_wizard_png",
+      "kind": "image",
+      "path": "art/town/sign-wizard.png",
+      "legacyPath": "assets/art/town/sign-wizard.png",
+      "name": "Sign Wizard"
+    },
+    {
+      "id": "asset_art_town_sky_png",
+      "kind": "image",
+      "path": "art/town/sky.png",
+      "legacyPath": "assets/art/town/sky.png",
+      "name": "Sky"
+    },
+    {
+      "id": "asset_art_town_well_png",
+      "kind": "image",
+      "path": "art/town/well.png",
+      "legacyPath": "assets/art/town/well.png",
+      "name": "Well"
+    },
+    {
+      "id": "asset_art_ui_amethyst_png",
+      "kind": "image",
+      "path": "art/ui/amethyst.png",
+      "legacyPath": "assets/art/ui/amethyst.png",
+      "name": "Amethyst"
+    },
+    {
+      "id": "asset_art_ui_button_png",
+      "kind": "image",
+      "path": "art/ui/button.png",
+      "legacyPath": "assets/art/ui/button.png",
+      "name": "Button"
+    },
+    {
+      "id": "asset_art_ui_compass_png",
+      "kind": "image",
+      "path": "art/ui/compass.png",
+      "legacyPath": "assets/art/ui/compass.png",
+      "name": "Compass"
+    },
+    {
+      "id": "asset_art_ui_equipment_figure_png",
+      "kind": "image",
+      "path": "art/ui/equipment-figure.png",
+      "legacyPath": "assets/art/ui/equipment-figure.png",
+      "name": "Equipment Figure"
+    },
+    {
+      "id": "asset_art_ui_frame_svg",
+      "kind": "image",
+      "path": "art/ui/frame.svg",
+      "legacyPath": "assets/art/ui/frame.svg",
+      "name": "Frame"
+    },
+    {
+      "id": "asset_art_ui_gargoyle_png",
+      "kind": "image",
+      "path": "art/ui/gargoyle.png",
+      "legacyPath": "assets/art/ui/gargoyle.png",
+      "name": "Gargoyle"
+    },
+    {
+      "id": "asset_art_ui_panel_png",
+      "kind": "image",
+      "path": "art/ui/panel.png",
+      "legacyPath": "assets/art/ui/panel.png",
+      "name": "Panel"
+    },
+    {
+      "id": "asset_art_ui_parchment_panel_png",
+      "kind": "image",
+      "path": "art/ui/parchment-panel.png",
+      "legacyPath": "assets/art/ui/parchment-panel.png",
+      "name": "Parchment Panel"
+    },
+    {
+      "id": "asset_art_ui_parchment_png",
+      "kind": "image",
+      "path": "art/ui/parchment.png",
+      "legacyPath": "assets/art/ui/parchment.png",
+      "name": "Parchment"
+    },
+    {
+      "id": "asset_art_ui_portrait_frame_png",
+      "kind": "image",
+      "path": "art/ui/portrait-frame.png",
+      "legacyPath": "assets/art/ui/portrait-frame.png",
+      "name": "Portrait Frame"
+    },
+    {
+      "id": "asset_art_ui_ruby_png",
+      "kind": "image",
+      "path": "art/ui/ruby.png",
+      "legacyPath": "assets/art/ui/ruby.png",
+      "name": "Ruby"
+    },
+    {
+      "id": "asset_art_ui_spellbook_pages_png",
+      "kind": "image",
+      "path": "art/ui/spellbook-pages.png",
+      "legacyPath": "assets/art/ui/spellbook-pages.png",
+      "name": "Spellbook Pages"
+    },
+    {
+      "id": "asset_art_ui_stone_png",
+      "kind": "image",
+      "path": "art/ui/stone.png",
+      "legacyPath": "assets/art/ui/stone.png",
+      "name": "Stone"
+    },
+    {
+      "id": "asset_art_ui_title_harbour_png",
+      "kind": "image",
+      "path": "art/ui/title-harbour.png",
+      "legacyPath": "assets/art/ui/title-harbour.png",
+      "name": "Title Harbour"
+    },
+    {
+      "id": "asset_art_upper_banner_png",
+      "kind": "image",
+      "path": "art/upper/banner.png",
+      "legacyPath": "assets/art/upper/banner.png",
+      "name": "Banner"
+    },
+    {
+      "id": "asset_art_upper_brazier_png",
+      "kind": "image",
+      "path": "art/upper/brazier.png",
+      "legacyPath": "assets/art/upper/brazier.png",
+      "name": "Brazier"
+    },
+    {
+      "id": "asset_art_upper_bronze_door_png",
+      "kind": "image",
+      "path": "art/upper/bronze-door.png",
+      "legacyPath": "assets/art/upper/bronze-door.png",
+      "name": "Bronze Door"
+    },
+    {
+      "id": "asset_art_upper_ceiling_png",
+      "kind": "image",
+      "path": "art/upper/ceiling.png",
+      "legacyPath": "assets/art/upper/ceiling.png",
+      "name": "Ceiling"
+    },
+    {
+      "id": "asset_art_upper_chest_closed_png",
+      "kind": "image",
+      "path": "art/upper/chest-closed.png",
+      "legacyPath": "assets/art/upper/chest-closed.png",
+      "name": "Chest Closed"
+    },
+    {
+      "id": "asset_art_upper_chest_open_png",
+      "kind": "image",
+      "path": "art/upper/chest-open.png",
+      "legacyPath": "assets/art/upper/chest-open.png",
+      "name": "Chest Open"
+    },
+    {
+      "id": "asset_art_upper_copper_bell_png",
+      "kind": "image",
+      "path": "art/upper/copper-bell.png",
+      "legacyPath": "assets/art/upper/copper-bell.png",
+      "name": "Copper Bell"
+    },
+    {
+      "id": "asset_art_upper_door_open_png",
+      "kind": "image",
+      "path": "art/upper/door-open.png",
+      "legacyPath": "assets/art/upper/door-open.png",
+      "name": "Door Open"
+    },
+    {
+      "id": "asset_art_upper_echo_pipes_png",
+      "kind": "image",
+      "path": "art/upper/echo-pipes.png",
+      "legacyPath": "assets/art/upper/echo-pipes.png",
+      "name": "Echo Pipes"
+    },
+    {
+      "id": "asset_art_upper_floor_png",
+      "kind": "image",
+      "path": "art/upper/floor.png",
+      "legacyPath": "assets/art/upper/floor.png",
+      "name": "Floor"
+    },
+    {
+      "id": "asset_art_upper_glass_chime_png",
+      "kind": "image",
+      "path": "art/upper/glass-chime.png",
+      "legacyPath": "assets/art/upper/glass-chime.png",
+      "name": "Glass Chime"
+    },
+    {
+      "id": "asset_art_upper_grate_floor_png",
+      "kind": "image",
+      "path": "art/upper/grate-floor.png",
+      "legacyPath": "assets/art/upper/grate-floor.png",
+      "name": "Grate Floor"
+    },
+    {
+      "id": "asset_art_upper_iron_door_png",
+      "kind": "image",
+      "path": "art/upper/iron-door.png",
+      "legacyPath": "assets/art/upper/iron-door.png",
+      "name": "Iron Door"
+    },
+    {
+      "id": "asset_art_upper_ledger_empty_png",
+      "kind": "image",
+      "path": "art/upper/ledger-empty.png",
+      "legacyPath": "assets/art/upper/ledger-empty.png",
+      "name": "Ledger Empty"
+    },
+    {
+      "id": "asset_art_upper_ledger_png",
+      "kind": "image",
+      "path": "art/upper/ledger.png",
+      "legacyPath": "assets/art/upper/ledger.png",
+      "name": "Ledger"
+    },
+    {
+      "id": "asset_art_upper_mirror_png",
+      "kind": "image",
+      "path": "art/upper/mirror.png",
+      "legacyPath": "assets/art/upper/mirror.png",
+      "name": "Mirror"
+    },
+    {
+      "id": "asset_art_upper_moon_plaque_png",
+      "kind": "image",
+      "path": "art/upper/moon-plaque.png",
+      "legacyPath": "assets/art/upper/moon-plaque.png",
+      "name": "Moon Plaque"
+    },
+    {
+      "id": "asset_art_upper_moon_pool_png",
+      "kind": "image",
+      "path": "art/upper/moon-pool.png",
+      "legacyPath": "assets/art/upper/moon-pool.png",
+      "name": "Moon Pool"
+    },
+    {
+      "id": "asset_art_upper_moss_wall_png",
+      "kind": "image",
+      "path": "art/upper/moss-wall.png",
+      "legacyPath": "assets/art/upper/moss-wall.png",
+      "name": "Moss Wall"
+    },
+    {
+      "id": "asset_art_upper_needle_spent_png",
+      "kind": "image",
+      "path": "art/upper/needle-spent.png",
+      "legacyPath": "assets/art/upper/needle-spent.png",
+      "name": "Needle Spent"
+    },
+    {
+      "id": "asset_art_upper_oak_door_png",
+      "kind": "image",
+      "path": "art/upper/oak-door.png",
+      "legacyPath": "assets/art/upper/oak-door.png",
+      "name": "Oak Door"
+    },
+    {
+      "id": "asset_art_upper_pipe_wall_png",
+      "kind": "image",
+      "path": "art/upper/pipe-wall.png",
+      "legacyPath": "assets/art/upper/pipe-wall.png",
+      "name": "Pipe Wall"
+    },
+    {
+      "id": "asset_art_upper_rune_spent_png",
+      "kind": "image",
+      "path": "art/upper/rune-spent.png",
+      "legacyPath": "assets/art/upper/rune-spent.png",
+      "name": "Rune Spent"
+    },
+    {
+      "id": "asset_art_upper_secret_open_png",
+      "kind": "image",
+      "path": "art/upper/secret-open.png",
+      "legacyPath": "assets/art/upper/secret-open.png",
+      "name": "Secret Open"
+    },
+    {
+      "id": "asset_art_upper_spring_png",
+      "kind": "image",
+      "path": "art/upper/spring.png",
+      "legacyPath": "assets/art/upper/spring.png",
+      "name": "Spring"
+    },
+    {
+      "id": "asset_art_upper_stair_open_png",
+      "kind": "image",
+      "path": "art/upper/stair-open.png",
+      "legacyPath": "assets/art/upper/stair-open.png",
+      "name": "Stair Open"
+    },
+    {
+      "id": "asset_art_upper_stair_sealed_png",
+      "kind": "image",
+      "path": "art/upper/stair-sealed.png",
+      "legacyPath": "assets/art/upper/stair-sealed.png",
+      "name": "Stair Sealed"
+    },
+    {
+      "id": "asset_art_upper_stair_up_png",
+      "kind": "image",
+      "path": "art/upper/stair-up.png",
+      "legacyPath": "assets/art/upper/stair-up.png",
+      "name": "Stair Up"
+    },
+    {
+      "id": "asset_art_upper_star_png",
+      "kind": "image",
+      "path": "art/upper/star.png",
+      "legacyPath": "assets/art/upper/star.png",
+      "name": "Star"
+    },
+    {
+      "id": "asset_art_upper_survey_png",
+      "kind": "image",
+      "path": "art/upper/survey.png",
+      "legacyPath": "assets/art/upper/survey.png",
+      "name": "Survey"
+    },
+    {
+      "id": "asset_art_upper_tools_empty_png",
+      "kind": "image",
+      "path": "art/upper/tools-empty.png",
+      "legacyPath": "assets/art/upper/tools-empty.png",
+      "name": "Tools Empty"
+    },
+    {
+      "id": "asset_art_upper_tools_png",
+      "kind": "image",
+      "path": "art/upper/tools.png",
+      "legacyPath": "assets/art/upper/tools.png",
+      "name": "Tools"
+    },
+    {
+      "id": "asset_art_upper_wall_png",
+      "kind": "image",
+      "path": "art/upper/wall.png",
+      "legacyPath": "assets/art/upper/wall.png",
+      "name": "Wall"
+    },
+    {
+      "id": "asset_art_upper_waterwheel_png",
+      "kind": "image",
+      "path": "art/upper/waterwheel.png",
+      "legacyPath": "assets/art/upper/waterwheel.png",
+      "name": "Waterwheel"
+    },
+    {
+      "id": "asset_art_vault_brass_wall_png",
+      "kind": "image",
+      "path": "art/vault/brass-wall.png",
+      "legacyPath": "assets/art/vault/brass-wall.png",
+      "name": "Brass Wall"
+    },
+    {
+      "id": "asset_art_vault_bypass_sign_png",
+      "kind": "image",
+      "path": "art/vault/bypass-sign.png",
+      "legacyPath": "assets/art/vault/bypass-sign.png",
+      "name": "Bypass Sign"
+    },
+    {
+      "id": "asset_art_vault_ceiling_png",
+      "kind": "image",
+      "path": "art/vault/ceiling.png",
+      "legacyPath": "assets/art/vault/ceiling.png",
+      "name": "Ceiling"
+    },
+    {
+      "id": "asset_art_vault_channel_floor_png",
+      "kind": "image",
+      "path": "art/vault/channel-floor.png",
+      "legacyPath": "assets/art/vault/channel-floor.png",
+      "name": "Channel Floor"
+    },
+    {
+      "id": "asset_art_vault_chest_closed_png",
+      "kind": "image",
+      "path": "art/vault/chest-closed.png",
+      "legacyPath": "assets/art/vault/chest-closed.png",
+      "name": "Chest Closed"
+    },
+    {
+      "id": "asset_art_vault_chest_open_png",
+      "kind": "image",
+      "path": "art/vault/chest-open.png",
+      "legacyPath": "assets/art/vault/chest-open.png",
+      "name": "Chest Open"
+    },
+    {
+      "id": "asset_art_vault_copper_valve_on_png",
+      "kind": "image",
+      "path": "art/vault/copper-valve-on.png",
+      "legacyPath": "assets/art/vault/copper-valve-on.png",
+      "name": "Copper Valve On"
+    },
+    {
+      "id": "asset_art_vault_copper_valve_png",
+      "kind": "image",
+      "path": "art/vault/copper-valve.png",
+      "legacyPath": "assets/art/vault/copper-valve.png",
+      "name": "Copper Valve"
+    },
+    {
+      "id": "asset_art_vault_door_open_png",
+      "kind": "image",
+      "path": "art/vault/door-open.png",
+      "legacyPath": "assets/art/vault/door-open.png",
+      "name": "Door Open"
+    },
+    {
+      "id": "asset_art_vault_echo_empty_png",
+      "kind": "image",
+      "path": "art/vault/echo-empty.png",
+      "legacyPath": "assets/art/vault/echo-empty.png",
+      "name": "Echo Empty"
+    },
+    {
+      "id": "asset_art_vault_echo_shrine_png",
+      "kind": "image",
+      "path": "art/vault/echo-shrine.png",
+      "legacyPath": "assets/art/vault/echo-shrine.png",
+      "name": "Echo Shrine"
+    },
+    {
+      "id": "asset_art_vault_floor_png",
+      "kind": "image",
+      "path": "art/vault/floor.png",
+      "legacyPath": "assets/art/vault/floor.png",
+      "name": "Floor"
+    },
+    {
+      "id": "asset_art_vault_glass_valve_on_png",
+      "kind": "image",
+      "path": "art/vault/glass-valve-on.png",
+      "legacyPath": "assets/art/vault/glass-valve-on.png",
+      "name": "Glass Valve On"
+    },
+    {
+      "id": "asset_art_vault_glass_valve_png",
+      "kind": "image",
+      "path": "art/vault/glass-valve.png",
+      "legacyPath": "assets/art/vault/glass-valve.png",
+      "name": "Glass Valve"
+    },
+    {
+      "id": "asset_art_vault_grate_floor_png",
+      "kind": "image",
+      "path": "art/vault/grate-floor.png",
+      "legacyPath": "assets/art/vault/grate-floor.png",
+      "name": "Grate Floor"
+    },
+    {
+      "id": "asset_art_vault_leech_spent_png",
+      "kind": "image",
+      "path": "art/vault/leech-spent.png",
+      "legacyPath": "assets/art/vault/leech-spent.png",
+      "name": "Leech Spent"
+    },
+    {
+      "id": "asset_art_vault_maintenance_score_png",
+      "kind": "image",
+      "path": "art/vault/maintenance-score.png",
+      "legacyPath": "assets/art/vault/maintenance-score.png",
+      "name": "Maintenance Score"
+    },
+    {
+      "id": "asset_art_vault_moon_valve_on_png",
+      "kind": "image",
+      "path": "art/vault/moon-valve-on.png",
+      "legacyPath": "assets/art/vault/moon-valve-on.png",
+      "name": "Moon Valve On"
+    },
+    {
+      "id": "asset_art_vault_moon_valve_png",
+      "kind": "image",
+      "path": "art/vault/moon-valve.png",
+      "legacyPath": "assets/art/vault/moon-valve.png",
+      "name": "Moon Valve"
+    },
+    {
+      "id": "asset_art_vault_regulator_empty_png",
+      "kind": "image",
+      "path": "art/vault/regulator-empty.png",
+      "legacyPath": "assets/art/vault/regulator-empty.png",
+      "name": "Regulator Empty"
+    },
+    {
+      "id": "asset_art_vault_regulator_png",
+      "kind": "image",
+      "path": "art/vault/regulator.png",
+      "legacyPath": "assets/art/vault/regulator.png",
+      "name": "Regulator"
+    },
+    {
+      "id": "asset_art_vault_rest_alcove_png",
+      "kind": "image",
+      "path": "art/vault/rest-alcove.png",
+      "legacyPath": "assets/art/vault/rest-alcove.png",
+      "name": "Rest Alcove"
+    },
+    {
+      "id": "asset_art_vault_seal_door_png",
+      "kind": "image",
+      "path": "art/vault/seal-door.png",
+      "legacyPath": "assets/art/vault/seal-door.png",
+      "name": "Seal Door"
+    },
+    {
+      "id": "asset_art_vault_secret_open_png",
+      "kind": "image",
+      "path": "art/vault/secret-open.png",
+      "legacyPath": "assets/art/vault/secret-open.png",
+      "name": "Secret Open"
+    },
+    {
+      "id": "asset_art_vault_spark_spent_png",
+      "kind": "image",
+      "path": "art/vault/spark-spent.png",
+      "legacyPath": "assets/art/vault/spark-spent.png",
+      "name": "Spark Spent"
+    },
+    {
+      "id": "asset_art_vault_spring_spent_png",
+      "kind": "image",
+      "path": "art/vault/spring-spent.png",
+      "legacyPath": "assets/art/vault/spring-spent.png",
+      "name": "Spring Spent"
+    },
+    {
+      "id": "asset_art_vault_spring_png",
+      "kind": "image",
+      "path": "art/vault/spring.png",
+      "legacyPath": "assets/art/vault/spring.png",
+      "name": "Spring"
+    },
+    {
+      "id": "asset_art_vault_stair_up_png",
+      "kind": "image",
+      "path": "art/vault/stair-up.png",
+      "legacyPath": "assets/art/vault/stair-up.png",
+      "name": "Stair Up"
+    },
+    {
+      "id": "asset_art_vault_wall_png",
+      "kind": "image",
+      "path": "art/vault/wall.png",
+      "legacyPath": "assets/art/vault/wall.png",
+      "name": "Wall"
+    },
+    {
+      "id": "asset_art_vault_warning_tablet_png",
+      "kind": "image",
+      "path": "art/vault/warning-tablet.png",
+      "legacyPath": "assets/art/vault/warning-tablet.png",
+      "name": "Warning Tablet"
+    },
+    {
+      "id": "asset_art_vault_wet_wall_png",
+      "kind": "image",
+      "path": "art/vault/wet-wall.png",
+      "legacyPath": "assets/art/vault/wet-wall.png",
+      "name": "Wet Wall"
+    },
+    {
+      "id": "asset_art_witch_afflicted_png",
+      "kind": "image",
+      "path": "art/witch-afflicted.png",
+      "legacyPath": "assets/art/witch-afflicted.png",
+      "name": "Witch Afflicted"
+    },
+    {
+      "id": "asset_art_witch_dead_png",
+      "kind": "image",
+      "path": "art/witch-dead.png",
+      "legacyPath": "assets/art/witch-dead.png",
+      "name": "Witch Dead"
+    },
+    {
+      "id": "asset_art_witch_hurt_png",
+      "kind": "image",
+      "path": "art/witch-hurt.png",
+      "legacyPath": "assets/art/witch-hurt.png",
+      "name": "Witch Hurt"
+    },
+    {
+      "id": "asset_art_witch_normal_png",
+      "kind": "image",
+      "path": "art/witch-normal.png",
+      "legacyPath": "assets/art/witch-normal.png",
+      "name": "Witch Normal"
+    },
+    {
+      "id": "asset_audio_ambience_cistern_wav",
+      "kind": "audio",
+      "path": "audio/ambience/cistern.wav",
+      "legacyPath": "assets/audio/ambience/cistern.wav",
+      "name": "Cistern"
+    },
+    {
+      "id": "asset_audio_ambience_town_wav",
+      "kind": "audio",
+      "path": "audio/ambience/town.wav",
+      "legacyPath": "assets/audio/ambience/town.wav",
+      "name": "Town"
+    },
+    {
+      "id": "asset_audio_ambience_vault_wav",
+      "kind": "audio",
+      "path": "audio/ambience/vault.wav",
+      "legacyPath": "assets/audio/ambience/vault.wav",
+      "name": "Vault"
+    },
+    {
+      "id": "asset_audio_music_boss_mid",
+      "kind": "audio",
+      "path": "audio/music/boss.mid",
+      "legacyPath": "assets/audio/music/boss.mid",
+      "name": "Boss"
+    },
+    {
+      "id": "asset_audio_music_cistern_mid",
+      "kind": "audio",
+      "path": "audio/music/cistern.mid",
+      "legacyPath": "assets/audio/music/cistern.mid",
+      "name": "Cistern"
+    },
+    {
+      "id": "asset_audio_music_combat_mid",
+      "kind": "audio",
+      "path": "audio/music/combat.mid",
+      "legacyPath": "assets/audio/music/combat.mid",
+      "name": "Combat"
+    },
+    {
+      "id": "asset_audio_music_defeat_mid",
+      "kind": "audio",
+      "path": "audio/music/defeat.mid",
+      "legacyPath": "assets/audio/music/defeat.mid",
+      "name": "Defeat"
+    },
+    {
+      "id": "asset_audio_music_ending_mid",
+      "kind": "audio",
+      "path": "audio/music/ending.mid",
+      "legacyPath": "assets/audio/music/ending.mid",
+      "name": "Ending"
+    },
+    {
+      "id": "asset_audio_music_title_mid",
+      "kind": "audio",
+      "path": "audio/music/title.mid",
+      "legacyPath": "assets/audio/music/title.mid",
+      "name": "Title"
+    },
+    {
+      "id": "asset_audio_music_town_mid",
+      "kind": "audio",
+      "path": "audio/music/town.mid",
+      "legacyPath": "assets/audio/music/town.mid",
+      "name": "Town"
+    },
+    {
+      "id": "asset_audio_music_vault_mid",
+      "kind": "audio",
+      "path": "audio/music/vault.mid",
+      "legacyPath": "assets/audio/music/vault.mid",
+      "name": "Vault"
+    },
+    {
+      "id": "asset_audio_sfx_attack_wav",
+      "kind": "audio",
+      "path": "audio/sfx/attack.wav",
+      "legacyPath": "assets/audio/sfx/attack.wav",
+      "name": "Attack"
+    },
+    {
+      "id": "asset_audio_sfx_boss_warning_wav",
+      "kind": "audio",
+      "path": "audio/sfx/boss_warning.wav",
+      "legacyPath": "assets/audio/sfx/boss_warning.wav",
+      "name": "Boss Warning"
+    },
+    {
+      "id": "asset_audio_sfx_boss_wave_wav",
+      "kind": "audio",
+      "path": "audio/sfx/boss_wave.wav",
+      "legacyPath": "assets/audio/sfx/boss_wave.wav",
+      "name": "Boss Wave"
+    },
+    {
+      "id": "asset_audio_sfx_cast_arcane_wav",
+      "kind": "audio",
+      "path": "audio/sfx/cast_arcane.wav",
+      "legacyPath": "assets/audio/sfx/cast_arcane.wav",
+      "name": "Cast Arcane"
+    },
+    {
+      "id": "asset_audio_sfx_cast_cold_wav",
+      "kind": "audio",
+      "path": "audio/sfx/cast_cold.wav",
+      "legacyPath": "assets/audio/sfx/cast_cold.wav",
+      "name": "Cast Cold"
+    },
+    {
+      "id": "asset_audio_sfx_cast_fire_wav",
+      "kind": "audio",
+      "path": "audio/sfx/cast_fire.wav",
+      "legacyPath": "assets/audio/sfx/cast_fire.wav",
+      "name": "Cast Fire"
+    },
+    {
+      "id": "asset_audio_sfx_cast_guard_wav",
+      "kind": "audio",
+      "path": "audio/sfx/cast_guard.wav",
+      "legacyPath": "assets/audio/sfx/cast_guard.wav",
+      "name": "Cast Guard"
+    },
+    {
+      "id": "asset_audio_sfx_cast_heal_wav",
+      "kind": "audio",
+      "path": "audio/sfx/cast_heal.wav",
+      "legacyPath": "assets/audio/sfx/cast_heal.wav",
+      "name": "Cast Heal"
+    },
+    {
+      "id": "asset_audio_sfx_cast_holy_wav",
+      "kind": "audio",
+      "path": "audio/sfx/cast_holy.wav",
+      "legacyPath": "assets/audio/sfx/cast_holy.wav",
+      "name": "Cast Holy"
+    },
+    {
+      "id": "asset_audio_sfx_cast_lightning_wav",
+      "kind": "audio",
+      "path": "audio/sfx/cast_lightning.wav",
+      "legacyPath": "assets/audio/sfx/cast_lightning.wav",
+      "name": "Cast Lightning"
+    },
+    {
+      "id": "asset_audio_sfx_cast_necrotic_wav",
+      "kind": "audio",
+      "path": "audio/sfx/cast_necrotic.wav",
+      "legacyPath": "assets/audio/sfx/cast_necrotic.wav",
+      "name": "Cast Necrotic"
+    },
+    {
+      "id": "asset_audio_sfx_cast_poison_wav",
+      "kind": "audio",
+      "path": "audio/sfx/cast_poison.wav",
+      "legacyPath": "assets/audio/sfx/cast_poison.wav",
+      "name": "Cast Poison"
+    },
+    {
+      "id": "asset_audio_sfx_chest_wav",
+      "kind": "audio",
+      "path": "audio/sfx/chest.wav",
+      "legacyPath": "assets/audio/sfx/chest.wav",
+      "name": "Chest"
+    },
+    {
+      "id": "asset_audio_sfx_coin_wav",
+      "kind": "audio",
+      "path": "audio/sfx/coin.wav",
+      "legacyPath": "assets/audio/sfx/coin.wav",
+      "name": "Coin"
+    },
+    {
+      "id": "asset_audio_sfx_defeat_wav",
+      "kind": "audio",
+      "path": "audio/sfx/defeat.wav",
+      "legacyPath": "assets/audio/sfx/defeat.wav",
+      "name": "Defeat"
+    },
+    {
+      "id": "asset_audio_sfx_door_wav",
+      "kind": "audio",
+      "path": "audio/sfx/door.wav",
+      "legacyPath": "assets/audio/sfx/door.wav",
+      "name": "Door"
+    },
+    {
+      "id": "asset_audio_sfx_enemy_wav",
+      "kind": "audio",
+      "path": "audio/sfx/enemy.wav",
+      "legacyPath": "assets/audio/sfx/enemy.wav",
+      "name": "Enemy"
+    },
+    {
+      "id": "asset_audio_sfx_ghost_wav",
+      "kind": "audio",
+      "path": "audio/sfx/ghost.wav",
+      "legacyPath": "assets/audio/sfx/ghost.wav",
+      "name": "Ghost"
+    },
+    {
+      "id": "asset_audio_sfx_hit_arcane_wav",
+      "kind": "audio",
+      "path": "audio/sfx/hit_arcane.wav",
+      "legacyPath": "assets/audio/sfx/hit_arcane.wav",
+      "name": "Hit Arcane"
+    },
+    {
+      "id": "asset_audio_sfx_hit_cold_wav",
+      "kind": "audio",
+      "path": "audio/sfx/hit_cold.wav",
+      "legacyPath": "assets/audio/sfx/hit_cold.wav",
+      "name": "Hit Cold"
+    },
+    {
+      "id": "asset_audio_sfx_hit_fire_wav",
+      "kind": "audio",
+      "path": "audio/sfx/hit_fire.wav",
+      "legacyPath": "assets/audio/sfx/hit_fire.wav",
+      "name": "Hit Fire"
+    },
+    {
+      "id": "asset_audio_sfx_hit_guard_wav",
+      "kind": "audio",
+      "path": "audio/sfx/hit_guard.wav",
+      "legacyPath": "assets/audio/sfx/hit_guard.wav",
+      "name": "Hit Guard"
+    },
+    {
+      "id": "asset_audio_sfx_hit_heal_wav",
+      "kind": "audio",
+      "path": "audio/sfx/hit_heal.wav",
+      "legacyPath": "assets/audio/sfx/hit_heal.wav",
+      "name": "Hit Heal"
+    },
+    {
+      "id": "asset_audio_sfx_hit_holy_wav",
+      "kind": "audio",
+      "path": "audio/sfx/hit_holy.wav",
+      "legacyPath": "assets/audio/sfx/hit_holy.wav",
+      "name": "Hit Holy"
+    },
+    {
+      "id": "asset_audio_sfx_hit_lightning_wav",
+      "kind": "audio",
+      "path": "audio/sfx/hit_lightning.wav",
+      "legacyPath": "assets/audio/sfx/hit_lightning.wav",
+      "name": "Hit Lightning"
+    },
+    {
+      "id": "asset_audio_sfx_hit_necrotic_wav",
+      "kind": "audio",
+      "path": "audio/sfx/hit_necrotic.wav",
+      "legacyPath": "assets/audio/sfx/hit_necrotic.wav",
+      "name": "Hit Necrotic"
+    },
+    {
+      "id": "asset_audio_sfx_hit_physical_wav",
+      "kind": "audio",
+      "path": "audio/sfx/hit_physical.wav",
+      "legacyPath": "assets/audio/sfx/hit_physical.wav",
+      "name": "Hit Physical"
+    },
+    {
+      "id": "asset_audio_sfx_hit_poison_wav",
+      "kind": "audio",
+      "path": "audio/sfx/hit_poison.wav",
+      "legacyPath": "assets/audio/sfx/hit_poison.wav",
+      "name": "Hit Poison"
+    },
+    {
+      "id": "asset_audio_sfx_metal_wav",
+      "kind": "audio",
+      "path": "audio/sfx/metal.wav",
+      "legacyPath": "assets/audio/sfx/metal.wav",
+      "name": "Metal"
+    },
+    {
+      "id": "asset_audio_sfx_miss_wav",
+      "kind": "audio",
+      "path": "audio/sfx/miss.wav",
+      "legacyPath": "assets/audio/sfx/miss.wav",
+      "name": "Miss"
+    },
+    {
+      "id": "asset_audio_sfx_quest_wav",
+      "kind": "audio",
+      "path": "audio/sfx/quest.wav",
+      "legacyPath": "assets/audio/sfx/quest.wav",
+      "name": "Quest"
+    },
+    {
+      "id": "asset_audio_sfx_rest_wav",
+      "kind": "audio",
+      "path": "audio/sfx/rest.wav",
+      "legacyPath": "assets/audio/sfx/rest.wav",
+      "name": "Rest"
+    },
+    {
+      "id": "asset_audio_sfx_shot_wav",
+      "kind": "audio",
+      "path": "audio/sfx/shot.wav",
+      "legacyPath": "assets/audio/sfx/shot.wav",
+      "name": "Shot"
+    },
+    {
+      "id": "asset_audio_sfx_step_stone_wav",
+      "kind": "audio",
+      "path": "audio/sfx/step_stone.wav",
+      "legacyPath": "assets/audio/sfx/step_stone.wav",
+      "name": "Step Stone"
+    },
+    {
+      "id": "asset_audio_sfx_step_town_wav",
+      "kind": "audio",
+      "path": "audio/sfx/step_town.wav",
+      "legacyPath": "assets/audio/sfx/step_town.wav",
+      "name": "Step Town"
+    },
+    {
+      "id": "asset_audio_sfx_trap_wav",
+      "kind": "audio",
+      "path": "audio/sfx/trap.wav",
+      "legacyPath": "assets/audio/sfx/trap.wav",
+      "name": "Trap"
+    },
+    {
+      "id": "asset_audio_sfx_ui_wav",
+      "kind": "audio",
+      "path": "audio/sfx/ui.wav",
+      "legacyPath": "assets/audio/sfx/ui.wav",
+      "name": "Ui"
+    },
+    {
+      "id": "asset_audio_sfx_victory_wav",
+      "kind": "audio",
+      "path": "audio/sfx/victory.wav",
+      "legacyPath": "assets/audio/sfx/victory.wav",
+      "name": "Victory"
+    },
+    {
+      "id": "asset_fonts_maxxia_mono_woff",
+      "kind": "font",
+      "path": "fonts/maxxia-mono.woff",
+      "legacyPath": "assets/fonts/maxxia-mono.woff",
+      "name": "Maxxia Mono"
+    },
+    {
+      "id": "asset_fonts_maxxia_serif_woff",
+      "kind": "font",
+      "path": "fonts/maxxia-serif.woff",
+      "legacyPath": "assets/fonts/maxxia-serif.woff",
+      "name": "Maxxia Serif"
+    },
+    {
+      "id": "asset_sigil_svg",
+      "kind": "image",
+      "path": "sigil.svg",
+      "legacyPath": "assets/sigil.svg",
+      "name": "Sigil"
+    }
+  ]
+}

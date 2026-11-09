@@ -1,0 +1,198 @@
+{
+  "scenes": [
+    {
+      "id": "npc_tessa_bell",
+      "atlas": [
+        880,
+        560
+      ],
+      "frame": [
+        440,
+        280
+      ],
+      "uniqueFrames": 4,
+      "durationsMs": [
+        2300,
+        120,
+        120,
+        1060
+      ],
+      "framesSha256": [
+        "d12c4743bb0bfe2249356f46251f4820f4d192a2b5c8416abe8e639b0c171b2f",
+        "dbf3229df8831ac2fda841c698ea5c5abc4551a3775e18fdaa53f1b8cb2a0ebe",
+        "eaefb9fcc320fb5aa03468ec4427886b1853744cc2a033007f32afb754b49eae",
+        "412f6af7a64ad7802560cb1effee8b0f4a9702ccee543a7c356ad4fc486d32f9"
+      ]
+    },
+    {
+      "id": "npc_orro_vane",
+      "atlas": [
+        880,
+        560
+      ],
+      "frame": [
+        440,
+        280
+      ],
+      "uniqueFrames": 4,
+      "durationsMs": [
+        2100,
+        120,
+        120,
+        1260
+      ],
+      "framesSha256": [
+        "f22cf47e2d424c4aded8dd3bf1ec332002a4bfb51d28820983a54569a34a0ac7",
+        "8b9b08a08ef7c5591907ed5ef302a7ab4f58b54d21b937999673832526a2b651",
+        "35098b2ceebd9b8927f3a56a858586456aca6be2167d9e737524c91941d63df4",
+        "48507201cfcfeac62fabd9ef3ded82d62a9628162b3d87db85ba796271aac810"
+      ]
+    },
+    {
+      "id": "npc_sister_vale",
+      "atlas": [
+        880,
+        560
+      ],
+      "frame": [
+        440,
+        280
+      ],
+      "uniqueFrames": 4,
+      "durationsMs": [
+        2600,
+        140,
+        120,
+        1140
+      ],
+      "framesSha256": [
+        "372a4b0e63f320b3ca1c0aa6e37f2fe7e44d0feb4e1b68fedff99674c0f4c480",
+        "6899f086e9ce55e1aaf1cecd4726f25041e7a8dd77d11379265e344e05ec9a67",
+        "e027d1b84826acdee9be212463e860fb8f32efdba6868b4adb91ccf02b4ebc4e",
+        "0dcad7d85241b83ac2fea69ae7dff17d4139f7ff56621a2bd845c1813d5a4c46"
+      ]
+    },
+    {
+      "id": "npc_captain_brann",
+      "atlas": [
+        880,
+        560
+      ],
+      "frame": [
+        440,
+        280
+      ],
+      "uniqueFrames": 4,
+      "durationsMs": [
+        2400,
+        120,
+        120,
+        960
+      ],
+      "framesSha256": [
+        "e3ba524fe465885f0599cff4268a94811dfe452e90a6b8cb746d8ab7eb4a1e3a",
+        "7ca0afb8d1574d1e09bee41a88173e3aef7ee42032d2a2ab274314f45270ccd0",
+        "a3f3ced074dd6b7eacd9ad0f3ec426abf9b2270ea9b8e917d63644cc07d6fb08",
+        "49a92eb6e225db2b9ed17ddb14982c5736e0a3b20906cd271290f1c55a0976a5"
+      ]
+    },
+    {
+      "id": "npc_pell_glass",
+      "atlas": [
+        880,
+        560
+      ],
+      "frame": [
+        440,
+        280
+      ],
+      "uniqueFrames": 4,
+      "durationsMs": [
+        2200,
+        120,
+        140,
+        1140
+      ],
+      "framesSha256": [
+        "5192df40bd2c7d853a8ed53a7b75cfc09782e5debaf051639f3148c070b2f118",
+        "3436050da65892121e1c37873d6a98dbc025278d7d78d4a751930f9924172505",
+        "831f0041a9c07dc1af46eb8417dadb8a60cde8145ec0a1e1bdb34476b565034c",
+        "25bafbcec66e32010f428fdebcd1a8525e068204368b0c8b28b5a2b4776fb2d9"
+      ]
+    },
+    {
+      "id": "npc_nera_salt",
+      "atlas": [
+        880,
+        560
+      ],
+      "frame": [
+        440,
+        280
+      ],
+      "uniqueFrames": 4,
+      "durationsMs": [
+        2500,
+        120,
+        120,
+        1260
+      ],
+      "framesSha256": [
+        "890d9bee8c258bb1bcb5ab40ff40be293a77325092960a761f6ce22585b16ccc",
+        "9789baa60b4003d283ddd27933ae4b6e2c412f957a24133144585b4fefa992f6",
+        "c17b45b3af0274b27d87f10d68f24d8eed84ddabc42b1ae790e0c391d9c419b9",
+        "11729781e1740182dde2a1828f8449e7d221a35db0477ce61ab7712ed399f85e"
+      ]
+    },
+    {
+      "id": "npc_aunt_vell",
+      "atlas": [
+        880,
+        560
+      ],
+      "frame": [
+        440,
+        280
+      ],
+      "uniqueFrames": 4,
+      "durationsMs": [
+        2300,
+        140,
+        120,
+        1040
+      ],
+      "framesSha256": [
+        "ff19a14a52a55539c5d0a6879d4c8f58607f9536fca77baec35e2eb2bc88bac1",
+        "ace42b0e396af708defab6a1a198edbe27e4de8ce12197d08855df69cef0fdca",
+        "69b4e7ad67d60889e90923435bd78e0b2ef62a241f271656f8eff5bffc018245",
+        "d1b3fde2dea6146cea8cbec2dc7a7a0511944e11752cb8b01c4c1ee3175a003f"
+      ]
+    },
+    {
+      "id": "npc_iona_reed",
+      "atlas": [
+        880,
+        560
+      ],
+      "frame": [
+        440,
+        280
+      ],
+      "uniqueFrames": 4,
+      "durationsMs": [
+        2400,
+        120,
+        140,
+        1340
+      ],
+      "framesSha256": [
+        "cb7959a32108f4cdda4e17fd3c3e863689e8329d115208897f9bb06c947c7357",
+        "8fb3927a43f3e8482f1b36380da77648fa09412fd1dbdff441fdb111832521d2",
+        "57acd1c1fbe8ab2efc91aaa8c3da2d5da284f1efcfbda34b755123a8a1dd3c3d",
+        "5038bda43c19143154494d23a1010a5f5a2215a3292d27539cdbd9122955eb06"
+      ]
+    }
+  ],
+  "totalFrames": 32,
+  "source": "production runtime atlases, Pillow asset review; not browser"
+}

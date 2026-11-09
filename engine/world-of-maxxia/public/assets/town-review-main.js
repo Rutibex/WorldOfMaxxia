@@ -1,0 +1,15 @@
+import {TownEnvironment} from './town-review-client-town-environment.js';
+import {TOWN_TEXTURES,townAsset,validateTownArt} from './town-review-client-town-art.js';
+import {initialGridState,applyGridAction,isOpaque,FACING_NAMES,DIRECTIONS} from './town-review-shared-rules-grid.js';
+import {viewPose} from './town-review-shared-rules-perspective.js';
+const $=id=>document.getElementById(id);try{const map=await fetch('content/town.json').then(r=>r.json());validateTownArt(map);
+const images=Object.fromEntries(await Promise.all(TOWN_TEXTURES.map(key=>new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>resolve([key,im]);im.onerror=()=>reject(Error('Missing '+townAsset(key)));im.src=townAsset(key);}))));
+await document.fonts.ready;const painter=new TownEnvironment(images);let state=initialGridState(map);const ctx=$('town').getContext('2d');
+function render(){painter.render(ctx,map,state,viewPose(state));$('facing').value=String(state.facing);$('status').textContent=state.x+', '+state.y+' · '+FACING_NAMES[state.facing]+' · isolated art review';const d=DIRECTIONS[state.facing],near=map.props.find(p=>p.x===state.x&&p.y===state.y)||map.props.find(p=>p.x===state.x+d.x&&p.y===state.y+d.y);$('info').textContent=near?near.name+' — '+near.description:'Town scenery uses stable map IDs; services and quest actions operate in the game.';}
+for(const p of map.props){const o=document.createElement('option');o.value=p.id;o.textContent=p.name;$('landmark').append(o);}
+$('landmark').addEventListener('change',()=>{const p=map.props.find(p=>p.id===$('landmark').value);if(!p){state={...state,...map.spawn};render();return;}const options=[{x:p.x,y:p.y+1,facing:0},{x:p.x-1,y:p.y,facing:1},{x:p.x,y:p.y-1,facing:2},{x:p.x+1,y:p.y,facing:3}];const spot=options.find(v=>!isOpaque(map,state,v.x,v.y));if(spot)state={...state,...spot};render();});
+$('facing').addEventListener('change',()=>{state={...state,facing:Number($('facing').value)};render();});$('scale').addEventListener('change',()=>{const s=Number($('scale').value);$('frame').style.width=440*s+'px';$('frame').style.height=280*s+'px';});
+$('gates').addEventListener('change',()=>{state={...state,doors:Object.fromEntries(map.doors.map(d=>[d.id,$('gates').checked]))};render();});
+function act(action){const r=applyGridAction(map,state,action);state=r.state;render();$('town').focus({preventScroll:true});if(!r.changed)$('status').textContent=r.message;}
+for(const b of document.querySelectorAll('[data-action]'))b.addEventListener('click',()=>act(b.dataset.action));
+window.addEventListener('keydown',e=>{if(['INPUT','SELECT','BUTTON'].includes(e.target.tagName))return;const moves={ArrowUp:'forward',ArrowDown:'backward',ArrowLeft:e.ctrlKey?'strafe_left':'turn_left',ArrowRight:e.ctrlKey?'strafe_right':'turn_right',Space:'interact'};const action=moves[e.code];if(action){e.preventDefault();act(action);}});render();}catch(error){$('status').textContent='Town review failed: '+error.message;}

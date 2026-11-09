@@ -1,0 +1,61 @@
+{
+  "format": "maxxia-project",
+  "projectFormatVersion": 1,
+  "projectId": "project_mp04_catalogue_proof",
+  "title": "MP04 — Brass and Glass Catalogue Proof",
+  "engineVersion": "0.50.0",
+  "minimumEngineVersion": "0.36.0",
+  "contentRevision": 13,
+  "content": {
+    "kind": "map-index",
+    "index": "projects/WorldOfMaxxia/maps/index.json",
+    "foundation": "projects/WorldOfMaxxia/database/foundation.json",
+    "resources": "assets/catalog.json",
+    "items": "core/classic/database/items.json",
+    "classes": "core/classic/database/classes.json",
+    "actors": "projects/WorldOfMaxxia/database/actors.json",
+    "progression": "core/classic/database/progression.json",
+    "spells": "core/classic/database/spells.json",
+    "monsters": "core/classic/database/monsters.json",
+    "encounterGroups": "mp04-proof/encounter-groups.json",
+    "encounterPlacements": "mp04-proof/encounter-placements.json",
+    "lootTables": "projects/WorldOfMaxxia/database/loot-tables.json",
+    "groundPickups": "projects/WorldOfMaxxia/database/ground-pickups.json",
+    "environments": "projects/WorldOfMaxxia/database/environments.json"
+  },
+  "start": {
+    "map": {
+      "type": "map",
+      "id": "map_town"
+    },
+    "x": 7,
+    "y": 12,
+    "facing": 0
+  },
+  "startingParty": [
+    {
+      "type": "actor",
+      "id": "hero_tarin"
+    },
+    {
+      "type": "actor",
+      "id": "hero_vexa"
+    },
+    {
+      "type": "actor",
+      "id": "hero_brindle"
+    },
+    {
+      "type": "actor",
+      "id": "hero_orrin"
+    },
+    {
+      "type": "actor",
+      "id": "hero_sera"
+    },
+    {
+      "type": "actor",
+      "id": "hero_mora"
+    }
+  ]
+}

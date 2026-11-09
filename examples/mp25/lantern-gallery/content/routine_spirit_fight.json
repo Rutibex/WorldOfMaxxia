@@ -1,0 +1,62 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 2,
+  "id": "lantern:routine:spirit_fight",
+  "parameters": {},
+  "actions": [
+    {
+      "op": "if",
+      "condition": {
+        "not": {
+          "any": [
+            {
+              "op": "eq",
+              "left": {
+                "query": "state",
+                "address": {
+                  "scope": "campaign"
+                },
+                "kind": "flag",
+                "key": "lantern:flag:spirit_clear"
+              },
+              "right": true
+            },
+            {
+              "op": "contains",
+              "left": {
+                "query": "state",
+                "address": {
+                  "scope": "campaign"
+                },
+                "kind": "collection",
+                "key": "lantern:collection:e_spirit_status"
+              },
+              "right": "won"
+            }
+          ]
+        }
+      },
+      "then": [
+        {
+          "op": "state",
+          "kind": "flag",
+          "address": {
+            "scope": "campaign"
+          },
+          "key": "lantern:flag:spirit_fight",
+          "value": true
+        },
+        {
+          "op": "message",
+          "text": "The echo tears free. Resolve the encounter through Fight; defeating it also releases the interlock."
+        }
+      ],
+      "else": [
+        {
+          "op": "message",
+          "text": "The interlock is already released."
+        }
+      ]
+    }
+  ]
+}

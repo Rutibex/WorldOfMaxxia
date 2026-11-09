@@ -1,0 +1,26 @@
+{
+  "poisoned": {
+    "cell": 64,
+    "art_type": "image-generated transparent cutout"
+  },
+  "asleep": {
+    "cell": 64,
+    "art_type": "image-generated transparent cutout"
+  },
+  "frightened": {
+    "cell": 64,
+    "art_type": "image-generated transparent cutout"
+  },
+  "cursed": {
+    "cell": 64,
+    "art_type": "image-generated transparent cutout"
+  },
+  "drunk": {
+    "cell": 64,
+    "art_type": "image-generated transparent cutout"
+  },
+  "hungry": {
+    "cell": 64,
+    "art_type": "image-generated transparent cutout"
+  }
+}

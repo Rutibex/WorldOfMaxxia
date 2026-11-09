@@ -1,0 +1,37 @@
+{
+  "format": "maxxia-authored-ability",
+  "formatVersion": 1,
+  "id": "lantern:ability:echo_hand",
+  "record": {
+    "id": "lantern:ability:echo_hand",
+    "name": "Echo Hand",
+    "description": "Spend one Echo to open or unlock an eligible mechanism, disarm a linked pressure hazard or operate a ward from up to three squares away with line of sight. The command uses exploration minutes and has a two-minute cooldown.",
+    "context": "exploration",
+    "target": "self",
+    "operations": [],
+    "activation": {
+      "mode": "active",
+      "classes": [
+        "lantern:class:echo_sentinel"
+      ],
+      "minLevel": 1,
+      "cost": {
+        "id": "lantern:pool:echoes",
+        "amount": 1
+      },
+      "cooldown": {
+        "clock": "minutes",
+        "amount": 2
+      }
+    },
+    "exploration": {
+      "tags": [
+        "mechanism",
+        "ward",
+        "step"
+      ],
+      "range": 3,
+      "requiresSight": true
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "format": "maxxia-content-index",
+  "formatVersion": 1,
+  "definitions": [
+    {
+      "id": "lantern:map:market",
+      "kind": "map",
+      "visibility": "local",
+      "file": "content/map-market.json",
+      "placement": "authored",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:race:mothkin",
+      "kind": "race",
+      "visibility": "exported",
+      "file": "content/race-mothkin.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:class:envoy",
+      "kind": "class",
+      "visibility": "exported",
+      "file": "content/class-envoy.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "brass:item:buckler",
+          "whenPackEnabled": "brass",
+          "onAbsent": "skip"
+        }
+      ]
+    }
+  ]
+}

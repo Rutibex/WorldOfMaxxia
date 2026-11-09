@@ -1,0 +1,15 @@
+{
+  "format": "maxxia-content-index",
+  "formatVersion": 1,
+  "definitions": [
+    {
+      "id": "core:routine:welcome",
+      "kind": "routine",
+      "visibility": "exported",
+      "file": "content/welcome.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "format": "maxxia-pack",
+  "formatVersion": 1,
+  "packId": "bridge",
+  "title": "Bridge proof content",
+  "version": "2.0.0",
+  "kind": "content",
+  "engine": {
+    "min": "0.49.0",
+    "maxExclusive": "1.0.0"
+  },
+  "rules": {
+    "id": "core:rules:classic",
+    "version": "1.0.0"
+  },
+  "dependencies": [
+    {
+      "packId": "core",
+      "versions": {
+        "min": "1.0.0",
+        "maxExclusive": "2.0.0"
+      },
+      "optional": false
+    },
+    {
+      "packId": "ward",
+      "versions": {
+        "min": "2.0.0",
+        "maxExclusive": "3.0.0"
+      },
+      "optional": false
+    }
+  ],
+  "contentIndex": "content/index.json",
+  "entry": null,
+  "credits": [
+    "Michael Robinson; MP03 resolution proof"
+  ]
+}

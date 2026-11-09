@@ -1,0 +1,11 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 1,
+  "id": "ward:routine:notice",
+  "actions": [
+    {
+      "operation": "message",
+      "text": "ward provider version 1.0.0"
+    }
+  ]
+}

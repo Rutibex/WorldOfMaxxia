@@ -1,0 +1,82 @@
+{
+  "format": "maxxia-authored-npc",
+  "formatVersion": 1,
+  "id": "mp14:npc:apprentice",
+  "record": {
+    "id": "mp14:npc:apprentice",
+    "name": "Counter Apprentice",
+    "dialogueId": "mp14:dialogue:counter",
+    "initialAttitude": -5,
+    "services": [
+      {
+        "id": "shop",
+        "name": "Counter supplies",
+        "kind": "shop",
+        "minAttitude": 0,
+        "stock": [
+          {
+            "itemId": "item_antidote",
+            "quantity": 2,
+            "price": 15
+          }
+        ],
+        "generic": {
+          "tags": [
+            "shop:counter"
+          ],
+          "quantity": 3,
+          "maxItems": 8
+        },
+        "buybackPercent": 50
+      },
+      {
+        "id": "healer",
+        "name": "First aid",
+        "kind": "healing",
+        "minAttitude": 0,
+        "cost": 10,
+        "amount": 12
+      },
+      {
+        "id": "trainer",
+        "name": "Adventurer training",
+        "kind": "training",
+        "minAttitude": 5
+      },
+      {
+        "id": "tribute",
+        "name": "Goodwill tribute",
+        "kind": "tribute",
+        "cost": 20,
+        "attitudeDelta": 10,
+        "once": true
+      },
+      {
+        "id": "barter",
+        "name": "Token exchange",
+        "kind": "barter",
+        "offers": [
+          {
+            "id": "tonic",
+            "name": "Exchange one trade token for a counter tonic",
+            "give": [
+              {
+                "itemId": "mp14:item:trade_token",
+                "count": 1
+              }
+            ],
+            "receive": [
+              {
+                "itemId": "mp14:item:tonic",
+                "count": 1
+              }
+            ],
+            "costGold": 0,
+            "once": true,
+            "attitudeDelta": 2
+          }
+        ]
+      }
+    ]
+  }
+}

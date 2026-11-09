@@ -1,0 +1,64 @@
+name: Build and test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  game:
+    name: Browser game and module tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            engine/world-of-maxxia/package-lock.json
+      - name: Install workspace dependencies
+        run: npm ci
+      - name: Install browser dependencies
+        run: npm --prefix engine/world-of-maxxia ci
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Check generated contracts
+        run: npm run check:generated
+      - name: Check pack contracts
+        run: npm run check:contracts
+      - name: Check public workspace structure
+        run: npm run check:workspace
+      - name: Check game and MP27 toolkit tests
+        run: |
+          npm run check:game
+          npm run check:mp27
+      - name: Build and verify browser output
+        run: |
+          npm run build:game
+          npm run verify:game
+          node tools/prepare-pages.mjs
+          node tools/verify-pages.mjs
+      - name: Upload compiled Pages preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: world-of-maxxia-pages-preview
+          path: _site/
+          if-no-files-found: error
+
+  editor:
+    name: Windows editor build
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Build editor and shared document code
+        run: dotnet build editor/MaxxiaMaker.sln -c Release --nologo

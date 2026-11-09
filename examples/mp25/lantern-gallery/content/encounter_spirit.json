@@ -1,0 +1,52 @@
+{
+  "format": "maxxia-authored-encounter",
+  "formatVersion": 1,
+  "id": "lantern:encounter:spirit",
+  "record": {
+    "name": "Angry maintenance echo",
+    "description": "Angry maintenance echo. Fight to resolve this guardian.",
+    "mapId": "lantern:map:cistern",
+    "nativeMapId": "map_lantern_cistern",
+    "x": 4,
+    "y": 3,
+    "range": 2,
+    "trigger": {
+      "kind": "proximity",
+      "interval": 1,
+      "table": "spirit"
+    },
+    "weight": 1,
+    "members": [
+      {
+        "kindId": "lantern:monster:echo",
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "bribe": null,
+    "avoidDC": null,
+    "condition": {
+      "op": "eq",
+      "left": {
+        "query": "state",
+        "address": {
+          "scope": "campaign"
+        },
+        "kind": "flag",
+        "key": "lantern:flag:spirit_fight"
+      },
+      "right": true
+    },
+    "respawn": {
+      "kind": "never",
+      "minutes": 1
+    },
+    "phases": [
+      {
+        "title": "Brass shell",
+        "healthPercent": 100
+      }
+    ],
+    "id": "lantern:encounter:spirit"
+  }
+}

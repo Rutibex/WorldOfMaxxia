@@ -1,0 +1,35 @@
+{
+  "format": "maxxia-pack",
+  "formatVersion": 1,
+  "packId": "route_lab",
+  "title": "The Shifting Waterworks",
+  "version": "1.0.0",
+  "kind": "adventure",
+  "engine": {
+    "min": "0.71.0",
+    "maxExclusive": "1.0.0"
+  },
+  "rules": {
+    "id": "core:rules:classic",
+    "version": "1.0.0"
+  },
+  "dependencies": [
+    {
+      "packId": "core",
+      "versions": {
+        "min": "1.0.0",
+        "maxExclusive": "2.0.0"
+      },
+      "optional": false
+    }
+  ],
+  "contentIndex": "content/index.json",
+  "entry": {
+    "mapId": "route_lab:map:maze",
+    "arrivalId": "entry"
+  },
+  "credits": [
+    "By Michael Robinson",
+    "MP26 finite topology and entry-hazard demonstration; temporary existing art."
+  ]
+}

@@ -1,0 +1,27 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {deflateRawSync} from 'node:zlib';
+import {readPackArchive,createPackArchive,crc32} from '../archive.mjs';
+const failure=code=>e=>e.code===code;
+const base=()=>createPackArchive(new Map([['abc.json',Buffer.from('{}')]]));
+const central=b=>b.readUInt32LE(b.length-6);
+function deflated(data){const name=Buffer.from('abc.json'),compressed=deflateRawSync(data),crc=crc32(data),l=Buffer.alloc(30),c=Buffer.alloc(46),e=Buffer.alloc(22);l.writeUInt32LE(0x04034b50);l.writeUInt16LE(20,4);l.writeUInt16LE(8,8);l.writeUInt32LE(crc,14);l.writeUInt32LE(compressed.length,18);l.writeUInt32LE(data.length,22);l.writeUInt16LE(name.length,26);c.writeUInt32LE(0x02014b50);c.writeUInt16LE(20,6);c.writeUInt16LE(8,10);c.writeUInt32LE(crc,16);c.writeUInt32LE(compressed.length,20);c.writeUInt32LE(data.length,24);c.writeUInt16LE(name.length,28);const offset=l.length+name.length+compressed.length,cd=Buffer.concat([c,name]);e.writeUInt32LE(0x06054b50);e.writeUInt16LE(1,8);e.writeUInt16LE(1,10);e.writeUInt32LE(cd.length,12);e.writeUInt32LE(offset,16);return Buffer.concat([l,name,compressed,cd,e]);}
+test('canonical writer/reader round trip is byte deterministic across file order',()=>{const a=createPackArchive(new Map([['b.json',Buffer.from('[]')],['a.json',Buffer.from('{}')]])),b=createPackArchive(new Map([['a.json',Buffer.from('{}')],['b.json',Buffer.from('[]')]]));assert.deepEqual(a,b);assert.equal(readPackArchive(a).files.get('a.json').toString(),'{}');});
+test('ordinary deflated file is supported',()=>{assert.equal(readPackArchive(deflated(Buffer.from('{"a":1}'))).files.get('abc.json').toString(),'{"a":1}');});
+for(const name of ['../x.txt','/abc.txt','C:/x.txt','a\\bc.txt','ab\0.json'])test('reject unsafe archive name '+JSON.stringify(name),()=>{const b=base(),cd=central(b);Buffer.from(name).copy(b,30);Buffer.from(name).copy(b,cd+46);assert.throws(()=>readPackArchive(b),failure('E_ARCHIVE_PATH'));});
+test('case-colliding ZIP entry paths rejected',()=>{const b=createPackArchive(new Map([['one.json',Buffer.from('{}')],['two.json',Buffer.from('{}')]]));const name=Buffer.from('two.json');for(let p=b.indexOf(name);p>=0;p=b.indexOf(name,p+8))Buffer.from('ONE.json').copy(b,p);assert.throws(()=>readPackArchive(b),failure('E_ARCHIVE_PATH'));});
+test('symlink entries rejected without extraction',()=>{const b=base(),cd=central(b);b.writeUInt32LE((0o120777<<16)>>>0,cd+38);assert.throws(()=>readPackArchive(b),failure('E_ARCHIVE_PATH'));});
+test('device entries rejected',()=>{const b=base(),cd=central(b);b.writeUInt32LE((0o020666<<16)>>>0,cd+38);assert.throws(()=>readPackArchive(b),failure('E_ARCHIVE_PATH'));});
+for(const flags of [0x0801,0x0808])test('unsupported encrypted/streaming flag '+flags,()=>{const b=base(),cd=central(b);b.writeUInt16LE(flags,6);b.writeUInt16LE(flags,cd+8);assert.throws(()=>readPackArchive(b),failure('E_ARCHIVE_FORMAT'));});
+test('unsupported compression rejected',()=>{const b=base(),cd=central(b);b.writeUInt16LE(12,8);b.writeUInt16LE(12,cd+10);assert.throws(()=>readPackArchive(b),failure('E_ARCHIVE_FORMAT'));});
+test('CRC mismatch rejected',()=>{const b=base();b[38]^=1;assert.throws(()=>readPackArchive(b),failure('E_ARCHIVE_INTEGRITY'));});
+test('truncated input rejected',()=>{assert.throws(()=>readPackArchive(base().subarray(0,40)),failure('E_ARCHIVE_FORMAT'));});
+test('central/local name mismatch rejected',()=>{const b=base();b[30]=100;assert.throws(()=>readPackArchive(b),failure('E_ARCHIVE_FORMAT'));});
+test('declared oversized entry rejected before decompression',()=>{const b=base(),cd=central(b);b.writeUInt32LE(1024*1024+1,cd+24);assert.throws(()=>readPackArchive(b),failure('E_ARCHIVE_LIMIT'));});
+test('compression bomb ratio rejected',()=>{assert.throws(()=>readPackArchive(deflated(Buffer.alloc(100000))),failure('E_ARCHIVE_LIMIT'));});
+test('ZIP64 sentinel rejected',()=>{const b=base();b.writeUInt16LE(65535,b.length-12);assert.throws(()=>readPackArchive(b),failure('E_ARCHIVE_FORMAT'));});
+test('multi-disk input rejected',()=>{const b=base();b.writeUInt16LE(1,b.length-18);assert.throws(()=>readPackArchive(b),failure('E_ARCHIVE_FORMAT'));});
+test('unreferenced trailing input rejected',()=>{assert.throws(()=>readPackArchive(Buffer.concat([base(),Buffer.from('junk')])),failure('E_ARCHIVE_FORMAT'));});
+test('empty ZIP cannot be a pack transport',()=>{assert.throws(()=>createPackArchive(new Map()),failure('E_ARCHIVE_LIMIT'));});
+test('input size limit enforced',()=>{assert.throws(()=>readPackArchive(Buffer.alloc(32*1024*1024+1)),failure('E_ARCHIVE_LIMIT'));});
+test('writer rejects case-colliding snapshot names',()=>{assert.throws(()=>createPackArchive(new Map([['One.json',Buffer.from('{}')],['one.json',Buffer.from('{}')]])),failure('E_ARCHIVE_PATH'));});

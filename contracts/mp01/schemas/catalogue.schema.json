@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maxxia.invalid/contracts/mp01/catalogue.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "engineVersion",
+    "rules",
+    "packs"
+  ],
+  "properties": {
+    "engineVersion": {
+      "$ref": "common.schema.json#/$defs/version"
+    },
+    "rules": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120,
+          "pattern": "^[a-z][a-z0-9_]{0,47}:rules:[a-z][a-z0-9_]{0,79}$"
+        },
+        "version": {
+          "$ref": "common.schema.json#/$defs/version"
+        }
+      },
+      "required": [
+        "id",
+        "version"
+      ]
+    },
+    "packs": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 128,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "manifest",
+          "index"
+        ],
+        "properties": {
+          "manifest": {
+            "$ref": "pack.schema.json"
+          },
+          "index": {
+            "$ref": "content-index.schema.json"
+          }
+        }
+      }
+    }
+  }
+}

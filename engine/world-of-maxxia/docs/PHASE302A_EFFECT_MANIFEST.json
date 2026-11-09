@@ -1,0 +1,128 @@
+{
+  "missile_arrow": {
+    "kind": "missile",
+    "frames": 6,
+    "cell": 96,
+    "source_family": "arrow",
+    "art_type": "image-generated rendered sequence"
+  },
+  "missile_arcane": {
+    "kind": "missile",
+    "frames": 6,
+    "cell": 96,
+    "source_family": "arcane",
+    "art_type": "image-generated rendered sequence"
+  },
+  "missile_fire": {
+    "kind": "missile",
+    "frames": 6,
+    "cell": 96,
+    "source_family": "fire",
+    "art_type": "image-generated rendered sequence"
+  },
+  "missile_frost": {
+    "kind": "missile",
+    "frames": 6,
+    "cell": 96,
+    "source_family": "cold",
+    "art_type": "image-generated rendered sequence"
+  },
+  "missile_lightning": {
+    "kind": "missile",
+    "frames": 6,
+    "cell": 96,
+    "source_family": "lightning",
+    "art_type": "image-generated rendered sequence"
+  },
+  "missile_holy": {
+    "kind": "missile",
+    "frames": 6,
+    "cell": 96,
+    "source_family": "holy",
+    "art_type": "image-generated rendered sequence"
+  },
+  "missile_shadow": {
+    "kind": "missile",
+    "frames": 6,
+    "cell": 96,
+    "source_family": "necrotic",
+    "art_type": "image-generated rendered sequence"
+  },
+  "missile_bind": {
+    "kind": "missile",
+    "frames": 6,
+    "cell": 96,
+    "source_family": "bind",
+    "art_type": "image-generated rendered sequence"
+  },
+  "burst_heal": {
+    "kind": "burst",
+    "frames": 6,
+    "cell": 96,
+    "source_family": "heal",
+    "art_type": "image-generated rendered sequence"
+  },
+  "burst_ward": {
+    "kind": "burst",
+    "frames": 6,
+    "cell": 96,
+    "source_family": "guard",
+    "art_type": "image-generated rendered sequence"
+  },
+  "burst_holy": {
+    "kind": "burst",
+    "frames": 6,
+    "cell": 96,
+    "source_family": "holy",
+    "art_type": "image-generated rendered sequence"
+  },
+  "burst_shadow": {
+    "kind": "burst",
+    "frames": 6,
+    "cell": 96,
+    "source_family": "necrotic",
+    "art_type": "image-generated rendered sequence"
+  },
+  "burst_poison": {
+    "kind": "burst",
+    "frames": 6,
+    "cell": 96,
+    "source_family": "poison",
+    "art_type": "image-generated rendered sequence"
+  },
+  "burst_portal": {
+    "kind": "burst",
+    "frames": 6,
+    "cell": 96,
+    "source_family": "portal",
+    "art_type": "image-generated rendered sequence"
+  },
+  "burst_starfall": {
+    "kind": "burst",
+    "frames": 6,
+    "cell": 96,
+    "source_family": "starfall",
+    "art_type": "image-generated rendered sequence"
+  },
+  "burst_firefan": {
+    "kind": "burst",
+    "frames": 6,
+    "cell": 96,
+    "source_family": "fire",
+    "art_type": "image-generated rendered sequence"
+  },
+  "burst_storm": {
+    "kind": "burst",
+    "frames": 6,
+    "cell": 96,
+    "source_family": "lightning",
+    "art_type": "image-generated rendered sequence"
+  },
+  "burst_arcane": {
+    "kind": "burst",
+    "frames": 6,
+    "cell": 96,
+    "source_family": "arcane",
+    "art_type": "image-generated rendered sequence"
+  }
+}

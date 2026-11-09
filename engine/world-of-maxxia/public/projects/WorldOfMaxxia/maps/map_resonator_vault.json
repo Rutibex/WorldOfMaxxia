@@ -1,0 +1,197 @@
+{
+  "format": "maxxia-map",
+  "version": 1,
+  "id": "map_resonator_vault",
+  "name": "Resonator Vault \u2014 Deep Waterworks",
+  "width": 16,
+  "height": 16,
+  "geometry": {
+    "rows": [
+      "################",
+      "#.........#....#",
+      "#....#....#....#",
+      "#....#....#....#",
+      "#.........##D###",
+      "#....#.........#",
+      "#.#.###.##.....#",
+      "#....#.........#",
+      "#....#.........#",
+      "#..............#",
+      "#....#.........#",
+      "#....##.###.##.#",
+      "#....#.........#",
+      "#..............#",
+      "#..............#",
+      "################"
+    ]
+  },
+  "materials": {
+    "floor": {
+      "default": "material_floor_default",
+      "overrides": []
+    },
+    "wall": {
+      "default": "material_wall_default",
+      "overrides": []
+    },
+    "ceiling": {
+      "default": "material_ceiling_default",
+      "overrides": []
+    }
+  },
+  "scenery": [
+    {
+      "id": "scene_vault_maintenance",
+      "kind": "banner",
+      "x": 6,
+      "y": 10,
+      "name": "Maintenance Score",
+      "description": "A scratched brass plate repeats the service sequence: Copper, then Moon, then Glass. The three valves answer in that order."
+    },
+    {
+      "id": "scene_vault_copper",
+      "kind": "crystal",
+      "x": 6,
+      "y": 8,
+      "name": "Copper Valve",
+      "description": "A copper-colored wheel marked with the first bell."
+    },
+    {
+      "id": "scene_vault_moon",
+      "kind": "crystal",
+      "x": 7,
+      "y": 8,
+      "name": "Moon Valve",
+      "description": "A silver wheel marked with the second bell."
+    },
+    {
+      "id": "scene_vault_glass",
+      "kind": "crystal",
+      "x": 8,
+      "y": 8,
+      "name": "Glass Valve",
+      "description": "A translucent valve marked with the third bell."
+    },
+    {
+      "id": "scene_vault_echo",
+      "kind": "brazier",
+      "x": 3,
+      "y": 4,
+      "name": "Echo Shrine",
+      "description": "A tiny bottle preserves an audible memory of the bells. Its warden will release it to a petitioner."
+    },
+    {
+      "id": "scene_vault_regulator",
+      "kind": "mirror",
+      "x": 13,
+      "y": 2,
+      "name": "Bell-Heart Regulator",
+      "description": "The regulating spindle lies in the defeated Custodian\u2019s cradle."
+    },
+    {
+      "id": "scene_vault_rest",
+      "kind": "brazier",
+      "x": 3,
+      "y": 11,
+      "name": "Dry Rest Alcove",
+      "description": "Warm air from the old vents makes this corner suitable for a short rest."
+    },
+    {
+      "id": "scene_vault_bypass",
+      "kind": "banner",
+      "x": 11,
+      "y": 10,
+      "name": "Bypass Corridor",
+      "description": "A maintenance passage lets adventurers return from the eastern culvert."
+    },
+    {
+      "id": "scene_vault_warning",
+      "kind": "banner",
+      "x": 12,
+      "y": 5,
+      "name": "Warning: Resonance Seal",
+      "description": "Beyond the brass gate waits the Bell-Heart Custodian. Once engaged it cannot be fled; prepare before entering."
+    }
+  ],
+  "objects": {
+    "doors": [
+      {
+        "id": "door_bell_heart_seal",
+        "x": 12,
+        "y": 4,
+        "lockDC": 30,
+        "questLocked": true
+      }
+    ],
+    "secrets": [
+      {
+        "id": "secret_vault_shortcut",
+        "x": 5,
+        "y": 12,
+        "description": "A concealed maintenance hatch opens a shorter return route."
+      }
+    ],
+    "traps": [
+      {
+        "id": "trap_vault_leech",
+        "x": 7,
+        "y": 12,
+        "dc": 13,
+        "damage": 5,
+        "description": "An old drainage grate releases caustic spray."
+      },
+      {
+        "id": "trap_vault_moth",
+        "x": 11,
+        "y": 8,
+        "dc": 14,
+        "damage": 6,
+        "description": "A discharge snaps between two copper rods."
+      }
+    ],
+    "fountains": [
+      {
+        "id": "fountain_vault_rest",
+        "x": 3,
+        "y": 11,
+        "name": "Rest Alcove Spring",
+        "heal": 4,
+        "sp": 3
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_vault_to_upper",
+        "x": 2,
+        "y": 13,
+        "targetMapId": "map_diagnostic_galleries",
+        "targetX": 13,
+        "targetY": 13,
+        "targetFacing": 0
+      },
+      {
+        "id": "portal_vault_shortcut",
+        "x": 13,
+        "y": 2,
+        "targetMapId": "map_diagnostic_galleries",
+        "targetX": 13,
+        "targetY": 13,
+        "targetFacing": 0
+      }
+    ]
+  },
+  "arrivals": [
+    {
+      "id": "arrival_start",
+      "name": "Start",
+      "x": 2,
+      "y": 13,
+      "facing": 0
+    }
+  ],
+  "events": [],
+  "settings": {
+    "environmentId": "environment_vault",
+    "notes": ""
+  }
+}

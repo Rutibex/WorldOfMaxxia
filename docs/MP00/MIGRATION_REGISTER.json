@@ -1,0 +1,131 @@
+{
+  "phase": "MP00",
+  "items": [
+    {
+      "id": "M01",
+      "finding": "Project loading replaces active databases",
+      "path": "engine/world-of-maxxia/src/client/project-boot.ts",
+      "targetPhases": "MP03\u201305",
+      "action": "Stage dependency resolution and compose immutable registries.",
+      "status": "identified",
+      "mp00GameplayChange": false
+    },
+    {
+      "id": "M02",
+      "finding": "Global mutable definition registries",
+      "path": "engine/world-of-maxxia/src/shared/content/classes.ts",
+      "targetPhases": "MP04",
+      "action": "Install one validated catalogue per session; reject duplicate namespaced IDs.",
+      "status": "identified",
+      "mp00GameplayChange": false
+    },
+    {
+      "id": "M03",
+      "finding": "Story-specific quest states and valve sequence",
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "targetPhases": "MP11\u201315; MP32",
+      "action": "Replace campaign assumptions with typed state/events and authored quests.",
+      "status": "identified",
+      "mp00GameplayChange": false
+    },
+    {
+      "id": "M04",
+      "finding": "Town services and shop stock",
+      "path": "engine/world-of-maxxia/src/shared/rules/services.ts",
+      "targetPhases": "MP14; MP32",
+      "action": "Pack-defined NPC services and stock eligibility.",
+      "status": "identified",
+      "mp00GameplayChange": false
+    },
+    {
+      "id": "M05",
+      "finding": "Map-ID renderer dispatch",
+      "path": "engine/world-of-maxxia/src/client/perspective-renderer.ts",
+      "targetPhases": "MP24\u201325",
+      "action": "Profiles choose presentation; preserve original art.",
+      "status": "identified",
+      "mp00GameplayChange": false
+    },
+    {
+      "id": "M06",
+      "finding": "Scene triggers and validators in main",
+      "path": "engine/world-of-maxxia/src/client/main.ts",
+      "targetPhases": "MP13\u201316; MP32",
+      "action": "Authored triggers and shared scene validation.",
+      "status": "identified",
+      "mp00GameplayChange": false
+    },
+    {
+      "id": "M07",
+      "finding": "Fixed class traits and prepared styles",
+      "path": "engine/world-of-maxxia/src/shared/content/classes.ts",
+      "targetPhases": "MP18\u201320",
+      "action": "Reusable resources, abilities and progression.",
+      "status": "identified",
+      "mp00GameplayChange": false
+    },
+    {
+      "id": "M08",
+      "finding": "Closed condition and ward semantics",
+      "path": "engine/world-of-maxxia/src/shared/content/conditions.ts",
+      "targetPhases": "MP18",
+      "action": "Extensible typed condition/effect contracts.",
+      "status": "identified",
+      "mp00GameplayChange": false
+    },
+    {
+      "id": "M09",
+      "finding": "Party embedded in campaign snapshots",
+      "path": "engine/world-of-maxxia/src/shared/rules/campaign.ts",
+      "targetPhases": "MP07\u201310",
+      "action": "Portable roster, revisioned snapshots, explicit transfer receipts.",
+      "status": "identified",
+      "mp00GameplayChange": false
+    },
+    {
+      "id": "M10",
+      "finding": "Project-prefixed campaign slots",
+      "path": "engine/world-of-maxxia/src/client/project-boot.ts",
+      "targetPhases": "MP07\u201310",
+      "action": "Campaign instances distinct from character ownership and pack dependencies.",
+      "status": "identified",
+      "mp00GameplayChange": false
+    },
+    {
+      "id": "M11",
+      "finding": "Plot-specific ground and pickup behaviour",
+      "path": "engine/world-of-maxxia/src/shared/rules/ground.ts",
+      "targetPhases": "MP13; MP21; MP32",
+      "action": "Placed entities, instance identity and one-time rewards.",
+      "status": "identified",
+      "mp00GameplayChange": false
+    },
+    {
+      "id": "M12",
+      "finding": "Fixed NPC illustration/scene catalogue",
+      "path": "engine/world-of-maxxia/src/client/npc-scenes.ts",
+      "targetPhases": "MP14; MP25; MP32",
+      "action": "Pack NPC graphs and resource-bound appearances.",
+      "status": "identified",
+      "mp00GameplayChange": false
+    },
+    {
+      "id": "M13",
+      "finding": "Original scene art selectors",
+      "path": "engine/world-of-maxxia/src/client/town-art.ts",
+      "targetPhases": "MP24\u201325",
+      "action": "Retain assets while replacing map-specific selectors.",
+      "status": "identified",
+      "mp00GameplayChange": false
+    },
+    {
+      "id": "M14",
+      "finding": "Existing composed spell restrictions",
+      "path": "engine/world-of-maxxia/src/shared/content/spells.ts",
+      "targetPhases": "MP18\u201323",
+      "action": "Broaden shared target/effect vocabulary without unrestricted eval.",
+      "status": "identified",
+      "mp00GameplayChange": false
+    }
+  ]
+}

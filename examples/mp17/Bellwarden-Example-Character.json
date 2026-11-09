@@ -1,0 +1,285 @@
+{
+  "format": "maxxia-portable-character",
+  "version": 1,
+  "portableId": "f9d76d3a-2ee6-441b-9bd3-21eb852755ad",
+  "revision": 1,
+  "originInstanceId": "11111111-1111-4111-8111-111111111117",
+  "source": {
+    "definitionId": "bell:class:bellwarden",
+    "packId": "bell",
+    "version": "1.0.0",
+    "catalogueHash": "fe07437a285aa9e81dd2f9450c405b39980dfde8f29c676c2d091a2c87a4eed8"
+  },
+  "character": {
+    "id": "hero_custom_001",
+    "name": "Tarin",
+    "classId": "bell:class:bellwarden",
+    "portrait": 0,
+    "portraitId": "portrait_00",
+    "age": 29,
+    "heritage": "Human",
+    "attributes": {
+      "STR": 12,
+      "DEX": 12,
+      "CON": 16,
+      "INT": 12,
+      "WIS": 12,
+      "CHA": 12
+    },
+    "attributeBonuses": {
+      "STR": 0,
+      "DEX": 0,
+      "CON": 0,
+      "INT": 0,
+      "WIS": 0,
+      "CHA": 0
+    },
+    "level": 2,
+    "xp": 455,
+    "hp": 29,
+    "sp": 0,
+    "baseResistances": {
+      "physical": 0,
+      "fire": 0,
+      "cold": 0,
+      "lightning": 0,
+      "poison": 0,
+      "arcane": 0,
+      "holy": 0,
+      "necrotic": 0
+    },
+    "conditions": [],
+    "awards": [],
+    "combatSetup": {
+      "prepared": "bastion",
+      "quickAction": "attack"
+    },
+    "equipment": {
+      "melee": "item_sword",
+      "ranged": null,
+      "body": "item_ring_mail",
+      "offhand": "bell:item:resonant_buckler",
+      "accessoryA": null,
+      "accessoryB": null,
+      "preferredAttack": "melee"
+    }
+  },
+  "spellbook": {
+    "known": [],
+    "readied": null,
+    "itemCurses": []
+  },
+  "items": [
+    {
+      "portableId": "e6d5e599-594a-4178-900d-9ab394226136",
+      "revision": 1,
+      "source": {
+        "definitionId": "item_sword",
+        "packId": "core",
+        "version": "1.0.1",
+        "catalogueHash": "fe07437a285aa9e81dd2f9450c405b39980dfde8f29c676c2d091a2c87a4eed8"
+      },
+      "instance": {
+        "id": "stack_1",
+        "ownerId": "hero_custom_001",
+        "definitionId": "item_sword",
+        "count": 1,
+        "charges": 0,
+        "durability": 19,
+        "identified": true,
+        "equipped": "melee"
+      }
+    },
+    {
+      "portableId": "dec1e869-5b1d-4d79-93b9-7b5ee2e160aa",
+      "revision": 1,
+      "source": {
+        "definitionId": "bell:item:siltglass_charm",
+        "packId": "bell",
+        "version": "1.0.0",
+        "catalogueHash": "fe07437a285aa9e81dd2f9450c405b39980dfde8f29c676c2d091a2c87a4eed8"
+      },
+      "instance": {
+        "id": "stack_19",
+        "ownerId": "hero_custom_001",
+        "definitionId": "bell:item:siltglass_charm",
+        "count": 1,
+        "charges": 3,
+        "durability": 0,
+        "identified": true,
+        "equipped": null,
+        "backpackSlot": 1
+      }
+    },
+    {
+      "portableId": "86fe9dc2-fbbf-4e87-a744-bda458974b0b",
+      "revision": 1,
+      "source": {
+        "definitionId": "item_ring_mail",
+        "packId": "core",
+        "version": "1.0.1",
+        "catalogueHash": "fe07437a285aa9e81dd2f9450c405b39980dfde8f29c676c2d091a2c87a4eed8"
+      },
+      "instance": {
+        "id": "stack_2",
+        "ownerId": "hero_custom_001",
+        "definitionId": "item_ring_mail",
+        "count": 1,
+        "charges": 0,
+        "durability": 24,
+        "identified": true,
+        "equipped": "body"
+      }
+    },
+    {
+      "portableId": "4d3236a1-f717-482b-baba-a4c21cf7451e",
+      "revision": 1,
+      "source": {
+        "definitionId": "bell:item:resonant_buckler",
+        "packId": "bell",
+        "version": "1.0.0",
+        "catalogueHash": "fe07437a285aa9e81dd2f9450c405b39980dfde8f29c676c2d091a2c87a4eed8"
+      },
+      "instance": {
+        "id": "stack_3",
+        "ownerId": "hero_custom_001",
+        "definitionId": "bell:item:resonant_buckler",
+        "count": 1,
+        "charges": 3,
+        "durability": 60,
+        "identified": true,
+        "equipped": "offhand"
+      }
+    }
+  ],
+  "definitionSnapshots": {
+    "bell:class:bellwarden": {
+      "casting": null,
+      "equipmentTags": [
+        "melee:staff",
+        "melee:dagger",
+        "melee:mace",
+        "melee:sword",
+        "melee:general",
+        "ranged",
+        "shield",
+        "armor:light",
+        "armor:medium",
+        "armor:heavy",
+        "accessory"
+      ],
+      "features": "Defensive martial variant:16 base HP and8 per level; CON primary; Bastion is available through martial mastery. Resonance resource and new active guard remain scheduled for MP19–20.",
+      "hpBase": 16,
+      "hpGain": 8,
+      "id": "bell:class:bellwarden",
+      "name": "Bellwarden",
+      "preparedStyles": [
+        "bastion",
+        "measured"
+      ],
+      "primary": "CON",
+      "role": "A waterworks guardian who holds the line.",
+      "spAttributeMultiplier": 0,
+      "spBase": 0,
+      "spGain": 0,
+      "starterEquipment": {
+        "offhand": "bell:item:resonant_buckler"
+      },
+      "traits": [
+        "martial_mastery"
+      ]
+    },
+    "item_sword": {
+      "id": "item_sword",
+      "name": "Sword",
+      "category": "weapons",
+      "price": 75,
+      "maxDurability": 20,
+      "maxCharges": 0,
+      "effect": "none",
+      "power": 0,
+      "unique": false,
+      "slot": "melee",
+      "weight": null,
+      "armor": 0,
+      "dice": "1d8",
+      "accuracy": 0,
+      "resistance": null,
+      "resistBonus": 0,
+      "description": "A reliable weapon, subject to wear and repairs.",
+      "iconResourceId": "asset_art_items_item_sword_png",
+      "equipmentTags": [
+        "melee:sword"
+      ]
+    },
+    "bell:item:siltglass_charm": {
+      "accuracy": 0,
+      "armor": 0,
+      "category": "accessories",
+      "description": "Three charges. Activate for twenty minutes of Glass Eye: eligible hidden mechanisms are found when searched, and nearby map geometry is revealed. Search still costs food and ten minutes. No automatic recharge.",
+      "dice": null,
+      "effect": "reveal",
+      "equipmentTags": [
+        "accessory"
+      ],
+      "id": "bell:item:siltglass_charm",
+      "maxCharges": 3,
+      "maxDurability": 0,
+      "name": "Siltglass Charm",
+      "portability": "exportable",
+      "power": 20,
+      "price": 60,
+      "resistBonus": 0,
+      "resistance": null,
+      "slot": "accessory",
+      "unique": false,
+      "weight": null
+    },
+    "item_ring_mail": {
+      "id": "item_ring_mail",
+      "name": "Ring Mail",
+      "category": "armor",
+      "price": 164,
+      "maxDurability": 24,
+      "maxCharges": 0,
+      "effect": "none",
+      "power": 0,
+      "unique": false,
+      "slot": "body",
+      "weight": "medium",
+      "armor": 3,
+      "dice": null,
+      "accuracy": 0,
+      "resistance": null,
+      "resistBonus": 0,
+      "description": "Protective equipment. Heavy armor restricts nimble movement.",
+      "iconResourceId": "asset_art_items_item_ring_mail_png",
+      "equipmentTags": [
+        "armor:medium"
+      ]
+    },
+    "bell:item:resonant_buckler": {
+      "accuracy": 0,
+      "armor": 1,
+      "category": "armor",
+      "description": "Shield: +1 armor while equipped. Activate for +2 party defense for five minutes, one charge, three charges total. Cannot stack Stone Skin. In combat it spends the normal item action; no automatic recharge.",
+      "dice": null,
+      "effect": "ward",
+      "equipmentTags": [
+        "shield"
+      ],
+      "id": "bell:item:resonant_buckler",
+      "maxCharges": 3,
+      "maxDurability": 60,
+      "name": "Resonant Buckler",
+      "portability": "exportable",
+      "power": 5,
+      "price": 80,
+      "resistBonus": 0,
+      "resistance": null,
+      "slot": "offhand",
+      "unique": false,
+      "weight": "light"
+    }
+  }
+}

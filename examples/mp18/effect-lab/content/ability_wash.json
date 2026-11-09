@@ -1,0 +1,27 @@
+{
+  "format": "maxxia-authored-ability",
+  "formatVersion": 1,
+  "id": "effect_lab:ability:wash",
+  "record": {
+    "name": "Restorative Wash",
+    "description": "Restorative Wash through the shared MP18 effect kernel.",
+    "target": "self",
+    "context": "both",
+    "operations": [
+      {
+        "op": "dispel",
+        "tags": [
+          "magic",
+          "curse",
+          "toxic"
+        ],
+        "max": 16
+      },
+      {
+        "op": "heal",
+        "amount": 20
+      }
+    ],
+    "id": "effect_lab:ability:wash"
+  }
+}

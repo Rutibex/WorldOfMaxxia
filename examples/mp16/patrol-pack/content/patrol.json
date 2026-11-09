@@ -1,0 +1,40 @@
+{
+  "format": "maxxia-authored-encounter",
+  "formatVersion": 1,
+  "id": "mp16:encounter:patrol",
+  "record": {
+    "id": "mp16:encounter:patrol",
+    "name": "Toll Patrol",
+    "description": "A waterlogged watchman demands a road toll. Fight, pay the posted fee, or slip through the shadows.",
+    "mapId": "mp16:map:watch",
+    "nativeMapId": "map_mp16_watch",
+    "x": 4,
+    "y": 3,
+    "range": 4,
+    "trigger": {
+      "kind": "clock",
+      "interval": 5,
+      "table": "patrols"
+    },
+    "weight": 3,
+    "members": [
+      {
+        "kindId": "mp16:monster:watchman",
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "bribe": 5,
+    "avoidDC": 1,
+    "respawn": {
+      "kind": "cooldown",
+      "minutes": 20
+    },
+    "phases": [
+      {
+        "title": "The watch approaches",
+        "healthPercent": 100
+      }
+    ]
+  }
+}

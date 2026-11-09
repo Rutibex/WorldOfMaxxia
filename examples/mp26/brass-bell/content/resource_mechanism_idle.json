@@ -1,0 +1,6 @@
+{
+  "format": "maxxia-resource-alias",
+  "formatVersion": 1,
+  "id": "bell:resource:mechanism_idle",
+  "sourceResourceId": "asset_art_vault_copper_valve_png"
+}

@@ -1,0 +1,68 @@
+{
+  "format": "maxxia-authored-map",
+  "formatVersion": 2,
+  "id": "mp14:map:counter",
+  "record": {
+    "id": "map_mp14_counter",
+    "name": "The Brass Counter",
+    "rows": [
+      "#########",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#########"
+    ],
+    "spawn": {
+      "x": 4,
+      "y": 3,
+      "facing": 0
+    },
+    "doors": [],
+    "props": [],
+    "arrivals": [
+      {
+        "id": "arrival_start",
+        "name": "Counter entrance",
+        "x": 4,
+        "y": 3,
+        "facing": 0
+      }
+    ],
+    "entities": [
+      {
+        "id": "mp14:object:keeper",
+        "name": "Counter Keeper",
+        "description": "The counter\u2019s counter keeper.",
+        "x": 4,
+        "y": 2,
+        "kind": "npc",
+        "npcId": "mp14:npc:keeper"
+      },
+      {
+        "id": "mp14:object:tokens",
+        "name": "Trade Token Box",
+        "description": "The counter\u2019s trade token box.",
+        "x": 3,
+        "y": 3,
+        "kind": "container",
+        "rewards": [
+          {
+            "itemId": "mp14:item:trade_token",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "id": "mp14:object:apprentice",
+        "name": "Counter Apprentice",
+        "description": "The counter\u2019s counter apprentice.",
+        "x": 6,
+        "y": 3,
+        "kind": "npc",
+        "npcId": "mp14:npc:apprentice"
+      }
+    ]
+  }
+}

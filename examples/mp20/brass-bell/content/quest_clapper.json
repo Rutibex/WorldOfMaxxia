@@ -1,0 +1,422 @@
+{
+  "format": "maxxia-authored-quest",
+  "formatVersion": 1,
+  "id": "bell:quest:clapper",
+  "record": {
+    "name": "The Brass Bell Cistern",
+    "description": "Recover the clapper, investigate the sabotaged regulator, then restore village water or power the abandoned infirmary. Optional: recover tools and identify the saboteur.",
+    "initial": "offered",
+    "states": [
+      {
+        "id": "offered",
+        "title": "Edda needs help",
+        "status": "available"
+      },
+      {
+        "id": "active",
+        "title": "Below the village well",
+        "status": "active"
+      },
+      {
+        "id": "village",
+        "title": "Village supply restored",
+        "status": "succeeded",
+        "ending": {
+          "title": "The Village Bell Rings Clear",
+          "text": "You replace the clapper and restore the regulator. The village well fills. Edda opens the public water ledger, naming the sabotage, and promises the infirmary a repaired supply line.",
+          "campaign": true
+        }
+      },
+      {
+        "id": "infirmary",
+        "title": "The infirmary awakens",
+        "status": "succeeded",
+        "ending": {
+          "title": "A Bell for the Sick",
+          "text": "You replace the clapper and divert the regulator to the abandoned infirmary. Its lamps and sterilizers wake. The village must ration water, but Edda agrees that a living patient matters more than an unbroken custom.",
+          "campaign": true
+        }
+      }
+    ],
+    "objectives": [
+      {
+        "id": "clapper",
+        "title": "Recover the Bell Clapper",
+        "description": "Recover the Bell Clapper.",
+        "states": [
+          "active"
+        ],
+        "condition": {
+          "op": "eq",
+          "left": {
+            "query": "has-item",
+            "item": "bell:item:bell_clapper"
+          },
+          "right": true
+        },
+        "optional": false,
+        "journalId": "clapper_note"
+      },
+      {
+        "id": "power",
+        "title": "Prepare regulator power",
+        "description": "Prepare regulator power.",
+        "states": [
+          "active"
+        ],
+        "condition": {
+          "any": [
+            {
+              "op": "eq",
+              "left": {
+                "query": "state",
+                "address": {
+                  "scope": "campaign"
+                },
+                "kind": "flag",
+                "key": "bell:flag:valves"
+              },
+              "right": true
+            },
+            {
+              "op": "eq",
+              "left": {
+                "query": "state",
+                "address": {
+                  "scope": "campaign"
+                },
+                "kind": "flag",
+                "key": "bell:flag:bypass"
+              },
+              "right": true
+            }
+          ]
+        },
+        "optional": false,
+        "journalId": "power_note"
+      },
+      {
+        "id": "spirit",
+        "title": "Resolve the maintenance spirit",
+        "description": "Resolve the maintenance spirit.",
+        "states": [
+          "active"
+        ],
+        "condition": {
+          "any": [
+            {
+              "op": "eq",
+              "left": {
+                "query": "state",
+                "address": {
+                  "scope": "campaign"
+                },
+                "kind": "flag",
+                "key": "bell:flag:spirit_clear"
+              },
+              "right": true
+            },
+            {
+              "op": "contains",
+              "left": {
+                "query": "state",
+                "address": {
+                  "scope": "campaign"
+                },
+                "kind": "collection",
+                "key": "bell:collection:e_spirit_status"
+              },
+              "right": "won"
+            }
+          ]
+        },
+        "optional": false,
+        "journalId": "spirit_note"
+      },
+      {
+        "id": "tools",
+        "title": "Recover the tool roll",
+        "description": "Recover the tool roll.",
+        "states": [
+          "active"
+        ],
+        "condition": {
+          "op": "eq",
+          "left": {
+            "query": "has-item",
+            "item": "bell:item:tool_roll"
+          },
+          "right": true
+        },
+        "optional": true,
+        "journalId": "tools_note"
+      },
+      {
+        "id": "saboteur",
+        "title": "Identify the saboteur",
+        "description": "Identify the saboteur.",
+        "states": [
+          "active"
+        ],
+        "condition": {
+          "op": "eq",
+          "left": {
+            "query": "state",
+            "address": {
+              "scope": "campaign"
+            },
+            "kind": "flag",
+            "key": "bell:flag:record"
+          },
+          "right": true
+        },
+        "optional": true,
+        "journalId": "saboteur_note"
+      },
+      {
+        "id": "boss",
+        "title": "Defeat the Bell-Heart",
+        "description": "Defeat the two-wave Bell-Heart regulator.",
+        "states": [
+          "active"
+        ],
+        "condition": {
+          "op": "contains",
+          "left": {
+            "query": "state",
+            "address": {
+              "scope": "campaign"
+            },
+            "kind": "collection",
+            "key": "bell:collection:e_boss_status"
+          },
+          "right": "won"
+        }
+      }
+    ],
+    "journal": [
+      {
+        "id": "opening",
+        "text": "Edda offers the well key. Pick or force the entrance if you prefer. The valve inscription gives a complete three-step solution; a paid shutoff bypass offers an alternative.",
+        "states": [
+          "active"
+        ]
+      },
+      {
+        "id": "clapper_note",
+        "text": "Recover the Bell Clapper."
+      },
+      {
+        "id": "power_note",
+        "text": "Prepare regulator power."
+      },
+      {
+        "id": "spirit_note",
+        "text": "Resolve the maintenance spirit."
+      },
+      {
+        "id": "tools_note",
+        "text": "Recover the tool roll."
+      },
+      {
+        "id": "saboteur_note",
+        "text": "Identify the saboteur."
+      }
+    ],
+    "transitions": [
+      {
+        "id": "accept",
+        "title": "Accept Edda\u2019s request",
+        "from": [
+          "offered"
+        ],
+        "to": "active"
+      },
+      {
+        "id": "village",
+        "title": "Restore village water",
+        "from": [
+          "active"
+        ],
+        "to": "village",
+        "requirements": {
+          "all": [
+            "clapper",
+            "power",
+            "spirit",
+            "boss"
+          ]
+        },
+        "condition": {
+          "op": "eq",
+          "left": {
+            "query": "has-item",
+            "item": "bell:item:bell_clapper"
+          },
+          "right": true
+        }
+      },
+      {
+        "id": "infirmary",
+        "title": "Power the infirmary",
+        "from": [
+          "active"
+        ],
+        "to": "infirmary",
+        "requirements": {
+          "all": [
+            "clapper",
+            "power",
+            "spirit",
+            "boss"
+          ]
+        },
+        "condition": {
+          "op": "eq",
+          "left": {
+            "query": "has-item",
+            "item": "bell:item:bell_clapper"
+          },
+          "right": true
+        }
+      }
+    ],
+    "rewards": [
+      {
+        "id": "admission",
+        "title": "Well key and field kit",
+        "states": [
+          "active"
+        ],
+        "gold": 0,
+        "xp": 0,
+        "items": [
+          {
+            "itemId": "bell:item:well_key",
+            "count": 1
+          },
+          {
+            "itemId": "bell:item:siltglass_charm",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "valve_pass",
+        "title": "Mechanism access token",
+        "states": [
+          "active"
+        ],
+        "condition": {
+          "any": [
+            {
+              "op": "eq",
+              "left": {
+                "query": "state",
+                "address": {
+                  "scope": "campaign"
+                },
+                "kind": "flag",
+                "key": "bell:flag:valves"
+              },
+              "right": true
+            },
+            {
+              "op": "eq",
+              "left": {
+                "query": "state",
+                "address": {
+                  "scope": "campaign"
+                },
+                "kind": "flag",
+                "key": "bell:flag:bypass"
+              },
+              "right": true
+            }
+          ]
+        },
+        "gold": 0,
+        "xp": 0,
+        "items": [
+          {
+            "itemId": "bell:item:valve_key",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "tools",
+        "title": "Reward for returned tools",
+        "states": [
+          "active",
+          "village",
+          "infirmary"
+        ],
+        "condition": {
+          "op": "eq",
+          "left": {
+            "query": "has-item",
+            "item": "bell:item:tool_roll"
+          },
+          "right": true
+        },
+        "gold": 35,
+        "xp": 60,
+        "items": [],
+        "consume": [
+          {
+            "itemId": "bell:item:tool_roll",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "saboteur",
+        "title": "Reward for the sabotage record",
+        "states": [
+          "active",
+          "village",
+          "infirmary"
+        ],
+        "condition": {
+          "op": "eq",
+          "left": {
+            "query": "state",
+            "address": {
+              "scope": "campaign"
+            },
+            "kind": "flag",
+            "key": "bell:flag:record"
+          },
+          "right": true
+        },
+        "gold": 25,
+        "xp": 50,
+        "items": []
+      },
+      {
+        "id": "completion",
+        "title": "Keeper\u2019s thanks",
+        "states": [
+          "village",
+          "infirmary"
+        ],
+        "gold": 150,
+        "xp": 300,
+        "items": [
+          {
+            "itemId": "bell:item:resonant_buckler",
+            "count": 1
+          }
+        ],
+        "consume": [
+          {
+            "itemId": "bell:item:bell_clapper",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "id": "bell:quest:clapper"
+  }
+}

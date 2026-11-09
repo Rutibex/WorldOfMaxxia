@@ -1,0 +1,16 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 1,
+  "id": "entry_chamber:routine:read_plaque",
+  "actions": [
+    {
+      "operation": "message",
+      "text": "Beyond this threshold, a new adventure begins."
+    },
+    {
+      "operation": "set_flag",
+      "flag": "plaque_read",
+      "value": true
+    }
+  ]
+}

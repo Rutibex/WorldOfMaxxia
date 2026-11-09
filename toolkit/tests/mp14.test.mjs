@@ -1,0 +1,14 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {mkdtemp,cp,readFile,writeFile,rm} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {loadSelection,inspectSelection} from '../content.mjs';
+const source=fileURLToPath(new URL('../../examples/mp14/counter-pack/',import.meta.url)),extra=fileURLToPath(new URL('../../examples/mp14/counter-extra/',import.meta.url));
+const fixture=async fn=>{const temp=await mkdtemp(join(tmpdir(),'maxxia-mp14-'));try{const pack=join(temp,'pack');await cp(source,pack,{recursive:true});await fn(pack);}finally{await rm(temp,{recursive:true,force:true});}};
+test('MP14 authoring CLI validates and inspects NPC/dialogue/service payloads',async()=>{const selection=await loadSelection(source,{engineVersion:'0.59.0'}),info=inspectSelection(selection);assert.equal(info.playableInCurrentRuntime,true);const root=info.packs.find(p=>p.packId==='mp14');assert.equal(root.definitions.filter(d=>d.kind==='npc').length,2);assert.equal(root.definitions.find(d=>d.kind==='dialogue').record.nodes.length,3);});
+test('MP14 invalid NPC service price identifies the source file and property',()=>fixture(async pack=>{const file=join(pack,'content/keeper.json'),d=JSON.parse(await readFile(file,'utf8'));d.record.services[1].cost=-1;await writeFile(file,JSON.stringify(d));await assert.rejects(loadSelection(pack,{engineVersion:'0.59.0'}),e=>e.code==='E_PAYLOAD_SCHEMA'&&e.file===file&&e.path==='$.record.services[1].cost');}));
+test('MP14 unknown dialogue destinations reject semantic validation',()=>fixture(async pack=>{const file=join(pack,'content/dialogue.json'),d=JSON.parse(await readFile(file,'utf8'));d.record.nodes[0].choices[0].next='missing';await writeFile(file,JSON.stringify(d));await assert.rejects(loadSelection(pack,{engineVersion:'0.59.0'}),e=>e.code==='E_SOCIAL'&&e.file===file); }));
+test('MP14 social references must match the content index',()=>fixture(async pack=>{const file=join(pack,'content/index.json'),d=JSON.parse(await readFile(file,'utf8'));d.definitions.find(d=>d.kind==='npc').references=[];await writeFile(file,JSON.stringify(d));await assert.rejects(loadSelection(pack,{engineVersion:'0.59.0'}),e=>e.code==='E_REFERENCE_INDEX');}));
+test('MP14 optional stock providers activate only in the explicit selection',async()=>{const alone=await loadSelection(source,{engineVersion:'0.59.0',candidates:[extra]}),together=await loadSelection(source,{engineVersion:'0.59.0',candidates:[extra],enable:['counter_extra']});assert.equal(alone.packs.some(p=>p.manifest.packId==='counter_extra'),false);assert.equal(together.packs.some(p=>p.manifest.packId==='counter_extra'),true);});

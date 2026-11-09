@@ -1,0 +1,246 @@
+{
+  "engineVersion": "0.49.0",
+  "rules": {
+    "id": "core:rules:classic",
+    "version": "1.0.0"
+  },
+  "packs": [
+    {
+      "manifest": {
+        "format": "maxxia-pack",
+        "formatVersion": 1,
+        "packId": "core",
+        "title": "Core Contract Fixture",
+        "version": "1.0.0",
+        "kind": "core",
+        "engine": {
+          "min": "0.49.0",
+          "maxExclusive": "1.0.0"
+        },
+        "rules": {
+          "id": "core:rules:classic",
+          "version": "1.0.0"
+        },
+        "dependencies": [],
+        "contentIndex": "content/index.json",
+        "entry": null,
+        "credits": [
+          "Michael Robinson; MP01 metadata fixtures only"
+        ]
+      },
+      "index": {
+        "format": "maxxia-content-index",
+        "formatVersion": 1,
+        "definitions": [
+          {
+            "id": "core:race:human",
+            "kind": "race",
+            "visibility": "exported",
+            "file": "content/race-human.json",
+            "placement": "none",
+            "tags": [],
+            "references": []
+          },
+          {
+            "id": "core:class:adventurer",
+            "kind": "class",
+            "visibility": "exported",
+            "file": "content/class-adventurer.json",
+            "placement": "none",
+            "tags": [],
+            "references": []
+          },
+          {
+            "id": "core:ability:strike",
+            "kind": "ability",
+            "visibility": "exported",
+            "file": "content/ability-strike.json",
+            "placement": "none",
+            "tags": [],
+            "references": []
+          },
+          {
+            "id": "core:item:sword",
+            "kind": "item",
+            "visibility": "exported",
+            "file": "content/item-sword.json",
+            "placement": "none",
+            "tags": [],
+            "references": []
+          },
+          {
+            "id": "core:condition:poisoned",
+            "kind": "condition",
+            "visibility": "exported",
+            "file": "content/condition-poisoned.json",
+            "placement": "none",
+            "tags": [],
+            "references": []
+          }
+        ]
+      }
+    },
+    {
+      "manifest": {
+        "format": "maxxia-pack",
+        "formatVersion": 1,
+        "packId": "brass",
+        "title": "Brass Contract Fixture",
+        "version": "1.0.0",
+        "kind": "adventure",
+        "engine": {
+          "min": "0.49.0",
+          "maxExclusive": "1.0.0"
+        },
+        "rules": {
+          "id": "core:rules:classic",
+          "version": "1.0.0"
+        },
+        "dependencies": [
+          {
+            "packId": "core",
+            "versions": {
+              "min": "1.0.0",
+              "maxExclusive": "2.0.0"
+            },
+            "optional": false
+          }
+        ],
+        "contentIndex": "content/index.json",
+        "entry": null,
+        "credits": [
+          "Michael Robinson; MP01 metadata fixtures only"
+        ]
+      },
+      "index": {
+        "format": "maxxia-content-index",
+        "formatVersion": 1,
+        "definitions": [
+          {
+            "id": "brass:map:cistern",
+            "kind": "map",
+            "visibility": "local",
+            "file": "content/map-cistern.json",
+            "placement": "authored",
+            "tags": [],
+            "references": []
+          },
+          {
+            "id": "brass:class:bellwarden",
+            "kind": "class",
+            "visibility": "exported",
+            "file": "content/class-bellwarden.json",
+            "placement": "none",
+            "tags": [],
+            "references": [
+              {
+                "id": "core:ability:strike"
+              }
+            ]
+          },
+          {
+            "id": "brass:item:buckler",
+            "kind": "item",
+            "visibility": "exported",
+            "file": "content/item-buckler.json",
+            "placement": "eligible",
+            "tags": [],
+            "references": []
+          },
+          {
+            "id": "brass:item:clapper",
+            "kind": "item",
+            "visibility": "local",
+            "file": "content/item-clapper.json",
+            "placement": "authored",
+            "tags": [],
+            "references": []
+          }
+        ]
+      }
+    },
+    {
+      "manifest": {
+        "format": "maxxia-pack",
+        "formatVersion": 1,
+        "packId": "lantern",
+        "title": "Lantern Contract Fixture",
+        "version": "1.0.0",
+        "kind": "adventure",
+        "engine": {
+          "min": "0.49.0",
+          "maxExclusive": "1.0.0"
+        },
+        "rules": {
+          "id": "core:rules:classic",
+          "version": "1.0.0"
+        },
+        "dependencies": [
+          {
+            "packId": "core",
+            "versions": {
+              "min": "1.0.0",
+              "maxExclusive": "2.0.0"
+            },
+            "optional": false
+          },
+          {
+            "packId": "brass",
+            "versions": {
+              "min": "1.0.0",
+              "maxExclusive": "2.0.0"
+            },
+            "optional": true
+          }
+        ],
+        "contentIndex": "content/index.json",
+        "entry": {
+          "mapId": "lantern:map:market",
+          "arrivalId": "entry"
+        },
+        "credits": [
+          "Michael Robinson; MP01 metadata fixtures only"
+        ]
+      },
+      "index": {
+        "format": "maxxia-content-index",
+        "formatVersion": 1,
+        "definitions": [
+          {
+            "id": "lantern:map:market",
+            "kind": "map",
+            "visibility": "local",
+            "file": "content/map-market.json",
+            "placement": "authored",
+            "tags": [],
+            "references": []
+          },
+          {
+            "id": "lantern:race:mothkin",
+            "kind": "race",
+            "visibility": "exported",
+            "file": "content/race-mothkin.json",
+            "placement": "none",
+            "tags": [],
+            "references": []
+          },
+          {
+            "id": "lantern:class:envoy",
+            "kind": "class",
+            "visibility": "exported",
+            "file": "content/class-envoy.json",
+            "placement": "none",
+            "tags": [],
+            "references": [
+              {
+                "id": "brass:item:buckler",
+                "whenPackEnabled": "brass",
+                "onAbsent": "skip"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

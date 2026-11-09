@@ -1,0 +1,37 @@
+{
+  "format": "maxxia-authored-npc",
+  "formatVersion": 1,
+  "id": "lantern:npc:mara",
+  "record": {
+    "name": "Mara the Trader",
+    "dialogueId": "lantern:dialogue:mara",
+    "initialAttitude": 0,
+    "services": [
+      {
+        "id": "supplies",
+        "name": "Field supplies",
+        "kind": "shop",
+        "buybackPercent": 50,
+        "stock": [
+          {
+            "itemId": "item_torch",
+            "quantity": 10
+          },
+          {
+            "itemId": "item_healing_draught",
+            "quantity": 10
+          },
+          {
+            "itemId": "lantern:item:brass_filament",
+            "quantity": 5
+          },
+          {
+            "itemId": "lantern:item:silt_crystal",
+            "quantity": 3
+          }
+        ]
+      }
+    ],
+    "id": "lantern:npc:mara"
+  }
+}

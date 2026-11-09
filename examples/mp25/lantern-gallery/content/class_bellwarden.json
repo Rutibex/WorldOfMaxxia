@@ -1,0 +1,41 @@
+{
+  "format": "maxxia-authored-class",
+  "formatVersion": 1,
+  "id": "lantern:class:bellwarden",
+  "record": {
+    "name": "Bellwarden",
+    "primary": "CON",
+    "hpBase": 16,
+    "hpGain": 8,
+    "casting": null,
+    "role": "A waterworks guardian who holds the line.",
+    "features": "Defensive Bellwarden with a Resonance resource and Resonant Guard action at level 1, Counter-Chime reaction at level 2 and Stillwater Stance defense at level 3. Bastion prepared style remains available.",
+    "equipmentTags": [
+      "melee:staff",
+      "melee:dagger",
+      "melee:mace",
+      "melee:sword",
+      "melee:general",
+      "ranged",
+      "shield",
+      "armor:light",
+      "armor:medium",
+      "armor:heavy",
+      "accessory"
+    ],
+    "traits": [
+      "martial_mastery"
+    ],
+    "preparedStyles": [
+      "bastion",
+      "measured"
+    ],
+    "id": "lantern:class:bellwarden",
+    "spBase": 0,
+    "spGain": 0,
+    "spAttributeMultiplier": 0,
+    "starterEquipment": {
+      "offhand": "lantern:item:resonant_buckler"
+    }
+  }
+}

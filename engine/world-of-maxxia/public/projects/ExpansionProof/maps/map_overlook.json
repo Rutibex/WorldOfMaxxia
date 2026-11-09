@@ -1,0 +1,65 @@
+{
+  "format": "maxxia-map",
+  "version": 1,
+  "id": "map_overlook",
+  "name": "The Uncharted Overlook",
+  "width": 9,
+  "height": 7,
+  "geometry": {
+    "rows": [
+      "#########",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#########"
+    ]
+  },
+  "materials": {
+    "floor": {
+      "default": "material_floor_default",
+      "overrides": []
+    },
+    "wall": {
+      "default": "material_wall_default",
+      "overrides": []
+    },
+    "ceiling": {
+      "default": "material_ceiling_default",
+      "overrides": []
+    }
+  },
+  "scenery": [],
+  "objects": {
+    "doors": [],
+    "secrets": [],
+    "traps": [],
+    "fountains": [],
+    "portals": [
+      {
+        "id": "portal_overlook_return",
+        "x": 4,
+        "y": 3,
+        "targetMapId": "map_town",
+        "targetX": 7,
+        "targetY": 12,
+        "targetFacing": 0
+      }
+    ]
+  },
+  "arrivals": [
+    {
+      "id": "arrival_start",
+      "name": "Start",
+      "x": 4,
+      "y": 3,
+      "facing": 2
+    }
+  ],
+  "events": [],
+  "settings": {
+    "environmentId": "environment_default",
+    "notes": ""
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "format": "maxxia-pack",
+  "formatVersion": 1,
+  "packId": "bell",
+  "title": "The Brass Bell Cistern",
+  "version": "1.5.0",
+  "kind": "adventure",
+  "engine": {
+    "min": "0.68.0",
+    "maxExclusive": "1.0.0"
+  },
+  "rules": {
+    "id": "core:rules:classic",
+    "version": "1.0.0"
+  },
+  "dependencies": [
+    {
+      "packId": "core",
+      "versions": {
+        "min": "1.0.0",
+        "maxExclusive": "2.0.0"
+      },
+      "optional": false
+    }
+  ],
+  "contentIndex": "content/index.json",
+  "entry": {
+    "mapId": "bell:map:yard",
+    "arrivalId": "entry"
+  },
+  "credits": [
+    "By Michael Robinson",
+    "MP23 capability-tagged exploration routes: physical key/pick/force, Echo Hand remote manipulation, Siltglass revelation, trap disarming. Temporary presentation art pending MP39–40."
+  ]
+}

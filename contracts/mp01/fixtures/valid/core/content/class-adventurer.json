@@ -1,0 +1,5 @@
+{
+  "id": "core:class:adventurer",
+  "fixtureOnly": true,
+  "note": "Metadata contract fixture; not a playable or executable definition."
+}

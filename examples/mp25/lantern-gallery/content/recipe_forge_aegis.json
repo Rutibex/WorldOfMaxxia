@@ -1,0 +1,28 @@
+{
+  "format": "maxxia-authored-recipe",
+  "formatVersion": 1,
+  "id": "lantern:recipe:forge_aegis",
+  "record": {
+    "id": "lantern:recipe:forge_aegis",
+    "name": "Forge Regulator Aegis",
+    "description": "At a authored workshop, bind two lengths of brass filament around a purified silt crystal to produce one attunable shield.",
+    "station": "workshop",
+    "minLevel": 2,
+    "ingredients": [
+      {
+        "itemId": "lantern:item:brass_filament",
+        "count": 2
+      },
+      {
+        "itemId": "lantern:item:silt_crystal",
+        "count": 1
+      }
+    ],
+    "results": [
+      {
+        "itemId": "lantern:item:regulator_aegis",
+        "count": 1
+      }
+    ]
+  }
+}

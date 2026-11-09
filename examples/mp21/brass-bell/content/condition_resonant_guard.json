@@ -1,0 +1,28 @@
+{
+  "format": "maxxia-authored-condition",
+  "formatVersion": 1,
+  "id": "bell:condition:resonant_guard",
+  "record": {
+    "id": "bell:condition:resonant_guard",
+    "name": "Resonant Guard",
+    "description": "The guardian shelters behind an echoing brass ward (+2 Defense for two rounds).",
+    "clock": "rounds",
+    "maxDuration": 3,
+    "stacking": "refresh",
+    "maxStacks": 1,
+    "tags": [
+      "ward",
+      "resonance"
+    ],
+    "immuneTags": [],
+    "dispelTags": [
+      "ward"
+    ],
+    "modifiers": {
+      "attack": 0,
+      "defense": 2,
+      "save": 0,
+      "resistance": {}
+    }
+  }
+}

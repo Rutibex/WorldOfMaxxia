@@ -1,0 +1,41 @@
+{
+  "format": "maxxia-content-index",
+  "formatVersion": 1,
+  "definitions": [
+    {
+      "id": "mp12:map:entry",
+      "kind": "map",
+      "visibility": "local",
+      "file": "content/entry.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp12:routine:lever"
+        }
+      ]
+    },
+    {
+      "id": "mp12:routine:lever",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/lever.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp12:routine:reward"
+        }
+      ]
+    },
+    {
+      "id": "mp12:routine:reward",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/reward.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    }
+  ]
+}

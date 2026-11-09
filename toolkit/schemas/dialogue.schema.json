@@ -1,0 +1,242 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maxxia.invalid/toolkit/mp14/dialogue.schema.json",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "maxxia-authored-dialogue"
+    },
+    "formatVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "record": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "entry": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 24
+        },
+        "nodes": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 32,
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 24
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "terminal": {
+                "type": "boolean"
+              },
+              "choices": {
+                "type": "array",
+                "maxItems": 8,
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 24
+                    },
+                    "text": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 300
+                    },
+                    "next": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 24
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "condition": {
+                      "$ref": "https://maxxia.invalid/toolkit/mp12/routine.schema.json#/$defs/condition"
+                    },
+                    "unavailable": {
+                      "enum": [
+                        "hide",
+                        "disable"
+                      ]
+                    },
+                    "unavailableText": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 300
+                    },
+                    "once": {
+                      "type": "boolean"
+                    },
+                    "effects": {
+                      "type": "array",
+                      "maxItems": 16,
+                      "items": {
+                        "oneOf": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "op": {
+                                "enum": [
+                                  "attitude",
+                                  "gold"
+                                ]
+                              },
+                              "delta": {
+                                "type": "integer",
+                                "minimum": -1000000,
+                                "maximum": 1000000
+                              }
+                            },
+                            "required": [
+                              "op",
+                              "delta"
+                            ],
+                            "additionalProperties": false
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "op": {
+                                "enum": [
+                                  "remember",
+                                  "forget"
+                                ]
+                              },
+                              "fact": {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 24
+                              }
+                            },
+                            "required": [
+                              "op",
+                              "fact"
+                            ],
+                            "additionalProperties": false
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "op": {
+                                "enum": [
+                                  "give-item",
+                                  "take-item"
+                                ]
+                              },
+                              "itemId": {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 128
+                              },
+                              "count": {
+                                "type": "integer",
+                                "minimum": 1,
+                                "maximum": 20
+                              }
+                            },
+                            "required": [
+                              "op",
+                              "itemId",
+                              "count"
+                            ],
+                            "additionalProperties": false
+                          }
+                        ]
+                      }
+                    },
+                    "routine": {
+                      "type": "object",
+                      "properties": {
+                        "routineId": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 128
+                        },
+                        "args": {
+                          "type": "object",
+                          "maxProperties": 16,
+                          "additionalProperties": {
+                            "anyOf": [
+                              {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 2048
+                              },
+                              {
+                                "type": "integer",
+                                "minimum": -100000000,
+                                "maximum": 100000000
+                              },
+                              {
+                                "type": "boolean"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "required": [
+                        "routineId",
+                        "args"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "text",
+                    "next"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "id",
+              "text",
+              "choices"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "id",
+        "entry",
+        "nodes"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "format",
+    "formatVersion",
+    "id",
+    "record"
+  ],
+  "additionalProperties": false
+}

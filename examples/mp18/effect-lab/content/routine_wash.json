@@ -1,0 +1,12 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 2,
+  "id": "effect_lab:routine:wash",
+  "parameters": {},
+  "actions": [
+    {
+      "op": "effect",
+      "effectId": "effect_lab:ability:wash"
+    }
+  ]
+}

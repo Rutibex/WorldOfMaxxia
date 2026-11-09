@@ -1,0 +1,22 @@
+{
+  "format": "maxxia-pack",
+  "formatVersion": 1,
+  "packId": "core",
+  "title": "Maxxia Classic Rules Core",
+  "version": "1.0.1",
+  "kind": "core",
+  "engine": {
+    "min": "0.49.0",
+    "maxExclusive": "1.0.0"
+  },
+  "rules": {
+    "id": "core:rules:classic",
+    "version": "1.0.0"
+  },
+  "dependencies": [],
+  "contentIndex": "content/index.json",
+  "entry": null,
+  "credits": [
+    "Michael Robinson; MP05 runtime core rules with preserved legacy IDs"
+  ]
+}

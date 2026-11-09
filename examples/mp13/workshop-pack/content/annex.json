@@ -1,0 +1,46 @@
+{
+  "format": "maxxia-authored-map",
+  "formatVersion": 2,
+  "id": "mp13:map:annex",
+  "record": {
+    "id": "map_mp13_annex",
+    "name": "Workshop Annex",
+    "rows": [
+      "#######",
+      "#.....#",
+      "#.....#",
+      "#.....#",
+      "#.....#",
+      "#######"
+    ],
+    "spawn": {
+      "x": 2,
+      "y": 2,
+      "facing": 0
+    },
+    "doors": [],
+    "props": [],
+    "arrivals": [
+      {
+        "id": "arrival_start",
+        "name": "Annex arrival",
+        "x": 2,
+        "y": 2,
+        "facing": 0
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_annex_workshop",
+        "x": 2,
+        "y": 3,
+        "targetMapId": "map_mp13_workshop",
+        "targetX": 8,
+        "targetY": 6,
+        "targetFacing": 0,
+        "targetArrivalId": "arrival_return"
+      }
+    ],
+    "entities": []
+  }
+}

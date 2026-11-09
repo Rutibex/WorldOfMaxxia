@@ -1,0 +1,16 @@
+{
+  "node": "24.22.1",
+  "typescript": "5.9.3",
+  "vite": "7.1.12",
+  "phaser": "3.90.0",
+  "ajvDevelopmentOnly": "8.17.1",
+  "dotnetSdk": "10.0.403",
+  "projectModelTarget": "net10.0",
+  "editorTarget": "net10.0-windows",
+  "editorPublishRid": "win-x64",
+  "editorSelfContained": true,
+  "projectFormatVersion": 1,
+  "engineVersion": "0.35.0",
+  "campaignSaveVersion": 18,
+  "nativeWindowsUI": "not executed"
+}

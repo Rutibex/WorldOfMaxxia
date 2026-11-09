@@ -1,0 +1,34 @@
+id,kind,count,owner_phase,acceptance
+asset_ui_frame,frame,1,21,All dashboard hit areas aligned; original art
+asset_ui_buttons,icon_atlas,1,21,Exploration/combat/direction/service/system icons; unique readable actions
+asset_ui_panels,panel_kit,1,21,Parchment character/inventory/spell/map/journal/service/settings
+asset_ui_ornaments,animation_atlas,1,21,Compass/protection/danger/secret/wing indicators and tooltips
+asset_font,font,1,21,"Legible numbers, names and symbols at logical size"
+asset_portraits,portrait_states,48,21,12 base portraits × normal/hurt/afflicted/dead; overlays allowed
+asset_env_town,perspective_kit,1,22,Floors/walls/corners/doors/stairs/props at depth/lateral slots; every used state covered
+asset_env_masonry,perspective_kit,1,25,Floors/walls/corners/doors/stairs/props at depth/lateral slots; every used state covered
+asset_env_depths,perspective_kit,1,26,Floors/walls/corners/doors/stairs/props at depth/lateral slots; every used state covered
+asset_npc_tessa,scene,1,23,Final scene with expressive loop and unique props; proof counted in first batch
+asset_npc_orro,scene,1,23,Final scene with expressive loop and unique props; proof counted in first batch
+asset_npc_vale,scene,1,23,Final scene with expressive loop and unique props; proof counted in first batch
+asset_npc_brann,scene,1,23,Final scene with expressive loop and unique props; proof counted in first batch
+asset_npc_pell,scene,1,24,Final scene with expressive loop and unique props; proof counted in first batch
+asset_npc_nera,scene,1,24,Final scene with expressive loop and unique props; proof counted in first batch
+asset_npc_vell,scene,1,24,Final scene with expressive loop and unique props; proof counted in first batch
+asset_npc_iona,scene,1,24,Final scene with expressive loop and unique props; proof counted in first batch
+asset_enemy_cistern_rat,animated_actor,1,27,Idle/attack/hurt/death; boss additionally telegraph; proof included not extra
+asset_enemy_sludge_leech,animated_actor,1,27,Idle/attack/hurt/death; boss additionally telegraph; proof included not extra
+asset_enemy_rust_pilgrim,animated_actor,1,27,Idle/attack/hurt/death; boss additionally telegraph; proof included not extra
+asset_enemy_lantern_moth,animated_actor,1,28,Idle/attack/hurt/death; boss additionally telegraph; proof included not extra
+asset_enemy_pipe_goblin,animated_actor,1,28,Idle/attack/hurt/death; boss additionally telegraph; proof included not extra
+asset_enemy_glass_slime,animated_actor,1,28,Idle/attack/hurt/death; boss additionally telegraph; proof included not extra
+asset_enemy_bell_wraith,animated_actor,1,29,Idle/attack/hurt/death; boss additionally telegraph; proof included not extra
+asset_enemy_valve_sentinel,animated_actor,1,29,Idle/attack/hurt/death; boss additionally telegraph; proof included not extra
+asset_enemy_bell_heart_custodian,animated_actor,1,29,Idle/attack/hurt/death; boss additionally telegraph; proof included not extra
+asset_spell_effects,effect_families,8,30,Arcane/fire/cold/lightning/holy/necrotic/poison/ward; 36 mapped spell variations
+asset_item_icons,icons,48,30,40 ordinary plus 8 notable reward icons
+asset_world_feedback,effect_atlas,1,30,Missiles/hit splats/heal/status/trap/puzzle effects
+asset_title_ending,scene_compositions,2,31,Title and ending art; original World of Maxxia title treatment
+asset_music,music_cues,5,31,Town/dungeon/combat/boss variation/title-ending cue; licensed or original
+asset_ambience,audio_beds,3,31,Town/cistern/vault
+asset_sfx,audio_library,1,31,UI/steps/weapons/spells/conditions/enemy voice or attack cues

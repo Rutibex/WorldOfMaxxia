@@ -1,0 +1,24 @@
+{
+  "format": "maxxia-authored-ability",
+  "formatVersion": 1,
+  "id": "lantern:ability:chime_instinct",
+  "record": {
+    "id": "lantern:ability:chime_instinct",
+    "name": "Chime Instinct",
+    "description": "Grants +1 Attack as a passive; Bellforged of any class inherit it.",
+    "context": "both",
+    "target": "self",
+    "operations": [],
+    "activation": {
+      "mode": "passive",
+      "classes": [
+        "lantern:class:echo_sentinel"
+      ],
+      "minLevel": 1,
+      "passive": {
+        "attack": 1,
+        "defense": 0
+      }
+    }
+  }
+}

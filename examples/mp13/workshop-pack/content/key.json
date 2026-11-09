@@ -1,0 +1,24 @@
+{
+  "format": "maxxia-authored-item",
+  "formatVersion": 1,
+  "record": {
+    "id": "mp13:item:workshop_key",
+    "name": "Workshop Key",
+    "category": "misc",
+    "price": 0,
+    "maxDurability": 0,
+    "maxCharges": 0,
+    "effect": "none",
+    "power": 0,
+    "unique": false,
+    "slot": null,
+    "weight": null,
+    "armor": 0,
+    "dice": null,
+    "accuracy": 0,
+    "resistance": null,
+    "resistBonus": 0,
+    "description": "A brass workshop key; authored local placement only."
+  },
+  "id": "mp13:item:workshop_key"
+}

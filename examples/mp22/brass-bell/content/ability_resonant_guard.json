@@ -1,0 +1,41 @@
+{
+  "format": "maxxia-authored-ability",
+  "formatVersion": 1,
+  "id": "bell:ability:resonant_guard",
+  "record": {
+    "id": "bell:ability:resonant_guard",
+    "name": "Resonant Guard",
+    "description": "Spend 1 Resonance and your normal action to enter a defensive stance for two combat rounds.",
+    "context": "combat",
+    "target": "self",
+    "operations": [
+      {
+        "op": "condition",
+        "conditionId": "bell:condition:resonant_guard",
+        "duration": 2
+      }
+    ],
+    "activation": {
+      "mode": "active",
+      "classes": [
+        "bell:class:bellwarden"
+      ],
+      "minLevel": 1,
+      "resource": {
+        "id": "bell:pool:resonance",
+        "base": 2,
+        "perLevel": 1,
+        "maximum": 6,
+        "recovery": "rest"
+      },
+      "cost": {
+        "id": "bell:pool:resonance",
+        "amount": 1
+      },
+      "cooldown": {
+        "clock": "rounds",
+        "amount": 2
+      }
+    }
+  }
+}

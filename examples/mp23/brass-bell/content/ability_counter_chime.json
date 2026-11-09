@@ -1,0 +1,30 @@
+{
+  "format": "maxxia-authored-ability",
+  "formatVersion": 1,
+  "id": "bell:ability:counter_chime",
+  "record": {
+    "id": "bell:ability:counter_chime",
+    "name": "Counter-Chime",
+    "description": "When blocking in combat, recover one HP at most once per two global combat rounds.",
+    "context": "combat",
+    "target": "self",
+    "operations": [
+      {
+        "op": "heal",
+        "amount": 1
+      }
+    ],
+    "activation": {
+      "mode": "triggered",
+      "classes": [
+        "bell:class:bellwarden"
+      ],
+      "minLevel": 2,
+      "cooldown": {
+        "clock": "rounds",
+        "amount": 2
+      },
+      "trigger": "block"
+    }
+  }
+}

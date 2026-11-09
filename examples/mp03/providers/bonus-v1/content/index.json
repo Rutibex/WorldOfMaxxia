@@ -1,0 +1,15 @@
+{
+  "format": "maxxia-content-index",
+  "formatVersion": 1,
+  "definitions": [
+    {
+      "id": "bonus:routine:notice",
+      "kind": "routine",
+      "visibility": "exported",
+      "file": "content/notice.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    }
+  ]
+}

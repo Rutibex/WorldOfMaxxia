@@ -1,0 +1,156 @@
+{
+  "format": "maxxia-authored-map",
+  "formatVersion": 2,
+  "id": "mp13:map:workshop",
+  "record": {
+    "id": "map_mp13_workshop",
+    "name": "The Locksmith\u2019s Workshop",
+    "rows": [
+      "###########",
+      "#....#....#",
+      "#....#....#",
+      "#....D....#",
+      "#....#....#",
+      "#....#....#",
+      "#....#....#",
+      "#....#....#",
+      "###########"
+    ],
+    "spawn": {
+      "x": 4,
+      "y": 3,
+      "facing": 1
+    },
+    "doors": [
+      {
+        "id": "door_workshop",
+        "x": 5,
+        "y": 3,
+        "lockDC": 12
+      }
+    ],
+    "props": [],
+    "secrets": [
+      {
+        "id": "secret_bypass",
+        "x": 5,
+        "y": 5,
+        "description": "A concealed maintenance passage joins both rooms."
+      }
+    ],
+    "arrivals": [
+      {
+        "id": "arrival_start",
+        "name": "Workshop entrance",
+        "x": 4,
+        "y": 3,
+        "facing": 1
+      },
+      {
+        "id": "arrival_return",
+        "name": "Annex return",
+        "x": 8,
+        "y": 6,
+        "facing": 0
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_workshop_annex",
+        "x": 8,
+        "y": 6,
+        "targetMapId": "map_mp13_annex",
+        "targetX": 2,
+        "targetY": 2,
+        "targetFacing": 0,
+        "targetArrivalId": "arrival_start"
+      }
+    ],
+    "entities": [
+      {
+        "id": "mp13:object:workshop_door",
+        "name": "Workshop Door",
+        "description": "A brass lock secures this workshop door. The key is kept in the box behind you.",
+        "x": 5,
+        "y": 3,
+        "kind": "door",
+        "doorId": "door_workshop",
+        "lock": {
+          "keyItemId": "mp13:item:workshop_key",
+          "pickDC": 8,
+          "forceDC": 8
+        }
+      },
+      {
+        "id": "mp13:object:key_box",
+        "name": "Key Box",
+        "description": "An unlocked box holds the workshop key.",
+        "x": 3,
+        "y": 3,
+        "kind": "container",
+        "rewards": [
+          {
+            "itemId": "mp13:item:workshop_key",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "mp13:object:treasure_chest",
+        "name": "Treasure Chest",
+        "description": "A supply chest. Its contents can be taken only once.",
+        "x": 7,
+        "y": 3,
+        "kind": "container",
+        "rewards": [
+          {
+            "itemId": "item_healing_draught",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "mp13:object:signal_lever",
+        "name": "Signal Lever",
+        "description": "A reusable lever lights the maintenance signal.",
+        "x": 3,
+        "y": 2,
+        "kind": "object",
+        "onUse": {
+          "routineId": "mp13:routine:signal",
+          "args": {}
+        },
+        "appearance": {
+          "idle": "lever_off",
+          "used": "lever_on"
+        }
+      },
+      {
+        "id": "mp13:object:concealed_stash",
+        "name": "Concealed Stash",
+        "description": "A concealed repair box, discovered by searching nearby.",
+        "x": 2,
+        "y": 4,
+        "kind": "container",
+        "hidden": true,
+        "searchDC": 5,
+        "rewards": [
+          {
+            "itemId": "item_healing_draught",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "mp13:object:maintenance_passage",
+        "name": "Maintenance Passage",
+        "description": "A loose wall panel reveals a maintenance passage.",
+        "x": 5,
+        "y": 5,
+        "kind": "secret",
+        "secretId": "secret_bypass",
+        "searchDC": 5
+      }
+    ]
+  }
+}

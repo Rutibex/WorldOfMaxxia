@@ -1,0 +1,283 @@
+{
+  "format": "maxxia-monsters",
+  "version": 1,
+  "monsters": [
+    {
+      "id": "dust_imp",
+      "name": "Dust Imp",
+      "hp": 9,
+      "defense": 10,
+      "attack": 2,
+      "damage": "1d3",
+      "speed": 11,
+      "xp": 35,
+      "gold": 12,
+      "symbol": "✦",
+      "attributes": {
+        "DEX": 13,
+        "WIS": 8,
+        "CON": 8
+      },
+      "undead": false,
+      "resistances": {},
+      "visualId": "dust_imp",
+      "aiPattern": "standard",
+      "abilities": [
+        {
+          "id": "basic",
+          "kind": "strike",
+          "weight": 1,
+          "when": "always",
+          "bonusDamage": 0
+        }
+      ]
+    },
+    {
+      "id": "stone_mite",
+      "name": "Stone Mite",
+      "hp": 12,
+      "defense": 11,
+      "attack": 2,
+      "damage": "1d4",
+      "speed": 7,
+      "xp": 45,
+      "gold": 14,
+      "symbol": "◆",
+      "attributes": {
+        "DEX": 6,
+        "WIS": 6,
+        "CON": 12
+      },
+      "undead": false,
+      "resistances": {},
+      "visualId": "stone_mite",
+      "aiPattern": "standard",
+      "abilities": [
+        {
+          "id": "basic",
+          "kind": "strike",
+          "weight": 1,
+          "when": "always",
+          "bonusDamage": 0
+        }
+      ]
+    },
+    {
+      "id": "gallery_watcher",
+      "name": "Gallery Watcher",
+      "hp": 17,
+      "defense": 12,
+      "attack": 3,
+      "damage": "1d5",
+      "speed": 9,
+      "xp": 80,
+      "gold": 30,
+      "symbol": "◈",
+      "attributes": {
+        "DEX": 10,
+        "WIS": 10,
+        "CON": 11
+      },
+      "undead": true,
+      "resistances": {},
+      "visualId": "gallery_watcher",
+      "aiPattern": "standard",
+      "abilities": [
+        {
+          "id": "normal",
+          "kind": "strike",
+          "weight": 1,
+          "when": "odd_round",
+          "bonusDamage": 0
+        },
+        {
+          "id": "spectral",
+          "kind": "spectral",
+          "weight": 1,
+          "when": "even_round",
+          "bonusDamage": 2
+        }
+      ]
+    },
+    {
+      "id": "cistern_rat",
+      "name": "Cistern Rat",
+      "hp": 9,
+      "defense": 10,
+      "attack": 2,
+      "damage": "1d3",
+      "speed": 14,
+      "xp": 35,
+      "gold": 8,
+      "symbol": "♢",
+      "attributes": {
+        "DEX": 15,
+        "WIS": 7,
+        "CON": 8
+      },
+      "undead": false,
+      "resistances": {},
+      "visualId": "cistern_rat",
+      "aiPattern": "standard",
+      "abilities": [
+        {
+          "id": "basic",
+          "kind": "strike",
+          "weight": 1,
+          "when": "always",
+          "bonusDamage": 0
+        }
+      ]
+    },
+    {
+      "id": "sludge_leech",
+      "name": "Sludge Leech",
+      "hp": 14,
+      "defense": 10,
+      "attack": 3,
+      "damage": "1d4",
+      "speed": 6,
+      "xp": 55,
+      "gold": 12,
+      "symbol": "◍",
+      "attributes": {
+        "DEX": 6,
+        "WIS": 6,
+        "CON": 12
+      },
+      "undead": false,
+      "resistances": {},
+      "visualId": "sludge_leech",
+      "aiPattern": "standard",
+      "abilities": [
+        {
+          "id": "basic",
+          "kind": "strike",
+          "weight": 1,
+          "when": "always",
+          "bonusDamage": 0
+        }
+      ]
+    },
+    {
+      "id": "pipe_goblin",
+      "name": "Pipe Goblin",
+      "hp": 18,
+      "defense": 12,
+      "attack": 4,
+      "damage": "1d5",
+      "speed": 11,
+      "xp": 80,
+      "gold": 25,
+      "symbol": "♠",
+      "attributes": {
+        "DEX": 12,
+        "WIS": 9,
+        "CON": 11
+      },
+      "undead": false,
+      "resistances": {},
+      "visualId": "pipe_goblin",
+      "aiPattern": "standard",
+      "abilities": [
+        {
+          "id": "basic",
+          "kind": "strike",
+          "weight": 1,
+          "when": "always",
+          "bonusDamage": 0
+        }
+      ]
+    },
+    {
+      "id": "bell_wraith",
+      "name": "Bell Wraith",
+      "hp": 21,
+      "defense": 12,
+      "attack": 5,
+      "damage": "1d6",
+      "speed": 12,
+      "xp": 105,
+      "gold": 35,
+      "symbol": "♧",
+      "attributes": {
+        "DEX": 13,
+        "WIS": 11,
+        "CON": 10
+      },
+      "undead": true,
+      "resistances": {},
+      "visualId": "bell_wraith",
+      "aiPattern": "standard",
+      "abilities": [
+        {
+          "id": "basic",
+          "kind": "strike",
+          "weight": 1,
+          "when": "always",
+          "bonusDamage": 0
+        }
+      ]
+    },
+    {
+      "id": "valve_sentinel",
+      "name": "Valve Sentinel",
+      "hp": 28,
+      "defense": 14,
+      "attack": 5,
+      "damage": "1d7",
+      "speed": 5,
+      "xp": 140,
+      "gold": 45,
+      "symbol": "▣",
+      "attributes": {
+        "DEX": 5,
+        "WIS": 8,
+        "CON": 17
+      },
+      "undead": false,
+      "resistances": {},
+      "visualId": "valve_sentinel",
+      "aiPattern": "standard",
+      "abilities": [
+        {
+          "id": "basic",
+          "kind": "strike",
+          "weight": 1,
+          "when": "always",
+          "bonusDamage": 0
+        }
+      ]
+    },
+    {
+      "id": "bell_heart",
+      "name": "Bell-Heart Custodian",
+      "hp": 65,
+      "defense": 14,
+      "attack": 6,
+      "damage": "1d8",
+      "speed": 8,
+      "xp": 350,
+      "gold": 120,
+      "symbol": "◉",
+      "attributes": {
+        "DEX": 8,
+        "WIS": 14,
+        "CON": 18
+      },
+      "undead": false,
+      "resistances": {},
+      "visualId": "bell_heart",
+      "aiPattern": "resonance",
+      "abilities": [
+        {
+          "id": "basic",
+          "kind": "strike",
+          "weight": 1,
+          "when": "always",
+          "bonusDamage": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+/** MP19 source/production parity proof. Deterministic fixture setup + normal character ability commands. */
+import {readFileSync,readdirSync} from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+const engine=new URL('../engine/world-of-maxxia/',import.meta.url),read=p=>JSON.parse(readFileSync(new URL(p,engine),'utf8'));
+async function run(production=false){
+ const runtime=production?readdirSync(new URL('dist/assets/',engine)).find(n=>n.startsWith('runtime-')):null;
+ const mod=p=>import(new URL(production?'dist/assets/'+runtime+'/wom-'+p.replaceAll('/','-')+'.js':'src/'+p+'.ts',engine));
+ const [cat,build,campaign,resources,creation,simulation,abilities,training,party,portable,instances,scope]=await Promise.all(['shared/content/catalogue','shared/content/catalogue-build','shared/rules/campaign','shared/project/resources','shared/rules/creation','shared/rules/simulation','shared/rules/abilities','shared/rules/training','shared/rules/party','shared/saves/portable-roster','shared/saves/campaign-instances','shared/rules/scoped-state'].map(mod));
+ const verified=await build.verifyCatalogueBuild(read('public/mp19-proof/brass-bell.maxxia-build.json'),'0.64.0');const reverified=await build.verifyCatalogueBuild(read('public/mp19-proof/receiving.maxxia-build.json'),'0.64.0');
+ const resolver=resources.locateResources(resources.readResourceCatalog(JSON.stringify(read('public/assets/catalog.json'))),'http://localhost/assets/catalog.json');
+ const base=cat.captureCatalogueBase(),bell=cat.composePackCatalogue(verified.packs,'bell',base,resolver,'0.64.0'),receiving=cat.composePackCatalogue(reverified.packs,'receiving',base,resolver,'0.64.0');
+ cat.installComposedCatalogue(bell);const legacy=campaign.validateMapRegistry(['town','galleries','vault'].map(n=>read('public/content/'+n+'.json'))),maps=cat.withCatalogueMaps(legacy);
+ let s=cat.startCatalogueCampaign(campaign.newCampaign(maps,'map_town',creation.createCustomParty(Array.from({length:6},(_,i)=>creation.proposedHero(i,i===0?'bell:class:bellwarden':undefined)))),maps);const id=s.party.order[0],hero=()=>s.party.characters[id],pool='bell:pool:resonance',guard='bell:ability:resonant_guard',chime='bell:ability:counter_chime';
+ const trace=[],step=(command,expected='applied')=>{const result=simulation.dispatchSimulation(s,maps,command);assert.equal(result.status,expected,result.messages.join(' '));trace.push({command,status:result.status,messages:result.messages,events:result.events});s=result.state;};
+ assert.equal(abilities.poolCurrent(hero(),pool),2);step({type:'ability',abilityId:guard,casterId:id},'failed');
+ s.party.resources.gold=10000;s.party.characters[id].xp=2000;let train=training.trainAdventurer(s,id);assert.ok(train.changed,train.message);s=train.state;assert.equal(hero().level,2);assert.equal(abilities.maxPool(hero(),pool),3);
+ train=training.trainAdventurer(s,id,'CON');assert.ok(train.changed,train.message);s=train.state;assert.equal(hero().level,3);assert.equal(abilities.maxPool(hero(),pool),4);assert.equal(abilities.passiveModifiers(hero()).defense,1);
+ s.party.characters[id].hp-=4;const enc=Object.values(s.combat.encounters).find(e=>!e.cleared&&e.enemies.some(x=>x.hp>0));assert.ok(enc);s.currentMapId=enc.mapId;const target=enc.enemies.find(e=>e.hp>0);s.combat.active={encounterId:enc.id,turnOrder:[id,target.id],turnIndex:0,round:1,targetId:target.id,guarding:[]};campaign.validateCampaign(s,maps);
+ step({type:'ability',abilityId:guard,casterId:id});assert.equal(abilities.poolCurrent(hero(),pool),3);assert.ok(hero().conditions.some(x=>x.id==='bell:condition:resonant_guard'));
+ step({type:'ability',abilityId:guard,casterId:id},'failed');
+ if(s.combat.active?.turnOrder[s.combat.active.turnIndex]!==id){for(let i=0;i<6&&s.combat.active?.turnOrder[s.combat.active.turnIndex]!==id;i++)step({type:'combat',action:'block'});}
+ if(s.combat.active?.turnOrder[s.combat.active.turnIndex]===id){step({type:'combat',action:'block'});assert.ok(hero().abilityState?.cooldowns[chime]);}
+ const serialized=campaign.serializeCampaign(s,maps),restored=campaign.parseCampaign(serialized,maps);assert.equal(JSON.stringify(restored),JSON.stringify(s));
+ // Portable cross-adventure proof is independent of prior ability outcomes or combat victory.
+ s.combat.active=null;s.currentMapId='map_town';const key={projectId:'project_mp19',adventureId:'bell',rules:{id:'core:rules:classic',version:'1.0.0'},catalogueHash:verified.catalogueHash,providers:bell.adventure.providers};
+ const storage={data:new Map(),getItem(k){return this.data.get(k)??null;},setItem(k,v){this.data.set(k,v);},removeItem(k){this.data.delete(k);}};
+ const store=new instances.CampaignInstanceStore(storage,maps,key);store.create('Proof',s,scope.newScopedState(),'11111111-1111-4111-8111-111111111119');const record=store.getRosterSnapshot().records.find(x=>x.character.id===id),exported=store.exportCharacter(record.portableId,true);
+ const info=JSON.parse(exported);assert.equal(info.abilityProviders.bell,'1.1.0');assert.ok(info.definitionSnapshots[guard]);
+ cat.installComposedCatalogue(receiving);const toMaps=cat.withCatalogueMaps(legacy);const dest=cat.startCatalogueCampaign(campaign.newCampaign(toMaps),toMaps),destLock={...key,adventureId:'receiving',catalogueHash:reverified.catalogueHash,providers:receiving.adventure.providers};
+ const imported=portable.copyPortableIntoReserve(dest,exported,destLock,toMaps),copied=Object.values(imported.party.characters).find(h=>h.classId==='bell:class:bellwarden');assert.deepEqual(copied.abilityState,record.character.abilityState);
+ return {trace,level:record.character.level,resource:record.character.abilityState?.pools[pool],cooldowns:record.character.abilityState?.cooldowns,passiveDefense:abilities.passiveModifiers(copied).defense,copyDefinition:info.definitionSnapshots[guard],copiedState:copied.abilityState,saveReload:'pass',crossAdventure:'pass'};
+}
+try{const reference=await run(),production=process.argv.includes('--production')?await run(true):null;if(production)assert.deepEqual(production,reference);console.log(JSON.stringify({ok:true,productionParity:production?'pass':'not requested',commands:reference.trace.length,sha256:createHash('sha256').update(JSON.stringify(reference)).digest('hex'),saveReload:reference.saveReload,crossAdventure:reference.crossAdventure,level:reference.level,resource:reference.resource,passiveDefense:reference.passiveDefense},null,2));}catch(e){console.error(e.stack);process.exitCode=1;}

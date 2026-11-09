@@ -1,0 +1,20 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 2,
+  "id": "mp15:routine:return_tools",
+  "parameters": {},
+  "actions": [
+    {
+      "op": "quest",
+      "questId": "mp15:quest:lost_tools",
+      "action": "transition",
+      "transitionId": "return"
+    },
+    {
+      "op": "quest",
+      "questId": "mp15:quest:lost_tools",
+      "action": "claim",
+      "rewardId": "thanks"
+    }
+  ]
+}

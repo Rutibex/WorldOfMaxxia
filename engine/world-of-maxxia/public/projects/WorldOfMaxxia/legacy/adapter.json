@@ -1,0 +1,35 @@
+{
+  "format": "maxxia-legacy-adapter",
+  "formatVersion": 1,
+  "adapterId": "firstlight",
+  "projectIds": [
+    "project_world_of_maxxia",
+    "project_mp04_catalogue_proof"
+  ],
+  "coreRules": {
+    "id": "core:rules:classic",
+    "version": "1.0.0"
+  },
+  "items": "projects/WorldOfMaxxia/legacy/database/items.json",
+  "monsters": "projects/WorldOfMaxxia/legacy/database/monsters.json",
+  "coreProvenance": "core/classic/provenance.json",
+  "expectedItemIds": [
+    "item_bellkeeper_blade",
+    "item_cistern_carapace",
+    "item_custodian_seal",
+    "item_echo_staff",
+    "item_glass_thorn",
+    "item_quayward_charm",
+    "item_regulator_lens",
+    "item_tessa_silver_brooch"
+  ],
+  "expectedMonsterIds": [
+    "bell_heart",
+    "bell_wraith",
+    "cistern_rat",
+    "gallery_watcher",
+    "pipe_goblin",
+    "sludge_leech",
+    "valve_sentinel"
+  ]
+}

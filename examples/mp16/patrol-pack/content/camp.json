@@ -1,0 +1,40 @@
+{
+  "format": "maxxia-authored-encounter",
+  "formatVersion": 1,
+  "id": "mp16:encounter:camp",
+  "record": {
+    "id": "mp16:encounter:camp",
+    "name": "Camp Disturbance",
+    "description": "The watch checks the embers after your rest.",
+    "mapId": "mp16:map:watch",
+    "nativeMapId": "map_mp16_watch",
+    "x": 4,
+    "y": 3,
+    "range": 4,
+    "trigger": {
+      "kind": "rest",
+      "interval": 1,
+      "table": "camp"
+    },
+    "weight": 1,
+    "members": [
+      {
+        "kindId": "mp16:monster:watchman",
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "bribe": 3,
+    "avoidDC": 1,
+    "respawn": {
+      "kind": "never",
+      "minutes": 1
+    },
+    "phases": [
+      {
+        "title": "The watch approaches",
+        "healthPercent": 100
+      }
+    ]
+  }
+}

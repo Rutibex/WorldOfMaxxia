@@ -1,0 +1,21 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 2,
+  "id": "lantern:routine:record",
+  "parameters": {},
+  "actions": [
+    {
+      "op": "state",
+      "kind": "flag",
+      "address": {
+        "scope": "campaign"
+      },
+      "key": "lantern:flag:record",
+      "value": true
+    },
+    {
+      "op": "message",
+      "text": "A signed work order identifies the saboteur: former bursar Harl Venn diverted repair money, then broke the regulator to conceal the missing accounts. The margin says: INTAKE, RETURN, BELL. The spirit recognizes his own handwriting here."
+    }
+  ]
+}

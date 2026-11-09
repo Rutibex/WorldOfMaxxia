@@ -1,0 +1,11 @@
+# Maxxia Maker MM06 — Authoring items
+
+Open a project (`.maxxia`) with the MM06 WinForms editor source built on Windows (.NET 10 SDK). Choose **Edit → Items database…** or **Ctrl+I**. This requires the manifest to declare `content.items`, a path relative to the `.maxxia` file; the World of Maxxia example does this already.
+
+Select and search the left-hand item list, edit fields on the right, choose a rendered image resource in the icon dropdown, then **Apply changes**. Duplicate preserves all fields (including the icon) but generates an independent permanent item ID. **New** creates an ordinary miscellaneous record. To equip a new item, set a compatible category/slot and respect current class permissions. **Save items** or **Ctrl+S** writes `items.json` safely to disk, keeping its previous bytes in a `.bak` file; the manifest Save control is separate. Ctrl+Z / Ctrl+Y undo and redo accepted item edits while this dialog is open.
+
+For a game content-only edit, change `projects/WorldOfMaxxia/database/items.json` (or a project's own file), restart the browser game and reload the page. The browser fetches the JSON before scene initialization, so TypeScript recompilation is **not required** when an existing item changes display name or when a new item definition is added. New game content can grant test items using existing runtime `giveItem`; the visual event system for placing arbitrary items comes later.
+
+Fields: `id` (permanent), `name`, `category` (`weapons`, `armor`, `accessories`, `misc`), price, durability, charges, effect, power, uniqueness, equipment slot, weight, armor rating, damage dice, accuracy, resistance, resistance bonus, description, `iconResourceId` (existing catalogue image ID). JSON format: `{ "format": "maxxia-items", "version": 1, "items": [ ... ] }`. New ID creation uses `item_` + random GUID; never change IDs after publication. C# and TypeScript both reject duplicate IDs and invalid values.
+
+The **Where Used** button currently searches project JSON files only; it cannot fully enumerate legacy compiled item references or older save slots. The 48 baseline items cannot be deleted in this phase. Refer to `PHASE_NOTES/MM06.md` for save-migration caution, verified tests and deferred items.

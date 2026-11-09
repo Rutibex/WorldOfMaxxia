@@ -1,0 +1,43 @@
+{
+  "format": "maxxia-pack",
+  "formatVersion": 1,
+  "packId": "mp14",
+  "title": "The Brass Counter \u2014 MP14 social proof",
+  "version": "1.0.0",
+  "kind": "adventure",
+  "engine": {
+    "min": "0.59.0",
+    "maxExclusive": "1.0.0"
+  },
+  "rules": {
+    "id": "core:rules:classic",
+    "version": "1.0.0"
+  },
+  "dependencies": [
+    {
+      "packId": "core",
+      "versions": {
+        "min": "1.0.0",
+        "maxExclusive": "2.0.0"
+      },
+      "optional": false
+    },
+    {
+      "packId": "counter_extra",
+      "versions": {
+        "min": "1.0.0",
+        "maxExclusive": "2.0.0"
+      },
+      "optional": true
+    }
+  ],
+  "contentIndex": "content/index.json",
+  "entry": {
+    "mapId": "mp14:map:counter",
+    "arrivalId": "arrival_start"
+  },
+  "credits": [
+    "By Michael Robinson",
+    "MP14 functional dialogue/services fixture; final campaign art is later work."
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 2,
+  "id": "effect_lab:routine:basin",
+  "parameters": {},
+  "actions": [
+    {
+      "op": "effect",
+      "effectId": "effect_lab:ability:fever"
+    },
+    {
+      "op": "message",
+      "text": "The basin applies the same condition as the vial. Wait or explore to advance its minute clock; menus do not tick it."
+    }
+  ]
+}

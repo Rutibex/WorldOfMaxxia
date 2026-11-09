@@ -1,0 +1,911 @@
+{
+  "format": "maxxia-content-index",
+  "formatVersion": 1,
+  "definitions": [
+    {
+      "id": "lantern:item:resonant_buckler",
+      "kind": "item",
+      "visibility": "exported",
+      "file": "content/item_resonant_buckler.json",
+      "placement": "eligible",
+      "tags": [
+        "waterworks",
+        "defensive"
+      ],
+      "references": []
+    },
+    {
+      "id": "lantern:item:siltglass_charm",
+      "kind": "item",
+      "visibility": "exported",
+      "file": "content/item_siltglass_charm.json",
+      "placement": "eligible",
+      "tags": [
+        "waterworks",
+        "exploration"
+      ],
+      "references": []
+    },
+    {
+      "id": "lantern:item:well_key",
+      "kind": "item",
+      "visibility": "local",
+      "file": "content/item_well_key.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:item:valve_key",
+      "kind": "item",
+      "visibility": "local",
+      "file": "content/item_valve_key.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:item:bell_clapper",
+      "kind": "item",
+      "visibility": "local",
+      "file": "content/item_bell_clapper.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:item:tool_roll",
+      "kind": "item",
+      "visibility": "local",
+      "file": "content/item_tool_roll.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:class:bellwarden",
+      "kind": "class",
+      "visibility": "exported",
+      "file": "content/class_bellwarden.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:item:resonant_buckler"
+        }
+      ]
+    },
+    {
+      "id": "lantern:monster:silt_rat",
+      "kind": "monster",
+      "visibility": "local",
+      "file": "content/monster_silt_rat.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:monster:echo",
+      "kind": "monster",
+      "visibility": "local",
+      "file": "content/monster_echo.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:monster:sentinel",
+      "kind": "monster",
+      "visibility": "local",
+      "file": "content/monster_sentinel.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:monster:valve_spark"
+        }
+      ]
+    },
+    {
+      "id": "lantern:monster:bell_heart",
+      "kind": "monster",
+      "visibility": "local",
+      "file": "content/monster_bell_heart.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:quest:clapper",
+      "kind": "quest",
+      "visibility": "local",
+      "file": "content/quest_clapper.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:item:bell_clapper"
+        },
+        {
+          "id": "lantern:item:resonant_buckler"
+        },
+        {
+          "id": "lantern:item:siltglass_charm"
+        },
+        {
+          "id": "lantern:item:tool_roll"
+        },
+        {
+          "id": "lantern:item:valve_key"
+        },
+        {
+          "id": "lantern:item:well_key"
+        }
+      ]
+    },
+    {
+      "id": "lantern:routine:accept",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_accept.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:quest:clapper"
+        }
+      ]
+    },
+    {
+      "id": "lantern:routine:village",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_village.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:quest:clapper"
+        }
+      ]
+    },
+    {
+      "id": "lantern:routine:infirmary",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_infirmary.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:quest:clapper"
+        }
+      ]
+    },
+    {
+      "id": "lantern:routine:record",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_record.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:routine:spirit_question",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_spirit_question.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:routine:spirit_appease",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_spirit_appease.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:routine:spirit_fight",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_spirit_fight.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:routine:valve_intake",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_valve_intake.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:routine:valve_return",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_valve_return.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:routine:valve_bell",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_valve_bell.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:quest:clapper"
+        }
+      ]
+    },
+    {
+      "id": "lantern:routine:bypass",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_bypass.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:quest:clapper"
+        }
+      ]
+    },
+    {
+      "id": "lantern:routine:clue",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_clue.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:dialogue:edda",
+      "kind": "dialogue",
+      "visibility": "local",
+      "file": "content/dialogue_edda.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:quest:clapper"
+        },
+        {
+          "id": "lantern:routine:accept"
+        },
+        {
+          "id": "lantern:routine:infirmary"
+        },
+        {
+          "id": "lantern:routine:village"
+        }
+      ]
+    },
+    {
+      "id": "lantern:npc:edda",
+      "kind": "npc",
+      "visibility": "local",
+      "file": "content/npc_edda.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:dialogue:edda"
+        }
+      ]
+    },
+    {
+      "id": "lantern:dialogue:mara",
+      "kind": "dialogue",
+      "visibility": "local",
+      "file": "content/dialogue_mara.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:npc:mara",
+      "kind": "npc",
+      "visibility": "local",
+      "file": "content/npc_mara.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:dialogue:mara"
+        },
+        {
+          "id": "lantern:item:brass_filament"
+        },
+        {
+          "id": "lantern:item:silt_crystal"
+        }
+      ]
+    },
+    {
+      "id": "lantern:dialogue:spirit",
+      "kind": "dialogue",
+      "visibility": "local",
+      "file": "content/dialogue_spirit.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:routine:spirit_appease"
+        },
+        {
+          "id": "lantern:routine:spirit_fight"
+        },
+        {
+          "id": "lantern:routine:spirit_question"
+        }
+      ]
+    },
+    {
+      "id": "lantern:npc:spirit",
+      "kind": "npc",
+      "visibility": "local",
+      "file": "content/npc_spirit.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:dialogue:spirit"
+        }
+      ]
+    },
+    {
+      "id": "lantern:map:yard",
+      "kind": "map",
+      "visibility": "local",
+      "file": "content/map_yard.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:item:well_key"
+        },
+        {
+          "id": "lantern:map:cistern"
+        },
+        {
+          "id": "lantern:npc:edda"
+        },
+        {
+          "id": "lantern:npc:mara"
+        },
+        {
+          "id": "lantern:environment:night"
+        },
+        {
+          "id": "lantern:monster:silt_rat"
+        },
+        {
+          "id": "lantern:monster:echo"
+        },
+        {
+          "id": "lantern:monster:sentinel"
+        },
+        {
+          "id": "lantern:monster:bell_heart"
+        },
+        {
+          "id": "lantern:monster:chime_wisp"
+        }
+      ]
+    },
+    {
+      "id": "lantern:map:cistern",
+      "kind": "map",
+      "visibility": "local",
+      "file": "content/map_cistern.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:item:bell_clapper"
+        },
+        {
+          "id": "lantern:item:tool_roll"
+        },
+        {
+          "id": "lantern:item:valve_key"
+        },
+        {
+          "id": "lantern:map:yard"
+        },
+        {
+          "id": "lantern:npc:spirit"
+        },
+        {
+          "id": "lantern:routine:bypass"
+        },
+        {
+          "id": "lantern:routine:clue"
+        },
+        {
+          "id": "lantern:routine:record"
+        },
+        {
+          "id": "lantern:routine:valve_bell"
+        },
+        {
+          "id": "lantern:routine:valve_intake"
+        },
+        {
+          "id": "lantern:routine:valve_return"
+        },
+        {
+          "id": "lantern:environment:brass"
+        },
+        {
+          "id": "lantern:monster:silt_rat"
+        },
+        {
+          "id": "lantern:monster:echo"
+        },
+        {
+          "id": "lantern:monster:sentinel"
+        },
+        {
+          "id": "lantern:monster:bell_heart"
+        },
+        {
+          "id": "lantern:monster:chime_wisp"
+        }
+      ]
+    },
+    {
+      "id": "lantern:encounter:rats",
+      "kind": "encounter",
+      "visibility": "local",
+      "file": "content/encounter_rats.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:map:cistern"
+        },
+        {
+          "id": "lantern:monster:silt_rat"
+        }
+      ]
+    },
+    {
+      "id": "lantern:encounter:spirit",
+      "kind": "encounter",
+      "visibility": "local",
+      "file": "content/encounter_spirit.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:map:cistern"
+        },
+        {
+          "id": "lantern:monster:echo"
+        }
+      ]
+    },
+    {
+      "id": "lantern:encounter:sentinel",
+      "kind": "encounter",
+      "visibility": "local",
+      "file": "content/encounter_sentinel.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:map:cistern"
+        },
+        {
+          "id": "lantern:monster:sentinel"
+        }
+      ]
+    },
+    {
+      "id": "lantern:encounter:boss",
+      "kind": "encounter",
+      "visibility": "local",
+      "file": "content/encounter_boss.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:map:cistern"
+        },
+        {
+          "id": "lantern:monster:bell_heart"
+        }
+      ]
+    },
+    {
+      "id": "lantern:condition:resonant_guard",
+      "kind": "condition",
+      "visibility": "exported",
+      "file": "content/condition_resonant_guard.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:ability:resonant_guard",
+      "kind": "ability",
+      "visibility": "exported",
+      "file": "content/ability_resonant_guard.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:class:bellwarden"
+        },
+        {
+          "id": "lantern:condition:resonant_guard"
+        }
+      ]
+    },
+    {
+      "id": "lantern:ability:counter_chime",
+      "kind": "ability",
+      "visibility": "exported",
+      "file": "content/ability_counter_chime.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:class:bellwarden"
+        }
+      ]
+    },
+    {
+      "id": "lantern:ability:stillwater_stance",
+      "kind": "ability",
+      "visibility": "exported",
+      "file": "content/ability_stillwater_stance.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:class:bellwarden"
+        }
+      ]
+    },
+    {
+      "id": "lantern:race:bellforged",
+      "kind": "race",
+      "visibility": "exported",
+      "file": "content/race_bellforged.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:ability:chime_instinct"
+        }
+      ]
+    },
+    {
+      "id": "lantern:class:echo_sentinel",
+      "kind": "class",
+      "visibility": "exported",
+      "file": "content/class_echo_sentinel.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:ability:echo_pulse"
+        },
+        {
+          "id": "lantern:item:resonant_buckler"
+        },
+        {
+          "id": "lantern:ability:call_chime_wisp"
+        },
+        {
+          "id": "lantern:ability:echo_hand"
+        }
+      ]
+    },
+    {
+      "id": "lantern:ability:chime_instinct",
+      "kind": "ability",
+      "visibility": "exported",
+      "file": "content/ability_chime_instinct.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:class:echo_sentinel"
+        }
+      ]
+    },
+    {
+      "id": "lantern:ability:echo_pulse",
+      "kind": "ability",
+      "visibility": "exported",
+      "file": "content/ability_echo_pulse.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:class:echo_sentinel"
+        },
+        {
+          "id": "lantern:condition:resonant_guard"
+        }
+      ]
+    },
+    {
+      "id": "lantern:item:brass_filament",
+      "kind": "item",
+      "visibility": "exported",
+      "file": "content/item_brass_filament.json",
+      "placement": "eligible",
+      "tags": [
+        "crafting",
+        "waterworks"
+      ],
+      "references": []
+    },
+    {
+      "id": "lantern:item:silt_crystal",
+      "kind": "item",
+      "visibility": "exported",
+      "file": "content/item_silt_crystal.json",
+      "placement": "eligible",
+      "tags": [
+        "crafting",
+        "waterworks"
+      ],
+      "references": []
+    },
+    {
+      "id": "lantern:item:regulator_aegis",
+      "kind": "item",
+      "visibility": "exported",
+      "file": "content/item_regulator_aegis.json",
+      "placement": "authored",
+      "tags": [
+        "crafting",
+        "waterworks"
+      ],
+      "references": [
+        {
+          "id": "lantern:class:bellwarden"
+        },
+        {
+          "id": "lantern:class:echo_sentinel"
+        }
+      ]
+    },
+    {
+      "id": "lantern:item:binding_ring",
+      "kind": "item",
+      "visibility": "exported",
+      "file": "content/item_binding_ring.json",
+      "placement": "eligible",
+      "tags": [
+        "curse"
+      ],
+      "references": []
+    },
+    {
+      "id": "lantern:recipe:forge_aegis",
+      "kind": "recipe",
+      "visibility": "exported",
+      "file": "content/recipe_forge_aegis.json",
+      "placement": "none",
+      "tags": [
+        "crafting"
+      ],
+      "references": [
+        {
+          "id": "lantern:item:brass_filament"
+        },
+        {
+          "id": "lantern:item:silt_crystal"
+        },
+        {
+          "id": "lantern:item:regulator_aegis"
+        }
+      ]
+    },
+    {
+      "id": "lantern:monster:valve_spark",
+      "kind": "monster",
+      "visibility": "local",
+      "file": "content/monster_valve_spark.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:monster:chime_wisp",
+      "kind": "monster",
+      "visibility": "exported",
+      "file": "content/monster_chime_wisp.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:ability:call_chime_wisp",
+      "kind": "ability",
+      "visibility": "exported",
+      "file": "content/ability_call_chime_wisp.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:class:echo_sentinel"
+        },
+        {
+          "id": "lantern:monster:chime_wisp"
+        }
+      ]
+    },
+    {
+      "id": "lantern:ability:echo_hand",
+      "kind": "ability",
+      "visibility": "exported",
+      "file": "content/ability_echo_hand.json",
+      "placement": "none",
+      "tags": [
+        "exploration"
+      ],
+      "references": [
+        {
+          "id": "lantern:class:echo_sentinel"
+        }
+      ]
+    },
+    {
+      "id": "lantern:environment:brass",
+      "kind": "environment",
+      "visibility": "exported",
+      "file": "content/environment_brass.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:resource:scene_wall"
+        },
+        {
+          "id": "lantern:resource:crate_closed"
+        },
+        {
+          "id": "lantern:resource:crate_open"
+        },
+        {
+          "id": "lantern:resource:enemy_atlas"
+        },
+        {
+          "id": "lantern:resource:keeper_portrait"
+        },
+        {
+          "id": "lantern:resource:scenery"
+        },
+        {
+          "id": "lantern:resource:mechanism_idle"
+        },
+        {
+          "id": "lantern:resource:mechanism_used"
+        }
+      ]
+    },
+    {
+      "id": "lantern:environment:night",
+      "kind": "environment",
+      "visibility": "exported",
+      "file": "content/environment_night.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "lantern:resource:crate_closed"
+        },
+        {
+          "id": "lantern:resource:crate_open"
+        },
+        {
+          "id": "lantern:resource:enemy_atlas"
+        },
+        {
+          "id": "lantern:resource:keeper_portrait"
+        },
+        {
+          "id": "lantern:resource:scenery"
+        },
+        {
+          "id": "lantern:resource:mechanism_idle"
+        },
+        {
+          "id": "lantern:resource:mechanism_used"
+        }
+      ]
+    },
+    {
+      "id": "lantern:resource:scene_wall",
+      "kind": "resource",
+      "visibility": "exported",
+      "file": "content/resource_scene_wall.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:resource:crate_closed",
+      "kind": "resource",
+      "visibility": "exported",
+      "file": "content/resource_crate_closed.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:resource:crate_open",
+      "kind": "resource",
+      "visibility": "exported",
+      "file": "content/resource_crate_open.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:resource:keeper_portrait",
+      "kind": "resource",
+      "visibility": "exported",
+      "file": "content/resource_keeper_portrait.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:resource:enemy_atlas",
+      "kind": "resource",
+      "visibility": "exported",
+      "file": "content/resource_enemy_atlas.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:resource:scenery",
+      "kind": "resource",
+      "visibility": "exported",
+      "file": "content/resource_scenery.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:resource:mechanism_idle",
+      "kind": "resource",
+      "visibility": "exported",
+      "file": "content/resource_mechanism_idle.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "lantern:resource:mechanism_used",
+      "kind": "resource",
+      "visibility": "exported",
+      "file": "content/resource_mechanism_used.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    }
+  ]
+}

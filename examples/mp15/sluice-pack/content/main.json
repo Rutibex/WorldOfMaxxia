@@ -1,0 +1,303 @@
+{
+  "format": "maxxia-authored-quest",
+  "formatVersion": 1,
+  "id": "mp15:quest:broken_sluice",
+  "record": {
+    "id": "mp15:quest:broken_sluice",
+    "name": "The Broken Sluice",
+    "description": "Decide whether the sluice should supply the village or the abandoned infirmary. Inspect it, then obtain the key or arrange peaceful maintenance help.",
+    "initial": "offered",
+    "states": [
+      {
+        "id": "offered",
+        "title": "A request awaits",
+        "status": "available"
+      },
+      {
+        "id": "active",
+        "title": "Investigating the sluice",
+        "status": "active"
+      },
+      {
+        "id": "repaired",
+        "title": "Village supply restored",
+        "status": "succeeded",
+        "ending": {
+          "title": "Water for the Village",
+          "text": "The regulator turns. Clean water returns to the village, and the keeper records your decision.",
+          "campaign": true
+        }
+      },
+      {
+        "id": "diverted",
+        "title": "Power diverted to the infirmary",
+        "status": "succeeded",
+        "ending": {
+          "title": "Light in the Infirmary",
+          "text": "The old infirmary lights again. The village must ration water while its people decide what to build next.",
+          "campaign": true
+        }
+      },
+      {
+        "id": "refused",
+        "title": "The request was refused",
+        "status": "refused",
+        "ending": {
+          "title": "The Unanswered Bell",
+          "text": "You refuse the keeper\u2019s request. The bell continues beneath the empty well.",
+          "campaign": true
+        }
+      },
+      {
+        "id": "failed",
+        "title": "The sluice was deliberately ruined",
+        "status": "failed",
+        "ending": {
+          "title": "The Broken Regulator",
+          "text": "Your final act breaks the regulator beyond local repair. The keeper records the failure without erasing what you discovered.",
+          "campaign": true
+        }
+      }
+    ],
+    "objectives": [
+      {
+        "id": "inspection",
+        "title": "Inspect the sluice mechanism",
+        "description": "Inspect the sluice mechanism.",
+        "states": [
+          "active"
+        ],
+        "condition": {
+          "op": "eq",
+          "left": {
+            "query": "state",
+            "address": {
+              "scope": "campaign"
+            },
+            "kind": "flag",
+            "key": "mp15:flag:inspected"
+          },
+          "right": true
+        },
+        "optional": false,
+        "hidden": false,
+        "journalId": "inspection_note"
+      },
+      {
+        "id": "key",
+        "title": "Recover the maintenance key",
+        "description": "Recover the maintenance key.",
+        "states": [
+          "active"
+        ],
+        "condition": {
+          "op": "eq",
+          "left": {
+            "query": "has-item",
+            "item": "mp15:item:sluice_key"
+          },
+          "right": true
+        },
+        "optional": false,
+        "hidden": false,
+        "journalId": "key_note"
+      },
+      {
+        "id": "spirit",
+        "title": "Arrange peaceful maintenance help",
+        "description": "Arrange peaceful maintenance help.",
+        "states": [
+          "active"
+        ],
+        "condition": {
+          "op": "eq",
+          "left": {
+            "query": "state",
+            "address": {
+              "scope": "campaign"
+            },
+            "kind": "flag",
+            "key": "mp15:flag:spirit_help"
+          },
+          "right": true
+        },
+        "optional": false,
+        "hidden": false,
+        "journalId": "spirit_note"
+      },
+      {
+        "id": "ledger",
+        "title": "Recover the maintenance ledger",
+        "description": "Recover the maintenance ledger.",
+        "states": [
+          "active"
+        ],
+        "condition": {
+          "op": "eq",
+          "left": {
+            "query": "has-item",
+            "item": "mp15:item:ledger"
+          },
+          "right": true
+        },
+        "optional": true,
+        "hidden": true,
+        "journalId": "ledger_note"
+      }
+    ],
+    "journal": [
+      {
+        "id": "offered",
+        "text": "Keeper Edda asks you to investigate the broken sluice. Accept or refuse the request.",
+        "states": [
+          "offered"
+        ]
+      },
+      {
+        "id": "accepted",
+        "text": "You accepted. Inspect the nearby mechanism; either a key or peaceful help will let you choose a repair.",
+        "states": [
+          "active"
+        ]
+      },
+      {
+        "id": "inspection_note",
+        "text": "Inspection shows two workable settings: restore the village supply or divert power to the infirmary."
+      },
+      {
+        "id": "key_note",
+        "text": "The recovered key provides one route through the regulator\u2019s lock."
+      },
+      {
+        "id": "spirit_note",
+        "text": "The maintenance spirit agreed to help. Its assistance replaces the need for the key."
+      },
+      {
+        "id": "ledger_note",
+        "text": "The ledger records an old infirmary conduit. This discovery is optional, not a hidden bottleneck."
+      },
+      {
+        "id": "repaired",
+        "text": "You restored the village supply. This outcome is final.",
+        "states": [
+          "repaired"
+        ]
+      },
+      {
+        "id": "diverted",
+        "text": "You diverted power to the infirmary. This outcome is final.",
+        "states": [
+          "diverted"
+        ]
+      },
+      {
+        "id": "refused",
+        "text": "You refused the request. No completion reward is due.",
+        "states": [
+          "refused"
+        ]
+      },
+      {
+        "id": "failed",
+        "text": "The regulator was deliberately destroyed. Your failed outcome remains in the journal.",
+        "states": [
+          "failed"
+        ]
+      },
+      {
+        "id": "reward_note",
+        "text": "The keeper\u2019s completion reward has been claimed once."
+      }
+    ],
+    "transitions": [
+      {
+        "id": "accept",
+        "title": "Accept the sluice request",
+        "from": [
+          "offered"
+        ],
+        "to": "active",
+        "manual": true
+      },
+      {
+        "id": "refuse",
+        "title": "Refuse the request (final)",
+        "from": [
+          "offered"
+        ],
+        "to": "refused",
+        "manual": true
+      },
+      {
+        "id": "repair",
+        "title": "Restore village water (final)",
+        "from": [
+          "active"
+        ],
+        "to": "repaired",
+        "requirements": {
+          "all": [
+            "inspection"
+          ],
+          "any": [
+            [
+              "key",
+              "spirit"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "divert",
+        "title": "Power the infirmary (final)",
+        "from": [
+          "active"
+        ],
+        "to": "diverted",
+        "requirements": {
+          "all": [
+            "inspection"
+          ],
+          "any": [
+            [
+              "key",
+              "spirit"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "ruin",
+        "title": "Destroy the regulator (final failure)",
+        "from": [
+          "active"
+        ],
+        "to": "failed",
+        "requirements": {
+          "all": [
+            "inspection"
+          ]
+        }
+      }
+    ],
+    "rewards": [
+      {
+        "id": "completion",
+        "title": "Sluice completion reward",
+        "states": [
+          "repaired",
+          "diverted"
+        ],
+        "gold": 75,
+        "xp": 250,
+        "items": [
+          {
+            "itemId": "mp15:item:sluice_badge",
+            "count": 1
+          }
+        ],
+        "journalId": "reward_note"
+      }
+    ]
+  }
+}

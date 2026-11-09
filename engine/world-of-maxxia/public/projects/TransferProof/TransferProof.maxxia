@@ -1,0 +1,50 @@
+{
+  "format": "maxxia-project",
+  "projectFormatVersion": 1,
+  "projectId": "project_mm18_transfer_proof",
+  "title": "MM18 \u2014 Named Arrival and Transfer Proof",
+  "engineVersion": "0.37.0",
+  "minimumEngineVersion": "0.36.0",
+  "contentRevision": 5,
+  "content": {
+    "kind": "map-index",
+    "index": "maps/index.json",
+    "resources": "assets/catalog.json",
+    "environments": "database/environments.json"
+  },
+  "start": {
+    "map": {
+      "type": "map",
+      "id": "map_landing"
+    },
+    "x": 4,
+    "y": 3,
+    "facing": 1
+  },
+  "startingParty": [
+    {
+      "type": "actor",
+      "id": "hero_tarin"
+    },
+    {
+      "type": "actor",
+      "id": "hero_vexa"
+    },
+    {
+      "type": "actor",
+      "id": "hero_brindle"
+    },
+    {
+      "type": "actor",
+      "id": "hero_orrin"
+    },
+    {
+      "type": "actor",
+      "id": "hero_sera"
+    },
+    {
+      "type": "actor",
+      "id": "hero_mora"
+    }
+  ]
+}

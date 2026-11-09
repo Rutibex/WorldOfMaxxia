@@ -1,0 +1,58 @@
+{
+  "format": "maxxia-ground-pickups",
+  "version": 1,
+  "pickups": [
+    {
+      "id": "pickup_scene_upper_ledger",
+      "mapId": "map_diagnostic_galleries",
+      "x": 4,
+      "y": 12,
+      "name": "Tessa’s lost ledger",
+      "gold": 0,
+      "items": [],
+      "legacyQuest": {
+        "sceneId": "scene_upper_ledger",
+        "plotId": "item_quest_tessa_ledger"
+      }
+    },
+    {
+      "id": "pickup_scene_upper_tools",
+      "mapId": "map_diagnostic_galleries",
+      "x": 12,
+      "y": 12,
+      "name": "Orro’s tool roll",
+      "gold": 0,
+      "items": [],
+      "legacyQuest": {
+        "sceneId": "scene_upper_tools",
+        "plotId": "item_quest_orro_tools"
+      }
+    },
+    {
+      "id": "pickup_scene_vault_echo",
+      "mapId": "map_resonator_vault",
+      "x": 3,
+      "y": 4,
+      "name": "Bottled echo",
+      "gold": 0,
+      "items": [],
+      "legacyQuest": {
+        "sceneId": "scene_vault_echo",
+        "plotId": "item_quest_nera_echo"
+      }
+    },
+    {
+      "id": "pickup_scene_vault_regulator",
+      "mapId": "map_resonator_vault",
+      "x": 13,
+      "y": 2,
+      "name": "Bell-Heart regulator",
+      "gold": 0,
+      "items": [],
+      "legacyQuest": {
+        "sceneId": "scene_vault_regulator",
+        "plotId": "item_quest_regulator"
+      }
+    }
+  ]
+}

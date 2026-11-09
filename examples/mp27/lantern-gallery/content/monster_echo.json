@@ -1,0 +1,66 @@
+{
+  "format": "maxxia-authored-monster",
+  "formatVersion": 1,
+  "id": "lantern:monster:echo",
+  "record": {
+    "id": "lantern:monster:echo",
+    "name": "Maintenance Echo",
+    "hp": 5,
+    "defense": 10,
+    "attack": 2,
+    "damage": "1d3",
+    "speed": 11,
+    "xp": 15,
+    "gold": 3,
+    "symbol": "\u2726",
+    "attributes": {
+      "DEX": 13,
+      "WIS": 8,
+      "CON": 8
+    },
+    "undead": false,
+    "resistances": {},
+    "visualId": "dust_imp",
+    "aiPattern": "standard",
+    "abilities": [
+      {
+        "id": "basic",
+        "kind": "strike",
+        "weight": 1,
+        "when": "always",
+        "bonusDamage": 0
+      }
+    ],
+    "behavior": {
+      "rules": [
+        {
+          "id": "brace",
+          "priority": 70,
+          "when": "even_round",
+          "action": "guard"
+        },
+        {
+          "id": "approach",
+          "priority": 60,
+          "when": "distant",
+          "action": "approach"
+        },
+        {
+          "id": "lash",
+          "priority": 10,
+          "when": "always",
+          "action": "strike"
+        }
+      ],
+      "phases": [
+        {
+          "atOrBelowPercent": 50,
+          "title": "Its fractured voice begins to keen",
+          "attackBonus": 1,
+          "defenseBonus": -1,
+          "damageBonus": 1
+        }
+      ]
+    }
+  }
+}

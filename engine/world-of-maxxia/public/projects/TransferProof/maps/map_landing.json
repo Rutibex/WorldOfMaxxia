@@ -1,0 +1,67 @@
+{
+  "format": "maxxia-map",
+  "version": 1,
+  "id": "map_landing",
+  "name": "MM18 Starting Landing",
+  "width": 9,
+  "height": 7,
+  "geometry": {
+    "rows": [
+      "#########",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#########"
+    ]
+  },
+  "materials": {
+    "floor": {
+      "default": "material_floor_default",
+      "overrides": []
+    },
+    "wall": {
+      "default": "material_wall_default",
+      "overrides": []
+    },
+    "ceiling": {
+      "default": "material_ceiling_default",
+      "overrides": []
+    }
+  },
+  "scenery": [],
+  "objects": {
+    "doors": [],
+    "secrets": [],
+    "traps": [],
+    "fountains": [],
+    "portals": [
+      {
+        "id": "portal_ascending",
+        "x": 5,
+        "y": 3,
+        "targetMapId": "map_tower",
+        "targetArrivalId": "arrival_top_of_stairs",
+        "targetX": 3,
+        "targetY": 4,
+        "targetFacing": 3,
+        "activation": "step"
+      }
+    ]
+  },
+  "arrivals": [
+    {
+      "id": "arrival_start",
+      "name": "Starting Landing",
+      "x": 4,
+      "y": 3,
+      "facing": 1
+    }
+  ],
+  "events": [],
+  "settings": {
+    "environmentId": "environment_ruins",
+    "notes": ""
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "format": "maxxia-content-index",
+  "formatVersion": 1,
+  "definitions": [
+    {
+      "id": "counter_extra:item:field_tonic",
+      "kind": "item",
+      "visibility": "exported",
+      "placement": "eligible",
+      "tags": [
+        "shop:counter"
+      ],
+      "file": "content/tonic.json",
+      "references": []
+    }
+  ]
+}

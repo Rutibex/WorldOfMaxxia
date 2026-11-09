@@ -1,0 +1,56 @@
+{
+  "format": "maxxia-content-index",
+  "formatVersion": 1,
+  "definitions": [
+    {
+      "id": "mp13:map:workshop",
+      "kind": "map",
+      "visibility": "local",
+      "file": "content/workshop.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp13:item:workshop_key"
+        },
+        {
+          "id": "mp13:routine:signal"
+        },
+        {
+          "id": "mp13:map:annex"
+        }
+      ]
+    },
+    {
+      "id": "mp13:map:annex",
+      "kind": "map",
+      "visibility": "local",
+      "file": "content/annex.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp13:map:workshop"
+        }
+      ]
+    },
+    {
+      "id": "mp13:routine:signal",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/signal.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "mp13:item:workshop_key",
+      "kind": "item",
+      "visibility": "local",
+      "file": "content/key.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 1,
+  "id": "core:routine:welcome",
+  "actions": [
+    {
+      "operation": "message",
+      "text": "Welcome to World of Maxxia."
+    }
+  ]
+}

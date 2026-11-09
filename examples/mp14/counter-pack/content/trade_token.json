@@ -1,0 +1,24 @@
+{
+  "format": "maxxia-authored-item",
+  "formatVersion": 1,
+  "id": "mp14:item:trade_token",
+  "record": {
+    "id": "mp14:item:trade_token",
+    "name": "Counter Trade Token",
+    "category": "misc",
+    "price": 2,
+    "maxDurability": 0,
+    "maxCharges": 0,
+    "effect": "none",
+    "power": 0,
+    "unique": false,
+    "slot": null,
+    "weight": null,
+    "armor": 0,
+    "dice": null,
+    "accuracy": 0,
+    "resistance": null,
+    "resistBonus": 0,
+    "description": "Counter Trade Token from the Brass Counter."
+  }
+}

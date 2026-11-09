@@ -1,0 +1,45 @@
+{
+  "format": "maxxia-authored-encounter",
+  "formatVersion": 1,
+  "id": "bell:encounter:boss",
+  "record": {
+    "name": "Bell-Heart regulator",
+    "description": "Bell-Heart regulator. Fight to resolve this guardian.",
+    "mapId": "bell:map:cistern",
+    "nativeMapId": "map_bell_cistern",
+    "x": 10,
+    "y": 3,
+    "range": 1,
+    "trigger": {
+      "kind": "proximity",
+      "interval": 1,
+      "table": "boss"
+    },
+    "weight": 1,
+    "members": [
+      {
+        "kindId": "bell:monster:bell_heart",
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "bribe": null,
+    "avoidDC": null,
+    "condition": true,
+    "respawn": {
+      "kind": "never",
+      "minutes": 1
+    },
+    "phases": [
+      {
+        "title": "Brass shell",
+        "healthPercent": 100
+      },
+      {
+        "title": "Exposed heart",
+        "healthPercent": 50
+      }
+    ],
+    "id": "bell:encounter:boss"
+  }
+}

@@ -1,0 +1,14 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {mkdtemp,cp,readFile,writeFile,rm} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {loadSelection,inspectSelection} from '../content.mjs';
+const source=fileURLToPath(new URL('../../examples/mp15/sluice-pack/',import.meta.url));
+const fixture=async fn=>{const temp=await mkdtemp(join(tmpdir(),'maxxia-mp15-'));try{const pack=join(temp,'pack');await cp(source,pack,{recursive:true});await fn(pack);}finally{await rm(temp,{recursive:true,force:true});}};
+test('MP15 toolkit validates and inspects three finished quest payloads',async()=>{const info=inspectSelection(await loadSelection(source,{engineVersion:'0.60.0'}));assert.equal(info.playableInCurrentRuntime,true);const quests=info.packs.find(p=>p.packId==='mp15').definitions.filter(d=>d.kind==='quest');assert.equal(quests.length,3);assert.ok(quests.find(q=>q.id==='mp15:quest:broken_sluice').record.states.some(s=>s.ending?.campaign));});
+test('MP15 invalid reward amount identifies the source file and exact property',()=>fixture(async pack=>{const file=join(pack,'content/main.json'),v=JSON.parse(await readFile(file,'utf8'));v.record.rewards[0].xp=-1;await writeFile(file,JSON.stringify(v));await assert.rejects(loadSelection(pack,{engineVersion:'0.60.0'}),e=>e.code==='E_PAYLOAD_SCHEMA'&&e.file===file&&e.path==='$.record.rewards[0].xp');}));
+test('MP15 unknown transition destinations reject semantic validation',()=>fixture(async pack=>{const file=join(pack,'content/main.json'),v=JSON.parse(await readFile(file,'utf8'));v.record.transitions[0].to='missing';await writeFile(file,JSON.stringify(v));await assert.rejects(loadSelection(pack,{engineVersion:'0.60.0'}),e=>e.code==='E_QUEST'&&e.file===file);}));
+test('MP15 routine quest links must match the declared reference index',()=>fixture(async pack=>{const file=join(pack,'content/index.json'),v=JSON.parse(await readFile(file,'utf8'));v.definitions.find(d=>d.id==='mp15:routine:accept').references=[];await writeFile(file,JSON.stringify(v));await assert.rejects(loadSelection(pack,{engineVersion:'0.60.0'}),e=>e.code==='E_REFERENCE_INDEX');}));
+test('MP15 objective query members are checked before a pack can build',()=>fixture(async pack=>{const file=join(pack,'content/dialogue_edda.json'),v=JSON.parse(await readFile(file,'utf8'));v.record.nodes[0].choices.find(c=>c.id==='repair').condition={op:'eq',left:{query:'objective',questId:'mp15:quest:broken_sluice',objectiveId:'missing'},right:true};await writeFile(file,JSON.stringify(v));await assert.rejects(loadSelection(pack,{engineVersion:'0.60.0'}),e=>e.code==='E_QUEST_REFERENCE');}));

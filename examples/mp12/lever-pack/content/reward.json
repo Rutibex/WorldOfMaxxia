@@ -1,0 +1,54 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 2,
+  "id": "mp12:routine:reward",
+  "parameters": {
+    "owner": "string"
+  },
+  "actions": [
+    {
+      "op": "if",
+      "condition": {
+        "op": "eq",
+        "left": {
+          "query": "state",
+          "address": {
+            "scope": "campaign"
+          },
+          "kind": "flag",
+          "key": "mp12:flag:claimed"
+        },
+        "right": false
+      },
+      "then": [
+        {
+          "op": "give-item",
+          "owner": {
+            "param": "owner"
+          },
+          "item": "item_healing_draught",
+          "count": 1
+        },
+        {
+          "op": "state",
+          "address": {
+            "scope": "campaign"
+          },
+          "kind": "flag",
+          "key": "mp12:flag:claimed",
+          "value": true
+        },
+        {
+          "op": "message",
+          "text": "The regulator opens. You receive one healing potion."
+        }
+      ],
+      "else": [
+        {
+          "op": "message",
+          "text": "This reward has already been claimed."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "format": "maxxia-authored-encounter",
+  "formatVersion": 1,
+  "id": "mp16:encounter:inspector",
+  "record": {
+    "id": "mp16:encounter:inspector",
+    "name": "Watch Inspector",
+    "description": "An inspector demands a higher toll. The rare result shares the same seeded table.",
+    "mapId": "mp16:map:watch",
+    "nativeMapId": "map_mp16_watch",
+    "x": 4,
+    "y": 3,
+    "range": 4,
+    "trigger": {
+      "kind": "clock",
+      "interval": 5,
+      "table": "patrols"
+    },
+    "weight": 1,
+    "members": [
+      {
+        "kindId": "mp16:monster:watchman",
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "bribe": 10,
+    "avoidDC": 1,
+    "respawn": {
+      "kind": "reentry",
+      "minutes": 20
+    },
+    "phases": [
+      {
+        "title": "The watch approaches",
+        "healthPercent": 100
+      }
+    ]
+  }
+}

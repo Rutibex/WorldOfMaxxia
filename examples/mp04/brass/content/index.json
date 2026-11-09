@@ -1,0 +1,73 @@
+{
+  "format": "maxxia-content-index",
+  "formatVersion": 1,
+  "definitions": [
+    {
+      "id": "brass:resource:shield",
+      "kind": "resource",
+      "visibility": "exported",
+      "file": "content/resource-shield.json",
+      "placement": "none",
+      "tags": [
+        "mp04_proof"
+      ],
+      "references": []
+    },
+    {
+      "id": "brass:resource:sword",
+      "kind": "resource",
+      "visibility": "exported",
+      "file": "content/resource-sword.json",
+      "placement": "none",
+      "tags": [
+        "mp04_proof"
+      ],
+      "references": []
+    },
+    {
+      "id": "brass:item:shield",
+      "kind": "item",
+      "visibility": "exported",
+      "file": "content/item-shield.json",
+      "placement": "eligible",
+      "tags": [
+        "mp04_proof"
+      ],
+      "references": [
+        {
+          "id": "brass:resource:shield"
+        }
+      ]
+    },
+    {
+      "id": "brass:class:warden",
+      "kind": "class",
+      "visibility": "exported",
+      "file": "content/class-warden.json",
+      "placement": "none",
+      "tags": [
+        "mp04_proof"
+      ],
+      "references": [
+        {
+          "id": "brass:item:shield"
+        }
+      ]
+    },
+    {
+      "id": "brass:monster:guardian",
+      "kind": "monster",
+      "visibility": "exported",
+      "file": "content/monster-guardian.json",
+      "placement": "eligible",
+      "tags": [
+        "mp04_proof"
+      ],
+      "references": [
+        {
+          "id": "brass:item:shield"
+        }
+      ]
+    }
+  ]
+}

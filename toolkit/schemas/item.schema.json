@@ -1,0 +1,270 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maxxia.invalid/toolkit/mp04/item.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "const": "maxxia-authored-item"
+    },
+    "formatVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "maxLength": 160,
+      "pattern": "^[a-z][a-z0-9_]{0,47}:item:[a-z][a-z0-9_]{0,79}$"
+    },
+    "record": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 160,
+          "pattern": "^[a-z][a-z0-9_]{0,47}:item:[a-z][a-z0-9_]{0,79}$"
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "category": {
+          "enum": [
+            "weapons",
+            "armor",
+            "accessories",
+            "misc"
+          ]
+        },
+        "price": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100000000
+        },
+        "maxDurability": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10000
+        },
+        "maxCharges": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10000
+        },
+        "effect": {
+          "enum": [
+            "none",
+            "heal",
+            "antidote",
+            "wake",
+            "courage",
+            "light",
+            "escape",
+            "acid",
+            "spark",
+            "venom",
+            "recall",
+            "identify",
+            "ward",
+            "reveal",
+            "composed"
+          ]
+        },
+        "power": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100000
+        },
+        "unique": {
+          "type": "boolean"
+        },
+        "slot": {
+          "enum": [
+            "melee",
+            "ranged",
+            "body",
+            "offhand",
+            "accessory",
+            null
+          ]
+        },
+        "weight": {
+          "enum": [
+            "light",
+            "medium",
+            "heavy",
+            null
+          ]
+        },
+        "armor": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10000
+        },
+        "dice": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[1-9][0-9]?d(?:[1-9][0-9]?|100)$"
+        },
+        "accuracy": {
+          "type": "integer",
+          "minimum": -1000,
+          "maximum": 1000
+        },
+        "resistance": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-z][a-z0-9_]{0,31}$"
+        },
+        "resistBonus": {
+          "type": "integer",
+          "minimum": -100,
+          "maximum": 100
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "iconResourceId": {
+          "type": "string",
+          "maxLength": 160,
+          "pattern": "^[a-z][a-z0-9_]{0,47}:resource:[a-z][a-z0-9_]{0,79}$"
+        },
+        "equipmentTags": {
+          "type": "array",
+          "maxItems": 20,
+          "items": {
+            "type": "string",
+            "maxLength": 48,
+            "pattern": "^[a-z][a-z0-9_:]{0,47}$"
+          },
+          "uniqueItems": true
+        },
+        "portability": {
+          "enum": [
+            "exportable",
+            "campaign-bound"
+          ]
+        },
+        "effectId": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]{0,31}:ability:[a-z][a-z0-9_]{0,31}$"
+        },
+        "attunement": {
+          "type": "boolean"
+        },
+        "curseOnEquip": {
+          "type": "boolean"
+        },
+        "curseOnUse": {
+          "type": "boolean"
+        },
+        "passive": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "attack": {
+              "type": "integer",
+              "minimum": -5,
+              "maximum": 5
+            },
+            "defense": {
+              "type": "integer",
+              "minimum": -5,
+              "maximum": 5
+            }
+          }
+        },
+        "equipRequirements": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "minLevel": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20
+            },
+            "classIds": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 12,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]{0,47}:class:[a-z][a-z0-9_]{0,79}$"
+              }
+            },
+            "raceIds": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 12,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]{0,47}:race:[a-z][a-z0-9_]{0,79}$"
+              }
+            }
+          }
+        },
+        "exploration": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "tags",
+            "range",
+            "requiresSight"
+          ],
+          "properties": {
+            "tags": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 8,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]{0,31}$"
+              }
+            },
+            "range": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 4
+            },
+            "requiresSight": {
+              "type": "boolean"
+            }
+          }
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "category",
+        "price",
+        "maxDurability",
+        "maxCharges",
+        "effect",
+        "power",
+        "unique",
+        "slot",
+        "weight",
+        "armor",
+        "dice",
+        "accuracy",
+        "resistance",
+        "resistBonus",
+        "description"
+      ]
+    }
+  },
+  "required": [
+    "format",
+    "formatVersion",
+    "id",
+    "record"
+  ]
+}

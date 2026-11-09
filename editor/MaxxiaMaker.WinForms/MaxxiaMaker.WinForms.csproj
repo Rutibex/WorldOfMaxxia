@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Version>0.19.0</Version>
+    <InformationalVersion>0.19.0-mm19</InformationalVersion>
+    <AssemblyName>MaxxiaMaker</AssemblyName>
+    <RootNamespace>MaxxiaMaker</RootNamespace>
+    <Product>Maxxia Maker</Product>
+    <Company>Witches Mirror Games</Company>
+    <Description>MM19 native environment profile editor, map material painting and runtime-backed preview launcher.</Description>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../MaxxiaMaker.ProjectModel/MaxxiaMaker.ProjectModel.csproj" />
+    <ProjectReference Include="../MaxxiaMaker.Documents/MaxxiaMaker.Documents.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,229 @@
+{
+  "format": "mp01-fixtures",
+  "cases": [
+    {
+      "name": "core-and-two-packs",
+      "file": "cases/core-and-two-packs.json",
+      "valid": true,
+      "code": null,
+      "path": null
+    },
+    {
+      "name": "optional-pack-absent",
+      "file": "cases/optional-pack-absent.json",
+      "valid": true,
+      "code": null,
+      "path": null
+    },
+    {
+      "name": "core-only",
+      "file": "cases/core-only.json",
+      "valid": true,
+      "code": null,
+      "path": null
+    },
+    {
+      "name": "duplicate-pack-id",
+      "file": "cases/duplicate-pack-id.json",
+      "valid": false,
+      "code": "E_PACK_DUPLICATE",
+      "path": "$.packs[3].manifest.packId"
+    },
+    {
+      "name": "duplicate-definition-id",
+      "file": "cases/duplicate-definition-id.json",
+      "valid": false,
+      "code": "E_ID_DUPLICATE",
+      "path": "$.packs[1].index.definitions[4].id"
+    },
+    {
+      "name": "wrong-namespace",
+      "file": "cases/wrong-namespace.json",
+      "valid": false,
+      "code": "E_NAMESPACE",
+      "path": "$.packs[1].index.definitions[1].id"
+    },
+    {
+      "name": "wrong-id-kind",
+      "file": "cases/wrong-id-kind.json",
+      "valid": false,
+      "code": "E_ID_KIND",
+      "path": "$.packs[1].index.definitions[1].id"
+    },
+    {
+      "name": "missing-required-pack",
+      "file": "cases/missing-required-pack.json",
+      "valid": false,
+      "code": "E_DEPENDENCY_MISSING",
+      "path": "$.packs[0].manifest.dependencies[0].packId"
+    },
+    {
+      "name": "wrong-rules-id",
+      "file": "cases/wrong-rules-id.json",
+      "valid": false,
+      "code": "E_RULES",
+      "path": "$.packs[1].manifest.rules"
+    },
+    {
+      "name": "wrong-rules-version",
+      "file": "cases/wrong-rules-version.json",
+      "valid": false,
+      "code": "E_RULES",
+      "path": "$.packs[1].manifest.rules"
+    },
+    {
+      "name": "engine-too-old",
+      "file": "cases/engine-too-old.json",
+      "valid": false,
+      "code": "E_ENGINE",
+      "path": "$.packs[0].manifest.engine"
+    },
+    {
+      "name": "engine-upper-bound",
+      "file": "cases/engine-upper-bound.json",
+      "valid": false,
+      "code": "E_ENGINE",
+      "path": "$.packs[0].manifest.engine"
+    },
+    {
+      "name": "dependency-version",
+      "file": "cases/dependency-version.json",
+      "valid": false,
+      "code": "E_DEPENDENCY_VERSION",
+      "path": "$.packs[1].manifest.dependencies[0].versions"
+    },
+    {
+      "name": "duplicate-dependency",
+      "file": "cases/duplicate-dependency.json",
+      "valid": false,
+      "code": "E_DEPENDENCY_DUPLICATE",
+      "path": "$.packs[1].manifest.dependencies[1].packId"
+    },
+    {
+      "name": "self-dependency",
+      "file": "cases/self-dependency.json",
+      "valid": false,
+      "code": "E_DEPENDENCY_SELF",
+      "path": "$.packs[1].manifest.dependencies[1].packId"
+    },
+    {
+      "name": "dependency-cycle",
+      "file": "cases/dependency-cycle.json",
+      "valid": false,
+      "code": "E_DEPENDENCY_CYCLE",
+      "path": "$.packs[0].manifest.dependencies"
+    },
+    {
+      "name": "missing-reference",
+      "file": "cases/missing-reference.json",
+      "valid": false,
+      "code": "E_REFERENCE_MISSING",
+      "path": "$.packs[1].index.definitions[1].references[0].id"
+    },
+    {
+      "name": "local-reference",
+      "file": "cases/local-reference.json",
+      "valid": false,
+      "code": "E_REFERENCE_PRIVATE",
+      "path": "$.packs[2].index.definitions[2].references[0].id"
+    },
+    {
+      "name": "undeclared-provider",
+      "file": "cases/undeclared-provider.json",
+      "valid": false,
+      "code": "E_REFERENCE_DEPENDENCY",
+      "path": "$.packs[2].index.definitions[2].references[0].id"
+    },
+    {
+      "name": "unguarded-optional-reference",
+      "file": "cases/unguarded-optional-reference.json",
+      "valid": false,
+      "code": "E_OPTIONAL_GUARD",
+      "path": "$.packs[2].index.definitions[2].references[0]"
+    },
+    {
+      "name": "wrong-optional-guard",
+      "file": "cases/wrong-optional-guard.json",
+      "valid": false,
+      "code": "E_OPTIONAL_GUARD",
+      "path": "$.packs[2].index.definitions[2].references[0]"
+    },
+    {
+      "name": "local-generic-placement",
+      "file": "cases/local-generic-placement.json",
+      "valid": false,
+      "code": "E_PLACEMENT",
+      "path": "$.packs[1].index.definitions[3].placement"
+    },
+    {
+      "name": "missing-entry-map",
+      "file": "cases/missing-entry-map.json",
+      "valid": false,
+      "code": "E_ENTRY",
+      "path": "$.packs[1].manifest.entry.mapId"
+    },
+    {
+      "name": "inverted-engine-range",
+      "file": "cases/inverted-engine-range.json",
+      "valid": false,
+      "code": "E_VERSION_RANGE",
+      "path": "$.packs[0].manifest.engine"
+    },
+    {
+      "name": "unknown-manifest-field",
+      "file": "cases/unknown-manifest-field.json",
+      "valid": false,
+      "code": "E_SCHEMA",
+      "path": "$.packs[0].manifest.loadOrder"
+    },
+    {
+      "name": "traversal-path",
+      "file": "cases/traversal-path.json",
+      "valid": false,
+      "code": "E_SCHEMA",
+      "path": "$.packs[0].manifest.contentIndex"
+    },
+    {
+      "name": "noncanonical-version",
+      "file": "cases/noncanonical-version.json",
+      "valid": false,
+      "code": "E_SCHEMA",
+      "path": "$.packs[0].manifest.version"
+    },
+    {
+      "name": "core-cannot-be-adventure",
+      "file": "cases/core-cannot-be-adventure.json",
+      "valid": false,
+      "code": "E_CORE",
+      "path": "$.packs[0].manifest.kind"
+    },
+    {
+      "name": "adventure-needs-entry",
+      "file": "cases/adventure-needs-entry.json",
+      "valid": false,
+      "code": "E_ENTRY",
+      "path": "$.packs[1].manifest.entry"
+    },
+    {
+      "name": "content-cannot-have-entry",
+      "file": "cases/content-cannot-have-entry.json",
+      "valid": false,
+      "code": "E_ENTRY",
+      "path": "$.packs[1].manifest.entry"
+    },
+    {
+      "name": "duplicate-definition-path",
+      "file": "cases/duplicate-definition-path.json",
+      "valid": false,
+      "code": "E_PATH_DUPLICATE",
+      "path": "$.packs[1].index.definitions[1].file"
+    },
+    {
+      "name": "casefold-path-collision",
+      "file": "cases/casefold-path-collision.json",
+      "valid": false,
+      "code": "E_PATH_DUPLICATE",
+      "path": "$.packs[1].index.definitions[1].file"
+    }
+  ]
+}

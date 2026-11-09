@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {mkdtemp,cp,readFile,writeFile,rm} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {loadSelection,inspectSelection} from '../content.mjs';
+const source=fileURLToPath(new URL('../../examples/mp13/workshop-pack/',import.meta.url));
+const fixture=async fn=>{const temp=await mkdtemp(join(tmpdir(),'maxxia-mp13-'));try{const pack=join(temp,'pack');await cp(source,pack,{recursive:true});await fn(pack);}finally{await rm(temp,{recursive:true,force:true});}};
+test('MP13 CLI validates and inspects a playable native-map adventure',async()=>{const selection=await loadSelection(source,{engineVersion:'0.58.0'}),info=inspectSelection(selection);assert.equal(info.playableInCurrentRuntime,true);const map=info.packs.find(p=>p.packId==='mp13').definitions.find(d=>d.id==='mp13:map:workshop');assert.equal(map.record.entities.length,6);});
+test('MP13 invalid entity operand identifies its source file and property',()=>fixture(async pack=>{const file=join(pack,'content/workshop.json'),v=JSON.parse(await readFile(file,'utf8'));v.record.entities[0].lock.pickDC='bad';await writeFile(file,JSON.stringify(v));await assert.rejects(loadSelection(pack,{engineVersion:'0.58.0'}),e=>e.code==='E_PAYLOAD_SCHEMA'&&e.file===file&&e.path==='$.record.entities[0].lock.pickDC');}));
+test('MP13 map entity routine and item references must be declared',()=>fixture(async pack=>{const file=join(pack,'content/index.json'),v=JSON.parse(await readFile(file,'utf8'));v.definitions[0].references=v.definitions[0].references.filter(r=>r.id!=='mp13:routine:signal');await writeFile(file,JSON.stringify(v));await assert.rejects(loadSelection(pack,{engineVersion:'0.58.0'}),e=>e.code==='E_REFERENCE_INDEX');}));

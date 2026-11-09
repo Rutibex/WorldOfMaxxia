@@ -1,0 +1,92 @@
+{
+  "format": "maxxia-authored-quest",
+  "formatVersion": 1,
+  "id": "mp15:quest:records",
+  "record": {
+    "id": "mp15:quest:records",
+    "name": "Maintenance Records",
+    "description": "Record the old maintenance ledger. This investigation can be completed independently of the main request.",
+    "initial": "active",
+    "states": [
+      {
+        "id": "active",
+        "title": "A ledger is missing",
+        "status": "active"
+      },
+      {
+        "id": "recorded",
+        "title": "Maintenance history recorded",
+        "status": "succeeded"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "ledger",
+        "title": "Find the maintenance ledger",
+        "description": "Find the maintenance ledger.",
+        "states": [
+          "active"
+        ],
+        "condition": {
+          "op": "eq",
+          "left": {
+            "query": "has-item",
+            "item": "mp15:item:ledger"
+          },
+          "right": true
+        },
+        "optional": false,
+        "hidden": false,
+        "journalId": "ledger_note"
+      }
+    ],
+    "journal": [
+      {
+        "id": "started",
+        "text": "An open notice asks for the old maintenance ledger. Its recovery is a separate task.",
+        "states": [
+          "active"
+        ]
+      },
+      {
+        "id": "ledger_note",
+        "text": "The ledger is recovered and can now be recorded."
+      },
+      {
+        "id": "recorded",
+        "text": "The maintenance history is preserved.",
+        "states": [
+          "recorded"
+        ]
+      }
+    ],
+    "transitions": [
+      {
+        "id": "record",
+        "title": "Record the recovered ledger",
+        "from": [
+          "active"
+        ],
+        "to": "recorded",
+        "manual": true,
+        "requirements": {
+          "all": [
+            "ledger"
+          ]
+        }
+      }
+    ],
+    "rewards": [
+      {
+        "id": "recording",
+        "title": "Archive payment",
+        "states": [
+          "recorded"
+        ],
+        "gold": 15,
+        "xp": 30,
+        "items": []
+      }
+    ]
+  }
+}

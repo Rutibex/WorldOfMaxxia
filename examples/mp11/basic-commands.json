@@ -1,0 +1,11 @@
+{
+  "format": "maxxia-simulation-commands",
+  "version": 1,
+  "description": "Deterministic Firstlight turn, step and seeded roll proof; no dependency on the browser",
+  "commands": [
+    { "type": "grid", "action": "forward" },
+    { "type": "grid", "action": "turn_right" },
+    { "type": "roll", "min": 1, "max": 20 }
+  ],
+  "expect": { "currentMapId": "map_town", "elapsedMinutes": 1, "rollCount": 1, "facing": 1 }
+}

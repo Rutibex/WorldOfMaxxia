@@ -1,0 +1,14 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 2,
+  "id": "mp15:routine:repair",
+  "parameters": {},
+  "actions": [
+    {
+      "op": "quest",
+      "questId": "mp15:quest:broken_sluice",
+      "action": "transition",
+      "transitionId": "repair"
+    }
+  ]
+}

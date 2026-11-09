@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maxxia.invalid/contracts/mp01/transfer.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "const": "maxxia-character-transfer"
+    },
+    "formatVersion": {
+      "const": 1
+    },
+    "transferId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "pattern": "^t_[a-z0-9_]{1,100}$"
+    },
+    "operation": {
+      "enum": [
+        "move",
+        "copy"
+      ]
+    },
+    "sourceCampaignId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "destinationCampaignId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "sourceCharacterId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "pattern": "^c_[a-z0-9_]{1,100}$"
+    },
+    "destinationCharacterId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "pattern": "^c_[a-z0-9_]{1,100}$"
+    },
+    "sourceRevision": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "characterSha256": {
+      "$ref": "common.schema.json#/$defs/hash"
+    },
+    "stage": {
+      "enum": [
+        "prepared",
+        "imported",
+        "committed",
+        "cancelled"
+      ]
+    }
+  },
+  "required": [
+    "format",
+    "formatVersion",
+    "transferId",
+    "operation",
+    "sourceCampaignId",
+    "destinationCampaignId",
+    "sourceCharacterId",
+    "destinationCharacterId",
+    "sourceRevision",
+    "characterSha256",
+    "stage"
+  ]
+}

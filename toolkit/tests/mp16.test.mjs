@@ -1,0 +1,15 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {mkdtemp,cp,readFile,writeFile,rm} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {loadSelection,inspectSelection} from '../content.mjs';
+const source=fileURLToPath(new URL('../../examples/mp16/patrol-pack/',import.meta.url));
+const fixture=async fn=>{const temp=await mkdtemp(join(tmpdir(),'maxxia-mp16-'));try{const pack=join(temp,'pack');await cp(source,pack,{recursive:true});await fn(pack);}finally{await rm(temp,{recursive:true,force:true});}};
+const edit=async(pack,fn)=>{const file=join(pack,'content/patrol.json'),v=JSON.parse(await readFile(file,'utf8'));fn(v.record);await writeFile(file,JSON.stringify(v));return file;};
+test('MP16 toolkit inspects four encounter schedules and two maps',async()=>{const info=inspectSelection(await loadSelection(source,{engineVersion:'0.61.0'})),defs=info.packs.find(p=>p.packId==='mp16').definitions;assert.equal(defs.filter(d=>d.kind==='encounter').length,4);assert.equal(defs.filter(d=>d.kind==='map').length,2);});
+test('MP16 invalid weights identify the exact authoring property',()=>fixture(async pack=>{const file=await edit(pack,e=>e.weight=0);await assert.rejects(loadSelection(pack,{engineVersion:'0.61.0'}),e=>e.code==='E_PAYLOAD_SCHEMA'&&e.file===file&&e.path==='$.record.weight');}));
+test('MP16 missing monster references are rejected before installation',()=>fixture(async pack=>{await edit(pack,e=>e.members[0].kindId='missing:monster:guard');await assert.rejects(loadSelection(pack,{engineVersion:'0.61.0'}));}));
+test('MP16 unsupported boss waves fail schema diagnostics',()=>fixture(async pack=>{await edit(pack,e=>e.phases.push(...Array.from({length:4},()=>({title:'wave',healthPercent:100}))));await assert.rejects(loadSelection(pack,{engineVersion:'0.61.0'}),e=>e.code==='E_PAYLOAD_SCHEMA');}));
+test('MP16 wall placements fail composed semantic validation',()=>fixture(async pack=>{await edit(pack,e=>e.x=0);await assert.rejects(loadSelection(pack,{engineVersion:'0.61.0'}),e=>e.code==='E_ENCOUNTER');}));

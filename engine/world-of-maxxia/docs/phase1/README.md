@@ -1,0 +1,4 @@
+# World of Maxxia — Phase 1 package
+Start with Demo_Specification.md. CSVs are UTF-8 and can be opened as tables or consumed by later tooling; they are specifications, not implemented game content. Spell_Rules.md supplies catalogue interpretation. UI_Coverage_Matrix.csv records normal control coverage and deliberate replacements/exclusions. Asset_Manifest.csv assigns production owners. Item_Manifest.csv locks counts/names, while numeric item definitions are Phase 13. PROJECT_STATE.md is the continuation handoff. The original 34-phase plan is included unchanged for context.
+
+Phase 1 delivers no executable or browser build, consistent with its design-only scope. All local story/NPC/enemy/spell/item names introduced here are proposed new demo lore. Numeric rules are a fixed initial implementation baseline and will require playtesting.

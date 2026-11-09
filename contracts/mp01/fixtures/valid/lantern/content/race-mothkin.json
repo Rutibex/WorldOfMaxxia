@@ -1,0 +1,5 @@
+{
+  "id": "lantern:race:mothkin",
+  "fixtureOnly": true,
+  "note": "Metadata contract fixture; not a playable or executable definition."
+}

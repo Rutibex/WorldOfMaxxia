@@ -1,0 +1,6 @@
+{
+  "format": "maxxia-resource-alias",
+  "formatVersion": 1,
+  "id": "bell:resource:enemy_atlas",
+  "sourceResourceId": "asset_art_enemies_cistern_rat_png"
+}

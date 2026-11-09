@@ -1,0 +1,165 @@
+{
+  "format": "maxxia-authored-map",
+  "formatVersion": 2,
+  "record": {
+    "id": "map_mirror_lab_maze",
+    "name": "The Counterfeit Gallery",
+    "rows": [
+      "#########",
+      "#.......#",
+      "#.......#",
+      "#..#....#",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#########"
+    ],
+    "spawn": {
+      "x": 1,
+      "y": 1,
+      "facing": 1
+    },
+    "arrivals": [
+      {
+        "id": "entry",
+        "x": 1,
+        "y": 1,
+        "facing": 1
+      }
+    ],
+    "doors": [],
+    "props": [
+      {
+        "id": "mechanism_bells",
+        "x": 2,
+        "y": 1,
+        "kind": "lever_off",
+        "name": "Bells mechanism",
+        "description": "The inscription reads: Dawn rings before Noon; Dusk answers last."
+      },
+      {
+        "id": "mechanism_rings",
+        "x": 2,
+        "y": 4,
+        "kind": "lever_off",
+        "name": "Rings mechanism",
+        "description": "Align the rings from left to right: Dusk, Dawn, Noon."
+      },
+      {
+        "id": "mechanism_stars",
+        "x": 2,
+        "y": 6,
+        "kind": "lever_off",
+        "name": "Stars mechanism",
+        "description": "Select the two lights that border Noon: Dawn and Dusk."
+      }
+    ],
+    "entities": [],
+    "portals": [],
+    "recovery": {
+      "mapId": "map_mirror_lab_maze",
+      "arrivalId": "entry"
+    },
+    "environmentId": "mirror_lab:environment:waterworks",
+    "spritePlacements": [],
+    "perception": {
+      "version": 1,
+      "illusions": [
+        {
+          "id": "false_wall",
+          "x": 3,
+          "y": 1,
+          "appearance": "wall",
+          "name": "Marble wall",
+          "description": "Your fingers pass through cold marble. The painted wall is a veil over an open passage.",
+          "searchable": true,
+          "revealPuzzleId": "bells"
+        },
+        {
+          "id": "false_door",
+          "x": 3,
+          "y": 3,
+          "appearance": "opening",
+          "name": "Painted doorway",
+          "description": "A careful touch finds stone behind the painted doorway.",
+          "searchable": true
+        },
+        {
+          "id": "false_statue",
+          "x": 5,
+          "y": 2,
+          "appearance": "scenery",
+          "name": "An impossible statue",
+          "description": "The statue is light cast on empty air.",
+          "searchable": true
+        }
+      ],
+      "puzzles": [
+        {
+          "id": "bells",
+          "x": 2,
+          "y": 1,
+          "name": "Bells mechanism",
+          "kind": "sequence",
+          "clue": "The inscription reads: Dawn rings before Noon; Dusk answers last.",
+          "tokens": [
+            "Dawn",
+            "Noon",
+            "Dusk"
+          ],
+          "solution": [
+            "Dawn",
+            "Noon",
+            "Dusk"
+          ],
+          "incorrect": "The mechanism clicks incorrectly and clears the input. Read the inscription again.",
+          "success": "The mechanism chimes. Its pattern is solved. The marble veil fades, revealing the passage.",
+          "reset": "The mechanism clears. You may start again."
+        },
+        {
+          "id": "rings",
+          "x": 2,
+          "y": 4,
+          "name": "Rings mechanism",
+          "kind": "alignment",
+          "clue": "Align the rings from left to right: Dusk, Dawn, Noon.",
+          "tokens": [
+            "Dawn",
+            "Noon",
+            "Dusk"
+          ],
+          "solution": [
+            "Dusk",
+            "Dawn",
+            "Noon"
+          ],
+          "incorrect": "The mechanism clicks incorrectly and clears the input. Read the inscription again.",
+          "success": "The mechanism chimes. Its pattern is solved.",
+          "reset": "The mechanism clears. You may start again."
+        },
+        {
+          "id": "stars",
+          "x": 2,
+          "y": 6,
+          "name": "Stars mechanism",
+          "kind": "combination",
+          "clue": "Select the two lights that border Noon: Dawn and Dusk.",
+          "tokens": [
+            "Dawn",
+            "Noon",
+            "Dusk"
+          ],
+          "solution": [
+            "Dawn",
+            "Dusk"
+          ],
+          "incorrect": "The mechanism clicks incorrectly and clears the input. Read the inscription again.",
+          "success": "The mechanism chimes. Its pattern is solved.",
+          "reset": "The mechanism clears. You may start again."
+        }
+      ]
+    }
+  },
+  "id": "mirror_lab:map:maze"
+}

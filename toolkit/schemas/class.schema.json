@@ -1,0 +1,500 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maxxia.invalid/toolkit/mp20/class.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "const": "maxxia-authored-class"
+    },
+    "formatVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "maxLength": 160,
+      "pattern": "^[a-z][a-z0-9_]{0,47}:class:[a-z][a-z0-9_]{0,79}$"
+    },
+    "record": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "primary": {
+          "enum": [
+            "STR",
+            "DEX",
+            "CON",
+            "INT",
+            "WIS",
+            "CHA"
+          ]
+        },
+        "hpBase": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 500
+        },
+        "hpGain": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        },
+        "casting": {
+          "enum": [
+            "STR",
+            "DEX",
+            "CON",
+            "INT",
+            "WIS",
+            "CHA",
+            null
+          ]
+        },
+        "role": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "features": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "equipmentTags": {
+          "type": "array",
+          "maxItems": 11,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "melee:staff",
+              "melee:dagger",
+              "melee:mace",
+              "melee:sword",
+              "melee:general",
+              "ranged",
+              "shield",
+              "armor:light",
+              "armor:medium",
+              "armor:heavy",
+              "accessory"
+            ]
+          },
+          "minItems": 1
+        },
+        "traits": {
+          "type": "array",
+          "maxItems": 12,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^(?:martial_mastery|device_training|mutant_biology|thornhide|[a-z][a-z0-9_]{0,47}:trait:[a-z][a-z0-9_]{0,79})$"
+          }
+        },
+        "preparedStyles": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^(?:measured|power|bastion|needle|spark|claws|carapace|standard|[a-z][a-z0-9_]{0,47}:style:[a-z][a-z0-9_]{0,79})$"
+          }
+        },
+        "id": {
+          "type": "string",
+          "maxLength": 160,
+          "pattern": "^[a-z][a-z0-9_]{0,47}:class:[a-z][a-z0-9_]{0,79}$"
+        },
+        "spBase": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 500
+        },
+        "spGain": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "spAttributeMultiplier": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "starterEquipment": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "melee": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "maxLength": 160,
+                  "pattern": "^(?:[a-z][a-z0-9_]{0,47}:item:[a-z][a-z0-9_]{0,79}|item_[a-z0-9_]{1,70})$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "ranged": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "maxLength": 160,
+                  "pattern": "^(?:[a-z][a-z0-9_]{0,47}:item:[a-z][a-z0-9_]{0,79}|item_[a-z0-9_]{1,70})$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "body": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "maxLength": 160,
+                  "pattern": "^(?:[a-z][a-z0-9_]{0,47}:item:[a-z][a-z0-9_]{0,79}|item_[a-z0-9_]{1,70})$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "offhand": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "maxLength": 160,
+                  "pattern": "^(?:[a-z][a-z0-9_]{0,47}:item:[a-z][a-z0-9_]{0,79}|item_[a-z0-9_]{1,70})$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": []
+        },
+        "abilityGrants": {
+          "type": "array",
+          "maxItems": 32,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]{0,47}:ability:[a-z][a-z0-9_]{0,79}$"
+              },
+              "minLevel": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 20
+              }
+            },
+            "required": [
+              "id",
+              "minLevel"
+            ]
+          }
+        },
+        "styleDefinitions": {
+          "type": "array",
+          "maxItems": 12,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]{0,47}:style:[a-z][a-z0-9_]{0,79}$"
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "description": {
+                "type": "string",
+                "maxLength": 500
+              },
+              "operation": {
+                "enum": [
+                  "weapon",
+                  "device",
+                  "natural"
+                ]
+              },
+              "requiredTrait": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "attackBonus": {
+                "type": "integer",
+                "minimum": -20,
+                "maximum": 20
+              },
+              "attackBonusAtVeteran": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 20
+              },
+              "damageBonus": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 20
+              },
+              "damageBonusAtMilestone": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 20
+              },
+              "damageBonusAtMilestoneReplacesBase": {
+                "type": "boolean"
+              },
+              "ignoreDefense": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 20
+              },
+              "damageType": {
+                "enum": [
+                  "physical",
+                  "lightning"
+                ]
+              },
+              "dice": {
+                "type": "string",
+                "pattern": "^(?:[1-9][0-9]?d(?:4|6|8|10|12|20)|[1-9][0-9]?)$"
+              },
+              "diceAtMilestone": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(?:[1-9][0-9]?d(?:4|6|8|10|12|20)|[1-9][0-9]?)$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "diceAtVeteran": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^(?:[1-9][0-9]?d(?:4|6|8|10|12|20)|[1-9][0-9]?)$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "defenseBonus": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 20
+              },
+              "defenseAtVeteran": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 20
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "description",
+              "operation",
+              "requiredTrait",
+              "attackBonus",
+              "attackBonusAtVeteran",
+              "damageBonus",
+              "damageBonusAtMilestone",
+              "damageBonusAtMilestoneReplacesBase",
+              "ignoreDefense",
+              "damageType",
+              "dice",
+              "diceAtMilestone",
+              "diceAtVeteran",
+              "defenseBonus",
+              "defenseAtVeteran"
+            ]
+          }
+        },
+        "creationChoices": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]{0,79}$"
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "description": {
+                "type": "string",
+                "maxLength": 500
+              },
+              "attributeBonuses": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "STR": {
+                    "type": "integer",
+                    "minimum": -3,
+                    "maximum": 3
+                  },
+                  "DEX": {
+                    "type": "integer",
+                    "minimum": -3,
+                    "maximum": 3
+                  },
+                  "CON": {
+                    "type": "integer",
+                    "minimum": -3,
+                    "maximum": 3
+                  },
+                  "INT": {
+                    "type": "integer",
+                    "minimum": -3,
+                    "maximum": 3
+                  },
+                  "WIS": {
+                    "type": "integer",
+                    "minimum": -3,
+                    "maximum": 3
+                  },
+                  "CHA": {
+                    "type": "integer",
+                    "minimum": -3,
+                    "maximum": 3
+                  }
+                }
+              },
+              "starterEquipment": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "melee": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 160,
+                        "pattern": "^(?:[a-z][a-z0-9_]{0,47}:item:[a-z][a-z0-9_]{0,79}|item_[a-z0-9_]{1,70})$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "ranged": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 160,
+                        "pattern": "^(?:[a-z][a-z0-9_]{0,47}:item:[a-z][a-z0-9_]{0,79}|item_[a-z0-9_]{1,70})$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "body": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 160,
+                        "pattern": "^(?:[a-z][a-z0-9_]{0,47}:item:[a-z][a-z0-9_]{0,79}|item_[a-z0-9_]{1,70})$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "offhand": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 160,
+                        "pattern": "^(?:[a-z][a-z0-9_]{0,47}:item:[a-z][a-z0-9_]{0,79}|item_[a-z0-9_]{1,70})$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": []
+              },
+              "abilityGrants": {
+                "type": "array",
+                "maxItems": 32,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[a-z][a-z0-9_]{0,47}:ability:[a-z][a-z0-9_]{0,79}$"
+                    },
+                    "minLevel": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 20
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "minLevel"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "description"
+            ]
+          }
+        }
+      },
+      "required": [
+        "name",
+        "primary",
+        "hpBase",
+        "hpGain",
+        "casting",
+        "role",
+        "features",
+        "equipmentTags",
+        "traits",
+        "preparedStyles",
+        "id",
+        "spBase",
+        "spGain",
+        "spAttributeMultiplier"
+      ]
+    }
+  },
+  "required": [
+    "format",
+    "formatVersion",
+    "id",
+    "record"
+  ]
+}

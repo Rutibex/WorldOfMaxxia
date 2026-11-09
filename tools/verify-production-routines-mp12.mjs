@@ -1,0 +1,13 @@
+import {readdirSync,readFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+import {dispatchSimulation} from '../engine/world-of-maxxia/src/shared/rules/simulation.ts';
+import {newCampaign,validateMapRegistry} from '../engine/world-of-maxxia/src/shared/rules/campaign.ts';
+import {newScopedState} from '../engine/world-of-maxxia/src/shared/rules/scoped-state.ts';
+const engine=new URL('../engine/world-of-maxxia/',import.meta.url);
+const runtime=readdirSync(new URL('dist/assets/',engine)).find(n=>n.startsWith('runtime-'));
+const production=await import(new URL('dist/assets/'+runtime+'/wom-shared-rules-simulation.js',engine));
+const maps=validateMapRegistry(['town','galleries','vault'].map(n=>JSON.parse(readFileSync(new URL('public/content/'+n+'.json',engine)))));
+const document=JSON.parse(readFileSync(new URL('../examples/mp12/lever-routines.json',import.meta.url)));
+const run=dispatch=>{let s=newCampaign(maps),scoped=newScopedState();return [2,1,2,2].map(lever=>{const r=dispatch(s,maps,{type:'routine',routineId:'mp12:routine:lever',args:{lever,owner:s.party.order[0]}},{routines:document,scoped});assert.equal(r.status,'applied');s=r.state;scoped=r.scoped;return r;});};
+assert.equal(JSON.stringify(run(production.dispatchSimulation)),JSON.stringify(run(dispatchSimulation)));
+console.log('PASS: built production JS and source dispatcher produce byte-identical campaign/scoped state, RNG, messages and event traces for wrong input, priming, solve and repeated claim. This is module parity, not interactive browser acceptance.');

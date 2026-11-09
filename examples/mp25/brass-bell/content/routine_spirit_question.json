@@ -1,0 +1,44 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 2,
+  "id": "bell:routine:spirit_question",
+  "parameters": {},
+  "actions": [
+    {
+      "op": "if",
+      "condition": {
+        "op": "eq",
+        "left": {
+          "query": "state",
+          "address": {
+            "scope": "campaign"
+          },
+          "kind": "flag",
+          "key": "bell:flag:record"
+        },
+        "right": true
+      },
+      "then": [
+        {
+          "op": "state",
+          "kind": "flag",
+          "address": {
+            "scope": "campaign"
+          },
+          "key": "bell:flag:spirit_clear",
+          "value": true
+        },
+        {
+          "op": "message",
+          "text": "The spirit recognizes the signed order. He releases the maintenance interlock and asks you to make the truth public."
+        }
+      ],
+      "else": [
+        {
+          "op": "message",
+          "text": "Find my signed maintenance record in the keeper\u2019s alcove before accusing anyone."
+        }
+      ]
+    }
+  ]
+}

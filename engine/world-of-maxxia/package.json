@@ -1,0 +1,30 @@
+{
+  "name": "world-of-maxxia",
+  "version": "0.72.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "check": "tsc --noEmit && node --experimental-strip-types --test tests/*.test.mjs",
+    "build": "vite build",
+    "start": "node server.mjs",
+    "preview": "node server.mjs",
+    "package": "node scripts/package.mjs",
+    "verify:build": "node scripts/verify-build.mjs",
+    "build:offline": "node --experimental-strip-types scripts/build-offline.mjs",
+    "check:rules": "tsc -p tsconfig.check-local.json && node --experimental-strip-types --test tests/*.test.mjs",
+    "check:offline": "tsc -p tsconfig.check-client-offline.json && node --experimental-strip-types --test tests/*.test.mjs",
+    "prebuild": "node scripts/build-galleries.mjs"
+  },
+  "dependencies": {
+    "phaser": "3.90.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.0",
+    "typescript": "5.9.3",
+    "vite": "7.1.12"
+  }
+}

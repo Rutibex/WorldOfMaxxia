@@ -1,0 +1,43 @@
+{
+  "format": "maxxia-authored-class",
+  "record": {
+    "name": "Warden",
+    "primary": "STR",
+    "hpBase": 14,
+    "hpGain": 7,
+    "casting": null,
+    "role": "A martial adventurer who meets danger head-on.",
+    "features": "A glass-bladed adventurer using an imported brass shield.",
+    "equipmentTags": [
+      "melee:staff",
+      "melee:dagger",
+      "melee:mace",
+      "melee:sword",
+      "melee:general",
+      "ranged",
+      "shield",
+      "armor:light",
+      "armor:medium",
+      "armor:heavy",
+      "accessory"
+    ],
+    "traits": [
+      "martial_mastery"
+    ],
+    "preparedStyles": [
+      "measured",
+      "power",
+      "bastion"
+    ],
+    "id": "glass:class:warden",
+    "spBase": 0,
+    "spGain": 0,
+    "spAttributeMultiplier": 0,
+    "starterEquipment": {
+      "melee": "glass:item:blade",
+      "offhand": "brass:item:shield"
+    }
+  },
+  "id": "glass:class:warden",
+  "formatVersion": 1
+}

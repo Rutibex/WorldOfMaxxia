@@ -1,0 +1,92 @@
+{
+  "format": "maxxia-authored-class",
+  "formatVersion": 1,
+  "id": "bell:class:echo_sentinel",
+  "record": {
+    "id": "bell:class:echo_sentinel",
+    "name": "Echo Sentinel",
+    "primary": "DEX",
+    "hpBase": 11,
+    "hpGain": 6,
+    "casting": null,
+    "spBase": 0,
+    "spGain": 0,
+    "spAttributeMultiplier": 0,
+    "role": "A precision-oriented resonant striker, distinct from the defensive Bellwarden.",
+    "features": "Uses Sonorous Needle as a DEX-based lightning attack; Echo Pulse consumes 2 Echoes to guard an ally or self. Two starting specializations shape the recruit.",
+    "equipmentTags": [
+      "melee:staff",
+      "melee:dagger",
+      "melee:mace",
+      "melee:general",
+      "ranged",
+      "shield",
+      "armor:light",
+      "armor:medium",
+      "accessory"
+    ],
+    "traits": [
+      "bell:trait:soundcraft"
+    ],
+    "preparedStyles": [
+      "bell:style:sonorous_needle",
+      "standard"
+    ],
+    "styleDefinitions": [
+      {
+        "id": "bell:style:sonorous_needle",
+        "name": "Sonorous Needle",
+        "description": "A resonant DEX-based melee strike dealing lightning damage, ignoring 1 Defense; grows from 1d6 to 1d8 at the veteran milestone.",
+        "operation": "device",
+        "requiredTrait": "bell:trait:soundcraft",
+        "attackBonus": 0,
+        "attackBonusAtVeteran": 1,
+        "damageBonus": 0,
+        "damageBonusAtMilestone": 1,
+        "damageBonusAtMilestoneReplacesBase": false,
+        "ignoreDefense": 1,
+        "damageType": "lightning",
+        "dice": "1d6",
+        "diceAtMilestone": null,
+        "diceAtVeteran": "1d8",
+        "defenseBonus": 0,
+        "defenseAtVeteran": 0
+      }
+    ],
+    "abilityGrants": [
+      {
+        "id": "bell:ability:echo_pulse",
+        "minLevel": 1
+      },
+      {
+        "id": "bell:ability:call_chime_wisp",
+        "minLevel": 1
+      }
+    ],
+    "creationChoices": [
+      {
+        "id": "watcher",
+        "name": "Watcher",
+        "description": "Favours careful defence with +1 CON and a shield at creation.",
+        "attributeBonuses": {
+          "CON": 1
+        },
+        "starterEquipment": {
+          "offhand": "bell:item:resonant_buckler"
+        }
+      },
+      {
+        "id": "runner",
+        "name": "Runner",
+        "description": "Favours speed with +1 DEX and a quarterstaff at creation.",
+        "attributeBonuses": {
+          "DEX": 1
+        },
+        "starterEquipment": {
+          "melee": "item_staff",
+          "offhand": null
+        }
+      }
+    ]
+  }
+}

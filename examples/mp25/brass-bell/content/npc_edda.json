@@ -1,0 +1,25 @@
+{
+  "format": "maxxia-authored-npc",
+  "formatVersion": 1,
+  "id": "bell:npc:edda",
+  "record": {
+    "name": "Keeper Edda",
+    "dialogueId": "bell:dialogue:edda",
+    "initialAttitude": 0,
+    "services": [
+      {
+        "id": "training",
+        "name": "Adventurer training",
+        "kind": "training"
+      },
+      {
+        "id": "healing",
+        "name": "Village healer",
+        "kind": "healing",
+        "cost": 5,
+        "amount": 20
+      }
+    ],
+    "id": "bell:npc:edda"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "format": "maxxia-map-index",
+  "version": 1,
+  "maps": [
+    {
+      "id": "map_town",
+      "path": "map_town.json"
+    },
+    {
+      "id": "map_diagnostic_galleries",
+      "path": "map_diagnostic_galleries.json"
+    },
+    {
+      "id": "map_resonator_vault",
+      "path": "map_resonator_vault.json"
+    },
+    {
+      "id": "map_overlook",
+      "path": "map_overlook.json"
+    }
+  ]
+}

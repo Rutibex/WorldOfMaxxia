@@ -1,0 +1,540 @@
+{
+  "format": "maxxia-content-index",
+  "formatVersion": 1,
+  "definitions": [
+    {
+      "id": "bell:item:resonant_buckler",
+      "kind": "item",
+      "visibility": "exported",
+      "file": "content/item_resonant_buckler.json",
+      "placement": "eligible",
+      "tags": [
+        "waterworks",
+        "defensive"
+      ],
+      "references": []
+    },
+    {
+      "id": "bell:item:siltglass_charm",
+      "kind": "item",
+      "visibility": "exported",
+      "file": "content/item_siltglass_charm.json",
+      "placement": "eligible",
+      "tags": [
+        "waterworks",
+        "exploration"
+      ],
+      "references": []
+    },
+    {
+      "id": "bell:item:well_key",
+      "kind": "item",
+      "visibility": "local",
+      "file": "content/item_well_key.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "bell:item:valve_key",
+      "kind": "item",
+      "visibility": "local",
+      "file": "content/item_valve_key.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "bell:item:bell_clapper",
+      "kind": "item",
+      "visibility": "local",
+      "file": "content/item_bell_clapper.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "bell:item:tool_roll",
+      "kind": "item",
+      "visibility": "local",
+      "file": "content/item_tool_roll.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "bell:class:bellwarden",
+      "kind": "class",
+      "visibility": "exported",
+      "file": "content/class_bellwarden.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "bell:item:resonant_buckler"
+        }
+      ]
+    },
+    {
+      "id": "bell:monster:silt_rat",
+      "kind": "monster",
+      "visibility": "local",
+      "file": "content/monster_silt_rat.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "bell:monster:echo",
+      "kind": "monster",
+      "visibility": "local",
+      "file": "content/monster_echo.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "bell:monster:sentinel",
+      "kind": "monster",
+      "visibility": "local",
+      "file": "content/monster_sentinel.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "bell:monster:bell_heart",
+      "kind": "monster",
+      "visibility": "local",
+      "file": "content/monster_bell_heart.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "bell:quest:clapper",
+      "kind": "quest",
+      "visibility": "local",
+      "file": "content/quest_clapper.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "bell:item:bell_clapper"
+        },
+        {
+          "id": "bell:item:resonant_buckler"
+        },
+        {
+          "id": "bell:item:siltglass_charm"
+        },
+        {
+          "id": "bell:item:tool_roll"
+        },
+        {
+          "id": "bell:item:valve_key"
+        },
+        {
+          "id": "bell:item:well_key"
+        }
+      ]
+    },
+    {
+      "id": "bell:routine:accept",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_accept.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "bell:quest:clapper"
+        }
+      ]
+    },
+    {
+      "id": "bell:routine:village",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_village.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "bell:quest:clapper"
+        }
+      ]
+    },
+    {
+      "id": "bell:routine:infirmary",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_infirmary.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "bell:quest:clapper"
+        }
+      ]
+    },
+    {
+      "id": "bell:routine:record",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_record.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "bell:routine:spirit_question",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_spirit_question.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "bell:routine:spirit_appease",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_spirit_appease.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "bell:routine:spirit_fight",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_spirit_fight.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "bell:routine:valve_intake",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_valve_intake.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "bell:routine:valve_return",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_valve_return.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "bell:routine:valve_bell",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_valve_bell.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "bell:quest:clapper"
+        }
+      ]
+    },
+    {
+      "id": "bell:routine:bypass",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_bypass.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "bell:quest:clapper"
+        }
+      ]
+    },
+    {
+      "id": "bell:routine:clue",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_clue.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "bell:dialogue:edda",
+      "kind": "dialogue",
+      "visibility": "local",
+      "file": "content/dialogue_edda.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "bell:quest:clapper"
+        },
+        {
+          "id": "bell:routine:accept"
+        },
+        {
+          "id": "bell:routine:infirmary"
+        },
+        {
+          "id": "bell:routine:village"
+        }
+      ]
+    },
+    {
+      "id": "bell:npc:edda",
+      "kind": "npc",
+      "visibility": "local",
+      "file": "content/npc_edda.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "bell:dialogue:edda"
+        }
+      ]
+    },
+    {
+      "id": "bell:dialogue:mara",
+      "kind": "dialogue",
+      "visibility": "local",
+      "file": "content/dialogue_mara.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "bell:npc:mara",
+      "kind": "npc",
+      "visibility": "local",
+      "file": "content/npc_mara.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "bell:dialogue:mara"
+        }
+      ]
+    },
+    {
+      "id": "bell:dialogue:spirit",
+      "kind": "dialogue",
+      "visibility": "local",
+      "file": "content/dialogue_spirit.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "bell:routine:spirit_appease"
+        },
+        {
+          "id": "bell:routine:spirit_fight"
+        },
+        {
+          "id": "bell:routine:spirit_question"
+        }
+      ]
+    },
+    {
+      "id": "bell:npc:spirit",
+      "kind": "npc",
+      "visibility": "local",
+      "file": "content/npc_spirit.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "bell:dialogue:spirit"
+        }
+      ]
+    },
+    {
+      "id": "bell:map:yard",
+      "kind": "map",
+      "visibility": "local",
+      "file": "content/map_yard.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "bell:item:well_key"
+        },
+        {
+          "id": "bell:map:cistern"
+        },
+        {
+          "id": "bell:npc:edda"
+        },
+        {
+          "id": "bell:npc:mara"
+        }
+      ]
+    },
+    {
+      "id": "bell:map:cistern",
+      "kind": "map",
+      "visibility": "local",
+      "file": "content/map_cistern.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "bell:item:bell_clapper"
+        },
+        {
+          "id": "bell:item:tool_roll"
+        },
+        {
+          "id": "bell:item:valve_key"
+        },
+        {
+          "id": "bell:map:yard"
+        },
+        {
+          "id": "bell:npc:spirit"
+        },
+        {
+          "id": "bell:routine:bypass"
+        },
+        {
+          "id": "bell:routine:clue"
+        },
+        {
+          "id": "bell:routine:record"
+        },
+        {
+          "id": "bell:routine:valve_bell"
+        },
+        {
+          "id": "bell:routine:valve_intake"
+        },
+        {
+          "id": "bell:routine:valve_return"
+        }
+      ]
+    },
+    {
+      "id": "bell:encounter:rats",
+      "kind": "encounter",
+      "visibility": "local",
+      "file": "content/encounter_rats.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "bell:map:cistern"
+        },
+        {
+          "id": "bell:monster:silt_rat"
+        }
+      ]
+    },
+    {
+      "id": "bell:encounter:spirit",
+      "kind": "encounter",
+      "visibility": "local",
+      "file": "content/encounter_spirit.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "bell:map:cistern"
+        },
+        {
+          "id": "bell:monster:echo"
+        }
+      ]
+    },
+    {
+      "id": "bell:encounter:sentinel",
+      "kind": "encounter",
+      "visibility": "local",
+      "file": "content/encounter_sentinel.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "bell:map:cistern"
+        },
+        {
+          "id": "bell:monster:sentinel"
+        }
+      ]
+    },
+    {
+      "id": "bell:encounter:boss",
+      "kind": "encounter",
+      "visibility": "local",
+      "file": "content/encounter_boss.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "bell:map:cistern"
+        },
+        {
+          "id": "bell:monster:bell_heart"
+        }
+      ]
+    },
+    {
+      "id": "bell:condition:resonant_guard",
+      "kind": "condition",
+      "visibility": "exported",
+      "file": "content/condition_resonant_guard.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "bell:ability:resonant_guard",
+      "kind": "ability",
+      "visibility": "exported",
+      "file": "content/ability_resonant_guard.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "bell:class:bellwarden"
+        },
+        {
+          "id": "bell:condition:resonant_guard"
+        }
+      ]
+    },
+    {
+      "id": "bell:ability:counter_chime",
+      "kind": "ability",
+      "visibility": "exported",
+      "file": "content/ability_counter_chime.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "bell:class:bellwarden"
+        }
+      ]
+    },
+    {
+      "id": "bell:ability:stillwater_stance",
+      "kind": "ability",
+      "visibility": "exported",
+      "file": "content/ability_stillwater_stance.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "bell:class:bellwarden"
+        }
+      ]
+    }
+  ]
+}

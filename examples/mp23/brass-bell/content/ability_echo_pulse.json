@@ -1,0 +1,41 @@
+{
+  "format": "maxxia-authored-ability",
+  "formatVersion": 1,
+  "id": "bell:ability:echo_pulse",
+  "record": {
+    "id": "bell:ability:echo_pulse",
+    "name": "Echo Pulse",
+    "description": "Spend two Echoes and one normal combat action to gain two rounds of resonant warding.",
+    "context": "combat",
+    "target": "self",
+    "operations": [
+      {
+        "op": "condition",
+        "conditionId": "bell:condition:resonant_guard",
+        "duration": 2
+      }
+    ],
+    "activation": {
+      "mode": "active",
+      "classes": [
+        "bell:class:echo_sentinel"
+      ],
+      "minLevel": 1,
+      "resource": {
+        "id": "bell:pool:echoes",
+        "base": 4,
+        "perLevel": 1,
+        "maximum": 8,
+        "recovery": "rest"
+      },
+      "cost": {
+        "id": "bell:pool:echoes",
+        "amount": 2
+      },
+      "cooldown": {
+        "clock": "rounds",
+        "amount": 2
+      }
+    }
+  }
+}

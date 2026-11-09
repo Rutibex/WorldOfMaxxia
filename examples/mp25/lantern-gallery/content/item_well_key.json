@@ -1,0 +1,25 @@
+{
+  "format": "maxxia-authored-item",
+  "formatVersion": 1,
+  "id": "lantern:item:well_key",
+  "record": {
+    "id": "lantern:item:well_key",
+    "name": "Edda\u2019s Well Key",
+    "category": "misc",
+    "price": 0,
+    "maxDurability": 0,
+    "maxCharges": 0,
+    "effect": "none",
+    "power": 0,
+    "unique": false,
+    "slot": null,
+    "weight": null,
+    "armor": 0,
+    "dice": null,
+    "accuracy": 0,
+    "resistance": null,
+    "resistBonus": 0,
+    "description": "Edda\u2019s Well Key",
+    "portability": "campaign-bound"
+  }
+}

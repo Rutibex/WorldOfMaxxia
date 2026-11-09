@@ -1,0 +1,155 @@
+{
+  "format": "maxxia-encounter-placements",
+  "version": 1,
+  "placements": [
+    {
+      "id": "enc_gallery_entry",
+      "mapId": "map_diagnostic_galleries",
+      "groupId": "group_gallery_entry",
+      "x": 3,
+      "y": 7,
+      "triggerRange": 1,
+      "respawn": "never",
+      "enemyIds": [
+        "enemy_imp_1",
+        "enemy_mite_1"
+      ]
+    },
+    {
+      "id": "enc_gallery_east",
+      "mapId": "map_diagnostic_galleries",
+      "groupId": "group_gallery_east",
+      "x": 7,
+      "y": 8,
+      "triggerRange": 1,
+      "respawn": "never",
+      "enemyIds": [
+        "enemy_watcher_1"
+      ]
+    },
+    {
+      "id": "enc_town_patrol",
+      "mapId": "map_diagnostic_galleries",
+      "groupId": "group_town_patrol",
+      "x": 7,
+      "y": 2,
+      "triggerRange": 1,
+      "respawn": "never",
+      "enemyIds": [
+        "enemy_imp_2"
+      ]
+    },
+    {
+      "id": "enc_upper_pumps",
+      "mapId": "map_diagnostic_galleries",
+      "groupId": "group_upper_pumps",
+      "x": 12,
+      "y": 5,
+      "triggerRange": 1,
+      "respawn": "never",
+      "enemyIds": [
+        "enemy_mite_pump",
+        "enemy_imp_pump"
+      ]
+    },
+    {
+      "id": "enc_upper_archive",
+      "mapId": "map_diagnostic_galleries",
+      "groupId": "group_upper_archive",
+      "x": 13,
+      "y": 2,
+      "triggerRange": 1,
+      "respawn": "never",
+      "enemyIds": [
+        "enemy_watcher_archive"
+      ]
+    },
+    {
+      "id": "enc_upper_sluice",
+      "mapId": "map_diagnostic_galleries",
+      "groupId": "group_upper_sluice",
+      "x": 13,
+      "y": 13,
+      "triggerRange": 1,
+      "respawn": "never",
+      "enemyIds": [
+        "enemy_imp_sluice",
+        "enemy_mite_sluice"
+      ]
+    },
+    {
+      "id": "enc_vault_drain",
+      "mapId": "map_resonator_vault",
+      "groupId": "group_vault_drain",
+      "x": 3,
+      "y": 10,
+      "triggerRange": 1,
+      "respawn": "never",
+      "enemyIds": [
+        "enemy_rat_vault",
+        "enemy_leech_vault"
+      ]
+    },
+    {
+      "id": "enc_vault_engine",
+      "mapId": "map_resonator_vault",
+      "groupId": "group_vault_engine",
+      "x": 10,
+      "y": 8,
+      "triggerRange": 1,
+      "respawn": "never",
+      "enemyIds": [
+        "enemy_goblin_vault",
+        "enemy_sentinel_vault"
+      ]
+    },
+    {
+      "id": "enc_vault_echo",
+      "mapId": "map_resonator_vault",
+      "groupId": "group_vault_echo",
+      "x": 2,
+      "y": 3,
+      "triggerRange": 1,
+      "respawn": "never",
+      "enemyIds": [
+        "enemy_wraith_vault"
+      ]
+    },
+    {
+      "id": "enc_bell_heart",
+      "mapId": "map_resonator_vault",
+      "groupId": "group_bell_heart",
+      "x": 12,
+      "y": 2,
+      "triggerRange": 1,
+      "respawn": "never",
+      "enemyIds": [
+        "enemy_bell_heart"
+      ]
+    },
+    {
+      "id": "enc_mp04_brass",
+      "mapId": "map_town",
+      "groupId": "group_mp04_brass",
+      "x": 7,
+      "y": 11,
+      "triggerRange": 1,
+      "respawn": "never",
+      "enemyIds": [
+        "enemy_mp04_brass"
+      ]
+    },
+    {
+      "id": "enc_mp04_glass",
+      "mapId": "map_town",
+      "groupId": "group_mp04_glass",
+      "x": 9,
+      "y": 11,
+      "triggerRange": 1,
+      "respawn": "never",
+      "enemyIds": [
+        "enemy_mp04_glass"
+      ]
+    }
+  ]
+}

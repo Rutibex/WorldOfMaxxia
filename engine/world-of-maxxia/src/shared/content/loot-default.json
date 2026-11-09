@@ -1,0 +1,255 @@
+{
+  "format": "maxxia-loot-tables",
+  "version": 1,
+  "tables": [
+    {
+      "id": "loot_enc_gallery_entry",
+      "name": "Gallery Entry drops",
+      "entries": [
+        {
+          "itemId": "item_healing_draught",
+          "chance": 100,
+          "min": 1,
+          "max": 1,
+          "memberIndex": 0
+        },
+        {
+          "itemId": "item_copper_ring",
+          "chance": 100,
+          "min": 1,
+          "max": 1,
+          "memberIndex": 1
+        },
+        {
+          "itemId": "item_acid_flask",
+          "chance": 100,
+          "min": 1,
+          "max": 1,
+          "memberIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "loot_enc_gallery_east",
+      "name": "Gallery East drops",
+      "entries": [
+        {
+          "itemId": "item_echo_staff",
+          "chance": 100,
+          "min": 1,
+          "max": 1,
+          "memberIndex": 0
+        },
+        {
+          "itemId": "item_treasure_gem",
+          "chance": 100,
+          "min": 1,
+          "max": 1,
+          "memberIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "loot_enc_town_patrol",
+      "name": "Town Patrol drops",
+      "entries": [
+        {
+          "itemId": "item_wake_salts",
+          "chance": 100,
+          "min": 1,
+          "max": 1,
+          "memberIndex": 0
+        },
+        {
+          "itemId": "item_buckler",
+          "chance": 100,
+          "min": 1,
+          "max": 1,
+          "memberIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "loot_enc_upper_pumps",
+      "name": "Upper Pumps drops",
+      "entries": [
+        {
+          "itemId": "item_healing_draught",
+          "chance": 100,
+          "min": 1,
+          "max": 1,
+          "memberIndex": 0
+        },
+        {
+          "itemId": "item_treasure_gem",
+          "chance": 100,
+          "min": 1,
+          "max": 1,
+          "memberIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "loot_enc_upper_archive",
+      "name": "Upper Archive drops",
+      "entries": [
+        {
+          "itemId": "item_spark_capsule",
+          "chance": 100,
+          "min": 1,
+          "max": 1,
+          "memberIndex": 0
+        },
+        {
+          "itemId": "item_antidote",
+          "chance": 100,
+          "min": 1,
+          "max": 1,
+          "memberIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "loot_enc_upper_sluice",
+      "name": "Upper Sluice drops",
+      "entries": [
+        {
+          "itemId": "item_healing_scroll",
+          "chance": 100,
+          "min": 1,
+          "max": 1,
+          "memberIndex": 0
+        },
+        {
+          "itemId": "item_copper_ring",
+          "chance": 100,
+          "min": 1,
+          "max": 1,
+          "memberIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "loot_enc_vault_drain",
+      "name": "Vault Drain drops",
+      "entries": [
+        {
+          "itemId": "item_healing_draught",
+          "chance": 100,
+          "min": 1,
+          "max": 1,
+          "memberIndex": 0
+        },
+        {
+          "itemId": "item_antidote",
+          "chance": 100,
+          "min": 1,
+          "max": 1,
+          "memberIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "loot_enc_vault_engine",
+      "name": "Vault Engine drops",
+      "entries": [
+        {
+          "itemId": "item_spark_capsule",
+          "chance": 100,
+          "min": 1,
+          "max": 1,
+          "memberIndex": 0
+        },
+        {
+          "itemId": "item_treasure_gem",
+          "chance": 100,
+          "min": 1,
+          "max": 1,
+          "memberIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "loot_enc_vault_echo",
+      "name": "Vault Echo drops",
+      "entries": [
+        {
+          "itemId": "item_healing_scroll",
+          "chance": 100,
+          "min": 1,
+          "max": 1,
+          "memberIndex": 0
+        },
+        {
+          "itemId": "item_echo_staff",
+          "chance": 100,
+          "min": 1,
+          "max": 1,
+          "memberIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "loot_enc_bell_heart",
+      "name": "Bell Heart drops",
+      "entries": [
+        {
+          "itemId": "item_bellkeeper_blade",
+          "chance": 100,
+          "min": 1,
+          "max": 1,
+          "memberIndex": 0
+        },
+        {
+          "itemId": "item_custodian_seal",
+          "chance": 100,
+          "min": 1,
+          "max": 1,
+          "memberIndex": 0
+        }
+      ]
+    }
+  ],
+  "assignments": [
+    {
+      "encounterId": "enc_gallery_entry",
+      "tableId": "loot_enc_gallery_entry"
+    },
+    {
+      "encounterId": "enc_gallery_east",
+      "tableId": "loot_enc_gallery_east"
+    },
+    {
+      "encounterId": "enc_town_patrol",
+      "tableId": "loot_enc_town_patrol"
+    },
+    {
+      "encounterId": "enc_upper_pumps",
+      "tableId": "loot_enc_upper_pumps"
+    },
+    {
+      "encounterId": "enc_upper_archive",
+      "tableId": "loot_enc_upper_archive"
+    },
+    {
+      "encounterId": "enc_upper_sluice",
+      "tableId": "loot_enc_upper_sluice"
+    },
+    {
+      "encounterId": "enc_vault_drain",
+      "tableId": "loot_enc_vault_drain"
+    },
+    {
+      "encounterId": "enc_vault_engine",
+      "tableId": "loot_enc_vault_engine"
+    },
+    {
+      "encounterId": "enc_vault_echo",
+      "tableId": "loot_enc_vault_echo"
+    },
+    {
+      "encounterId": "enc_bell_heart",
+      "tableId": "loot_enc_bell_heart"
+    }
+  ]
+}

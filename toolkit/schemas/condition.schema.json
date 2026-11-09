@@ -1,0 +1,208 @@
+{
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "maxxia-authored-condition"
+    },
+    "formatVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "record": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "clock": {
+          "enum": [
+            "minutes",
+            "rounds",
+            "persistent"
+          ]
+        },
+        "maxDuration": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 60
+        },
+        "stacking": {
+          "enum": [
+            "refresh",
+            "extend",
+            "stack",
+            "reject"
+          ]
+        },
+        "maxStacks": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        },
+        "tags": {
+          "type": "array",
+          "maxItems": 8,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]{0,31}$"
+          }
+        },
+        "immuneTags": {
+          "type": "array",
+          "maxItems": 8,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]{0,31}$"
+          }
+        },
+        "dispelTags": {
+          "type": "array",
+          "maxItems": 8,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]{0,31}$"
+          }
+        },
+        "modifiers": {
+          "type": "object",
+          "properties": {
+            "attack": {
+              "type": "integer",
+              "minimum": -5,
+              "maximum": 5
+            },
+            "defense": {
+              "type": "integer",
+              "minimum": -5,
+              "maximum": 5
+            },
+            "save": {
+              "type": "integer",
+              "minimum": -5,
+              "maximum": 5
+            },
+            "resistance": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "integer",
+                "minimum": -50,
+                "maximum": 50
+              },
+              "propertyNames": {
+                "enum": [
+                  "physical",
+                  "fire",
+                  "cold",
+                  "lightning",
+                  "poison",
+                  "arcane",
+                  "holy",
+                  "necrotic"
+                ]
+              }
+            }
+          },
+          "required": [
+            "attack",
+            "defense",
+            "save",
+            "resistance"
+          ],
+          "additionalProperties": false
+        },
+        "periodic": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10
+            },
+            "damageType": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 20
+            }
+          },
+          "required": [
+            "amount",
+            "damageType"
+          ],
+          "additionalProperties": false
+        },
+        "save": {
+          "type": "object",
+          "properties": {
+            "ability": {
+              "enum": [
+                "CON",
+                "DEX",
+                "WIS"
+              ]
+            },
+            "dc": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 30
+            },
+            "timing": {
+              "enum": [
+                "apply",
+                "minute",
+                "round-end"
+              ]
+            }
+          },
+          "required": [
+            "ability",
+            "dc",
+            "timing"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "description",
+        "clock",
+        "maxDuration",
+        "stacking",
+        "maxStacks",
+        "tags",
+        "immuneTags",
+        "dispelTags",
+        "modifiers"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "format",
+    "formatVersion",
+    "id",
+    "record"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maxxia.invalid/toolkit/mp18/condition.schema.json"
+}

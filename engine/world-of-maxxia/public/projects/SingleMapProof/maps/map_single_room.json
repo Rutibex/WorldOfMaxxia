@@ -1,0 +1,55 @@
+{
+  "format": "maxxia-map",
+  "version": 1,
+  "id": "map_single_room",
+  "name": "One Map Adventure",
+  "width": 9,
+  "height": 7,
+  "geometry": {
+    "rows": [
+      "#########",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#########"
+    ]
+  },
+  "materials": {
+    "floor": {
+      "default": "material_floor_default",
+      "overrides": []
+    },
+    "wall": {
+      "default": "material_wall_default",
+      "overrides": []
+    },
+    "ceiling": {
+      "default": "material_ceiling_default",
+      "overrides": []
+    }
+  },
+  "scenery": [],
+  "objects": {
+    "doors": [],
+    "secrets": [],
+    "traps": [],
+    "fountains": [],
+    "portals": []
+  },
+  "arrivals": [
+    {
+      "id": "arrival_start",
+      "name": "Start",
+      "x": 4,
+      "y": 3,
+      "facing": 2
+    }
+  ],
+  "events": [],
+  "settings": {
+    "environmentId": "environment_default",
+    "notes": ""
+  }
+}

@@ -1,0 +1,37 @@
+id,class,name,min_level,sp_cost,gold_price,target,contexts,effect
+spell_wizard_spark_lance,wizard,Spark Lance,1,2,0,enemy,combat,d6+INT arcane; no save
+spell_wizard_lantern_globe,wizard,Lantern Globe,1,1,0,party,exploration,Light 60 minutes
+spell_wizard_frost_needle,wizard,Frost Needle,1,2,0,enemy,combat,d6+INT cold; no save
+spell_wizard_burning_fan,wizard,Burning Fan,2,4,40,enemies,combat,2d6 fire; DEX half
+spell_wizard_glass_eye,wizard,Glass Eye,2,3,40,world,exploration,"Reveal geometry within 3 tiles for 30 minutes, not visited flags"
+spell_wizard_binding_thread,wizard,Binding Thread,2,4,40,enemy,combat,"WIS negates; skip next action, damage breaks"
+spell_wizard_storm_arc,wizard,Storm Arc,3,5,60,enemies,combat,2d6+INT lightning; DEX half
+spell_wizard_unseal,wizard,Unseal,3,4,60,object,exploration,Open nonquest lock DC<=16 on facing adjacent door; otherwise invalid
+spell_wizard_stone_skin,wizard,Stone Skin,3,5,60,party,both,+2 Defense 30 minutes
+spell_wizard_fold_step,wizard,Fold Step,4,6,80,world,exploration,"Move 1 or 2 forward passable tiles, cannot cross closed doors, triggers or undiscovered cells"
+spell_wizard_mirror_ward,wizard,Mirror Ward,4,6,80,party,both,25% arcane resistance 30 minutes
+spell_wizard_starfall,wizard,Starfall,5,9,100,enemies,combat,4d6 arcane; DEX half
+spell_priest_mend_flesh,priest,Mend Flesh,1,2,0,ally,both,Heal d8+WIS living HP
+spell_priest_sacred_ember,priest,Sacred Ember,1,2,0,enemy,combat,d6+WIS holy; no save
+spell_priest_pilgrim_light,priest,Pilgrim Light,1,1,0,party,exploration,Light 60 minutes
+spell_priest_cleanse_venom,priest,Cleanse Venom,2,3,40,ally,both,Remove poison; invalid without poison
+spell_priest_steadfast,priest,Steadfast,2,3,40,party,both,Remove fear and grant fear immunity 3 rounds or 3 minutes
+spell_priest_blessing,priest,Blessing,2,4,40,party,both,+1 attack 30 minutes
+spell_priest_healing_chorus,priest,Healing Chorus,3,6,60,party,both,Heal d8+WIS to each living member
+spell_priest_turn_the_hollow,priest,Turn the Hollow,3,5,60,enemies,combat,Undead only: 2d6 holy and frightened 2 rounds; WIS halves damage and negates fear
+spell_priest_sheltering_hand,priest,Sheltering Hand,3,5,60,party,both,+2 Defense 30 minutes
+spell_priest_break_malison,priest,Break Malison,4,6,80,ally,both,Remove cursed condition and curses on equipped items
+spell_priest_return_breath,priest,Return Breath,4,8,80,dead_ally,exploration,"Revive with 1 HP, 0 SP; exploration only"
+spell_priest_dawn_judgment,priest,Dawn Judgment,5,9,100,enemies,combat,3d6+WIS holy; CON half
+spell_witch_withering_word,witch,Withering Word,1,2,0,enemy,combat,d6+CHA necrotic; no save
+spell_witch_ill_omen,witch,Ill Omen,1,2,0,enemy,combat,WIS negates; −2 attack 3 rounds
+spell_witch_borrowed_face,witch,Borrowed Face,1,1,0,party,exploration,Reveal nearby NPC/secret interaction hints 30 minutes; no dialogue bypass
+spell_witch_leech_kiss,witch,Leech Kiss,2,4,40,enemy,combat,2d6 necrotic; heal caster half actual HP removed; no save
+spell_witch_sleep_of_thorns,witch,Sleep of Thorns,2,4,40,enemy,combat,"WIS negates; skip next action, damage breaks"
+spell_witch_rat_whisper,witch,Rat Whisper,2,3,40,world,exploration,Add nearest undiscovered secret clue in current floor to notes; invalid if none
+spell_witch_crooked_bones,witch,Crooked Bones,3,5,60,enemy,combat,CON negates; −3 Defense 3 rounds
+spell_witch_briar_mantle,witch,Briar Mantle,3,5,60,party,both,Melee attacker takes 2 physical once per successful hit; 5 rounds or 5 minutes
+spell_witch_malice_rain,witch,Malice Rain,3,6,60,enemies,combat,2d6 poison; CON half
+spell_witch_bottle_the_echo,witch,Bottle the Echo,4,6,80,enemy,combat,WIS negates; suppress special attack 2 rounds; ordinary attack remains
+spell_witch_hearth_thread,witch,Hearth Thread,4,7,80,party,both,"Exploration only: return to town entrance; no healing or time discount, costs 10 minutes"
+spell_witch_black_moon,witch,Black Moon,5,9,100,enemies,combat,3d6+CHA necrotic; WIS half

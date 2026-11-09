@@ -1,0 +1,32 @@
+{
+  "format": "maxxia-authored-map",
+  "formatVersion": 1,
+  "id": "mp12:map:entry",
+  "name": "The Entry Chamber",
+  "rows": [
+    "#########",
+    "#.......#",
+    "#.......#",
+    "#.......#",
+    "#.......#",
+    "#.......#",
+    "#########"
+  ],
+  "arrivals": [
+    {
+      "id": "entry",
+      "x": 4,
+      "y": 4,
+      "facing": 0
+    }
+  ],
+  "objects": [
+    {
+      "id": "plaque",
+      "name": "Regulator levers (routine test bench)",
+      "x": 4,
+      "y": 2,
+      "onInteract": "mp12:routine:lever"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "format": "maxxia-authored-item",
+  "record": {
+    "id": "brass:item:shield",
+    "name": "Brass Ward Shield",
+    "category": "armor",
+    "price": 116,
+    "maxDurability": 24,
+    "maxCharges": 0,
+    "effect": "none",
+    "power": 0,
+    "unique": false,
+    "slot": "offhand",
+    "weight": "medium",
+    "armor": 2,
+    "dice": null,
+    "accuracy": 0,
+    "resistance": null,
+    "resistBonus": 0,
+    "description": "Protective equipment. Heavy armor restricts nimble movement.",
+    "iconResourceId": "brass:resource:shield",
+    "equipmentTags": [
+      "shield"
+    ]
+  },
+  "id": "brass:item:shield",
+  "formatVersion": 1
+}

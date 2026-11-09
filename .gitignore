@@ -1,0 +1,32 @@
+# Dependencies and build artifacts
+**/node_modules/
+**/dist/
+**/bin/
+**/obj/
+artifacts/
+_site/
+builds/
+coverage/
+.nyc_output/
+.vs/
+.vscode/
+.idea/
+# Local settings, OS and editor state
+*.user
+*.suo
+*.rsuser
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+*.save-lock
+*.log
+# Private configuration and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx

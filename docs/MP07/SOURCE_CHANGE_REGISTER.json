@@ -1,0 +1,122 @@
+{
+  "baseline": "MP06 source release",
+  "changed": [
+    {
+      "path": "CHANGELOG.md",
+      "disposition": "modified",
+      "baselineSha256": "4f4c1da5a74aa3427397b2543c8ab27525d95a324881ad621d8f3054b963a053",
+      "currentSha256": "739656225e9d48cffaf1be5b1e9d4efbb97d898681d2ba6b8d6c8e69839648e1"
+    },
+    {
+      "path": "MP_PHASE_STATUS.json",
+      "disposition": "modified",
+      "baselineSha256": "3aabb6dee70d90e5927ceb7db51c741cb8052e4440cc06794d8399cc948680c0",
+      "currentSha256": "23fe44510460f38079516784a9b6c356bd4de189af1bbb4898f1b48d7424260b"
+    },
+    {
+      "path": "PROJECT_STATE.md",
+      "disposition": "modified",
+      "baselineSha256": "3257eabdf5bb2a4ed89993458488f2359034c0c32e5f70db9d24397e21f0c72e",
+      "currentSha256": "5cd0acb42e6a9673852b6d118407aa2e70598443ed04e201f7bc64327efc8995"
+    },
+    {
+      "path": "README.md",
+      "disposition": "modified",
+      "baselineSha256": "4c4d042ef029d6760083100757ebcb3487370351f85cd5061a9c67a112500495",
+      "currentSha256": "78da37e3ab1e3429ff7d0605d4a67e53918101f6f0361de6972d787acf402498"
+    },
+    {
+      "path": "engine/world-of-maxxia/index.html",
+      "disposition": "modified",
+      "baselineSha256": "d56a5afe27e2df7205d6405af55423ed04d35046e065af66dc5fcdcda06ff118",
+      "currentSha256": "add765ff0d97ee64f9d5c3e47ad168c5ee0960c7a954af708d6a7ac93230a235"
+    },
+    {
+      "path": "engine/world-of-maxxia/package-lock.json",
+      "disposition": "modified",
+      "baselineSha256": "67c0f6b2e9b3ed55ffafe97de9d5f63be0d978347cf1ebdc5d49a2784d9bed67",
+      "currentSha256": "49c682a22978c7197bdcc079e8a4b60d2e5abd763d417152a86d7e9e85c53ad8"
+    },
+    {
+      "path": "engine/world-of-maxxia/package.json",
+      "disposition": "modified",
+      "baselineSha256": "f8ba8358d03500a96514b0e4c76230ffe5461046c10d384546713fbf2df0936f",
+      "currentSha256": "c41c69859d6103c6ccae5a0e66600438be62bb98bc9df94b87c2063f8d80b7db"
+    },
+    {
+      "path": "engine/world-of-maxxia/public/assets/gallery.css",
+      "disposition": "modified",
+      "baselineSha256": "185d5cdfe155ef62937031b43216fb5376764c0d92999aa09c540fba2d9767a2",
+      "currentSha256": "36f647bc3b263bcc4afa6baf7d8f19a6440da1c975b1b1e4643437da470410ff"
+    },
+    {
+      "path": "engine/world-of-maxxia/public/mp06-proof/catalogue.maxxia-build.json",
+      "disposition": "modified",
+      "baselineSha256": "8cfb1a99e59b8e442a8b13d3f7df7a9b3b6041b5ce4d058b123950961bd8f53f",
+      "currentSha256": "07da90e32065c827d8da24aa07c070a55a446bbbdf146bb9d7ab102fd22b6451"
+    },
+    {
+      "path": "engine/world-of-maxxia/scripts/build-offline.mjs",
+      "disposition": "modified",
+      "baselineSha256": "32efea44bb3df251a34af7705466e8c5dd4f7e927186dc212c0a6c05bbb3fa70",
+      "currentSha256": "8e0c1b0af3ae10cb576b1f6788f5e19fb03e997b057bc94dbe62320ddd23e5b2"
+    },
+    {
+      "path": "engine/world-of-maxxia/server.mjs",
+      "disposition": "modified",
+      "baselineSha256": "368640a81f653e79016a87771b397d0d947d4bee1e9ea29301b5b3b3a1c4bafe",
+      "currentSha256": "7238d6d8816f8ee6d035f159a34c7afd8a30ac7aa5522e844ab125f68605e794"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/main.ts",
+      "disposition": "modified",
+      "baselineSha256": "c22125c3521dca5d817bb04eb424ba91441d4496fa4bc0b9ce5e9b14ac3d073a",
+      "currentSha256": "fd1abcaae37d3dec96f3c31b775a5c12c7dea2a704666df4deda9121ebe9cfd3"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/pack-library-ui.ts",
+      "disposition": "modified",
+      "baselineSha256": "f2ea950f52fd864a79be1678aac66d92928e07f7ce66bf328211d9cf640bb1bf",
+      "currentSha256": "602e4cf4f8823df75b070bf8b7ee71d1ecd1410061c2e29c2bdff7559b539410"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/style.css",
+      "disposition": "modified",
+      "baselineSha256": "80abfccf54c71ae314385d62b56bafd940a655de88a877266d2e323605129b45",
+      "currentSha256": "56f328a88dac518010fc47ba2ec7262cfd52d829d6742be15f6772bebdbba524"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/pack-library.ts",
+      "disposition": "modified",
+      "baselineSha256": "8048d8d197b83b387a62a809837660bbde1bc568e33ddcf611273645cbd276db",
+      "currentSha256": "c3195ad825f4599a0058afe82298548e39461ebc2c6e92adad18dad2fb197d47"
+    },
+    {
+      "path": "package-lock.json",
+      "disposition": "modified",
+      "baselineSha256": "2c5c378661c1aad609727e28a1b919aa73281aa0bdfb3cfd2eb60119cdd23318",
+      "currentSha256": "31a0b27ffdd7272ddf52c9ee4c4c9f4c1bbfdd5e4958aa9551ee7dddd21ae07b"
+    },
+    {
+      "path": "package.json",
+      "disposition": "modified",
+      "baselineSha256": "814270756f589d6d0628e402704158aa6021001300049c80bdb97d6b8c56b392",
+      "currentSha256": "9f335ec5a6f0d83ed08199b580612e0e80525f7ce9d332cab3f3cdc7a3ed917e"
+    },
+    {
+      "path": "tools/build-mp06-catalogue.mjs",
+      "disposition": "modified",
+      "baselineSha256": "308b3a95ac8ed7c2d4ff64dcbccd3fa5839a03728bb22c2bf2fda451dad81a4d",
+      "currentSha256": "328779bea2d598634ed2c4b037650ea5f357b1fa95e831d241a11b10441913b8"
+    }
+  ],
+  "newFiles": [
+    "PHASE_NOTES/MP07.md",
+    "docs/MP07/BROWSER_README.md",
+    "docs/MP07/CAMPAIGN_INSTANCES_AND_NAMESPACED_STATE.md",
+    "engine/world-of-maxxia/src/shared/rules/scoped-state.ts",
+    "engine/world-of-maxxia/src/shared/saves/campaign-instances.ts",
+    "engine/world-of-maxxia/tests/campaign-instances-mp07.test.mjs",
+    "tools/audit-mp07.py"
+  ]
+}

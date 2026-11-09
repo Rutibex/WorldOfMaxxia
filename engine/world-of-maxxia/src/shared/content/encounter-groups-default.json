@@ -1,0 +1,161 @@
+{
+  "format": "maxxia-encounter-groups",
+  "version": 1,
+  "groups": [
+    {
+      "id": "group_gallery_entry",
+      "name": "Gallery Entry",
+      "boss": false,
+      "musicTag": null,
+      "members": [
+        {
+          "kindId": "dust_imp",
+          "dx": 0,
+          "dy": 1
+        },
+        {
+          "kindId": "stone_mite",
+          "dx": 0,
+          "dy": 0
+        }
+      ]
+    },
+    {
+      "id": "group_gallery_east",
+      "name": "Gallery East",
+      "boss": false,
+      "musicTag": null,
+      "members": [
+        {
+          "kindId": "gallery_watcher",
+          "dx": 0,
+          "dy": 0
+        }
+      ]
+    },
+    {
+      "id": "group_town_patrol",
+      "name": "Town Patrol",
+      "boss": false,
+      "musicTag": null,
+      "members": [
+        {
+          "kindId": "dust_imp",
+          "dx": 0,
+          "dy": 0
+        }
+      ]
+    },
+    {
+      "id": "group_upper_pumps",
+      "name": "Upper Pumps",
+      "boss": false,
+      "musicTag": null,
+      "members": [
+        {
+          "kindId": "stone_mite",
+          "dx": 0,
+          "dy": 0
+        },
+        {
+          "kindId": "dust_imp",
+          "dx": 2,
+          "dy": 0
+        }
+      ]
+    },
+    {
+      "id": "group_upper_archive",
+      "name": "Upper Archive",
+      "boss": false,
+      "musicTag": null,
+      "members": [
+        {
+          "kindId": "gallery_watcher",
+          "dx": 0,
+          "dy": 0
+        }
+      ]
+    },
+    {
+      "id": "group_upper_sluice",
+      "name": "Upper Sluice",
+      "boss": false,
+      "musicTag": null,
+      "members": [
+        {
+          "kindId": "dust_imp",
+          "dx": 0,
+          "dy": 0
+        },
+        {
+          "kindId": "stone_mite",
+          "dx": 1,
+          "dy": 1
+        }
+      ]
+    },
+    {
+      "id": "group_vault_drain",
+      "name": "Vault Drain",
+      "boss": false,
+      "musicTag": null,
+      "members": [
+        {
+          "kindId": "cistern_rat",
+          "dx": 0,
+          "dy": 0
+        },
+        {
+          "kindId": "sludge_leech",
+          "dx": 1,
+          "dy": 0
+        }
+      ]
+    },
+    {
+      "id": "group_vault_engine",
+      "name": "Vault Engine",
+      "boss": false,
+      "musicTag": null,
+      "members": [
+        {
+          "kindId": "pipe_goblin",
+          "dx": 0,
+          "dy": 0
+        },
+        {
+          "kindId": "valve_sentinel",
+          "dx": 2,
+          "dy": 1
+        }
+      ]
+    },
+    {
+      "id": "group_vault_echo",
+      "name": "Vault Echo",
+      "boss": false,
+      "musicTag": null,
+      "members": [
+        {
+          "kindId": "bell_wraith",
+          "dx": 0,
+          "dy": 0
+        }
+      ]
+    },
+    {
+      "id": "group_bell_heart",
+      "name": "Bell Heart",
+      "boss": true,
+      "musicTag": "boss",
+      "members": [
+        {
+          "kindId": "bell_heart",
+          "dx": 0,
+          "dy": 0
+        }
+      ]
+    }
+  ]
+}

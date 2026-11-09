@@ -1,0 +1,35 @@
+{
+  "format": "maxxia-authored-item",
+  "formatVersion": 1,
+  "id": "lantern:item:siltglass_charm",
+  "record": {
+    "id": "lantern:item:siltglass_charm",
+    "name": "Siltglass Charm",
+    "category": "accessories",
+    "price": 60,
+    "maxDurability": 0,
+    "maxCharges": 3,
+    "effect": "reveal",
+    "power": 20,
+    "unique": false,
+    "slot": "accessory",
+    "weight": null,
+    "armor": 0,
+    "dice": null,
+    "accuracy": 0,
+    "resistance": null,
+    "resistBonus": 0,
+    "description": "Three charges. Activate for twenty minutes of Glass Eye: eligible hidden mechanisms are found when searched, and nearby map geometry is revealed. Search still costs food and ten minutes. No automatic recharge. MP23: can also spend one charge to reveal an authored secret within adjacent range, without spending food.",
+    "equipmentTags": [
+      "accessory"
+    ],
+    "portability": "exportable",
+    "exploration": {
+      "tags": [
+        "reveal"
+      ],
+      "range": 1,
+      "requiresSight": false
+    }
+  }
+}

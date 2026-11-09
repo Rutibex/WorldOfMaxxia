@@ -1,0 +1,717 @@
+{
+  "format": "maxxia-authored-map",
+  "formatVersion": 2,
+  "id": "bell:map:cistern",
+  "record": {
+    "id": "map_bell_cistern",
+    "name": "The Brass Bell Cistern \u2014 ten areas",
+    "rows": [
+      "#############",
+      "#.....#.....#",
+      "#.....#.....#",
+      "#.....#.....#",
+      "#.....#.....#",
+      "#.....D.....#",
+      "#.....#.....#",
+      "#.....#.....#",
+      "#.....#.....#",
+      "#.....#.....#",
+      "#.....#.....#",
+      "#.....#.....#",
+      "#############"
+    ],
+    "spawn": {
+      "x": 2,
+      "y": 10,
+      "facing": 0
+    },
+    "doors": [
+      {
+        "id": "door_gallery",
+        "x": 6,
+        "y": 5
+      }
+    ],
+    "secrets": [
+      {
+        "id": "secret_conduit",
+        "x": 6,
+        "y": 9,
+        "description": "An old infirmary maintenance conduit."
+      }
+    ],
+    "traps": [
+      {
+        "id": "trap_store",
+        "x": 3,
+        "y": 8,
+        "dc": 8,
+        "damage": 2,
+        "description": "A pressure nozzle bursts on an unprepared approach. Search/disarm, approach by the side, or endure it once."
+      }
+    ],
+    "props": [
+      {
+        "id": "area_entry",
+        "kind": "marker",
+        "x": 2,
+        "y": 10,
+        "name": "Entry stair",
+        "description": "Entry stair. Labelled review scenery; final art follows later."
+      },
+      {
+        "id": "area_landing",
+        "kind": "marker",
+        "x": 2,
+        "y": 8,
+        "name": "Flooded landing",
+        "description": "Flooded landing. Labelled review scenery; final art follows later."
+      },
+      {
+        "id": "area_pump",
+        "kind": "marker",
+        "x": 2,
+        "y": 6,
+        "name": "Pump room",
+        "description": "Pump room. Labelled review scenery; final art follows later."
+      },
+      {
+        "id": "area_nest",
+        "kind": "marker",
+        "x": 2,
+        "y": 3,
+        "name": "Vermin nest",
+        "description": "Vermin nest. Labelled review scenery; final art follows later."
+      },
+      {
+        "id": "area_alcove",
+        "kind": "marker",
+        "x": 4,
+        "y": 3,
+        "name": "Keeper\u2019s alcove",
+        "description": "Keeper\u2019s alcove. Labelled review scenery; final art follows later."
+      },
+      {
+        "id": "area_gallery",
+        "kind": "marker",
+        "x": 4,
+        "y": 5,
+        "name": "Three-valve gallery",
+        "description": "Three-valve gallery. Labelled review scenery; final art follows later."
+      },
+      {
+        "id": "area_store",
+        "kind": "marker",
+        "x": 3,
+        "y": 9,
+        "name": "Trapped maintenance store",
+        "description": "Trapped maintenance store. Labelled review scenery; final art follows later."
+      },
+      {
+        "id": "area_sentinel",
+        "kind": "marker",
+        "x": 9,
+        "y": 7,
+        "name": "Sentinel chamber",
+        "description": "Sentinel chamber. Labelled review scenery; final art follows later."
+      },
+      {
+        "id": "area_regulator",
+        "kind": "marker",
+        "x": 10,
+        "y": 3,
+        "name": "Bell regulator",
+        "description": "Bell regulator. Labelled review scenery; final art follows later."
+      }
+    ],
+    "entities": [
+      {
+        "id": "bell:object:record",
+        "name": "Signed sabotage record",
+        "description": "Signed sabotage record",
+        "x": 4,
+        "y": 2,
+        "kind": "object",
+        "onUse": {
+          "routineId": "bell:routine:record",
+          "args": {}
+        }
+      },
+      {
+        "id": "bell:object:spirit",
+        "name": "Maintenance Spirit",
+        "description": "Maintenance Spirit",
+        "x": 4,
+        "y": 3,
+        "kind": "npc",
+        "npcId": "bell:npc:spirit"
+      },
+      {
+        "id": "bell:object:clue",
+        "name": "Valve inscription",
+        "description": "Valve inscription",
+        "x": 3,
+        "y": 5,
+        "kind": "object",
+        "onUse": {
+          "routineId": "bell:routine:clue",
+          "args": {}
+        }
+      },
+      {
+        "id": "bell:object:valve_intake",
+        "name": "INTAKE valve",
+        "description": "INTAKE valve",
+        "x": 4,
+        "y": 5,
+        "kind": "object",
+        "onUse": {
+          "routineId": "bell:routine:valve_intake",
+          "args": {}
+        }
+      },
+      {
+        "id": "bell:object:valve_return",
+        "name": "RETURN valve",
+        "description": "RETURN valve",
+        "x": 4,
+        "y": 6,
+        "kind": "object",
+        "onUse": {
+          "routineId": "bell:routine:valve_return",
+          "args": {}
+        }
+      },
+      {
+        "id": "bell:object:valve_bell",
+        "name": "BELL valve",
+        "description": "BELL valve",
+        "x": 5,
+        "y": 5,
+        "kind": "object",
+        "onUse": {
+          "routineId": "bell:routine:valve_bell",
+          "args": {}
+        }
+      },
+      {
+        "id": "bell:object:bypass",
+        "name": "Shutoff bypass",
+        "description": "Shutoff bypass",
+        "x": 5,
+        "y": 8,
+        "kind": "object",
+        "onUse": {
+          "routineId": "bell:routine:bypass",
+          "args": {}
+        },
+        "capabilities": [
+          {
+            "id": "remote_bypass",
+            "label": "Echo Hand: activate bypass",
+            "tag": "mechanism",
+            "outcome": "use",
+            "minutes": 2
+          }
+        ]
+      },
+      {
+        "id": "bell:object:gallery_gate",
+        "name": "Gallery pressure gate",
+        "description": "Gallery pressure gate",
+        "x": 6,
+        "y": 5,
+        "kind": "door",
+        "doorId": "door_gallery",
+        "lock": {
+          "keyItemId": "bell:item:valve_key"
+        },
+        "capabilities": [
+          {
+            "id": "remote_open",
+            "label": "Echo Hand: open pressure gate",
+            "tag": "mechanism",
+            "outcome": "open",
+            "minutes": 2
+          }
+        ]
+      },
+      {
+        "id": "bell:object:conduit",
+        "name": "Hidden infirmary conduit",
+        "description": "A scratched seam in the east wall. Search discovers the alternate route; Siltglass guarantees eligible discovery. It is not required to finish.",
+        "x": 6,
+        "y": 9,
+        "kind": "secret",
+        "secretId": "secret_conduit",
+        "hidden": true,
+        "searchDC": 8,
+        "capabilities": [
+          {
+            "id": "siltglass_reveal",
+            "label": "Siltglass: reveal hidden conduit",
+            "tag": "reveal",
+            "outcome": "reveal",
+            "minutes": 1
+          }
+        ]
+      },
+      {
+        "id": "bell:object:tools",
+        "name": "Trapped tool chest",
+        "description": "A pressure trap lies on the approach tile (3,8). Search/disarm through normal expedition controls or approach from the side.",
+        "x": 3,
+        "y": 9,
+        "kind": "container",
+        "rewards": [
+          {
+            "itemId": "bell:item:tool_roll",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "bell:object:clapper",
+        "name": "Bell Clapper housing",
+        "description": "Bell Clapper housing",
+        "x": 10,
+        "y": 3,
+        "kind": "container",
+        "rewards": [
+          {
+            "itemId": "bell:item:bell_clapper",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "bell:object:pressure_nozzle",
+        "name": "Pressure Nozzle",
+        "description": "A hidden maintenance trap can be spotted or neutralized through an appropriate ward-manipulation capability.",
+        "x": 3,
+        "y": 8,
+        "kind": "object",
+        "hazardId": "trap_store",
+        "capabilities": [
+          {
+            "id": "ward_disarm",
+            "label": "Echo Hand: neutralize pressure nozzle",
+            "tag": "ward",
+            "outcome": "disarm",
+            "minutes": 2
+          }
+        ]
+      },
+      {
+        "id": "bell:object:stair_lip",
+        "name": "Cistern ledge",
+        "description": "A small ledge allows a short, unobstructed echo-step onto the nearby gallery floor.",
+        "x": 3,
+        "y": 10,
+        "kind": "object",
+        "capabilities": [
+          {
+            "id": "echo_step",
+            "label": "Echo Hand: step across ledge",
+            "tag": "step",
+            "outcome": "traverse",
+            "minutes": 1,
+            "destination": {
+              "x": 4,
+              "y": 10
+            }
+          }
+        ]
+      },
+      {
+        "id": "bell:object:remote_record",
+        "name": "Resonant inscription",
+        "description": "A distant inscription accepts a short echo touch and exposes a signed repair record.",
+        "x": 3,
+        "y": 10,
+        "kind": "object",
+        "onUse": {
+          "routineId": "bell:routine:record",
+          "args": {}
+        },
+        "capabilities": [
+          {
+            "id": "echo_read",
+            "label": "Echo Hand: read inscription",
+            "tag": "mechanism",
+            "outcome": "use",
+            "minutes": 2
+          }
+        ]
+      }
+    ],
+    "arrivals": [
+      {
+        "id": "entry",
+        "x": 2,
+        "y": 10,
+        "facing": 0
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_up",
+        "x": 2,
+        "y": 11,
+        "targetMapId": "map_bell_yard",
+        "targetX": 4,
+        "targetY": 2,
+        "targetFacing": 0,
+        "targetArrivalId": "return"
+      }
+    ],
+    "recovery": {
+      "mapId": "map_bell_yard",
+      "arrivalId": "return"
+    },
+    "environmentId": "bell:environment:brass",
+    "spritePlacements": [
+      {
+        "id": "visual_spirit",
+        "spriteId": "keeper",
+        "x": 4,
+        "y": 3,
+        "scale": 0.65,
+        "facing": 2,
+        "entityId": "bell:object:spirit",
+        "stateAnimations": {
+          "idle": "idle"
+        },
+        "hotspot": {
+          "x": 0.08,
+          "y": 0.05,
+          "width": 0.84,
+          "height": 0.9
+        }
+      },
+      {
+        "id": "visual_tools",
+        "spriteId": "crate",
+        "x": 3,
+        "y": 9,
+        "scale": 0.45,
+        "facing": 2,
+        "entityId": "bell:object:tools",
+        "stateAnimations": {
+          "closed": "closed",
+          "open": "open",
+          "claimed": "claimed"
+        },
+        "hotspot": {
+          "x": 0.08,
+          "y": 0.05,
+          "width": 0.84,
+          "height": 0.9
+        }
+      },
+      {
+        "id": "visual_clapper",
+        "spriteId": "crate",
+        "x": 10,
+        "y": 3,
+        "scale": 0.45,
+        "facing": 2,
+        "entityId": "bell:object:clapper",
+        "stateAnimations": {
+          "closed": "closed",
+          "open": "open",
+          "claimed": "claimed"
+        },
+        "hotspot": {
+          "x": 0.08,
+          "y": 0.05,
+          "width": 0.84,
+          "height": 0.9
+        }
+      },
+      {
+        "id": "visual_area_entry",
+        "spriteId": "brazier",
+        "x": 2,
+        "y": 10,
+        "scale": 0.55,
+        "facing": 0,
+        "propId": "area_entry"
+      },
+      {
+        "id": "visual_area_landing",
+        "spriteId": "brazier",
+        "x": 2,
+        "y": 8,
+        "scale": 0.55,
+        "facing": 0,
+        "propId": "area_landing"
+      },
+      {
+        "id": "visual_area_pump",
+        "spriteId": "brazier",
+        "x": 2,
+        "y": 6,
+        "scale": 0.55,
+        "facing": 0,
+        "propId": "area_pump"
+      },
+      {
+        "id": "visual_area_nest",
+        "spriteId": "brazier",
+        "x": 2,
+        "y": 3,
+        "scale": 0.55,
+        "facing": 0,
+        "propId": "area_nest"
+      },
+      {
+        "id": "visual_area_sentinel",
+        "spriteId": "brazier",
+        "x": 9,
+        "y": 7,
+        "scale": 0.55,
+        "facing": 0,
+        "propId": "area_sentinel"
+      },
+      {
+        "id": "visual_record",
+        "spriteId": "mechanism",
+        "x": 4,
+        "y": 2,
+        "scale": 0.48,
+        "facing": 2,
+        "entityId": "bell:object:record",
+        "stateAnimations": {
+          "idle": "idle",
+          "used": "used"
+        },
+        "hotspot": {
+          "x": 0.05,
+          "y": 0.05,
+          "width": 0.9,
+          "height": 0.9
+        }
+      },
+      {
+        "id": "visual_clue",
+        "spriteId": "mechanism",
+        "x": 3,
+        "y": 5,
+        "scale": 0.48,
+        "facing": 2,
+        "entityId": "bell:object:clue",
+        "stateAnimations": {
+          "idle": "idle",
+          "used": "used"
+        },
+        "hotspot": {
+          "x": 0.05,
+          "y": 0.05,
+          "width": 0.9,
+          "height": 0.9
+        }
+      },
+      {
+        "id": "visual_valve_intake",
+        "spriteId": "mechanism",
+        "x": 4,
+        "y": 5,
+        "scale": 0.48,
+        "facing": 2,
+        "entityId": "bell:object:valve_intake",
+        "stateAnimations": {
+          "idle": "idle",
+          "used": "used"
+        },
+        "hotspot": {
+          "x": 0.05,
+          "y": 0.05,
+          "width": 0.9,
+          "height": 0.9
+        }
+      },
+      {
+        "id": "visual_valve_return",
+        "spriteId": "mechanism",
+        "x": 4,
+        "y": 6,
+        "scale": 0.48,
+        "facing": 2,
+        "entityId": "bell:object:valve_return",
+        "stateAnimations": {
+          "idle": "idle",
+          "used": "used"
+        },
+        "hotspot": {
+          "x": 0.05,
+          "y": 0.05,
+          "width": 0.9,
+          "height": 0.9
+        }
+      },
+      {
+        "id": "visual_valve_bell",
+        "spriteId": "mechanism",
+        "x": 5,
+        "y": 5,
+        "scale": 0.48,
+        "facing": 2,
+        "entityId": "bell:object:valve_bell",
+        "stateAnimations": {
+          "idle": "idle",
+          "used": "used"
+        },
+        "hotspot": {
+          "x": 0.05,
+          "y": 0.05,
+          "width": 0.9,
+          "height": 0.9
+        }
+      },
+      {
+        "id": "visual_bypass",
+        "spriteId": "mechanism",
+        "x": 5,
+        "y": 8,
+        "scale": 0.48,
+        "facing": 2,
+        "entityId": "bell:object:bypass",
+        "stateAnimations": {
+          "idle": "idle",
+          "used": "used"
+        },
+        "hotspot": {
+          "x": 0.05,
+          "y": 0.05,
+          "width": 0.9,
+          "height": 0.9
+        }
+      },
+      {
+        "id": "visual_pressure_nozzle",
+        "spriteId": "mechanism",
+        "x": 3,
+        "y": 8,
+        "scale": 0.48,
+        "facing": 2,
+        "entityId": "bell:object:pressure_nozzle",
+        "stateAnimations": {
+          "idle": "idle",
+          "used": "used"
+        },
+        "hotspot": {
+          "x": 0.05,
+          "y": 0.05,
+          "width": 0.9,
+          "height": 0.9
+        }
+      },
+      {
+        "id": "visual_stair_lip",
+        "spriteId": "mechanism",
+        "x": 3,
+        "y": 10,
+        "scale": 0.48,
+        "facing": 2,
+        "entityId": "bell:object:stair_lip",
+        "stateAnimations": {
+          "idle": "idle",
+          "used": "used"
+        },
+        "hotspot": {
+          "x": 0.05,
+          "y": 0.05,
+          "width": 0.9,
+          "height": 0.9
+        }
+      },
+      {
+        "id": "visual_remote_record",
+        "spriteId": "mechanism",
+        "x": 3,
+        "y": 10,
+        "scale": 0.48,
+        "facing": 2,
+        "entityId": "bell:object:remote_record",
+        "stateAnimations": {
+          "idle": "idle",
+          "used": "used"
+        },
+        "hotspot": {
+          "x": 0.05,
+          "y": 0.05,
+          "width": 0.9,
+          "height": 0.9
+        }
+      }
+    ],
+    "enemyAppearances": [
+      {
+        "kindId": "bell:monster:silt_rat",
+        "spriteId": "vermin",
+        "scale": 0.9,
+        "facing": 2,
+        "stateAnimations": {
+          "idle": "idle",
+          "active": "active",
+          "guarded": "guarded",
+          "attack": "attack",
+          "hurt": "hurt"
+        }
+      },
+      {
+        "kindId": "bell:monster:echo",
+        "spriteId": "vermin",
+        "scale": 0.9,
+        "facing": 2,
+        "stateAnimations": {
+          "idle": "idle",
+          "active": "active",
+          "guarded": "guarded",
+          "attack": "attack",
+          "hurt": "hurt"
+        }
+      },
+      {
+        "kindId": "bell:monster:sentinel",
+        "spriteId": "vermin",
+        "scale": 0.9,
+        "facing": 2,
+        "stateAnimations": {
+          "idle": "idle",
+          "active": "active",
+          "guarded": "guarded",
+          "attack": "attack",
+          "hurt": "hurt"
+        }
+      },
+      {
+        "kindId": "bell:monster:bell_heart",
+        "spriteId": "vermin",
+        "scale": 0.9,
+        "facing": 2,
+        "stateAnimations": {
+          "idle": "idle",
+          "active": "active",
+          "guarded": "guarded",
+          "attack": "attack",
+          "hurt": "hurt"
+        }
+      },
+      {
+        "kindId": "bell:monster:chime_wisp",
+        "spriteId": "vermin",
+        "scale": 0.9,
+        "facing": 2,
+        "stateAnimations": {
+          "idle": "idle",
+          "active": "active",
+          "guarded": "guarded",
+          "attack": "attack",
+          "hurt": "hurt"
+        }
+      }
+    ]
+  }
+}

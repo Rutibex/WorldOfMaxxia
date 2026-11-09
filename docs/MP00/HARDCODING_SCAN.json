@@ -1,0 +1,1302 @@
+{
+  "note": "Candidate source references; not all matches require removal. Read with migration register.",
+  "matches": [
+    {
+      "path": "engine/world-of-maxxia/src/client/adventure-screen.ts",
+      "line": 19,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " const area=n('section','','adventure-map-area'),canvas=n('canvas');canvas.width=528;canvas.height=528;canvas.setAttribute('role','img');canvas.setAttribute('aria-label',`Explored map of ${map.name}, position ${world.x}, ${world.y}`);area.append(canvas);const side=n('aside','','adventure-reading'),revealing=this.hooks.magic().effects.some(e=>e.kind==='glass_eye'&&(e.expiresAtMinute??0)>now);side.append(n('h3',map.name),n('p',`${world.x}, ${world.y} \u00b7 ${['North','East','South','West'][world.facing]}`),n('p',revealing?'Glass Eye: nearby geometry is revealed temporarily.':'Visited passages and adjacent walls are recorded. Unknown passages stay hidden.'),n('h3','Map key'));const list=n('dl');for(const [symbol,label] of [['\u25cf','Party position'],['Gold / green','Closed / open door'],['!','Known trap'],['S','Discovered secret'],['C','Discovered chest'],['\u2726','Fountain'],...(map.id==='map_town'?[['T / M / H','Tavern / market / healer'],['L / G / Q','Trainer / guild / quest office']]:[])])list.append(n('dt',symbol),n('dd',label));side.append(list);body.classList.add('adventure-map');body.append(area,side);this.hooks.drawMap(canvas,map,world,revealing);"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/audio-plan.ts",
+      "line": 8,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "export function musicScene(state:CampaignState|undefined,entered:boolean):MusicScene{if(!entered||!state)return 'title';if(state.combat.defeated)return 'defeat';if(state.combat.active)return state.combat.active.encounterId==='enc_bell_heart'?'boss':'combat';return state.currentMapId==='map_town'?'town':state.currentMapId==='map_resonator_vault'?'vault':'cistern';}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/dashboard.ts",
+      "line": 25,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "import {ABILITIES,CLASSES,STARTER_GEAR,DAMAGE_TYPES,derived,modifier,training,conditionLabels,portraitState,healthColor,type PartyState,type Character,type PreparedStyle,type QuickAction} from '../shared/rules/party.ts';"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/dashboard.ts",
+      "line": 33,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "interface Hooks{ground:()=>GroundContainer[];loot:(r:LootRequest)=>{changed:boolean;message:string};thievery:()=>ThieveryState;campCheck:()=>string|null;castCheck:(r:CastRequest)=>string|null;journal:()=>QuestState;serviceState:()=>ServicesState;nearService:()=>TownService|null;serviceAction:(request:ServiceRequest)=>{changed:boolean;message:string};expedition:()=>ExpeditionState;expeditionAction:(action:'rest'|'bash'|'lockpick'|'search')=>ExpeditionResult;inventory:()=>InventoryState;inventoryAction:(command:ItemCommand)=>{changed:boolean;message:string};notes:()=>string[];magic:()=>MagicState;castSpell:(r:CastRequest)=>{changed:boolean;message:string};readySpell:(casterId:string,spellId:string)=>{changed:boolean;message:string};learnWizard:(casterId:string,spellId:string)=>{changed:boolean;message:string};combat:()=>{active:boolean;actorId:string|null;actorName:string;targets:{id:string;name:string;hp:number;maxHP:number}[];selectedTargetId:string|null};combatCommand:(action:string)=>void;configurePrepared:(id:string,style:PreparedStyle)=>void;configureQuick:(id:string,action:QuickAction)=>void;target:(id:string)=>void;snapshot:()=>{map:GridMap;world:GridState};party:()=>PartySta"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/dashboard.ts",
+      "line": 597,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "   if(map.id==='map_town')p('Discovered service markers: T = Tavern, M = Market, H = Healer, L = Trainer, G = Guilds, Q = Iona\u2019s quest office.');"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/dashboard.ts",
+      "line": 616,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "   const marks=[...LOOT_CACHES.filter(c=>c.mapId===map.id&&this.hooks.thievery().discovered.includes(c.id)&&!this.hooks.inventory().claimed.includes(c.id)).map(c=>({...c,glyph:'C'})),...(map.traps??[]).filter(t=>this.hooks.expedition().triggeredTraps.includes(`${map.id}:${t.id}`)||this.hooks.thievery().discovered.includes(`trap:${map.id}:${t.id}`)).map(t=>({...t,glyph:'!'})),...(map.fountains??[]).filter(f=>known.has(`${f.x},${f.y}`)).map(f=>({...f,glyph:'\u2726'})),...(map.secrets??[]).filter(o=>world.secrets[o.id]).map(o=>({...o,glyph:'S'})),...(map.id==='map_town'&&size>12?TOWN_SERVICES.filter(n=>known.has(`${n.x},${n.y}`)).map(n=>({...n,glyph:n.kind==='tavern'?'T':n.kind==='quest'?'Q':n.kind==='merchant'?'M':n.kind==='temple'?'H':n.kind==='trainer'?'L':'G'})):[])];"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/main.ts",
+      "line": 27,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "import {createDefaultParty,validateParty,selectMember,exchangeMembers,updateMember,derived,damage,withCondition,type QuickAction,type PreparedStyle,type PartyState} from '../shared/rules/party.ts';"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/main.ts",
+      "line": 116,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "        if(registry.map_diagnostic_galleries)validateUpperArt(registry.map_diagnostic_galleries);"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/main.ts",
+      "line": 117,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "        if(registry.map_resonator_vault)validateVaultArt(registry.map_resonator_vault);"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/main.ts",
+      "line": 118,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "        if(registry.map_town){validateNpcScenes(TOWN_SERVICES);validateTownArt(registry.map_town);}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/main.ts",
+      "line": 333,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "      const townScene=this.map.id==='map_town'?this.map.props.find(p=>p.id.startsWith('scene_')&&!this.campaign.quests.seenScenes.includes(p.id)&&((p.x===this.world.x&&p.y===this.world.y)||(p.x===this.world.x+v[0]&&p.y===this.world.y+v[1]&&!isOpaque(this.map,this.world,p.x,p.y)))):undefined;"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/main.ts",
+      "line": 334,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "      const vaultScene=this.map.id==='map_resonator_vault'?this.map.props.find(p=>VAULT_SCENES.includes(p.id as typeof VAULT_SCENES[number])&&((p.x===this.world.x&&p.y===this.world.y)||(p.x===this.world.x+v[0]&&p.y===this.world.y+v[1]&&!isOpaque(this.map,this.world,p.x,p.y)))):undefined;"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/main.ts",
+      "line": 335,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "      const upperScene=this.map.id==='map_diagnostic_galleries'?this.map.props.find(p=>UPPER_SCENES.includes(p.id as typeof UPPER_SCENES[number])&&((p.x===this.world.x&&p.y===this.world.y)||(p.x===this.world.x+v[0]&&p.y===this.world.y+v[1]&&!isOpaque(this.map,this.world,p.x,p.y)))):undefined;"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/main.ts",
+      "line": 379,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "        if(this.map.id==='map_town'&&this.campaign.expedition.fountainDays['map_town:town_well_spring']===undefined){"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/main.ts",
+      "line": 400,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "        if(result.moved)void audioDirector.cue(this.map.id==='map_town'?'step_town':'step_stone');"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/perspective-renderer.ts",
+      "line": 75,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "    if(map.id==='map_town'){this.town.render(ctx,map,state,pose);this.drawGround(map,state,pose,art);this.texture.refresh();return;} // Discovered minimap remains owned by Dashboard."
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/perspective-renderer.ts",
+      "line": 76,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "    if(map.id==='map_diagnostic_galleries'){this.upper.render(ctx,map,state,pose,art!,time);this.drawGround(map,state,pose,art);this.texture.refresh();return;}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/perspective-renderer.ts",
+      "line": 77,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "    if(map.id==='map_resonator_vault'){this.vault.render(ctx,map,state,pose,art!,time);this.drawGround(map,state,pose,art);this.texture.refresh();return;}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/project-boot.ts",
+      "line": 7,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "import {readItemDatabase,installItemDatabase,MAX_ITEMS_BYTES} from '../shared/content/items.ts';"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/project-boot.ts",
+      "line": 8,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "import {readClassDatabase,installClassDatabase,MAX_CLASSES_BYTES,resetClassDatabase} from '../shared/content/classes.ts';"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/project-boot.ts",
+      "line": 12,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "import {readActorDatabase,installActorDatabase,resetActorDatabase,MAX_ACTORS_BYTES} from '../shared/content/actors.ts';"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/project-boot.ts",
+      "line": 14,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "import {readSpellDatabase,installSpellDatabase,resetSpellDatabase,MAX_SPELLS_BYTES} from '../shared/content/spells.ts';"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/project-boot.ts",
+      "line": 15,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "import {readMonsterDatabase,installMonsterDatabase,resetMonsterDatabase,MAX_MONSTERS_BYTES,MONSTERS} from '../shared/content/monsters.ts';"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/project-boot.ts",
+      "line": 16,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "import {readConditionDatabase,installConditionDatabase,resetConditionDatabase,MAX_CONDITIONS_BYTES} from '../shared/content/conditions.ts';"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/project-boot.ts",
+      "line": 17,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "import {readLootDatabase,readPickupDatabase,installLootDatabase,installPickupDatabase,resetLootDefinitions,validateLootReferences,MAX_LOOT_BYTES,MAX_PICKUPS_BYTES} from '../shared/content/loot.ts';"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/project-boot.ts",
+      "line": 64,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "   const mapDocuments=[['galleries','map_diagnostic_galleries'],['town','map_town'],['vault','map_resonator_vault']].map(([field,id])=>({id,path:source[field] as string,url:new URL(source[field] as string,url).href,cacheKey:'mapdoc:'+id}));"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/project-boot.ts",
+      "line": 117,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "  installItemDatabase(database);"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/project-boot.ts",
+      "line": 124,
+      "categories": [
+        "registry_install"
+      ],
+      "text": " if(!boot.classesUrl){resetClassDatabase();return;} // Legacy manifests always reset to the bundled six-class baseline."
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/project-boot.ts",
+      "line": 126,
+      "categories": [
+        "registry_install"
+      ],
+      "text": " try {installClassDatabase(readClassDatabase(await getText(boot.classesUrl,'Classes database',MAX_CLASSES_BYTES,fetcher,controller.signal)));}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/project-boot.ts",
+      "line": 132,
+      "categories": [
+        "registry_install"
+      ],
+      "text": " if(!boot.actorsUrl){resetActorDatabase();syncStarterHeroes();return;}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/project-boot.ts",
+      "line": 142,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "  installActorDatabase(db);syncStarterHeroes();"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/project-boot.ts",
+      "line": 156,
+      "categories": [
+        "registry_install"
+      ],
+      "text": " if(!boot.spellsUrl){resetSpellDatabase();resetConditionDatabase();return;}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/project-boot.ts",
+      "line": 164,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "   installConditionDatabase(readConditionDatabase(await getText(base+database.conditionsFile,'Condition database',MAX_CONDITIONS_BYTES,fetcher,controller.signal)));"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/project-boot.ts",
+      "line": 165,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "  }else resetConditionDatabase();"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/project-boot.ts",
+      "line": 166,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "  installSpellDatabase(database);"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/project-boot.ts",
+      "line": 172,
+      "categories": [
+        "registry_install"
+      ],
+      "text": " if(!boot.monstersUrl){resetMonsterDatabase();return;}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/project-boot.ts",
+      "line": 179,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "  installMonsterDatabase(database);"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/project-boot.ts",
+      "line": 205,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "  if(boot.lootTablesUrl)installLootDatabase(readLootDatabase(await getText(boot.lootTablesUrl,'Loot tables',MAX_LOOT_BYTES,fetcher,controller.signal)));"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/project-boot.ts",
+      "line": 206,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "  if(boot.groundPickupsUrl)installPickupDatabase(readPickupDatabase(await getText(boot.groundPickupsUrl,'Ground pickups',MAX_PICKUPS_BYTES,fetcher,controller.signal)));"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/town-art.ts",
+      "line": 25,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " if(map.id!=='map_town')throw new Error('Town art requires map_town.');"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/upper-art.ts",
+      "line": 40,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " if(map.id!=='map_diagnostic_galleries')throw new Error('Upper art requires the Upper Cistern.');"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/client/vault-art.ts",
+      "line": 54,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " if(map.id!=='map_resonator_vault')throw new Error('Vault art requires map_resonator_vault.');"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/actors.ts",
+      "line": 53,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "export function installActorDatabase(data:unknown):void {"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/actors.ts",
+      "line": 61,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "export function resetActorDatabase():void{installActorDatabase(baseline);}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/actors.ts",
+      "line": 64,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "installActorDatabase(baseline);"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/classes.ts",
+      "line": 9,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "export const CLASS_TRAITS=['martial_mastery','device_training','mutant_biology','thornhide'] as const;"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/classes.ts",
+      "line": 10,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "export type ClassTrait=typeof CLASS_TRAITS[number];"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/classes.ts",
+      "line": 12,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "export type PreparedStyle=typeof STYLES[number];"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/classes.ts",
+      "line": 13,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "export interface ClassDefinition {id:ClassId;name:string;primary:Ability;hpBase:number;hpGain:number;casting:Ability|null;spBase:number;spGain:number;spAttributeMultiplier:number;role:string;features:string;equipmentTags:EquipmentTag[];traits:ClassTrait[];preparedStyles:PreparedStyle[];}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/classes.ts",
+      "line": 36,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "  for(const [field,options,max] of [['equipmentTags',EQUIPMENT_TAGS,11],['traits',CLASS_TRAITS,4],['preparedStyles',STYLES,8]] as const){"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/classes.ts",
+      "line": 46,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "export const PREPARED_STYLES:Record<string,readonly PreparedStyle[]>={};"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/classes.ts",
+      "line": 47,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "export function installClassDatabase(input:unknown):void {"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/classes.ts",
+      "line": 54,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "export function resetClassDatabase():void{installClassDatabase(baseline);}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/classes.ts",
+      "line": 62,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "installClassDatabase(baseline);"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/conditions.ts",
+      "line": 7,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "export const CONDITION_IDS=['poisoned','asleep','frightened','cursed','drunk','hungry'] as const;"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/conditions.ts",
+      "line": 18,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": " if(db.format!=='maxxia-conditions'||db.version!==1||!Array.isArray(db.conditions)||db.conditions.length!==CONDITION_IDS.length)throw new TypeError('Expected six supported condition definitions, version 1.');"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/conditions.ts",
+      "line": 21,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "  if(!condition||!CONDITION_IDS.includes(condition.id as typeof CONDITION_IDS[number])||ids.has(condition.id)||typeof condition.name!=='string'||!condition.name.trim()||condition.name.length>80||typeof condition.description!=='string'||condition.description.length>500||!['replace','extend'].includes(condition.reapply))throw new TypeError('Invalid or duplicate condition definition.');"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/conditions.ts",
+      "line": 26,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "export function installConditionDatabase(value:unknown):void{"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/conditions.ts",
+      "line": 30,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "export function resetConditionDatabase():void{installConditionDatabase(defaults);}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/conditions.ts",
+      "line": 38,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "resetConditionDatabase();"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/items.ts",
+      "line": 51,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "export function installItemDatabase(value:unknown):void{"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/items.ts",
+      "line": 56,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "installItemDatabase(defaultItems);"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/loot.ts",
+      "line": 73,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "export function installLootDatabase(raw:unknown):void {const next=readLootDatabase(raw);loot=next;}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/loot.ts",
+      "line": 74,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "export function installPickupDatabase(raw:unknown):void {const next=readPickupDatabase(raw);pickups=next;}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/manifest.ts",
+      "line": 5,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "  if (v.contentVersion !== '0.5.0' || v.roomId !== 'map_diagnostic_galleries' || typeof v.title !== 'string' || !Array.isArray(v.classes) || v.classes.length !== 6 || new Set(v.classes).size !== 6 || v.classes.some(c => typeof c !== 'string')) throw new TypeError('Invalid foundation content manifest.');"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/monsters.ts",
+      "line": 45,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "export function installMonsterDatabase(input:unknown):void {const db=readMonsterDatabase(input);for(const key of Object.keys(MONSTERS))delete MONSTERS[key];for(const m of db.monsters)MONSTERS[m.id]=m;}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/monsters.ts",
+      "line": 46,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "export function resetMonsterDatabase():void{installMonsterDatabase(bundled);}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/monsters.ts",
+      "line": 58,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "resetMonsterDatabase();"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/progression.ts",
+      "line": 3,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "import {CLASS_TRAITS,STYLES,type ClassTrait,type PreparedStyle} from './classes.ts';"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/progression.ts",
+      "line": 5,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "export interface PreparedDefinition {id:PreparedStyle;name:string;operation:PreparedOperation;requiredTrait:ClassTrait|null;attackBonus:number;attackBonusAtVeteran:number;damageBonus:number;damageBonusAtMilestone:number;damageBonusAtMilestoneReplacesBase:boolean;ignoreDefense:number;damageType:'physical'|'lightning';dice:string;diceAtMilestone:string|null;diceAtVeteran:string|null;defenseBonus:number;defenseAtVeteran:number;}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/progression.ts",
+      "line": 35,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "  if(s.requiredTrait!==null&&!(CLASS_TRAITS as readonly string[]).includes(s.requiredTrait as string))fail('E_STYLE',path+'.requiredTrait','Unknown required trait.');"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/progression.ts",
+      "line": 50,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "export function preparedDefinition(id:PreparedStyle):Readonly<PreparedDefinition>{const def=active.prepared.find(p=>p.id===id);if(!def)throw new ProgressionError('E_STYLE','$.prepared',`Missing style ${id}.`);return def;}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/spells.ts",
+      "line": 9,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "export interface SpellPrimitive {operation:PrimitiveOperation;target:PrimitiveTarget;amount?:string;resource?:'hp'|'sp';damageType?:'physical'|'fire'|'cold'|'lightning'|'poison'|'arcane'|'holy'|'necrotic';conditionId?:'poisoned'|'asleep'|'frightened'|'cursed'|'drunk'|'hungry';wardKind?:'stone_skin'|'mirror_ward'|'blessing'|'sheltering_hand'|'steadfast'|'briar_mantle'|'light'|'glass_eye'|'borrowed_face';hexKind?:'ill_omen'|'binding_thread'|'sleep_thorns'|'crooked_bones'|'bottle_echo'|'hollow_fear';unit?:'ticks'|'turns'|'minutes'|'persistent';remaining?:number|null;}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/spells.ts",
+      "line": 63,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "    if(op.operation==='ward' ? !['stone_skin','mirror_ward','blessing','sheltering_hand','steadfast','briar_mantle','light','glass_eye','borrowed_face'].includes(op.wardKind!) : op.wardKind!==undefined)bad('E_WARD',path,'Unsupported ward kind.');"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/spells.ts",
+      "line": 67,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "     const limit=op.operation==='hex' ? (['ill_omen','crooked_bones'].includes(op.hexKind!)?3:['bottle_echo','hollow_fear'].includes(op.hexKind!)?2:1) : op.operation==='ward' ? (['light'].includes(op.wardKind!)?60:['briar_mantle'].includes(op.wardKind!)?5:['steadfast'].includes(op.wardKind!)?3:30) : op.operation==='reveal'?30:999;"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/spells.ts",
+      "line": 94,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "export function installSpellDatabase(input:unknown):void{"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/spells.ts",
+      "line": 102,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "export function resetSpellDatabase():void{installSpellDatabase(bundled);}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/content/spells.ts",
+      "line": 107,
+      "categories": [
+        "registry_install"
+      ],
+      "text": "resetSpellDatabase();"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/campaign.ts",
+      "line": 69,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "export function newCampaign(registry:MapRegistry, startMapId='map_town', customParty?:PartyState):CampaignState {"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/campaign.ts",
+      "line": 96,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "  if(registry.map_resonator_vault?.doors.some(d=>d.id==='door_bell_heart_seal')&&s.maps.map_resonator_vault.doors.door_bell_heart_seal!==s.quests.flags.includes('flag_vault_valves'))throw new TypeError('Bell-Heart gate state contradicts the valve puzzle.');"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/campaign.ts",
+      "line": 144,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "    const oldTown=candidate.maps.map_town;"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/campaign.ts",
+      "line": 146,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "    const map=registry.map_town,doors=Object.fromEntries(map.doors.map(d=>[d.id,(oldTown.doors as Record<string,unknown>)[d.id]===true]));"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/campaign.ts",
+      "line": 157,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "    candidate={...candidate,version:11,maps:{...candidate.maps,map_town:migratedTown},quests:migrateQuests(oldQuests)};"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/campaign.ts",
+      "line": 161,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "    const oldWorld=candidate.maps.map_diagnostic_galleries;"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/campaign.ts",
+      "line": 163,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "    const upper=registry.map_diagnostic_galleries,world=oldWorld as unknown as GridState;"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/campaign.ts",
+      "line": 175,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "    candidate={...candidate,version:12,maps:{...candidate.maps,map_diagnostic_galleries:upgraded},combat:{...combats,encounters},expedition:nextExp};"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/campaign.ts",
+      "line": 178,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "    const vault=registry.map_resonator_vault;"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/campaign.ts",
+      "line": 184,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "      maps:{...candidate.maps,map_resonator_vault:initialGridState(vault)},"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/combat.ts",
+      "line": 246,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "  s.combat.defeated=false;s.combat.active=null;s.currentMapId=registry.map_town?'map_town':source.currentMapId;const w=s.maps[s.currentMapId],map=registry[s.currentMapId],k=`${map.spawn.x},${map.spawn.y}`;"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/expedition.ts",
+      "line": 135,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " if(fountain){const today=expeditionDay(source.elapsedMinutes),id=key(map.id,fountain.id),oneUse=id==='map_town:town_well_spring';"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/ground.ts",
+      "line": 15,
+      "categories": [
+        "map_ids",
+        "story_terms"
+      ],
+      "text": "export const PLOT_GROUND=[['map_diagnostic_galleries','scene_upper_ledger','item_quest_tessa_ledger','Tessa\u2019s lost ledger'],['map_diagnostic_galleries','scene_upper_tools','item_quest_orro_tools','Orro\u2019s tool roll'],['map_resonator_vault','scene_vault_echo','item_quest_nera_echo','Bottled echo'],['map_resonator_vault','scene_vault_regulator','item_quest_regulator','Bell-Heart regulator']] as const;"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/ground.ts",
+      "line": 43,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " for(const id of r.takeAll?c.entries.map(e=>e.id):r.entryId?[r.entryId]:[]){const e=c.entries.find(e=>e.id===id);if(!e)continue;if(e.item){const item=e.item,d=ITEMS[item.definitionId];if(s.inventory.items.length>=ITEM_LIMIT_TOTAL||itemCategoryCount(s.inventory,owner,d.category)>=ITEM_LIMIT_PER_CATEGORY||s.inventory.items.filter(i=>i.ownerId===owner&&!i.equipped).length>=36){blocked.push(groundName(e)+' \u2014 backpack full');continue;}item.ownerId=owner;delete item.backpackSlot;s.inventory.items.push(item);assignBackpackSlots(s.inventory);got.push(groundName(e));c.entries=c.entries.filter(v=>v.id!==id);}else if(e.sceneId){const result=(c.mapId==='map_diagnostic_galleries'?inspectUpperScene:inspectVaultScene)(s,registry,e.sceneId);if(!result&&e.sceneId==='scene_upper_tools'){const disarm=interactExpedition(s,registry);if(disarm?.changed)return disarm;}if(!result?.changed||!result.state.quests.questItems.includes(e.plotId!)){blocked.push(result?.message??'Disarm this object\u2019s trap first.');continue;}s=result.state;c=s.ground.containers.find(v=>v.id===r.containerId)??{...c,entries:[]};c.entries=c.entries.filter(v=>v.id!==id);got.push(groundName(e));}else if(e.plotId){"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/inventory.ts",
+      "line": 24,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " {id:'cache_gallery_mirror',mapId:'map_diagnostic_galleries',x:7,y:8,items:['item_glass_thorn','item_regulator_lens','item_healing_scroll']},"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/inventory.ts",
+      "line": 25,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " {id:'cache_gallery_star',mapId:'map_diagnostic_galleries',x:8,y:2,items:['item_custodian_seal','item_bellkeeper_blade','item_recall_token']},"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/inventory.ts",
+      "line": 26,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " {id:'cache_gallery_brazier',mapId:'map_diagnostic_galleries',x:2,y:2,items:['item_cistern_carapace','item_spark_capsule']},"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/inventory.ts",
+      "line": 27,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " {id:'cache_upper_archive',mapId:'map_diagnostic_galleries',x:11,y:2,items:['item_antidote','item_wake_salts']},"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/inventory.ts",
+      "line": 28,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " {id:'cache_upper_sluice',mapId:'map_diagnostic_galleries',x:11,y:13,items:['item_copper_ring','item_spark_capsule']},"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/inventory.ts",
+      "line": 29,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " {id:'cache_vault_rest',mapId:'map_resonator_vault',x:3,y:11,items:['item_healing_draught','item_antidote']},"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/inventory.ts",
+      "line": 30,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " {id:'cache_vault_bypass',mapId:'map_resonator_vault',x:11,y:10,items:['item_spark_capsule','item_treasure_gem']},"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/inventory.ts",
+      "line": 31,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " {id:'cache_town_market',mapId:'map_town',x:9,y:11,items:['item_quayward_charm','item_tessa_silver_brooch','item_antidote']}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/inventory.ts",
+      "line": 41,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " const dropIds=new Set<string>();for(const drop of inventory.drops){if(!drop||typeof drop.id!=='string'||!/^drop_[a-z0-9_]{1,48}$/.test(drop.id)||dropIds.has(drop.id)||!['map_town','map_diagnostic_galleries','map_resonator_vault'].includes(drop.mapId)||!safeCount(drop.x,63)||!safeCount(drop.y,63)||!ITEMS[drop.definitionId]||!Object.entries(LOOT_TABLE).some(([enc,ids])=>ids.some((id,i)=>drop.id===`drop_${enc}_${i}`&&id===drop.definitionId)))throw new TypeError('Invalid ground loot.');dropIds.add(drop.id);}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/inventory.ts",
+      "line": 92,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " if(d.effect==='recall'&&(s.combat.active||s.currentMapId==='map_town'))return 'Recall is available only outside combat and away from town.';"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/inventory.ts",
+      "line": 138,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " if(request.action==='sell'&&(found.equipped||source.currentMapId!=='map_town'||source.combat.active))return no(source,'Sell only unequipped items in town.');"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/inventory.ts",
+      "line": 139,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " if(request.action==='repair'&&(d.maxDurability===0||found.durability===d.maxDurability||source.currentMapId!=='map_town'))return no(source,'Repairs are only needed and available for damaged equipment in town.');"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/inventory.ts",
+      "line": 171,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "  if(d.effect==='recall'){const town=s.maps.map_town;const k='7,12';s.currentMapId='map_town';s.maps.map_town={...town,x:7,y:12,facing:0,visited:town.visited.includes(k)?town.visited:[...town.visited,k]};s.elapsedMinutes+=10;message='Recall returns the party to Firstlight Village.';}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/inventory.ts",
+      "line": 172,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "  if(d.effect==='escape'){const map=s.maps[s.currentMapId];const origin=s.currentMapId==='map_town'?{x:7,y:12}:{x:2,y:8};const key=`${origin.x},${origin.y}`;s.maps[s.currentMapId]={...map,...origin,visited:map.visited.includes(key)?map.visited:[...map.visited,key]};s.combat.active=null;message='The party escapes through a cloud of smoke.';}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/magic.ts",
+      "line": 93,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " map_town:[{id:'well_reflection',x:7,y:7,note:'Rat Whisper: the village well reflects a strange sky; inspect the well for its story.'}],"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/magic.ts",
+      "line": 94,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " map_diagnostic_galleries:["
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/magic.ts",
+      "line": 159,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " if(spell.effect==='hearth'&&(s.currentMapId==='map_town'||!registry?.map_town))return 'Hearth Thread requires a dungeon and a known town entrance.';"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/magic.ts",
+      "line": 199,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "    s.magic.effects=s.magic.effects.filter(e=>e.kind!==primitive.wardKind||e.targetId!=='party');"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/magic.ts",
+      "line": 200,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "    s.magic.effects.push({kind:primitive.wardKind!,targetId:'party',expiresAtMinute:s.elapsedMinutes+primitive.remaining!});"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/magic.ts",
+      "line": 201,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "    lines.push(`The party gains ${primitive.wardKind}.`);continue;"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/magic.ts",
+      "line": 306,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "  const home=registry!.map_town,arrival=s.maps.map_town,key=`${home.spawn.x},${home.spawn.y}`;"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/magic.ts",
+      "line": 307,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "  s.maps.map_town={...arrival,...home.spawn,visited:arrival.visited.includes(key)?arrival.visited:[...arrival.visited,key]};"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/magic.ts",
+      "line": 308,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "  s.currentMapId='map_town';s.elapsedMinutes+=9;lines.push('Hearth Thread draws the party safely back to the town entrance (10 minutes passed).');"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/noncaster.ts",
+      "line": 2,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "import {derived,effectiveAttributes,modifier,PREPARED_STYLES,type Character,type PreparedStyle,type QuickAction} from './party.ts';"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/noncaster.ts",
+      "line": 32,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "export function setPrepared(c:Character,style:PreparedStyle):Character {"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/party.ts",
+      "line": 3,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "import {PREPARED_STYLES,hasTrait,canEquip,type PreparedStyle} from '../content/classes.ts';"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/party.ts",
+      "line": 9,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "export const CONDITION_IDS=['poisoned','asleep','frightened','cursed','drunk','hungry'] as const;"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/party.ts",
+      "line": 10,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "export type ConditionId=typeof CONDITION_IDS[number];"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/party.ts",
+      "line": 13,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "export type {PreparedStyle};"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/party.ts",
+      "line": 15,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "export const PREPARED_INFO:Record<PreparedStyle,{name:string;description:string}>={"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/party.ts",
+      "line": 26,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "export function preparedInfo(id:PreparedStyle):{name:string;description:string}{return {name:preparedDefinition(id).name,description:PREPARED_INFO[id].description};}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/party.ts",
+      "line": 27,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "export function defaultPrepared(classId:ClassId):PreparedStyle{return PREPARED_STYLES[classId][0];}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/party.ts",
+      "line": 28,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "export interface CombatSetup{prepared:PreparedStyle;quickAction:QuickAction;}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/party.ts",
+      "line": 82,
+      "categories": [
+        "closed_mechanics"
+      ],
+      "text": "export function withCondition(c:Character,condition:Condition):Character{if(!CONDITION_IDS.includes(condition.id)||!['ticks','turns','minutes','persistent'].includes(condition.unit)||(condition.remaining!==null&&(!Number.isSafeInteger(condition.remaining)||condition.remaining<1)))throw new RangeError('Invalid condition.');return {...c,conditions:[...c.conditions.filter(v=>v.id!==condition.id),{...condition}]};}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 5,
+      "categories": [
+        "story_terms"
+      ],
+      "text": " {id:'quest_main_01',title:'The Keeper\u2019s Request',objective:'Speak to Iona Reed at the cistern office.',detail:'The waterworks are ringing beneath Firstlight.'},"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 6,
+      "categories": [
+        "story_terms"
+      ],
+      "text": " {id:'quest_main_02',title:'The Cistern Key',objective:'Carry Iona\u2019s brass key through the northern gate and enter the galleries.',detail:'Iona entrusts the party with the key; the staircase stands at (13,2).'},"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 7,
+      "categories": [
+        "story_terms"
+      ],
+      "text": " {id:'quest_main_03',title:'A Sequence of Bells',objective:'Discover the regulator sequence and descend from the upper cistern.',detail:'Read three bell inscriptions\u2014Copper, Moon, Glass\u2014and find the lower stair. The resonator stair opens once all three inscriptions are learned.'},"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 8,
+      "categories": [
+        "story_terms"
+      ],
+      "text": " {id:'quest_main_04',title:'The Shut Valves',objective:'Reset the deep valves and open the sealed chamber.',detail:'The deep valve sequence is Copper \u2192 Moon \u2192 Glass; wrong input resets the mechanism.'},"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 9,
+      "categories": [
+        "story_terms"
+      ],
+      "text": " {id:'quest_main_05',title:'The Bell-Heart',objective:'Defeat the Bell-Heart Custodian and recover the regulator.',detail:'The regulator rests behind the Bell-Heart Custodian in the resonator chamber.'},"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 10,
+      "categories": [
+        "story_terms"
+      ],
+      "text": " {id:'quest_main_06',title:'Firstlight\u2019s Choice',objective:'Return to Iona, choose repair or disconnect, and claim the ending.',detail:'Choose to repair the town waterworks or isolate the dangerous resonator; side quests remain accessible.'},"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 23,
+      "categories": [
+        "story_terms"
+      ],
+      "text": "export const VALVE_ORDER=['scene_vault_copper','scene_vault_moon','scene_vault_glass'] as const;"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 39,
+      "categories": [
+        "story_terms"
+      ],
+      "text": " if(q.flags.includes('flag_iona_cistern_task')){q.mainStage=2;q.completedStages=['quest_main_01'];q.questItems=['item_quest_cistern_key'];}"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 49,
+      "categories": [
+        "story_terms"
+      ],
+      "text": " !Array.isArray(q.valveSequence)||q.valveSequence.length>2||q.valveSequence.some((v,i)=>v!==VALVE_ORDER[i])||!([null,'repair','disconnect'] as unknown[]).includes(q.ending)||"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 55,
+      "categories": [
+        "story_terms"
+      ],
+      "text": " const accepted=q.flags.includes('flag_iona_cistern_task');"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 57,
+      "categories": [
+        "story_terms"
+      ],
+      "text": "  (q.mainStage>0)!==q.completedStages.includes('quest_main_01')||"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 58,
+      "categories": [
+        "story_terms"
+      ],
+      "text": "  (q.mainStage>=3)!==q.completedStages.includes('quest_main_02')||"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 69,
+      "categories": [
+        "story_terms"
+      ],
+      "text": " if(q.mainStage>=5&&(!q.flags.includes('flag_vault_valves')||!VALVE_ORDER.every(id=>q.seenScenes.includes(id))))throw new TypeError('Valve stage skipped.');"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 71,
+      "categories": [
+        "story_terms"
+      ],
+      "text": " if(q.ending&&(!q.flags.includes('flag_ending_'+q.ending)||!q.completedStages.includes('quest_main_06')||q.mainStage!==6))throw new TypeError('Invalid ending record.');"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 72,
+      "categories": [
+        "story_terms"
+      ],
+      "text": " if(!q.ending&&(q.flags.includes('flag_ending_repair')||q.flags.includes('flag_ending_disconnect')||q.completedStages.includes('quest_main_06')))throw new TypeError('Ending flag without resolution.');"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 85,
+      "categories": [
+        "story_terms"
+      ],
+      "text": " const next=structuredClone(s);next.quests.mainStage=2;next.quests.completedStages.push('quest_main_01');next.quests.flags.push('flag_iona_cistern_task');next.quests.questItems.push('item_quest_cistern_key');"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 97,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " if(from==='map_town'&&to==='map_diagnostic_galleries'&&s.quests.mainStage===2&&s.quests.questItems.includes('item_quest_cistern_key')){"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 98,
+      "categories": [
+        "story_terms"
+      ],
+      "text": "  s.quests.mainStage=3;s.quests.completedStages.push('quest_main_02');s.quests.notes.push('Entered the Upper Galleries of the Upper Cistern. Three bells\u2014Copper, Moon, Glass\u2014hold the key to the lower resonator stair.');"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 100,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " if(from==='map_diagnostic_galleries'&&to==='map_resonator_vault'&&s.quests.mainStage===3&&s.quests.flags.includes('flag_upper_descent_ready')){"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 101,
+      "categories": [
+        "story_terms"
+      ],
+      "text": "  s.quests.mainStage=4;s.quests.completedStages.push('quest_main_03');s.quests.notes.push('Descended into the Resonator Vault. A maintenance score by the valves repeats Copper \u2192 Moon \u2192 Glass.');"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 106,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " if(s.currentMapId!=='map_town'||s.combat.active||s.combat.defeated)return null;"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 107,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " const map=registry.map_town,w=s.maps.map_town,d=DIRECTIONS[w.facing];"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 112,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " next.elapsedMinutes+=1;next.maps.map_town.minutes+=1;"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 118,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " if(s.currentMapId!=='map_diagnostic_galleries'||s.combat.active||s.combat.defeated)return null;"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 137,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "  if(!ledger&&!s.expedition.triggeredTraps.includes('map_diagnostic_galleries:upper_tool_snare'))return null; // Let expedition search/disarm the dangerous cache first."
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 164,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " if(s.currentMapId!=='map_resonator_vault'||s.combat.active||s.combat.defeated)return null;"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 170,
+      "categories": [
+        "story_terms"
+      ],
+      "text": " if((VALVE_ORDER as readonly string[]).includes(prop.id)){"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 175,
+      "categories": [
+        "story_terms"
+      ],
+      "text": "  if(prop.id!==VALVE_ORDER[step]){"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 184,
+      "categories": [
+        "story_terms"
+      ],
+      "text": "   next.quests.valveSequence=[];next.quests.flags.push('flag_vault_valves');next.quests.mainStage=5;next.quests.completedStages.push('quest_main_04');"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 185,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "   next.maps.map_resonator_vault.doors.door_bell_heart_seal=true;"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 203,
+      "categories": [
+        "story_terms"
+      ],
+      "text": "  const next=structuredClone(s);next.quests.questItems.push('item_quest_regulator');next.quests.mainStage=6;next.quests.completedStages.push('quest_main_05');next.quests.seenScenes.push(prop.id);if(next.ground)next.ground.containers=next.ground.containers.map(c=>({...c,entries:c.entries.filter(e=>e.sceneId!==prop.id)})).filter(c=>c.kind==='corpse'||c.entries.length||c.gold);"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/quests.ts",
+      "line": 222,
+      "categories": [
+        "story_terms"
+      ],
+      "text": " const next=structuredClone(s);next.quests.ending=choice;next.quests.flags.push('flag_ending_'+choice);next.quests.completedStages.push('quest_main_06');next.party.resources.gold+=150;"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/services.ts",
+      "line": 17,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "/** Phase 16 permanent town service anchors; map_town is a connected 16x16 street network. */"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/services.ts",
+      "line": 47,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " if(s.currentMapId!=='map_town'||s.combat.active||s.combat.defeated)return null;"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/services.ts",
+      "line": 48,
+      "categories": [
+        "map_ids"
+      ],
+      "text": " const w=s.maps.map_town,map=registry.map_town,d=DIRECTIONS[w.facing];"
+    },
+    {
+      "path": "engine/world-of-maxxia/src/shared/rules/services.ts",
+      "line": 113,
+      "categories": [
+        "map_ids"
+      ],
+      "text": "   const s=next();s.party.resources.gold-=6;s.elapsedMinutes+=480;s.maps.map_town.minutes+=480;settleExpeditionTime(s);"
+    }
+  ]
+}

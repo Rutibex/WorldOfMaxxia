@@ -1,0 +1,41 @@
+{
+  "format": "maxxia-authored-encounter",
+  "formatVersion": 1,
+  "id": "lantern:encounter:rats",
+  "record": {
+    "name": "Silt-rat nest",
+    "description": "Silt-rat nest. Fight to resolve this guardian.",
+    "mapId": "lantern:map:cistern",
+    "nativeMapId": "map_lantern_cistern",
+    "x": 2,
+    "y": 3,
+    "range": 1,
+    "trigger": {
+      "kind": "proximity",
+      "interval": 1,
+      "table": "rats"
+    },
+    "weight": 1,
+    "members": [
+      {
+        "kindId": "lantern:monster:silt_rat",
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "bribe": null,
+    "avoidDC": null,
+    "condition": true,
+    "respawn": {
+      "kind": "never",
+      "minutes": 1
+    },
+    "phases": [
+      {
+        "title": "Brass shell",
+        "healthPercent": 100
+      }
+    ],
+    "id": "lantern:encounter:rats"
+  }
+}

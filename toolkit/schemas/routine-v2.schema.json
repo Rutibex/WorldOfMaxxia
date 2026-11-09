@@ -1,0 +1,818 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maxxia.invalid/toolkit/mp12/routine.schema.json",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "maxxia-authored-routine"
+    },
+    "formatVersion": {
+      "const": 2
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]{0,47}:routine:[a-z][a-z0-9_]{0,63}$"
+    },
+    "parameters": {
+      "type": "object",
+      "maxProperties": 16,
+      "additionalProperties": {
+        "enum": [
+          "string",
+          "number",
+          "boolean"
+        ]
+      }
+    },
+    "actions": {
+      "type": "array",
+      "maxItems": 128,
+      "items": {
+        "$ref": "#/$defs/action"
+      }
+    }
+  },
+  "required": [
+    "format",
+    "formatVersion",
+    "id",
+    "parameters",
+    "actions"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "expression": {
+      "oneOf": [
+        {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 2048
+            },
+            {
+              "type": "integer",
+              "minimum": -100000000,
+              "maximum": 100000000
+            },
+            {
+              "type": "boolean"
+            }
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "param": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "param"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "variable": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "variable"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "query": {
+              "const": "state"
+            },
+            "address": {
+              "$ref": "#/$defs/address"
+            },
+            "kind": {
+              "enum": [
+                "flag",
+                "counter",
+                "collection"
+              ]
+            },
+            "key": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "query",
+            "address",
+            "kind",
+            "key"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "query": {
+              "const": "has-item"
+            },
+            "item": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "query",
+            "item"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "query": {
+              "const": "gold"
+            }
+          },
+          "required": [
+            "query"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "query"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "query": {
+              "const": "attitude"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "query",
+            "fact"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "query": {
+              "const": "fact"
+            },
+            "fact": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_]{0,23}$"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "query": {
+              "const": "quest-state"
+            },
+            "questId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            }
+          },
+          "required": [
+            "query",
+            "questId"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "query": {
+              "const": "objective"
+            },
+            "questId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            "objectiveId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 24
+            }
+          },
+          "required": [
+            "query",
+            "questId",
+            "objectiveId"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "query": {
+              "const": "quest-claimed"
+            },
+            "questId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            "rewardId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 24
+            }
+          },
+          "required": [
+            "query",
+            "questId",
+            "rewardId"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "query",
+            "conditionId"
+          ],
+          "properties": {
+            "query": {
+              "const": "has-condition"
+            },
+            "conditionId": {
+              "type": "string",
+              "maxLength": 128
+            },
+            "targetId": {
+              "type": "string",
+              "maxLength": 128
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "query",
+            "puzzleId"
+          ],
+          "properties": {
+            "query": {
+              "const": "puzzle-solved"
+            },
+            "puzzleId": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_]{0,31}$"
+            }
+          }
+        }
+      ]
+    },
+    "condition": {
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "not": {
+              "$ref": "#/$defs/condition"
+            }
+          },
+          "required": [
+            "not"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "all": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/condition"
+              }
+            }
+          },
+          "required": [
+            "all"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "any": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/condition"
+              }
+            }
+          },
+          "required": [
+            "any"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "op": {
+              "enum": [
+                "eq",
+                "ne",
+                "lt",
+                "lte",
+                "gt",
+                "gte",
+                "contains"
+              ]
+            },
+            "left": {
+              "$ref": "#/$defs/expression"
+            },
+            "right": {
+              "$ref": "#/$defs/expression"
+            }
+          },
+          "required": [
+            "op",
+            "left",
+            "right"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "action": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "op": {
+              "const": "message"
+            },
+            "text": {
+              "$ref": "#/$defs/expression"
+            }
+          },
+          "required": [
+            "op",
+            "text"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "op": {
+              "const": "set"
+            },
+            "variable": {
+              "type": "string"
+            },
+            "value": {
+              "$ref": "#/$defs/expression"
+            }
+          },
+          "required": [
+            "op",
+            "variable",
+            "value"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "op": {
+              "const": "state"
+            },
+            "kind": {
+              "enum": [
+                "flag",
+                "counter",
+                "collection-add",
+                "collection-remove"
+              ]
+            },
+            "key": {
+              "type": "string"
+            },
+            "address": {
+              "$ref": "#/$defs/address"
+            },
+            "value": {
+              "$ref": "#/$defs/expression"
+            }
+          },
+          "required": [
+            "op",
+            "kind",
+            "key",
+            "address",
+            "value"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "op": {
+              "const": "if"
+            },
+            "condition": {
+              "$ref": "#/$defs/condition"
+            },
+            "then": {
+              "type": "array",
+              "maxItems": 128,
+              "items": {
+                "$ref": "#/$defs/action"
+              }
+            },
+            "else": {
+              "type": "array",
+              "maxItems": 128,
+              "items": {
+                "$ref": "#/$defs/action"
+              }
+            }
+          },
+          "required": [
+            "op",
+            "condition",
+            "then"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "op": {
+              "const": "call"
+            },
+            "routine": {
+              "type": "string"
+            },
+            "args": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/expression"
+              }
+            }
+          },
+          "required": [
+            "op",
+            "routine",
+            "args"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "op": {
+              "const": "check"
+            },
+            "variable": {
+              "type": "string"
+            },
+            "target": {
+              "$ref": "#/$defs/expression"
+            }
+          },
+          "required": [
+            "op",
+            "variable",
+            "target"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "op": {
+              "const": "give-item"
+            },
+            "owner": {
+              "$ref": "#/$defs/expression"
+            },
+            "item": {
+              "$ref": "#/$defs/expression"
+            },
+            "count": {
+              "$ref": "#/$defs/expression"
+            }
+          },
+          "required": [
+            "op",
+            "owner",
+            "item",
+            "count"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "op": {
+              "const": "command"
+            },
+            "command": {
+              "type": "object",
+              "required": [
+                "type"
+              ],
+              "properties": {
+                "type": {
+                  "enum": [
+                    "grid",
+                    "expedition",
+                    "combat",
+                    "spell",
+                    "learn-spell",
+                    "ready-spell",
+                    "item",
+                    "loot",
+                    "service",
+                    "roll",
+                    "party",
+                    "terrain",
+                    "puzzle"
+                  ]
+                },
+                "configurationId": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                }
+              },
+              "allOf": [
+                {
+                  "if": {
+                    "properties": {
+                      "type": {
+                        "const": "terrain"
+                      }
+                    },
+                    "required": [
+                      "type"
+                    ]
+                  },
+                  "then": {
+                    "required": [
+                      "configurationId"
+                    ],
+                    "properties": {
+                      "configurationId": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      }
+                    }
+                  }
+                },
+                {
+                  "if": {
+                    "properties": {
+                      "type": {
+                        "const": "puzzle"
+                      }
+                    }
+                  },
+                  "then": {
+                    "required": [
+                      "puzzleId",
+                      "action"
+                    ],
+                    "properties": {
+                      "puzzleId": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                      },
+                      "action": {
+                        "enum": [
+                          "inspect",
+                          "input",
+                          "submit",
+                          "reset"
+                        ]
+                      },
+                      "token": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 40
+                      },
+                      "slot": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 7
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "op",
+            "command"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "op",
+            "count",
+            "actions"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "const": "repeat"
+            },
+            "count": {
+              "$ref": "#/$defs/expression"
+            },
+            "actions": {
+              "type": "array",
+              "maxItems": 128,
+              "items": {
+                "$ref": "#/$defs/action"
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "op": {
+              "const": "quest"
+            },
+            "action": {
+              "const": "transition"
+            },
+            "questId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            "transitionId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 24
+            },
+            "expectedState": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 24
+            }
+          },
+          "required": [
+            "op",
+            "action",
+            "questId",
+            "transitionId"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "op": {
+              "const": "quest"
+            },
+            "action": {
+              "const": "claim"
+            },
+            "questId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            "rewardId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 24
+            },
+            "heroId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            }
+          },
+          "required": [
+            "op",
+            "action",
+            "questId",
+            "rewardId"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op"
+          ],
+          "properties": {
+            "op": {
+              "const": "cost"
+            },
+            "gold": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            "food": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 20
+            },
+            "minutes": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 60
+            },
+            "damage": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 20
+            },
+            "item": {
+              "type": "string",
+              "maxLength": 160
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "op": {
+              "const": "effect"
+            },
+            "effectId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            "targetId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            }
+          },
+          "required": [
+            "op",
+            "effectId"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "address": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "scope": {
+              "const": "campaign"
+            }
+          },
+          "required": [
+            "scope"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "scope": {
+              "const": "local"
+            },
+            "mapId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "scope",
+            "mapId"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}

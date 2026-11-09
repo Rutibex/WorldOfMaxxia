@@ -1,0 +1,41 @@
+{
+  "format": "maxxia-authored-class",
+  "formatVersion": 1,
+  "id": "bell:class:bellwarden",
+  "record": {
+    "name": "Bellwarden",
+    "primary": "CON",
+    "hpBase": 16,
+    "hpGain": 8,
+    "casting": null,
+    "role": "A waterworks guardian who holds the line.",
+    "features": "Defensive martial variant:16 base HP and8 per level; CON primary; Bastion is available through martial mastery. Resonance resource and new active guard remain scheduled for MP19\u201320.",
+    "equipmentTags": [
+      "melee:staff",
+      "melee:dagger",
+      "melee:mace",
+      "melee:sword",
+      "melee:general",
+      "ranged",
+      "shield",
+      "armor:light",
+      "armor:medium",
+      "armor:heavy",
+      "accessory"
+    ],
+    "traits": [
+      "martial_mastery"
+    ],
+    "preparedStyles": [
+      "bastion",
+      "measured"
+    ],
+    "id": "bell:class:bellwarden",
+    "spBase": 0,
+    "spGain": 0,
+    "spAttributeMultiplier": 0,
+    "starterEquipment": {
+      "offhand": "bell:item:resonant_buckler"
+    }
+  }
+}

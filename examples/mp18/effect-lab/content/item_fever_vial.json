@@ -1,0 +1,27 @@
+{
+  "format": "maxxia-authored-item",
+  "formatVersion": 1,
+  "id": "effect_lab:item:fever_vial",
+  "record": {
+    "id": "effect_lab:item:fever_vial",
+    "name": "Silt Fever Vial",
+    "category": "misc",
+    "price": 5,
+    "maxDurability": 0,
+    "maxCharges": 3,
+    "effect": "composed",
+    "power": 0,
+    "unique": false,
+    "slot": null,
+    "weight": null,
+    "armor": 0,
+    "dice": null,
+    "accuracy": 0,
+    "resistance": null,
+    "resistBonus": 0,
+    "description": "Three charges: apply the same authored Silt Fever used by the basin.",
+    "equipmentTags": [],
+    "portability": "campaign-bound",
+    "effectId": "effect_lab:ability:fever"
+  }
+}

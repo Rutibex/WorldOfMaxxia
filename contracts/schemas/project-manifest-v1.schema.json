@@ -1,0 +1,211 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maxxia.example/schemas/project-manifest-v1.json",
+  "title": "Maxxia project manifest v1",
+  "type": "object",
+  "required": [
+    "format",
+    "projectFormatVersion",
+    "projectId",
+    "title",
+    "engineVersion",
+    "minimumEngineVersion",
+    "contentRevision",
+    "content",
+    "start",
+    "startingParty"
+  ],
+  "properties": {
+    "format": {
+      "type": "string",
+      "const": "maxxia-project"
+    },
+    "projectFormatVersion": {
+      "type": "integer",
+      "const": 1
+    },
+    "projectId": {
+      "$ref": "#/$defs/StableId"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "pattern": "[^\\u0000-\\u0020\\u007f]"
+    },
+    "engineVersion": {
+      "$ref": "#/$defs/EngineVersion"
+    },
+    "minimumEngineVersion": {
+      "$ref": "#/$defs/EngineVersion"
+    },
+    "contentRevision": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2147483647
+    },
+    "content": {
+      "$ref": "#/$defs/LegacyContent"
+    },
+    "start": {
+      "$ref": "#/$defs/StartLocation"
+    },
+    "startingParty": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 6,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/ActorReference"
+      }
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "StableId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]{0,95}$(?![\\s\\S])",
+      "maxLength": 96
+    },
+    "RelativePath": {
+      "type": "string",
+      "pattern": "^(?:[A-Za-z0-9_-](?:[A-Za-z0-9_.-]*[A-Za-z0-9_-])?/)*[A-Za-z0-9_-](?:[A-Za-z0-9_.-]*[A-Za-z0-9_-])?$(?![\\s\\S])",
+      "maxLength": 240
+    },
+    "EngineVersion": {
+      "type": "string",
+      "pattern": "^(?:0|[1-9][0-9]{0,3})\\.(?:0|[1-9][0-9]{0,3})\\.(?:0|[1-9][0-9]{0,3})$(?![\\s\\S])"
+    },
+    "MapReference": {
+      "type": "object",
+      "required": [
+        "type",
+        "id"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "map"
+        },
+        "id": {
+          "$ref": "#/$defs/StableId"
+        }
+      },
+      "additionalProperties": true
+    },
+    "ActorReference": {
+      "type": "object",
+      "required": [
+        "type",
+        "id"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "actor"
+        },
+        "id": {
+          "$ref": "#/$defs/StableId"
+        }
+      },
+      "additionalProperties": true
+    },
+    "LegacyContent": {
+      "type": "object",
+      "required": [
+        "kind"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "legacy-phase34",
+            "map-index"
+          ]
+        },
+        "foundation": {
+          "$ref": "#/$defs/RelativePath"
+        },
+        "town": {
+          "$ref": "#/$defs/RelativePath"
+        },
+        "galleries": {
+          "$ref": "#/$defs/RelativePath"
+        },
+        "vault": {
+          "$ref": "#/$defs/RelativePath"
+        },
+        "index": {
+          "$ref": "#/$defs/RelativePath"
+        },
+        "resources": {
+          "$ref": "#/$defs/RelativePath"
+        },
+        "environments": {
+          "$ref": "#/$defs/RelativePath"
+        },
+        "items": {
+          "$ref": "#/$defs/RelativePath"
+        },
+        "classes": {
+          "$ref": "#/$defs/RelativePath"
+        },
+        "actors": {
+          "$ref": "#/$defs/RelativePath"
+        },
+        "progression": {
+          "$ref": "#/$defs/RelativePath"
+        },
+        "spells": {
+          "$ref": "#/$defs/RelativePath"
+        },
+        "monsters": {
+          "$ref": "#/$defs/RelativePath"
+        },
+        "encounterGroups": {
+          "$ref": "#/$defs/RelativePath"
+        },
+        "encounterPlacements": {
+          "$ref": "#/$defs/RelativePath"
+        },
+        "lootTables": {
+          "$ref": "#/$defs/RelativePath"
+        },
+        "groundPickups": {
+          "$ref": "#/$defs/RelativePath"
+        }
+      },
+      "additionalProperties": true
+    },
+    "StartLocation": {
+      "type": "object",
+      "required": [
+        "map",
+        "x",
+        "y",
+        "facing"
+      ],
+      "properties": {
+        "map": {
+          "$ref": "#/$defs/MapReference"
+        },
+        "x": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 63
+        },
+        "y": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 63
+        },
+        "facing": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

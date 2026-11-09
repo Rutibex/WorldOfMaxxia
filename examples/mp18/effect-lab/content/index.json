@@ -1,0 +1,192 @@
+{
+  "format": "maxxia-content-index",
+  "formatVersion": 1,
+  "definitions": [
+    {
+      "id": "effect_lab:condition:silt_fever",
+      "kind": "condition",
+      "visibility": "local",
+      "file": "content/condition_silt_fever.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "effect_lab:condition:clearblood",
+      "kind": "condition",
+      "visibility": "local",
+      "file": "content/condition_clearblood.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "effect_lab:condition:tremor",
+      "kind": "condition",
+      "visibility": "local",
+      "file": "content/condition_tremor.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "effect_lab:condition:recovering",
+      "kind": "condition",
+      "visibility": "local",
+      "file": "content/condition_recovering.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "effect_lab:ability:fever",
+      "kind": "ability",
+      "visibility": "local",
+      "file": "content/ability_fever.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "effect_lab:condition:silt_fever"
+        }
+      ]
+    },
+    {
+      "id": "effect_lab:ability:clearblood",
+      "kind": "ability",
+      "visibility": "local",
+      "file": "content/ability_clearblood.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "effect_lab:condition:clearblood"
+        }
+      ]
+    },
+    {
+      "id": "effect_lab:ability:cleanse",
+      "kind": "ability",
+      "visibility": "local",
+      "file": "content/ability_cleanse.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "effect_lab:ability:tremor",
+      "kind": "ability",
+      "visibility": "local",
+      "file": "content/ability_tremor.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "effect_lab:condition:tremor"
+        }
+      ]
+    },
+    {
+      "id": "effect_lab:ability:wash",
+      "kind": "ability",
+      "visibility": "local",
+      "file": "content/ability_wash.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "effect_lab:ability:recovering",
+      "kind": "ability",
+      "visibility": "local",
+      "file": "content/ability_recovering.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "effect_lab:condition:recovering"
+        }
+      ]
+    },
+    {
+      "id": "effect_lab:ability:poison",
+      "kind": "ability",
+      "visibility": "local",
+      "file": "content/ability_poison.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "effect_lab:routine:basin",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_basin.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "effect_lab:ability:fever"
+        }
+      ]
+    },
+    {
+      "id": "effect_lab:routine:wash",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/routine_wash.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "effect_lab:ability:wash"
+        }
+      ]
+    },
+    {
+      "id": "effect_lab:item:fever_vial",
+      "kind": "item",
+      "visibility": "local",
+      "file": "content/item_fever_vial.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "effect_lab:ability:fever"
+        }
+      ]
+    },
+    {
+      "id": "effect_lab:map:lab",
+      "kind": "map",
+      "visibility": "local",
+      "file": "content/map_lab.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "effect_lab:item:fever_vial"
+        },
+        {
+          "id": "effect_lab:routine:basin"
+        },
+        {
+          "id": "effect_lab:routine:wash"
+        }
+      ]
+    },
+    {
+      "id": "effect_lab:encounter:sentinel",
+      "kind": "encounter",
+      "visibility": "local",
+      "file": "content/encounter_sentinel.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "effect_lab:map:lab"
+        }
+      ]
+    }
+  ]
+}

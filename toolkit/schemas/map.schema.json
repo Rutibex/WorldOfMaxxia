@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maxxia.invalid/toolkit/mp02/map.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "const": "maxxia-authored-map"
+    },
+    "formatVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "pattern": "^[a-z][a-z0-9_]{0,47}:(map|routine):[a-z][a-z0-9_]{0,79}$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 128,
+        "pattern": "^[#.]+$"
+      },
+      "minItems": 3,
+      "maxItems": 128
+    },
+    "arrivals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80,
+            "pattern": "^[a-z][a-z0-9_]{0,79}$"
+          },
+          "x": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 127
+          },
+          "y": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 127
+          },
+          "facing": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          }
+        },
+        "required": [
+          "id",
+          "x",
+          "y",
+          "facing"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 128
+    },
+    "objects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80,
+            "pattern": "^[a-z][a-z0-9_]{0,79}$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "x": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 127
+          },
+          "y": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 127
+          },
+          "onInteract": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160,
+            "pattern": "^[a-z][a-z0-9_]{0,47}:(map|routine):[a-z][a-z0-9_]{0,79}$"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "x",
+          "y",
+          "onInteract"
+        ]
+      },
+      "minItems": 0,
+      "maxItems": 256
+    }
+  },
+  "required": [
+    "format",
+    "formatVersion",
+    "id",
+    "name",
+    "rows",
+    "arrivals",
+    "objects"
+  ]
+}

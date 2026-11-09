@@ -1,0 +1,58 @@
+{
+  "format": "maxxia-authored-dialogue",
+  "formatVersion": 1,
+  "id": "mp15:dialogue:spirit",
+  "record": {
+    "id": "mp15:dialogue:spirit",
+    "entry": "entry",
+    "nodes": [
+      {
+        "id": "entry",
+        "text": "The maintenance spirit wants its work remembered. Treat it respectfully and it can replace the need for a key.",
+        "choices": [
+          {
+            "id": "respect",
+            "text": "Promise to preserve its maintenance work",
+            "next": "entry",
+            "once": true,
+            "effects": [
+              {
+                "op": "attitude",
+                "delta": 5
+              }
+            ]
+          },
+          {
+            "id": "help",
+            "text": "Ask for peaceful maintenance help",
+            "next": "entry",
+            "routine": {
+              "routineId": "mp15:routine:spirit_help",
+              "args": {}
+            },
+            "condition": {
+              "all": [
+                {
+                  "op": "eq",
+                  "left": {
+                    "query": "quest-state",
+                    "questId": "mp15:quest:broken_sluice"
+                  },
+                  "right": "active"
+                },
+                {
+                  "op": "gte",
+                  "left": {
+                    "query": "attitude"
+                  },
+                  "right": 5
+                }
+              ]
+            },
+            "once": true
+          }
+        ]
+      }
+    ]
+  }
+}

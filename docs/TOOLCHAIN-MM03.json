@@ -1,0 +1,12 @@
+{
+  "node": "24.22.1",
+  "dotnetSdk": "10.0.403",
+  "editorVersion": "0.3.0-mm03",
+  "runtimeEngineVersion": "0.35.0",
+  "projectFormatVersion": 1,
+  "campaignVersion": 18,
+  "documentTarget": "net10.0",
+  "editorTarget": "net10.0-windows",
+  "publishRid": "win-x64",
+  "nativeWindowsUI": "not executed"
+}

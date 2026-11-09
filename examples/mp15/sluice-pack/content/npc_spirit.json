@@ -1,0 +1,12 @@
+{
+  "format": "maxxia-authored-npc",
+  "formatVersion": 1,
+  "id": "mp15:npc:spirit",
+  "record": {
+    "id": "mp15:npc:spirit",
+    "name": "Maintenance Spirit",
+    "dialogueId": "mp15:dialogue:spirit",
+    "initialAttitude": 0,
+    "services": []
+  }
+}

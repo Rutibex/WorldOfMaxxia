@@ -1,0 +1,68 @@
+{
+  "format": "maxxia-environments",
+  "version": 1,
+  "profiles": [
+    {
+      "id": "environment_default",
+      "name": "Classic masonry",
+      "skyResourceId": null,
+      "skyColor": "#192b35",
+      "fogColor": "#041018",
+      "fogStrength": 0.095,
+      "materials": [
+        {
+          "id": "material_floor_default",
+          "name": "Floor",
+          "surface": "floor",
+          "resourceId": null
+        },
+        {
+          "id": "material_wall_default",
+          "name": "Wall",
+          "surface": "wall",
+          "resourceId": null
+        },
+        {
+          "id": "material_ceiling_default",
+          "name": "Ceiling",
+          "surface": "ceiling",
+          "resourceId": null
+        }
+      ]
+    },
+    {
+      "id": "environment_ruins",
+      "name": "Antique stonework",
+      "skyResourceId": "asset_mm19_sky",
+      "skyColor": "#1d3040",
+      "fogColor": "#101a22",
+      "fogStrength": 0.085,
+      "materials": [
+        {
+          "id": "material_floor_default",
+          "name": "Stone mosaic",
+          "surface": "floor",
+          "resourceId": "asset_mm19_floor"
+        },
+        {
+          "id": "material_wall_default",
+          "name": "Vault masonry",
+          "surface": "wall",
+          "resourceId": "asset_mm19_wall"
+        },
+        {
+          "id": "material_ceiling_default",
+          "name": "Ribbed ceiling",
+          "surface": "ceiling",
+          "resourceId": "asset_mm19_ceiling"
+        },
+        {
+          "id": "material_wall_brass",
+          "name": "Brass relief",
+          "surface": "wall",
+          "resourceId": "asset_mm19_brass"
+        }
+      ]
+    }
+  ]
+}

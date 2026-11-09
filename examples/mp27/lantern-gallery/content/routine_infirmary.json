@@ -1,0 +1,18 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 2,
+  "id": "lantern:routine:infirmary",
+  "parameters": {},
+  "actions": [
+    {
+      "op": "quest",
+      "action": "transition",
+      "questId": "lantern:quest:clapper",
+      "transitionId": "infirmary"
+    },
+    {
+      "op": "message",
+      "text": "The choice is recorded. Claim Keeper\u2019s thanks in the journal; it consumes the campaign-bound clapper."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 1,
+  "id": "bonus:routine:notice",
+  "actions": [
+    {
+      "operation": "message",
+      "text": "bonus provider version 1.0.0"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "format": "maxxia-authored-monster",
+  "formatVersion": 1,
+  "id": "lantern:monster:silt_rat",
+  "record": {
+    "id": "lantern:monster:silt_rat",
+    "name": "Silt Rat",
+    "hp": 3,
+    "defense": 10,
+    "attack": 2,
+    "damage": "1d3",
+    "speed": 11,
+    "xp": 10,
+    "gold": 3,
+    "symbol": "\u2726",
+    "attributes": {
+      "DEX": 13,
+      "WIS": 8,
+      "CON": 8
+    },
+    "undead": false,
+    "resistances": {},
+    "visualId": "dust_imp",
+    "aiPattern": "standard",
+    "abilities": [
+      {
+        "id": "basic",
+        "kind": "strike",
+        "weight": 1,
+        "when": "always",
+        "bonusDamage": 0
+      }
+    ],
+    "behavior": {
+      "rules": [
+        {
+          "id": "close_distance",
+          "priority": 80,
+          "when": "distant",
+          "action": "approach"
+        },
+        {
+          "id": "bite",
+          "priority": 10,
+          "when": "always",
+          "action": "strike"
+        }
+      ]
+    }
+  }
+}

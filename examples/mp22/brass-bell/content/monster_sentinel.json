@@ -1,0 +1,76 @@
+{
+  "format": "maxxia-authored-monster",
+  "formatVersion": 1,
+  "id": "bell:monster:sentinel",
+  "record": {
+    "id": "bell:monster:sentinel",
+    "name": "Brass Sentinel",
+    "hp": 6,
+    "defense": 10,
+    "attack": 2,
+    "damage": "1d3",
+    "speed": 11,
+    "xp": 20,
+    "gold": 3,
+    "symbol": "✦",
+    "attributes": {
+      "DEX": 13,
+      "WIS": 8,
+      "CON": 8
+    },
+    "undead": false,
+    "resistances": {},
+    "visualId": "dust_imp",
+    "aiPattern": "standard",
+    "abilities": [
+      {
+        "id": "basic",
+        "kind": "strike",
+        "weight": 1,
+        "when": "always",
+        "bonusDamage": 0
+      }
+    ],
+    "behavior": {
+      "rules": [
+        {
+          "id": "call_spark",
+          "priority": 100,
+          "when": "hurt",
+          "action": "summon",
+          "kindId": "bell:monster:valve_spark",
+          "maxUses": 1,
+          "lifetimeRounds": 3
+        },
+        {
+          "id": "repair",
+          "priority": 80,
+          "when": "hurt",
+          "action": "heal",
+          "amount": 2
+        },
+        {
+          "id": "march",
+          "priority": 60,
+          "when": "distant",
+          "action": "approach"
+        },
+        {
+          "id": "strike",
+          "priority": 10,
+          "when": "always",
+          "action": "strike"
+        }
+      ],
+      "phases": [
+        {
+          "atOrBelowPercent": 50,
+          "title": "Damaged pistons release charged steam",
+          "attackBonus": 1,
+          "defenseBonus": 0,
+          "damageBonus": 1
+        }
+      ]
+    }
+  }
+}

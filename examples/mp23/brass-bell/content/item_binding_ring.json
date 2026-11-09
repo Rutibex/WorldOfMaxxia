@@ -1,0 +1,29 @@
+{
+  "format": "maxxia-authored-item",
+  "formatVersion": 1,
+  "id": "bell:item:binding_ring",
+  "record": {
+    "id": "bell:item:binding_ring",
+    "name": "Ring of the Debt Collector",
+    "category": "accessories",
+    "price": 25,
+    "maxDurability": 0,
+    "maxCharges": 0,
+    "effect": "none",
+    "power": 0,
+    "unique": true,
+    "slot": "accessory",
+    "weight": "light",
+    "armor": 0,
+    "dice": null,
+    "accuracy": 0,
+    "resistance": null,
+    "resistBonus": 0,
+    "description": "An outwardly ordinary ring that binds on equip. A temple uncursing releases the wearer.",
+    "portability": "exportable",
+    "equipmentTags": [
+      "accessory"
+    ],
+    "curseOnEquip": true
+  }
+}

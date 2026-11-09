@@ -1,0 +1,19 @@
+{
+  "format": "maxxia-authored-ability",
+  "formatVersion": 1,
+  "id": "effect_lab:ability:poison",
+  "record": {
+    "name": "Poison Pulse",
+    "description": "Poison Pulse through the shared MP18 effect kernel.",
+    "target": "self",
+    "context": "exploration",
+    "operations": [
+      {
+        "op": "damage",
+        "amount": 4,
+        "damageType": "poison"
+      }
+    ],
+    "id": "effect_lab:ability:poison"
+  }
+}

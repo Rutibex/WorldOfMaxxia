@@ -1,0 +1,10 @@
+{
+  "format": "maxxia-map-index",
+  "version": 1,
+  "maps": [
+    {
+      "id": "map_single_room",
+      "path": "map_single_room.json"
+    }
+  ]
+}

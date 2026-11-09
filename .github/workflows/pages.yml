@@ -1,0 +1,47 @@
+name: Publish Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            engine/world-of-maxxia/package-lock.json
+      - name: Install and build browser
+        run: |
+          npm ci
+          npm --prefix engine/world-of-maxxia ci
+          npm run build:game
+          node tools/prepare-pages.mjs
+          node tools/verify-pages.mjs
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload GitHub Pages site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site/
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

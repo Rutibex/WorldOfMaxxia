@@ -1,0 +1,935 @@
+{
+  "items": {
+    "item_dagger": {
+      "master": "item1",
+      "cell": 0,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_staff": {
+      "master": "item1",
+      "cell": 7,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_mace": {
+      "master": "item1",
+      "cell": 2,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_sword": {
+      "master": "item2",
+      "cell": 0,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_axe": {
+      "master": "item1",
+      "cell": 1,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_spear": {
+      "master": "item1",
+      "cell": 3,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_shortbow": {
+      "master": "item1",
+      "cell": 4,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_crossbow": {
+      "master": "item2",
+      "cell": 7,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_heavy_crossbow": {
+      "master": "item1",
+      "cell": 6,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_greatsword": {
+      "master": "item2",
+      "cell": 1,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_cloth_robe": {
+      "master": "item1",
+      "cell": 14,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_leather_coat": {
+      "master": "item2",
+      "cell": 15,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_ring_mail": {
+      "master": "item1",
+      "cell": 9,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_scale_coat": {
+      "master": "item2",
+      "cell": 14,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_plate_harness": {
+      "master": "item1",
+      "cell": 10,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_buckler": {
+      "master": "item2",
+      "cell": 10,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_round_shield": {
+      "master": "item1",
+      "cell": 11,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_tower_shield": {
+      "master": "item2",
+      "cell": 9,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_copper_ring": {
+      "master": "item2",
+      "cell": 19,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_ward_ring": {
+      "master": "item2",
+      "cell": 20,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_ember_ring": {
+      "master": "item1",
+      "cell": 15,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_frost_ring": {
+      "master": "item2",
+      "cell": 21,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_pilgrim_charm": {
+      "master": "item2",
+      "cell": 22,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_glass_lens": {
+      "master": "item1",
+      "cell": 43,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_lucky_token": {
+      "master": "item2",
+      "cell": 24,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_iron_belt": {
+      "master": "item2",
+      "cell": 25,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_healing_draught": {
+      "master": "item1",
+      "cell": 16,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_greater_healing_draught": {
+      "master": "item2",
+      "cell": 27,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_antidote": {
+      "master": "item2",
+      "cell": 29,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_wake_salts": {
+      "master": "item1",
+      "cell": 28,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_courage_tonic": {
+      "master": "item2",
+      "cell": 30,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_torch": {
+      "master": "item1",
+      "cell": 29,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_smoke_bomb": {
+      "master": "item2",
+      "cell": 35,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_acid_flask": {
+      "master": "item1",
+      "cell": 18,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_spark_capsule": {
+      "master": "item1",
+      "cell": 19,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_healing_scroll": {
+      "master": "item1",
+      "cell": 20,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_venom_flask": {
+      "master": "item2",
+      "cell": 29,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_treasure_gem": {
+      "master": "item1",
+      "cell": 25,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_empty_bottle": {
+      "master": "item2",
+      "cell": 28,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_recall_token": {
+      "master": "item1",
+      "cell": 42,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_bellkeeper_blade": {
+      "master": "item2",
+      "cell": 1,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_cistern_carapace": {
+      "master": "item1",
+      "cell": 27,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_regulator_lens": {
+      "master": "item1",
+      "cell": 44,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_quayward_charm": {
+      "master": "item1",
+      "cell": 47,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_echo_staff": {
+      "master": "item2",
+      "cell": 8,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_glass_thorn": {
+      "master": "item2",
+      "cell": 4,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_custodian_seal": {
+      "master": "item1",
+      "cell": 45,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "item_tessa_silver_brooch": {
+      "master": "item1",
+      "cell": 47,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    }
+  },
+  "spells": {
+    "spell_wizard_spark_lance": {
+      "master": "spell1",
+      "cell": 2,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_wizard_lantern_globe": {
+      "master": "spell1",
+      "cell": 3,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_wizard_frost_needle": {
+      "master": "spell1",
+      "cell": 1,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_wizard_burning_fan": {
+      "master": "spell1",
+      "cell": 0,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_wizard_glass_eye": {
+      "master": "spell1",
+      "cell": 15,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_wizard_binding_thread": {
+      "master": "spell1",
+      "cell": 19,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_wizard_storm_arc": {
+      "master": "spell2",
+      "cell": 2,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_wizard_unseal": {
+      "master": "spell2",
+      "cell": 24,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_wizard_stone_skin": {
+      "master": "spell1",
+      "cell": 12,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_wizard_fold_step": {
+      "master": "spell1",
+      "cell": 30,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_wizard_mirror_ward": {
+      "master": "spell2",
+      "cell": 12,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_wizard_starfall": {
+      "master": "spell1",
+      "cell": 29,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_priest_mend_flesh": {
+      "master": "spell1",
+      "cell": 8,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_priest_sacred_ember": {
+      "master": "spell2",
+      "cell": 1,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_priest_pilgrim_light": {
+      "master": "spell1",
+      "cell": 10,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_priest_cleanse_venom": {
+      "master": "spell1",
+      "cell": 20,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_priest_steadfast": {
+      "master": "spell2",
+      "cell": 13,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_priest_blessing": {
+      "master": "spell1",
+      "cell": 9,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_priest_healing_chorus": {
+      "master": "spell1",
+      "cell": 27,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_priest_turn_the_hollow": {
+      "master": "spell2",
+      "cell": 8,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_priest_sheltering_hand": {
+      "master": "spell2",
+      "cell": 33,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_priest_break_malison": {
+      "master": "spell2",
+      "cell": 26,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_priest_return_breath": {
+      "master": "spell2",
+      "cell": 19,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_priest_dawn_judgment": {
+      "master": "spell2",
+      "cell": 17,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_witch_withering_word": {
+      "master": "spell2",
+      "cell": 20,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_witch_ill_omen": {
+      "master": "spell1",
+      "cell": 17,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_witch_borrowed_face": {
+      "master": "spell1",
+      "cell": 26,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_witch_leech_kiss": {
+      "master": "spell1",
+      "cell": 16,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_witch_sleep_of_thorns": {
+      "master": "spell2",
+      "cell": 21,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_witch_rat_whisper": {
+      "master": "spell1",
+      "cell": 31,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_witch_crooked_bones": {
+      "master": "spell2",
+      "cell": 5,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_witch_briar_mantle": {
+      "master": "spell2",
+      "cell": 32,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_witch_malice_rain": {
+      "master": "spell2",
+      "cell": 6,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_witch_bottle_the_echo": {
+      "master": "spell1",
+      "cell": 25,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_witch_hearth_thread": {
+      "master": "spell2",
+      "cell": 25,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "spell_witch_black_moon": {
+      "master": "spell2",
+      "cell": 35,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    }
+  },
+  "feedback": {
+    "attack": {
+      "master": "spell1",
+      "cell": 13,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "miss": {
+      "master": "spell1",
+      "cell": 14,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "guard": {
+      "master": "spell2",
+      "cell": 12,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "run": {
+      "master": "spell2",
+      "cell": 24,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "heal": {
+      "master": "spell2",
+      "cell": 19,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "cure": {
+      "master": "spell1",
+      "cell": 20,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "revive": {
+      "master": "spell2",
+      "cell": 10,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "arcane": {
+      "master": "spell1",
+      "cell": 3,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "fire": {
+      "master": "spell2",
+      "cell": 1,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "cold": {
+      "master": "spell2",
+      "cell": 3,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "lightning": {
+      "master": "spell2",
+      "cell": 2,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "holy": {
+      "master": "spell2",
+      "cell": 15,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "poison": {
+      "master": "spell2",
+      "cell": 8,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "necrotic": {
+      "master": "spell1",
+      "cell": 16,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "ward": {
+      "master": "spell2",
+      "cell": 33,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "debuff": {
+      "master": "spell1",
+      "cell": 17,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "bind": {
+      "master": "spell2",
+      "cell": 23,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "sleep": {
+      "master": "spell2",
+      "cell": 21,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    },
+    "special": {
+      "master": "spell2",
+      "cell": 26,
+      "size": [
+        64,
+        64
+      ],
+      "art_type": "rendered raster image crop"
+    }
+  }
+}

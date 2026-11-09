@@ -1,0 +1,145 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 2,
+  "id": "lantern:routine:valve_bell",
+  "parameters": {},
+  "actions": [
+    {
+      "op": "if",
+      "condition": {
+        "op": "eq",
+        "left": {
+          "query": "state",
+          "address": {
+            "scope": "campaign"
+          },
+          "kind": "flag",
+          "key": "lantern:flag:valves"
+        },
+        "right": true
+      },
+      "then": [
+        {
+          "op": "message",
+          "text": "The valves are already aligned."
+        }
+      ],
+      "else": [
+        {
+          "op": "if",
+          "condition": {
+            "op": "eq",
+            "left": {
+              "query": "state",
+              "address": {
+                "scope": "campaign"
+              },
+              "kind": "counter",
+              "key": "lantern:counter:valve_step"
+            },
+            "right": 2
+          },
+          "then": [
+            {
+              "op": "state",
+              "kind": "counter",
+              "address": {
+                "scope": "campaign"
+              },
+              "key": "lantern:counter:valve_step",
+              "value": 1
+            },
+            {
+              "op": "message",
+              "text": "Valve accepted: bell."
+            },
+            {
+              "op": "state",
+              "kind": "flag",
+              "address": {
+                "scope": "campaign"
+              },
+              "key": "lantern:flag:valves",
+              "value": true
+            },
+            {
+              "op": "quest",
+              "action": "claim",
+              "questId": "lantern:quest:clapper",
+              "rewardId": "valve_pass"
+            },
+            {
+              "op": "message",
+              "text": "Intake, Return, Bell: the regulator access token drops into the tray. Use it on the gallery gate."
+            }
+          ],
+          "else": [
+            {
+              "op": "cost",
+              "damage": 1,
+              "minutes": 1
+            },
+            {
+              "op": "if",
+              "condition": {
+                "op": "eq",
+                "left": {
+                  "query": "state",
+                  "address": {
+                    "scope": "campaign"
+                  },
+                  "kind": "counter",
+                  "key": "lantern:counter:valve_step"
+                },
+                "right": 1
+              },
+              "then": [
+                {
+                  "op": "state",
+                  "kind": "counter",
+                  "address": {
+                    "scope": "campaign"
+                  },
+                  "key": "lantern:counter:valve_step",
+                  "value": -1
+                }
+              ],
+              "else": []
+            },
+            {
+              "op": "if",
+              "condition": {
+                "op": "eq",
+                "left": {
+                  "query": "state",
+                  "address": {
+                    "scope": "campaign"
+                  },
+                  "kind": "counter",
+                  "key": "lantern:counter:valve_step"
+                },
+                "right": 2
+              },
+              "then": [
+                {
+                  "op": "state",
+                  "kind": "counter",
+                  "address": {
+                    "scope": "campaign"
+                  },
+                  "key": "lantern:counter:valve_step",
+                  "value": -2
+                }
+              ],
+              "else": []
+            },
+            {
+              "op": "message",
+              "text": "A recoverable pressure burst deals1 damage to each active hero. All valves reset. Read the inscription: Intake, Return, Bell."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 2,
+  "id": "bell:routine:bypass",
+  "parameters": {},
+  "actions": [
+    {
+      "op": "if",
+      "condition": {
+        "any": [
+          {
+            "op": "eq",
+            "left": {
+              "query": "state",
+              "address": {
+                "scope": "campaign"
+              },
+              "kind": "flag",
+              "key": "bell:flag:valves"
+            },
+            "right": true
+          },
+          {
+            "op": "eq",
+            "left": {
+              "query": "state",
+              "address": {
+                "scope": "campaign"
+              },
+              "kind": "flag",
+              "key": "bell:flag:bypass"
+            },
+            "right": true
+          }
+        ]
+      },
+      "then": [
+        {
+          "op": "message",
+          "text": "Regulator access is already prepared."
+        }
+      ],
+      "else": [
+        {
+          "op": "cost",
+          "gold": 10,
+          "food": 1,
+          "minutes": 20
+        },
+        {
+          "op": "state",
+          "kind": "flag",
+          "address": {
+            "scope": "campaign"
+          },
+          "key": "bell:flag:bypass",
+          "value": true
+        },
+        {
+          "op": "quest",
+          "action": "claim",
+          "questId": "bell:quest:clapper",
+          "rewardId": "valve_pass"
+        },
+        {
+          "op": "message",
+          "text": "You purchase sealant and hand-prime the shutoff bypass:10 gold,1 food and20 minutes. Regulator access is ready."
+        }
+      ]
+    }
+  ]
+}

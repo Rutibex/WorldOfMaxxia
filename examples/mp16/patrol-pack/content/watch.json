@@ -1,0 +1,56 @@
+{
+  "format": "maxxia-authored-map",
+  "formatVersion": 2,
+  "id": "mp16:map:watch",
+  "record": {
+    "id": "map_mp16_watch",
+    "name": "Drowned Watch Courtyard",
+    "rows": [
+      "#########",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#########"
+    ],
+    "spawn": {
+      "x": 4,
+      "y": 4,
+      "facing": 0
+    },
+    "doors": [],
+    "props": [],
+    "arrivals": [
+      {
+        "id": "entry",
+        "x": 4,
+        "y": 4,
+        "facing": 0
+      },
+      {
+        "id": "return",
+        "x": 6,
+        "y": 4,
+        "facing": 3
+      }
+    ],
+    "entities": [],
+    "portals": [
+      {
+        "id": "portal_watch_shelter",
+        "x": 7,
+        "y": 4,
+        "targetMapId": "map_mp16_shelter",
+        "targetX": 2,
+        "targetY": 2,
+        "targetFacing": 0,
+        "targetArrivalId": "entry"
+      }
+    ],
+    "traps": [],
+    "fountains": []
+  }
+}

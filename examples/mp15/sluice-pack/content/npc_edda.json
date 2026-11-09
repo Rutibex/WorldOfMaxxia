@@ -1,0 +1,18 @@
+{
+  "format": "maxxia-authored-npc",
+  "formatVersion": 1,
+  "id": "mp15:npc:edda",
+  "record": {
+    "id": "mp15:npc:edda",
+    "name": "Keeper Edda",
+    "dialogueId": "mp15:dialogue:edda",
+    "initialAttitude": 0,
+    "services": [
+      {
+        "id": "training",
+        "name": "Adventurer training",
+        "kind": "training"
+      }
+    ]
+  }
+}

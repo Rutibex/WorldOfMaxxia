@@ -1,0 +1,190 @@
+{
+  "format": "maxxia-items",
+  "version": 1,
+  "items": [
+    {
+      "id": "item_bellkeeper_blade",
+      "name": "Bellkeeper Blade",
+      "category": "weapons",
+      "price": 340,
+      "maxDurability": 40,
+      "maxCharges": 0,
+      "effect": "none",
+      "power": 0,
+      "unique": true,
+      "slot": "melee",
+      "weight": null,
+      "armor": 2,
+      "dice": "1d10",
+      "accuracy": 1,
+      "resistance": null,
+      "resistBonus": 0,
+      "description": "A rare named prize found during an expedition.",
+      "iconResourceId": "asset_art_items_item_bellkeeper_blade_png",
+      "equipmentTags": [
+        "melee:general"
+      ]
+    },
+    {
+      "id": "item_cistern_carapace",
+      "name": "Cistern Carapace",
+      "category": "armor",
+      "price": 340,
+      "maxDurability": 40,
+      "maxCharges": 0,
+      "effect": "none",
+      "power": 0,
+      "unique": true,
+      "slot": "body",
+      "weight": null,
+      "armor": 5,
+      "dice": null,
+      "accuracy": 0,
+      "resistance": null,
+      "resistBonus": 0,
+      "description": "A rare named prize found during an expedition.",
+      "iconResourceId": "asset_art_items_item_cistern_carapace_png",
+      "equipmentTags": [
+        "armor:medium"
+      ]
+    },
+    {
+      "id": "item_regulator_lens",
+      "name": "Regulator Lens",
+      "category": "accessories",
+      "price": 340,
+      "maxDurability": 0,
+      "maxCharges": 0,
+      "effect": "none",
+      "power": 0,
+      "unique": true,
+      "slot": "accessory",
+      "weight": null,
+      "armor": 0,
+      "dice": null,
+      "accuracy": 1,
+      "resistance": null,
+      "resistBonus": 0,
+      "description": "A rare named prize found during an expedition.",
+      "iconResourceId": "asset_art_items_item_regulator_lens_png",
+      "equipmentTags": [
+        "accessory"
+      ]
+    },
+    {
+      "id": "item_quayward_charm",
+      "name": "Quayward Charm",
+      "category": "accessories",
+      "price": 340,
+      "maxDurability": 0,
+      "maxCharges": 0,
+      "effect": "none",
+      "power": 0,
+      "unique": true,
+      "slot": "accessory",
+      "weight": null,
+      "armor": 0,
+      "dice": null,
+      "accuracy": 0,
+      "resistance": "poison",
+      "resistBonus": 25,
+      "description": "A rare named prize found during an expedition.",
+      "iconResourceId": "asset_art_items_item_quayward_charm_png",
+      "equipmentTags": [
+        "accessory"
+      ]
+    },
+    {
+      "id": "item_echo_staff",
+      "name": "Echo Staff",
+      "category": "weapons",
+      "price": 340,
+      "maxDurability": 40,
+      "maxCharges": 0,
+      "effect": "none",
+      "power": 0,
+      "unique": true,
+      "slot": "melee",
+      "weight": null,
+      "armor": 0,
+      "dice": "1d8",
+      "accuracy": 1,
+      "resistance": null,
+      "resistBonus": 0,
+      "description": "A rare named prize found during an expedition.",
+      "iconResourceId": "asset_art_items_item_echo_staff_png",
+      "equipmentTags": [
+        "melee:staff"
+      ]
+    },
+    {
+      "id": "item_glass_thorn",
+      "name": "Glass Thorn",
+      "category": "weapons",
+      "price": 340,
+      "maxDurability": 40,
+      "maxCharges": 0,
+      "effect": "none",
+      "power": 0,
+      "unique": true,
+      "slot": "melee",
+      "weight": null,
+      "armor": 0,
+      "dice": "1d6",
+      "accuracy": 2,
+      "resistance": null,
+      "resistBonus": 0,
+      "description": "A rare named prize found during an expedition.",
+      "iconResourceId": "asset_art_items_item_glass_thorn_png",
+      "equipmentTags": [
+        "melee:dagger"
+      ]
+    },
+    {
+      "id": "item_custodian_seal",
+      "name": "Custodian Seal",
+      "category": "accessories",
+      "price": 340,
+      "maxDurability": 0,
+      "maxCharges": 0,
+      "effect": "none",
+      "power": 0,
+      "unique": true,
+      "slot": "accessory",
+      "weight": null,
+      "armor": 0,
+      "dice": null,
+      "accuracy": 0,
+      "resistance": "arcane",
+      "resistBonus": 20,
+      "description": "A rare named prize found during an expedition.",
+      "iconResourceId": "asset_art_items_item_custodian_seal_png",
+      "equipmentTags": [
+        "accessory"
+      ]
+    },
+    {
+      "id": "item_tessa_silver_brooch",
+      "name": "Tessa Silver Brooch",
+      "category": "accessories",
+      "price": 340,
+      "maxDurability": 0,
+      "maxCharges": 0,
+      "effect": "none",
+      "power": 0,
+      "unique": true,
+      "slot": "accessory",
+      "weight": null,
+      "armor": 0,
+      "dice": null,
+      "accuracy": 0,
+      "resistance": "holy",
+      "resistBonus": 15,
+      "description": "A rare named prize found during an expedition.",
+      "iconResourceId": "asset_art_items_item_tessa_silver_brooch_png",
+      "equipmentTags": [
+        "accessory"
+      ]
+    }
+  ]
+}

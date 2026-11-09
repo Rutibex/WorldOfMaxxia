@@ -1,0 +1,25 @@
+{
+  "format": "maxxia-authored-item",
+  "formatVersion": 1,
+  "id": "lantern:item:bell_clapper",
+  "record": {
+    "id": "lantern:item:bell_clapper",
+    "name": "Bell Clapper",
+    "category": "misc",
+    "price": 0,
+    "maxDurability": 0,
+    "maxCharges": 0,
+    "effect": "none",
+    "power": 0,
+    "unique": true,
+    "slot": null,
+    "weight": null,
+    "armor": 0,
+    "dice": null,
+    "accuracy": 0,
+    "resistance": null,
+    "resistBonus": 0,
+    "description": "The missing brass clapper belongs to this cistern. Turn it in with the final reward; it cannot travel between adventures.",
+    "portability": "campaign-bound"
+  }
+}

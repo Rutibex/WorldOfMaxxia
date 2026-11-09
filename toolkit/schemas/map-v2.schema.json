@@ -1,0 +1,1011 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maxxia.invalid/toolkit/mp13/map.schema.json",
+  "type": "object",
+  "required": [
+    "format",
+    "formatVersion",
+    "id",
+    "record"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "const": "maxxia-authored-map"
+    },
+    "formatVersion": {
+      "const": 2
+    },
+    "id": {
+      "type": "string"
+    },
+    "record": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "rows",
+        "spawn",
+        "doors",
+        "props",
+        "arrivals"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "rows": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 64,
+          "items": {
+            "type": "string"
+          }
+        },
+        "spawn": {
+          "type": "object"
+        },
+        "doors": {
+          "type": "array"
+        },
+        "props": {
+          "type": "array"
+        },
+        "arrivals": {
+          "type": "array"
+        },
+        "entities": {
+          "type": "array",
+          "maxItems": 64,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "name",
+              "description",
+              "x",
+              "y",
+              "kind"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]{0,47}:object:[a-z][a-z0-9_]{0,47}$"
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 63
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 63
+              },
+              "kind": {
+                "enum": [
+                  "object",
+                  "door",
+                  "container",
+                  "secret",
+                  "npc"
+                ]
+              },
+              "doorId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "secretId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "hidden": {
+                "type": "boolean"
+              },
+              "searchDC": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 30
+              },
+              "lock": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "keyItemId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 128
+                  },
+                  "consumeKey": {
+                    "type": "boolean"
+                  },
+                  "pickDC": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 30
+                  },
+                  "forceDC": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 30
+                  }
+                }
+              },
+              "rewards": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 8,
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "itemId",
+                    "count"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "itemId": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 128
+                    },
+                    "count": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 20
+                    }
+                  }
+                }
+              },
+              "onUse": {
+                "type": "object",
+                "required": [
+                  "routineId",
+                  "args"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "routineId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 128
+                  },
+                  "args": {
+                    "type": "object",
+                    "maxProperties": 16,
+                    "additionalProperties": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "maxLength": 2048
+                        },
+                        {
+                          "type": "integer",
+                          "minimum": -100000000,
+                          "maximum": 100000000
+                        },
+                        {
+                          "type": "boolean"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "appearance": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "idle": {
+                    "enum": [
+                      "mirror",
+                      "brazier",
+                      "crystal",
+                      "banner",
+                      "chest_closed",
+                      "chest_open",
+                      "lever_off",
+                      "lever_on",
+                      "marker",
+                      "npc"
+                    ]
+                  },
+                  "used": {
+                    "enum": [
+                      "mirror",
+                      "brazier",
+                      "crystal",
+                      "banner",
+                      "chest_closed",
+                      "chest_open",
+                      "lever_off",
+                      "lever_on",
+                      "marker",
+                      "npc"
+                    ]
+                  },
+                  "closed": {
+                    "enum": [
+                      "mirror",
+                      "brazier",
+                      "crystal",
+                      "banner",
+                      "chest_closed",
+                      "chest_open",
+                      "lever_off",
+                      "lever_on",
+                      "marker",
+                      "npc"
+                    ]
+                  },
+                  "open": {
+                    "enum": [
+                      "mirror",
+                      "brazier",
+                      "crystal",
+                      "banner",
+                      "chest_closed",
+                      "chest_open",
+                      "lever_off",
+                      "lever_on",
+                      "marker",
+                      "npc"
+                    ]
+                  },
+                  "claimed": {
+                    "enum": [
+                      "mirror",
+                      "brazier",
+                      "crystal",
+                      "banner",
+                      "chest_closed",
+                      "chest_open",
+                      "lever_off",
+                      "lever_on",
+                      "marker",
+                      "npc"
+                    ]
+                  }
+                }
+              },
+              "npcId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "hazardId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 48
+              },
+              "capabilities": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 8,
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "label",
+                    "tag",
+                    "outcome",
+                    "minutes"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                    },
+                    "label": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 80
+                    },
+                    "tag": {
+                      "type": "string",
+                      "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                    },
+                    "outcome": {
+                      "enum": [
+                        "unlock",
+                        "open",
+                        "reveal",
+                        "disarm",
+                        "use",
+                        "traverse"
+                      ]
+                    },
+                    "minutes": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 30
+                    },
+                    "destination": {
+                      "type": "object",
+                      "required": [
+                        "x",
+                        "y"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "x": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 63
+                        },
+                        "y": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 63
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "recovery": {
+          "type": "object",
+          "required": [
+            "mapId",
+            "arrivalId"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "mapId": {
+              "type": "string",
+              "pattern": "^map_[a-z0-9_]+$"
+            },
+            "arrivalId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            }
+          }
+        },
+        "workshops": {
+          "type": "array",
+          "maxItems": 16,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "x",
+              "y"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9_]{1,48}$"
+              },
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 63
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 63
+              }
+            }
+          }
+        },
+        "environmentId": {
+          "type": "string",
+          "pattern": "^(environment_default|[a-z][a-z0-9_]{0,47}:environment:[a-z][a-z0-9_]{0,79})$"
+        },
+        "spritePlacements": {
+          "type": "array",
+          "maxItems": 128,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "spriteId",
+              "x",
+              "y",
+              "scale",
+              "facing"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]{0,47}$"
+              },
+              "spriteId": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]{0,47}$"
+              },
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 63
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 63
+              },
+              "scale": {
+                "type": "number",
+                "minimum": 0.1,
+                "maximum": 3
+              },
+              "facing": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 3
+              },
+              "entityId": {
+                "type": "string"
+              },
+              "propId": {
+                "type": "string"
+              },
+              "animation": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]{0,47}$"
+              },
+              "stateAnimations": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "idle": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,47}$"
+                  },
+                  "used": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,47}$"
+                  },
+                  "closed": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,47}$"
+                  },
+                  "open": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,47}$"
+                  },
+                  "claimed": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,47}$"
+                  },
+                  "active": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,47}$"
+                  },
+                  "guarded": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,47}$"
+                  },
+                  "attack": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,47}$"
+                  },
+                  "hurt": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,47}$"
+                  },
+                  "dead": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,47}$"
+                  }
+                }
+              },
+              "hotspot": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "x",
+                  "y",
+                  "width",
+                  "height"
+                ],
+                "properties": {
+                  "x": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "y": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "width": {
+                    "type": "number",
+                    "minimum": 0.01,
+                    "maximum": 1
+                  },
+                  "height": {
+                    "type": "number",
+                    "minimum": 0.01,
+                    "maximum": 1
+                  }
+                }
+              },
+              "mount": {
+                "enum": [
+                  "floor",
+                  "wall"
+                ]
+              }
+            }
+          }
+        },
+        "enemyAppearances": {
+          "type": "array",
+          "maxItems": 32,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kindId",
+              "spriteId",
+              "scale",
+              "facing"
+            ],
+            "properties": {
+              "kindId": {
+                "type": "string"
+              },
+              "spriteId": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]{0,47}$"
+              },
+              "scale": {
+                "type": "number",
+                "minimum": 0.1,
+                "maximum": 3
+              },
+              "facing": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 3
+              },
+              "stateAnimations": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "idle": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,47}$"
+                  },
+                  "used": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,47}$"
+                  },
+                  "closed": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,47}$"
+                  },
+                  "open": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,47}$"
+                  },
+                  "claimed": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,47}$"
+                  },
+                  "active": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,47}$"
+                  },
+                  "guarded": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,47}$"
+                  },
+                  "attack": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,47}$"
+                  },
+                  "hurt": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,47}$"
+                  },
+                  "dead": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,47}$"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "terrain": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "version",
+            "initialConfigurationId",
+            "changeMinutes",
+            "recovery",
+            "configurations",
+            "transitions"
+          ],
+          "properties": {
+            "version": {
+              "const": 1
+            },
+            "initialConfigurationId": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_]{0,31}$"
+            },
+            "changeMinutes": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10
+            },
+            "recovery": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "x",
+                "y",
+                "entityId"
+              ],
+              "properties": {
+                "x": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 62
+                },
+                "y": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 62
+                },
+                "entityId": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9_]{0,47}:object:[a-z][a-z0-9_]{0,47}$"
+                }
+              }
+            },
+            "configurations": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 8,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "id",
+                  "name",
+                  "cells",
+                  "blockedEdges"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                  },
+                  "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  },
+                  "cells": {
+                    "type": "array",
+                    "maxItems": 256,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "x",
+                        "y",
+                        "kind"
+                      ],
+                      "properties": {
+                        "x": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 62
+                        },
+                        "y": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 62
+                        },
+                        "kind": {
+                          "enum": [
+                            "floor",
+                            "wall",
+                            "bridge",
+                            "pit",
+                            "liquid",
+                            "conveyor",
+                            "teleporter"
+                          ]
+                        },
+                        "elevation": {
+                          "type": "integer",
+                          "minimum": -2,
+                          "maximum": 2
+                        },
+                        "minutes": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 5
+                        },
+                        "damage": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 20
+                        },
+                        "direction": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 3
+                        },
+                        "destination": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "x",
+                            "y"
+                          ],
+                          "properties": {
+                            "x": {
+                              "type": "integer",
+                              "minimum": 1,
+                              "maximum": 62
+                            },
+                            "y": {
+                              "type": "integer",
+                              "minimum": 1,
+                              "maximum": 62
+                            }
+                          }
+                        },
+                        "facing": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 3
+                        }
+                      }
+                    }
+                  },
+                  "blockedEdges": {
+                    "type": "array",
+                    "maxItems": 128,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "x",
+                        "y",
+                        "direction"
+                      ],
+                      "properties": {
+                        "x": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 62
+                        },
+                        "y": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 62
+                        },
+                        "direction": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "transitions": {
+              "type": "array",
+              "maxItems": 32,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "from",
+                  "to"
+                ],
+                "properties": {
+                  "from": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                  },
+                  "to": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "perception": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "version",
+            "illusions",
+            "puzzles"
+          ],
+          "properties": {
+            "version": {
+              "const": 1
+            },
+            "illusions": {
+              "type": "array",
+              "maxItems": 32,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "id",
+                  "x",
+                  "y",
+                  "name",
+                  "appearance",
+                  "description",
+                  "searchable"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                  },
+                  "x": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 62
+                  },
+                  "y": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 62
+                  },
+                  "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 1000
+                  },
+                  "appearance": {
+                    "enum": [
+                      "wall",
+                      "opening",
+                      "scenery"
+                    ]
+                  },
+                  "description": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 1000
+                  },
+                  "searchable": {
+                    "type": "boolean"
+                  },
+                  "revealPuzzleId": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                  }
+                }
+              }
+            },
+            "puzzles": {
+              "type": "array",
+              "maxItems": 16,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "id",
+                  "x",
+                  "y",
+                  "name",
+                  "kind",
+                  "clue",
+                  "incorrect",
+                  "success",
+                  "reset",
+                  "tokens",
+                  "solution"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                  },
+                  "x": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 62
+                  },
+                  "y": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 62
+                  },
+                  "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 1000
+                  },
+                  "kind": {
+                    "enum": [
+                      "sequence",
+                      "alignment",
+                      "combination"
+                    ]
+                  },
+                  "clue": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 1000
+                  },
+                  "incorrect": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 1000
+                  },
+                  "success": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 1000
+                  },
+                  "reset": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 1000
+                  },
+                  "tokens": {
+                    "type": "array",
+                    "minItems": 2,
+                    "maxItems": 8,
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 40
+                    }
+                  },
+                  "solution": {
+                    "type": "array",
+                    "minItems": 1,
+                    "maxItems": 8,
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 40
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {}
+}

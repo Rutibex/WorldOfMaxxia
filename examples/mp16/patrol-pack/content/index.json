@@ -1,0 +1,105 @@
+{
+  "format": "maxxia-content-index",
+  "formatVersion": 1,
+  "definitions": [
+    {
+      "id": "mp16:map:watch",
+      "kind": "map",
+      "visibility": "local",
+      "file": "content/watch.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp16:map:shelter"
+        }
+      ]
+    },
+    {
+      "id": "mp16:monster:watchman",
+      "kind": "monster",
+      "visibility": "local",
+      "file": "content/watchman.json",
+      "placement": "authored",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "mp16:encounter:patrol",
+      "kind": "encounter",
+      "visibility": "local",
+      "file": "content/patrol.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp16:map:watch"
+        },
+        {
+          "id": "mp16:monster:watchman"
+        }
+      ]
+    },
+    {
+      "id": "mp16:encounter:inspector",
+      "kind": "encounter",
+      "visibility": "local",
+      "file": "content/inspector.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp16:map:watch"
+        },
+        {
+          "id": "mp16:monster:watchman"
+        }
+      ]
+    },
+    {
+      "id": "mp16:encounter:camp",
+      "kind": "encounter",
+      "visibility": "local",
+      "file": "content/camp.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp16:map:watch"
+        },
+        {
+          "id": "mp16:monster:watchman"
+        }
+      ]
+    },
+    {
+      "id": "mp16:encounter:warden",
+      "kind": "encounter",
+      "visibility": "local",
+      "file": "content/warden.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp16:map:watch"
+        },
+        {
+          "id": "mp16:monster:watchman"
+        }
+      ]
+    },
+    {
+      "id": "mp16:map:shelter",
+      "kind": "map",
+      "visibility": "local",
+      "file": "content/shelter.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp16:map:watch"
+        }
+      ]
+    }
+  ]
+}

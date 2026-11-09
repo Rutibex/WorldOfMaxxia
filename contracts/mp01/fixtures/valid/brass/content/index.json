@@ -1,0 +1,46 @@
+{
+  "format": "maxxia-content-index",
+  "formatVersion": 1,
+  "definitions": [
+    {
+      "id": "brass:map:cistern",
+      "kind": "map",
+      "visibility": "local",
+      "file": "content/map-cistern.json",
+      "placement": "authored",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "brass:class:bellwarden",
+      "kind": "class",
+      "visibility": "exported",
+      "file": "content/class-bellwarden.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "core:ability:strike"
+        }
+      ]
+    },
+    {
+      "id": "brass:item:buckler",
+      "kind": "item",
+      "visibility": "exported",
+      "file": "content/item-buckler.json",
+      "placement": "eligible",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "brass:item:clapper",
+      "kind": "item",
+      "visibility": "local",
+      "file": "content/item-clapper.json",
+      "placement": "authored",
+      "tags": [],
+      "references": []
+    }
+  ]
+}

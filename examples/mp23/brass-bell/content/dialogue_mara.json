@@ -1,0 +1,22 @@
+{
+  "format": "maxxia-authored-dialogue",
+  "formatVersion": 1,
+  "id": "bell:dialogue:mara",
+  "record": {
+    "entry": "entry",
+    "nodes": [
+      {
+        "id": "entry",
+        "text": "Mara sells torches for offerings and healing supplies. Edda\u2019s key opens the well; picking costs food and ten minutes, while forcing it hurts the leading conscious hero and makes more noise. The valve bypass always remains available.",
+        "choices": [
+          {
+            "id": "supplies_info",
+            "text": "Review the field supply shelves",
+            "next": "entry"
+          }
+        ]
+      }
+    ],
+    "id": "bell:dialogue:mara"
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "format": "maxxia-authored-map",
+  "formatVersion": 2,
+  "record": {
+    "id": "map_route_lab_maze",
+    "name": "The Shifting Waterworks",
+    "rows": [
+      "#########",
+      "#.......#",
+      "#.......#",
+      "#..#....#",
+      "#.......#",
+      "#...D...#",
+      "#.......#",
+      "#.......#",
+      "#########"
+    ],
+    "spawn": {
+      "x": 1,
+      "y": 1,
+      "facing": 1
+    },
+    "arrivals": [
+      {
+        "id": "entry",
+        "x": 1,
+        "y": 1,
+        "facing": 1
+      }
+    ],
+    "doors": [
+      {
+        "id": "service_door",
+        "x": 4,
+        "y": 5
+      }
+    ],
+    "props": [
+      {
+        "id": "exit_marker",
+        "kind": "marker",
+        "x": 7,
+        "y": 7,
+        "name": "Exit refuge",
+        "description": "You have reached the far refuge. The recovery control remains at (1,1)."
+      }
+    ],
+    "entities": [
+      {
+        "id": "route_lab:object:reset",
+        "name": "Recovery control",
+        "description": "Return to the marked recovery control at (1,1) to restore the initial route. Shifts cannot bury the party, enemies or unclaimed loot.",
+        "x": 1,
+        "y": 1,
+        "kind": "object",
+        "onUse": {
+          "routineId": "route_lab:routine:reset",
+          "args": {}
+        }
+      },
+      {
+        "id": "route_lab:object:shift",
+        "name": "Shift the maze",
+        "description": "Return to the marked recovery control at (1,1) to restore the initial route. Shifts cannot bury the party, enemies or unclaimed loot.",
+        "x": 2,
+        "y": 1,
+        "kind": "object",
+        "onUse": {
+          "routineId": "route_lab:routine:shift",
+          "args": {}
+        }
+      },
+      {
+        "id": "route_lab:object:restore",
+        "name": "Restore the maze",
+        "description": "Return to the marked recovery control at (1,1) to restore the initial route. Shifts cannot bury the party, enemies or unclaimed loot.",
+        "x": 3,
+        "y": 1,
+        "kind": "object",
+        "onUse": {
+          "routineId": "route_lab:routine:reset",
+          "args": {}
+        }
+      }
+    ],
+    "portals": [],
+    "recovery": {
+      "mapId": "map_route_lab_maze",
+      "arrivalId": "entry"
+    },
+    "environmentId": "route_lab:environment:waterworks",
+    "spritePlacements": [
+      {
+        "id": "visual_reset",
+        "spriteId": "mechanism",
+        "x": 1,
+        "y": 1,
+        "scale": 0.6,
+        "facing": 3,
+        "entityId": "route_lab:object:reset",
+        "stateAnimations": {
+          "idle": "idle",
+          "used": "used"
+        }
+      },
+      {
+        "id": "visual_shift",
+        "spriteId": "mechanism",
+        "x": 2,
+        "y": 1,
+        "scale": 0.6,
+        "facing": 3,
+        "entityId": "route_lab:object:shift",
+        "stateAnimations": {
+          "idle": "idle",
+          "used": "used"
+        }
+      },
+      {
+        "id": "visual_restore",
+        "spriteId": "mechanism",
+        "x": 3,
+        "y": 1,
+        "scale": 0.6,
+        "facing": 3,
+        "entityId": "route_lab:object:restore",
+        "stateAnimations": {
+          "idle": "idle",
+          "used": "used"
+        }
+      }
+    ],
+    "terrain": {
+      "version": 1,
+      "initialConfigurationId": "initial",
+      "changeMinutes": 1,
+      "recovery": {
+        "x": 1,
+        "y": 1,
+        "entityId": "route_lab:object:reset"
+      },
+      "configurations": [
+        {
+          "id": "initial",
+          "name": "Initial watercourse",
+          "cells": [
+            {
+              "x": 3,
+              "y": 2,
+              "kind": "bridge",
+              "elevation": 1
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "kind": "bridge",
+              "elevation": 2
+            },
+            {
+              "x": 3,
+              "y": 4,
+              "kind": "pit",
+              "destination": {
+                "x": 2,
+                "y": 4
+              },
+              "damage": 2,
+              "elevation": -1
+            },
+            {
+              "x": 6,
+              "y": 6,
+              "kind": "liquid",
+              "minutes": 2,
+              "damage": 1
+            },
+            {
+              "x": 5,
+              "y": 6,
+              "kind": "conveyor",
+              "direction": 1
+            },
+            {
+              "x": 6,
+              "y": 5,
+              "kind": "teleporter",
+              "destination": {
+                "x": 6,
+                "y": 2
+              },
+              "facing": 3
+            },
+            {
+              "x": 3,
+              "y": 3,
+              "kind": "wall"
+            },
+            {
+              "x": 5,
+              "y": 4,
+              "kind": "wall"
+            }
+          ],
+          "blockedEdges": [
+            {
+              "x": 5,
+              "y": 3,
+              "direction": 1
+            }
+          ]
+        },
+        {
+          "id": "shifted",
+          "name": "Shifted watercourse",
+          "cells": [
+            {
+              "x": 3,
+              "y": 2,
+              "kind": "bridge",
+              "elevation": 1
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "kind": "bridge",
+              "elevation": 2
+            },
+            {
+              "x": 3,
+              "y": 4,
+              "kind": "bridge"
+            },
+            {
+              "x": 6,
+              "y": 6,
+              "kind": "liquid",
+              "minutes": 2,
+              "damage": 1
+            },
+            {
+              "x": 5,
+              "y": 6,
+              "kind": "conveyor",
+              "direction": 1
+            },
+            {
+              "x": 6,
+              "y": 5,
+              "kind": "teleporter",
+              "destination": {
+                "x": 6,
+                "y": 2
+              },
+              "facing": 3
+            },
+            {
+              "x": 3,
+              "y": 3,
+              "kind": "floor"
+            },
+            {
+              "x": 4,
+              "y": 4,
+              "kind": "wall"
+            }
+          ],
+          "blockedEdges": [
+            {
+              "x": 5,
+              "y": 4,
+              "direction": 1
+            }
+          ]
+        }
+      ],
+      "transitions": [
+        {
+          "from": "initial",
+          "to": "shifted"
+        },
+        {
+          "from": "shifted",
+          "to": "initial"
+        }
+      ]
+    }
+  },
+  "id": "route_lab:map:maze"
+}

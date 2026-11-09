@@ -1,0 +1,35 @@
+{
+  "format": "maxxia-pack",
+  "formatVersion": 1,
+  "packId": "bell",
+  "title": "The Brass Bell Cistern",
+  "version": "1.2.0",
+  "kind": "adventure",
+  "engine": {
+    "min": "0.65.0",
+    "maxExclusive": "1.0.0"
+  },
+  "rules": {
+    "id": "core:rules:classic",
+    "version": "1.0.0"
+  },
+  "dependencies": [
+    {
+      "packId": "core",
+      "versions": {
+        "min": "1.0.0",
+        "maxExclusive": "2.0.0"
+      },
+      "optional": false
+    }
+  ],
+  "contentIndex": "content/index.json",
+  "entry": {
+    "mapId": "bell:map:yard",
+    "arrivalId": "entry"
+  },
+  "credits": [
+    "By Michael Robinson",
+    "MP20 authored race, class, specializations and attack style; temporary art pending MP39\u201340."
+  ]
+}

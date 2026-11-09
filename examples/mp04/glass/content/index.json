@@ -1,0 +1,91 @@
+{
+  "format": "maxxia-content-index",
+  "formatVersion": 1,
+  "definitions": [
+    {
+      "id": "glass:map:entry",
+      "kind": "map",
+      "visibility": "local",
+      "file": "content/entry.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "glass:routine:read_plaque"
+        }
+      ]
+    },
+    {
+      "id": "glass:routine:read_plaque",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/read-plaque.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "glass:resource:sword",
+      "kind": "resource",
+      "visibility": "exported",
+      "file": "content/resource-sword.json",
+      "placement": "none",
+      "tags": [
+        "mp04_proof"
+      ],
+      "references": [
+        {
+          "id": "brass:resource:sword"
+        }
+      ]
+    },
+    {
+      "id": "glass:item:blade",
+      "kind": "item",
+      "visibility": "exported",
+      "file": "content/item-blade.json",
+      "placement": "eligible",
+      "tags": [
+        "mp04_proof"
+      ],
+      "references": [
+        {
+          "id": "glass:resource:sword"
+        }
+      ]
+    },
+    {
+      "id": "glass:class:warden",
+      "kind": "class",
+      "visibility": "exported",
+      "file": "content/class-warden.json",
+      "placement": "none",
+      "tags": [
+        "mp04_proof"
+      ],
+      "references": [
+        {
+          "id": "glass:item:blade"
+        },
+        {
+          "id": "brass:item:shield"
+        }
+      ]
+    },
+    {
+      "id": "glass:monster:guardian",
+      "kind": "monster",
+      "visibility": "exported",
+      "file": "content/monster-guardian.json",
+      "placement": "eligible",
+      "tags": [
+        "mp04_proof"
+      ],
+      "references": [
+        {
+          "id": "brass:item:shield"
+        }
+      ]
+    }
+  ]
+}

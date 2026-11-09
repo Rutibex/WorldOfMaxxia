@@ -1,0 +1,51 @@
+{
+  "format": "maxxia-project",
+  "projectFormatVersion": 1,
+  "projectId": "project_world_of_maxxia",
+  "title": "World of Maxxia",
+  "engineVersion": "0.35.0",
+  "minimumEngineVersion": "0.35.0",
+  "contentRevision": 1,
+  "content": {
+    "kind": "legacy-phase34",
+    "foundation": "content/foundation.json",
+    "town": "content/town.json\n",
+    "galleries": "content/galleries.json",
+    "vault": "content/vault.json"
+  },
+  "start": {
+    "map": {
+      "type": "map",
+      "id": "map_town"
+    },
+    "x": 7,
+    "y": 12,
+    "facing": 0
+  },
+  "startingParty": [
+    {
+      "type": "actor",
+      "id": "hero_tarin"
+    },
+    {
+      "type": "actor",
+      "id": "hero_vexa"
+    },
+    {
+      "type": "actor",
+      "id": "hero_brindle"
+    },
+    {
+      "type": "actor",
+      "id": "hero_orrin"
+    },
+    {
+      "type": "actor",
+      "id": "hero_sera"
+    },
+    {
+      "type": "actor",
+      "id": "hero_mora"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 2,
+  "id": "lantern:routine:spirit_appease",
+  "parameters": {},
+  "actions": [
+    {
+      "op": "if",
+      "condition": {
+        "not": {
+          "any": [
+            {
+              "op": "eq",
+              "left": {
+                "query": "state",
+                "address": {
+                  "scope": "campaign"
+                },
+                "kind": "flag",
+                "key": "lantern:flag:spirit_clear"
+              },
+              "right": true
+            },
+            {
+              "op": "contains",
+              "left": {
+                "query": "state",
+                "address": {
+                  "scope": "campaign"
+                },
+                "kind": "collection",
+                "key": "lantern:collection:e_spirit_status"
+              },
+              "right": "won"
+            }
+          ]
+        }
+      },
+      "then": [
+        {
+          "op": "cost",
+          "item": "item_torch",
+          "count": 1
+        },
+        {
+          "op": "state",
+          "kind": "flag",
+          "address": {
+            "scope": "campaign"
+          },
+          "key": "lantern:flag:spirit_clear",
+          "value": true
+        },
+        {
+          "op": "message",
+          "text": "The spirit accepts the torch as a promise that the work will be remembered. The interlock releases."
+        }
+      ],
+      "else": [
+        {
+          "op": "message",
+          "text": "The spirit has already released the interlock."
+        }
+      ]
+    }
+  ]
+}

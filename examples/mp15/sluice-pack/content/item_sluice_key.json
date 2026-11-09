@@ -1,0 +1,24 @@
+{
+  "format": "maxxia-authored-item",
+  "formatVersion": 1,
+  "id": "mp15:item:sluice_key",
+  "record": {
+    "id": "mp15:item:sluice_key",
+    "name": "Sluice Key",
+    "category": "misc",
+    "price": 0,
+    "maxDurability": 0,
+    "maxCharges": 0,
+    "effect": "none",
+    "power": 0,
+    "unique": false,
+    "slot": null,
+    "weight": null,
+    "armor": 0,
+    "dice": null,
+    "accuracy": 0,
+    "resistance": null,
+    "resistBonus": 0,
+    "description": "Sluice Key from the sluice adventure."
+  }
+}

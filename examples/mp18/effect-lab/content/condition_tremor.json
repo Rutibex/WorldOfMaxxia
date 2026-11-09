@@ -1,0 +1,33 @@
+{
+  "format": "maxxia-authored-condition",
+  "formatVersion": 1,
+  "id": "effect_lab:condition:tremor",
+  "record": {
+    "name": "Tremor",
+    "description": "Three global combat rounds: attack\u22122, defense\u22121. CON save at application.",
+    "clock": "rounds",
+    "maxDuration": 3,
+    "stacking": "refresh",
+    "maxStacks": 1,
+    "tags": [
+      "curse"
+    ],
+    "immuneTags": [],
+    "dispelTags": [
+      "curse",
+      "magic"
+    ],
+    "modifiers": {
+      "attack": -2,
+      "defense": -1,
+      "save": 0,
+      "resistance": {}
+    },
+    "save": {
+      "ability": "CON",
+      "dc": 18,
+      "timing": "apply"
+    },
+    "id": "effect_lab:condition:tremor"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 2,
+  "id": "mp12:routine:lever",
+  "parameters": {
+    "lever": "number",
+    "owner": "string"
+  },
+  "actions": [
+    {
+      "op": "if",
+      "condition": {
+        "op": "eq",
+        "left": {
+          "query": "state",
+          "address": {
+            "scope": "campaign"
+          },
+          "kind": "flag",
+          "key": "mp12:flag:claimed"
+        },
+        "right": true
+      },
+      "then": [
+        {
+          "op": "message",
+          "text": "The regulator is already restored."
+        }
+      ],
+      "else": [
+        {
+          "op": "if",
+          "condition": {
+            "op": "eq",
+            "left": {
+              "param": "lever"
+            },
+            "right": 1
+          },
+          "then": [
+            {
+              "op": "state",
+              "address": {
+                "scope": "campaign"
+              },
+              "kind": "flag",
+              "key": "mp12:flag:primed",
+              "value": true
+            },
+            {
+              "op": "message",
+              "text": "The first lever primes the regulator. Pull lever 2 next."
+            }
+          ],
+          "else": [
+            {
+              "op": "if",
+              "condition": {
+                "all": [
+                  {
+                    "op": "eq",
+                    "left": {
+                      "param": "lever"
+                    },
+                    "right": 2
+                  },
+                  {
+                    "op": "eq",
+                    "left": {
+                      "query": "state",
+                      "address": {
+                        "scope": "campaign"
+                      },
+                      "kind": "flag",
+                      "key": "mp12:flag:primed"
+                    },
+                    "right": true
+                  }
+                ]
+              },
+              "then": [
+                {
+                  "op": "call",
+                  "routine": "mp12:routine:reward",
+                  "args": {
+                    "owner": {
+                      "param": "owner"
+                    }
+                  }
+                }
+              ],
+              "else": [
+                {
+                  "op": "state",
+                  "address": {
+                    "scope": "campaign"
+                  },
+                  "kind": "flag",
+                  "key": "mp12:flag:primed",
+                  "value": false
+                },
+                {
+                  "op": "message",
+                  "text": "Wrong sequence. The regulator resets; begin with lever 1."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

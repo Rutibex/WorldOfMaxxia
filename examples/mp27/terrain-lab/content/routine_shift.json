@@ -1,0 +1,15 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 2,
+  "parameters": {},
+  "actions": [
+    {
+      "op": "command",
+      "command": {
+        "type": "terrain",
+        "configurationId": "shifted"
+      }
+    }
+  ],
+  "id": "route_lab:routine:shift"
+}

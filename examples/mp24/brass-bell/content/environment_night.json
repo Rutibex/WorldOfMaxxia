@@ -1,0 +1,42 @@
+{
+  "format": "maxxia-authored-environment",
+  "formatVersion": 1,
+  "id": "bell:environment:night",
+  "record": {
+    "id": "bell:environment:night",
+    "name": "Night Waterworks",
+    "skyResourceId": null,
+    "skyColor": "#192b35",
+    "fogColor": "#041018",
+    "fogStrength": 0.095,
+    "materials": [
+      {
+        "id": "material_floor_default",
+        "name": "Floor",
+        "surface": "floor",
+        "resourceId": null
+      },
+      {
+        "id": "material_wall_default",
+        "name": "Wall",
+        "surface": "wall",
+        "resourceId": null
+      },
+      {
+        "id": "material_ceiling_default",
+        "name": "Ceiling",
+        "surface": "ceiling",
+        "resourceId": null
+      }
+    ],
+    "scene": {
+      "renderer": "waterworks",
+      "wallTexture": "moss-wall",
+      "floorTexture": "floor",
+      "doorTexture": "oak-door",
+      "legacyScenery": false,
+      "tintColor": "#172655",
+      "tintStrength": 0.22
+    }
+  }
+}

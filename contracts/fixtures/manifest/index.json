@@ -1,0 +1,365 @@
+{
+  "currentEngineVersion": "0.35.0",
+  "fixtures": [
+    {
+      "name": "valid-baseline",
+      "file": "valid-baseline.maxxia",
+      "valid": true,
+      "code": null,
+      "path": null,
+      "schemaValid": true
+    },
+    {
+      "name": "valid-unknown-fields",
+      "file": "valid-unknown-fields.maxxia",
+      "valid": true,
+      "code": null,
+      "path": null,
+      "schemaValid": true
+    },
+    {
+      "name": "valid-unicode-title",
+      "file": "valid-unicode-title.maxxia",
+      "valid": true,
+      "code": null,
+      "path": null,
+      "schemaValid": true
+    },
+    {
+      "name": "valid-older-authored-engine",
+      "file": "valid-older-authored-engine.maxxia",
+      "valid": true,
+      "code": null,
+      "path": null,
+      "schemaValid": true
+    },
+    {
+      "name": "valid-integral-numeric-notation",
+      "file": "valid-integral-numeric-notation.maxxia",
+      "valid": true,
+      "code": null,
+      "path": null,
+      "schemaValid": true
+    },
+    {
+      "name": "valid-bom",
+      "file": "valid-bom.maxxia",
+      "valid": true,
+      "code": null,
+      "path": null,
+      "schemaValid": true
+    },
+    {
+      "name": "invalid-json",
+      "file": "invalid-json.maxxia",
+      "valid": false,
+      "code": "E_JSON",
+      "path": "$",
+      "schemaValid": false
+    },
+    {
+      "name": "invalid-root",
+      "file": "invalid-root.maxxia",
+      "valid": false,
+      "code": "E_TYPE",
+      "path": "$",
+      "schemaValid": false
+    },
+    {
+      "name": "missing-title",
+      "file": "missing-title.maxxia",
+      "valid": false,
+      "code": "E_REQUIRED",
+      "path": "$.title",
+      "schemaValid": false
+    },
+    {
+      "name": "null-title",
+      "file": "null-title.maxxia",
+      "valid": false,
+      "code": "E_TYPE",
+      "path": "$.title",
+      "schemaValid": false
+    },
+    {
+      "name": "empty-title",
+      "file": "empty-title.maxxia",
+      "valid": false,
+      "code": "E_LENGTH",
+      "path": "$.title",
+      "schemaValid": false
+    },
+    {
+      "name": "blank-title",
+      "file": "blank-title.maxxia",
+      "valid": false,
+      "code": "E_PATTERN",
+      "path": "$.title",
+      "schemaValid": false
+    },
+    {
+      "name": "long-title",
+      "file": "long-title.maxxia",
+      "valid": false,
+      "code": "E_LENGTH",
+      "path": "$.title",
+      "schemaValid": false
+    },
+    {
+      "name": "wrong-format",
+      "file": "wrong-format.maxxia",
+      "valid": false,
+      "code": "E_CONST",
+      "path": "$.format",
+      "schemaValid": false
+    },
+    {
+      "name": "future-format",
+      "file": "future-format.maxxia",
+      "valid": false,
+      "code": "E_PROJECT_VERSION",
+      "path": "$.projectFormatVersion",
+      "schemaValid": false
+    },
+    {
+      "name": "string-format-version",
+      "file": "string-format-version.maxxia",
+      "valid": false,
+      "code": "E_TYPE",
+      "path": "$.projectFormatVersion",
+      "schemaValid": false
+    },
+    {
+      "name": "invalid-id",
+      "file": "invalid-id.maxxia",
+      "valid": false,
+      "code": "E_PATTERN",
+      "path": "$.projectId",
+      "schemaValid": false
+    },
+    {
+      "name": "id-trailing-newline",
+      "file": "id-trailing-newline.maxxia",
+      "valid": false,
+      "code": "E_PATTERN",
+      "path": "$.projectId",
+      "schemaValid": false
+    },
+    {
+      "name": "invalid-engine-version",
+      "file": "invalid-engine-version.maxxia",
+      "valid": false,
+      "code": "E_PATTERN",
+      "path": "$.engineVersion",
+      "schemaValid": false
+    },
+    {
+      "name": "future-engine",
+      "file": "future-engine.maxxia",
+      "valid": false,
+      "code": "E_ENGINE_VERSION",
+      "path": "$.minimumEngineVersion",
+      "schemaValid": true
+    },
+    {
+      "name": "inverted-engine-range",
+      "file": "inverted-engine-range.maxxia",
+      "valid": false,
+      "code": "E_ENGINE_RANGE",
+      "path": "$.engineVersion",
+      "schemaValid": true
+    },
+    {
+      "name": "fractional-revision",
+      "file": "fractional-revision.maxxia",
+      "valid": false,
+      "code": "E_TYPE",
+      "path": "$.contentRevision",
+      "schemaValid": false
+    },
+    {
+      "name": "zero-revision",
+      "file": "zero-revision.maxxia",
+      "valid": false,
+      "code": "E_MINIMUM",
+      "path": "$.contentRevision",
+      "schemaValid": false
+    },
+    {
+      "name": "overflow-revision",
+      "file": "overflow-revision.maxxia",
+      "valid": false,
+      "code": "E_MAXIMUM",
+      "path": "$.contentRevision",
+      "schemaValid": false
+    },
+    {
+      "name": "path-traversal",
+      "file": "path-traversal.maxxia",
+      "valid": false,
+      "code": "E_PATTERN",
+      "path": "$.content.town",
+      "schemaValid": false
+    },
+    {
+      "name": "path-absolute",
+      "file": "path-absolute.maxxia",
+      "valid": false,
+      "code": "E_PATTERN",
+      "path": "$.content.town",
+      "schemaValid": false
+    },
+    {
+      "name": "path-windows",
+      "file": "path-windows.maxxia",
+      "valid": false,
+      "code": "E_PATTERN",
+      "path": "$.content.town",
+      "schemaValid": false
+    },
+    {
+      "name": "path-encoded",
+      "file": "path-encoded.maxxia",
+      "valid": false,
+      "code": "E_PATTERN",
+      "path": "$.content.town",
+      "schemaValid": false
+    },
+    {
+      "name": "path-url",
+      "file": "path-url.maxxia",
+      "valid": false,
+      "code": "E_PATTERN",
+      "path": "$.content.town",
+      "schemaValid": false
+    },
+    {
+      "name": "path-trailing-dot",
+      "file": "path-trailing-dot.maxxia",
+      "valid": false,
+      "code": "E_PATTERN",
+      "path": "$.content.town",
+      "schemaValid": false
+    },
+    {
+      "name": "path-newline",
+      "file": "path-newline.maxxia",
+      "valid": false,
+      "code": "E_PATTERN",
+      "path": "$.content.town",
+      "schemaValid": false
+    },
+    {
+      "name": "wrong-content-kind",
+      "file": "wrong-content-kind.maxxia",
+      "valid": false,
+      "code": "E_ENUM",
+      "path": "$.content.kind",
+      "schemaValid": false
+    },
+    {
+      "name": "wrong-reference-type",
+      "file": "wrong-reference-type.maxxia",
+      "valid": false,
+      "code": "E_CONST",
+      "path": "$.start.map.type",
+      "schemaValid": false
+    },
+    {
+      "name": "invalid-facing",
+      "file": "invalid-facing.maxxia",
+      "valid": false,
+      "code": "E_MAXIMUM",
+      "path": "$.start.facing",
+      "schemaValid": false
+    },
+    {
+      "name": "negative-start",
+      "file": "negative-start.maxxia",
+      "valid": false,
+      "code": "E_MINIMUM",
+      "path": "$.start.x",
+      "schemaValid": false
+    },
+    {
+      "name": "empty-party",
+      "file": "empty-party.maxxia",
+      "valid": false,
+      "code": "E_ITEMS",
+      "path": "$.startingParty",
+      "schemaValid": false
+    },
+    {
+      "name": "duplicate-reference",
+      "file": "duplicate-reference.maxxia",
+      "valid": false,
+      "code": "E_DUPLICATE_ITEMS",
+      "path": "$.startingParty",
+      "schemaValid": false
+    },
+    {
+      "name": "duplicate-id-with-extra",
+      "file": "duplicate-id-with-extra.maxxia",
+      "valid": false,
+      "code": "E_REFERENCE_DUPLICATE",
+      "path": "$.startingParty[1].id",
+      "schemaValid": true
+    },
+    {
+      "name": "wrong-actor-type",
+      "file": "wrong-actor-type.maxxia",
+      "valid": false,
+      "code": "E_CONST",
+      "path": "$.startingParty[0].type",
+      "schemaValid": false
+    },
+    {
+      "name": "oversized",
+      "file": "oversized.maxxia",
+      "valid": false,
+      "code": "E_SIZE",
+      "path": "$",
+      "schemaValid": true
+    },
+    {
+      "name": "too-deep",
+      "file": "too-deep.maxxia",
+      "valid": false,
+      "code": "E_DEPTH",
+      "path": "$",
+      "schemaValid": true
+    },
+    {
+      "name": "valid-compact-near-budget",
+      "file": "valid-compact-near-budget.maxxia",
+      "valid": true,
+      "code": null,
+      "path": null,
+      "schemaValid": true
+    },
+    {
+      "name": "valid-map-index",
+      "file": "valid-map-index.maxxia",
+      "valid": true,
+      "code": null,
+      "path": null,
+      "schemaValid": true
+    },
+    {
+      "name": "map-index-missing-index",
+      "file": "map-index-missing-index.maxxia",
+      "valid": false,
+      "code": "E_REQUIRED",
+      "path": "$.content.index",
+      "schemaValid": true
+    },
+    {
+      "name": "map-index-path-traversal",
+      "file": "map-index-path-traversal.maxxia",
+      "valid": false,
+      "code": "E_PATTERN",
+      "path": "$.content.index",
+      "schemaValid": false
+    }
+  ]
+}

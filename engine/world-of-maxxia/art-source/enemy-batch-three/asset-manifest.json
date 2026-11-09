@@ -1,0 +1,101 @@
+{
+  "phase": 29,
+  "original": true,
+  "format": "transparent RGBA 4x4 128px cells",
+  "standard_clips": {
+    "idle": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "attack": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "hurt": [
+      10,
+      11
+    ],
+    "death": [
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "actors": {
+    "bell-wraith": {
+      "frames": 16,
+      "canvas": [
+        512,
+        512
+      ],
+      "cell": [
+        128,
+        128
+      ],
+      "nonempty": true
+    },
+    "valve-sentinel": {
+      "frames": 16,
+      "canvas": [
+        512,
+        512
+      ],
+      "cell": [
+        128,
+        128
+      ],
+      "nonempty": true
+    },
+    "bell-heart": {
+      "frames": 16,
+      "canvas": [
+        512,
+        512
+      ],
+      "cell": [
+        128,
+        128
+      ],
+      "nonempty": true
+    },
+    "bell-heart-special": {
+      "frames": 16,
+      "canvas": [
+        512,
+        512
+      ],
+      "cell": [
+        128,
+        128
+      ],
+      "special_clips": {
+        "telegraph": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "discharge": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "recovery": [
+          8,
+          9,
+          10,
+          11
+        ]
+      }
+    }
+  },
+  "rules_save_changes": false
+}

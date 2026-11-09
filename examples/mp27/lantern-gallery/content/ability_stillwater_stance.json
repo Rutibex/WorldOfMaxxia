@@ -1,0 +1,24 @@
+{
+  "format": "maxxia-authored-ability",
+  "formatVersion": 1,
+  "id": "lantern:ability:stillwater_stance",
+  "record": {
+    "id": "lantern:ability:stillwater_stance",
+    "name": "Stillwater Stance",
+    "description": "Level 3 grants a passive +1 Defense without creating an extra action.",
+    "context": "both",
+    "target": "self",
+    "operations": [],
+    "activation": {
+      "mode": "passive",
+      "classes": [
+        "lantern:class:bellwarden"
+      ],
+      "minLevel": 3,
+      "passive": {
+        "attack": 0,
+        "defense": 1
+      }
+    }
+  }
+}

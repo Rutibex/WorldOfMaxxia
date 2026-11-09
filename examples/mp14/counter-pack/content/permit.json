@@ -1,0 +1,24 @@
+{
+  "format": "maxxia-authored-item",
+  "formatVersion": 1,
+  "id": "mp14:item:permit",
+  "record": {
+    "id": "mp14:item:permit",
+    "name": "Inspection Permit",
+    "category": "misc",
+    "price": 0,
+    "maxDurability": 0,
+    "maxCharges": 0,
+    "effect": "none",
+    "power": 0,
+    "unique": false,
+    "slot": null,
+    "weight": null,
+    "armor": 0,
+    "dice": null,
+    "accuracy": 0,
+    "resistance": null,
+    "resistBonus": 0,
+    "description": "Inspection Permit from the Brass Counter."
+  }
+}

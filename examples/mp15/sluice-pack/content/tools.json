@@ -1,0 +1,203 @@
+{
+  "format": "maxxia-authored-quest",
+  "formatVersion": 1,
+  "id": "mp15:quest:lost_tools",
+  "record": {
+    "id": "mp15:quest:lost_tools",
+    "name": "The Lost Tool Roll",
+    "description": "Recover Edda\u2019s missing tools. This request is independent of the final sluice decision.",
+    "initial": "offered",
+    "states": [
+      {
+        "id": "offered",
+        "title": "Optional request available",
+        "status": "available"
+      },
+      {
+        "id": "active",
+        "title": "Searching for the tools",
+        "status": "active"
+      },
+      {
+        "id": "returned",
+        "title": "Tools returned",
+        "status": "succeeded"
+      },
+      {
+        "id": "lost",
+        "title": "Tools reported lost",
+        "status": "failed"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "found",
+        "title": "Recover the tool roll",
+        "description": "Recover the tool roll.",
+        "states": [
+          "active"
+        ],
+        "condition": {
+          "op": "eq",
+          "left": {
+            "query": "has-item",
+            "item": "mp15:item:tool_roll"
+          },
+          "right": true
+        },
+        "optional": false,
+        "hidden": false,
+        "journalId": "found_note"
+      }
+    ],
+    "journal": [
+      {
+        "id": "offered",
+        "text": "Edda has an optional request for a misplaced tool roll.",
+        "states": [
+          "offered"
+        ]
+      },
+      {
+        "id": "accepted",
+        "text": "You agreed to recover the roll from the east side of the room.",
+        "states": [
+          "active"
+        ]
+      },
+      {
+        "id": "found_note",
+        "text": "You recovered the tools. Return them through Edda\u2019s dialogue."
+      },
+      {
+        "id": "returned",
+        "text": "The tools were returned and the repair charm was awarded once.",
+        "states": [
+          "returned"
+        ]
+      },
+      {
+        "id": "lost",
+        "text": "The tool roll was lost after recovery. The optional request is closed without a reward.",
+        "states": [
+          "lost"
+        ]
+      }
+    ],
+    "transitions": [
+      {
+        "id": "accept",
+        "title": "Accept the optional tool request",
+        "from": [
+          "offered"
+        ],
+        "to": "active",
+        "manual": true,
+        "condition": {
+          "any": [
+            {
+              "op": "eq",
+              "left": {
+                "query": "quest-state",
+                "questId": "mp15:quest:broken_sluice"
+              },
+              "right": "active"
+            },
+            {
+              "op": "eq",
+              "left": {
+                "query": "quest-state",
+                "questId": "mp15:quest:broken_sluice"
+              },
+              "right": "repaired"
+            },
+            {
+              "op": "eq",
+              "left": {
+                "query": "quest-state",
+                "questId": "mp15:quest:broken_sluice"
+              },
+              "right": "diverted"
+            }
+          ]
+        }
+      },
+      {
+        "id": "return",
+        "title": "Return the recovered tools",
+        "from": [
+          "active"
+        ],
+        "to": "returned",
+        "requirements": {
+          "all": [
+            "found"
+          ]
+        },
+        "condition": {
+          "op": "eq",
+          "left": {
+            "query": "has-item",
+            "item": "mp15:item:tool_roll"
+          },
+          "right": true
+        }
+      },
+      {
+        "id": "report_lost",
+        "title": "Report the recovered tools lost",
+        "from": [
+          "active"
+        ],
+        "to": "lost",
+        "manual": true,
+        "condition": {
+          "all": [
+            {
+              "op": "eq",
+              "left": {
+                "query": "objective",
+                "questId": "mp15:quest:lost_tools",
+                "objectiveId": "found"
+              },
+              "right": true
+            },
+            {
+              "not": {
+                "op": "eq",
+                "left": {
+                  "query": "has-item",
+                  "item": "mp15:item:tool_roll"
+                },
+                "right": true
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "rewards": [
+      {
+        "id": "thanks",
+        "title": "Tool return thanks",
+        "states": [
+          "returned"
+        ],
+        "gold": 20,
+        "xp": 50,
+        "items": [
+          {
+            "itemId": "mp15:item:repair_charm",
+            "count": 1
+          }
+        ],
+        "consume": [
+          {
+            "itemId": "mp15:item:tool_roll",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  }
+}

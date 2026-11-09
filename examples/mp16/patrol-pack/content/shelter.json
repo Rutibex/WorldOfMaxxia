@@ -1,0 +1,44 @@
+{
+  "format": "maxxia-authored-map",
+  "formatVersion": 2,
+  "id": "mp16:map:shelter",
+  "record": {
+    "id": "map_mp16_shelter",
+    "name": "Watch Shelter",
+    "rows": [
+      "#####",
+      "#...#",
+      "#...#",
+      "#...#",
+      "#####"
+    ],
+    "spawn": {
+      "x": 2,
+      "y": 2,
+      "facing": 0
+    },
+    "doors": [],
+    "props": [],
+    "arrivals": [
+      {
+        "id": "entry",
+        "x": 2,
+        "y": 2,
+        "facing": 0
+      }
+    ],
+    "entities": [],
+    "portals": [
+      {
+        "id": "portal_shelter_watch",
+        "x": 2,
+        "y": 1,
+        "targetMapId": "map_mp16_watch",
+        "targetX": 6,
+        "targetY": 4,
+        "targetFacing": 3,
+        "targetArrivalId": "return"
+      }
+    ]
+  }
+}

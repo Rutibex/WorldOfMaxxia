@@ -1,0 +1,21 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 2,
+  "id": "mp13:routine:signal",
+  "parameters": {},
+  "actions": [
+    {
+      "op": "state",
+      "address": {
+        "scope": "campaign"
+      },
+      "kind": "flag",
+      "key": "mp13:flag:signal_lit",
+      "value": true
+    },
+    {
+      "op": "message",
+      "text": "A green maintenance signal glows. The mechanism remains reusable."
+    }
+  ]
+}

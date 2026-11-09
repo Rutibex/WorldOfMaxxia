@@ -1,0 +1,106 @@
+[
+  {
+    "id": "npc_tessa_bell",
+    "name": "Tessa Bell",
+    "place": "The Silver Lantern",
+    "url": "assets/art/tessa-loop.png",
+    "description": "Tessa Bell welcomes you to the Silver Lantern, beside a glowing hearth overlooking the harbour.",
+    "durations": [
+      2300,
+      120,
+      120,
+      1060
+    ]
+  },
+  {
+    "id": "npc_orro_vane",
+    "name": "Orro Vane",
+    "place": "Vane Forge",
+    "url": "assets/art/npcs/orro-loop.png",
+    "description": "Orro Vane stands at his brick forge with tongs, an anvil, hanging tools and glowing coals.",
+    "durations": [
+      2100,
+      120,
+      120,
+      1260
+    ]
+  },
+  {
+    "id": "npc_sister_vale",
+    "name": "Sister Vale",
+    "place": "Temple of the Lantern",
+    "url": "assets/art/npcs/vale-loop.png",
+    "description": "Sister Vale offers a reassuring welcome among ivory arches, teal glass, votive candles and healing herbs.",
+    "durations": [
+      2600,
+      140,
+      120,
+      1140
+    ]
+  },
+  {
+    "id": "npc_captain_brann",
+    "name": "Captain Brann",
+    "place": "Training Court",
+    "url": "assets/art/npcs/brann-loop.png",
+    "description": "Captain Brann rests a hand on a practice sword in the sunlit training court, with targets, dummies and red pennants.",
+    "durations": [
+      2400,
+      120,
+      120,
+      960
+    ]
+  },
+  {
+    "id": "npc_pell_glass",
+    "name": "Pell Glass",
+    "place": "School of Glass",
+    "url": "assets/art/npcs/pell-loop.png",
+    "description": "Pell Glass welcomes you among mirrors, prisms, violet glass and open spellbooks in the School of Glass.",
+    "durations": [
+      2200,
+      120,
+      140,
+      1140
+    ]
+  },
+  {
+    "id": "npc_nera_salt",
+    "name": "Nera Salt",
+    "place": "Tide Shrine",
+    "url": "assets/art/npcs/nera-loop.png",
+    "description": "Nera Salt tends blue echo bottles and a water basin in a sea-lit shrine with shells and wave carvings.",
+    "durations": [
+      2500,
+      120,
+      120,
+      1260
+    ]
+  },
+  {
+    "id": "npc_aunt_vell",
+    "name": "Aunt Vell",
+    "place": "Briar Hearth",
+    "url": "assets/art/npcs/vell-loop.png",
+    "description": "Aunt Vell stirs a small cauldron amid briar garlands, violet bottles and green hearthlight.",
+    "durations": [
+      2300,
+      140,
+      120,
+      1040
+    ]
+  },
+  {
+    "id": "npc_iona_reed",
+    "name": "Iona Reed",
+    "place": "Cistern Office",
+    "url": "assets/art/npcs/iona-loop.png",
+    "description": "Iona Reed keeps the waterworks ledger beside brass tools, valve pipes and the cistern regulator.",
+    "durations": [
+      2400,
+      120,
+      140,
+      1340
+    ]
+  }
+]

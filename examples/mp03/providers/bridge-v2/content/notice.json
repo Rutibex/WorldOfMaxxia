@@ -1,0 +1,11 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 1,
+  "id": "bridge:routine:notice",
+  "actions": [
+    {
+      "operation": "message",
+      "text": "bridge provider version 2.0.0"
+    }
+  ]
+}

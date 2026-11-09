@@ -1,0 +1,42 @@
+{
+  "format": "maxxia-pack",
+  "formatVersion": 1,
+  "packId": "receiving",
+  "title": "Receiving Yard \u2014 Bellwarden portability fixture",
+  "version": "1.0.0",
+  "kind": "adventure",
+  "engine": {
+    "min": "0.62.0",
+    "maxExclusive": "1.0.0"
+  },
+  "rules": {
+    "id": "core:rules:classic",
+    "version": "1.0.0"
+  },
+  "dependencies": [
+    {
+      "packId": "core",
+      "versions": {
+        "min": "1.0.0",
+        "maxExclusive": "2.0.0"
+      },
+      "optional": false
+    },
+    {
+      "packId": "bell",
+      "versions": {
+        "min": "1.0.0",
+        "maxExclusive": "2.0.0"
+      },
+      "optional": false
+    }
+  ],
+  "contentIndex": "content/index.json",
+  "entry": {
+    "mapId": "receiving:map:yard",
+    "arrivalId": "entry"
+  },
+  "credits": [
+    "Michael Robinson"
+  ]
+}

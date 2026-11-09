@@ -1,0 +1,21 @@
+{
+  "format": "maxxia-authored-ability",
+  "formatVersion": 1,
+  "id": "effect_lab:ability:cleanse",
+  "record": {
+    "name": "Cleanse Toxic Effects",
+    "description": "Cleanse Toxic Effects through the shared MP18 effect kernel.",
+    "target": "self",
+    "context": "both",
+    "operations": [
+      {
+        "op": "dispel",
+        "tags": [
+          "toxic"
+        ],
+        "max": 16
+      }
+    ],
+    "id": "effect_lab:ability:cleanse"
+  }
+}

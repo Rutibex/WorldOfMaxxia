@@ -1,0 +1,21 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 2,
+  "id": "mp15:routine:spirit_help",
+  "parameters": {},
+  "actions": [
+    {
+      "op": "state",
+      "kind": "flag",
+      "address": {
+        "scope": "campaign"
+      },
+      "key": "mp15:flag:spirit_help",
+      "value": true
+    },
+    {
+      "op": "message",
+      "text": "The spirit agrees to turn the maintenance lock for you."
+    }
+  ]
+}

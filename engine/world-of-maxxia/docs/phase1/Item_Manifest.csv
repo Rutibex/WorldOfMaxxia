@@ -1,0 +1,49 @@
+id,name,category,kind,definition_phase,icon_phase
+item_dagger,Dagger,Weapons,ordinary,13,30
+item_staff,Staff,Weapons,ordinary,13,30
+item_mace,Mace,Weapons,ordinary,13,30
+item_sword,Sword,Weapons,ordinary,13,30
+item_axe,Axe,Weapons,ordinary,13,30
+item_spear,Spear,Weapons,ordinary,13,30
+item_shortbow,Shortbow,Weapons,ordinary,13,30
+item_crossbow,Crossbow,Weapons,ordinary,13,30
+item_heavy_crossbow,Heavy Crossbow,Weapons,ordinary,13,30
+item_greatsword,Greatsword,Weapons,ordinary,13,30
+item_cloth_robe,Cloth Robe,Armor,ordinary,13,30
+item_leather_coat,Leather Coat,Armor,ordinary,13,30
+item_ring_mail,Ring Mail,Armor,ordinary,13,30
+item_scale_coat,Scale Coat,Armor,ordinary,13,30
+item_plate_harness,Plate Harness,Armor,ordinary,13,30
+item_buckler,Buckler,Armor,ordinary,13,30
+item_round_shield,Round Shield,Armor,ordinary,13,30
+item_tower_shield,Tower Shield,Armor,ordinary,13,30
+item_copper_ring,Copper Ring,Accessories,ordinary,13,30
+item_ward_ring,Ward Ring,Accessories,ordinary,13,30
+item_ember_ring,Ember Ring,Accessories,ordinary,13,30
+item_frost_ring,Frost Ring,Accessories,ordinary,13,30
+item_pilgrim_charm,Pilgrim Charm,Accessories,ordinary,13,30
+item_glass_lens,Glass Lens,Accessories,ordinary,13,30
+item_lucky_token,Lucky Token,Accessories,ordinary,13,30
+item_iron_belt,Iron Belt,Accessories,ordinary,13,30
+item_healing_draught,Healing Draught,Misc,ordinary,13,30
+item_greater_healing_draught,Greater Healing Draught,Misc,ordinary,13,30
+item_antidote,Antidote,Misc,ordinary,13,30
+item_wake_salts,Wake Salts,Misc,ordinary,13,30
+item_courage_tonic,Courage Tonic,Misc,ordinary,13,30
+item_torch,Torch,Misc,ordinary,13,30
+item_smoke_bomb,Smoke Bomb,Misc,ordinary,13,30
+item_acid_flask,Acid Flask,Misc,ordinary,13,30
+item_spark_capsule,Spark Capsule,Misc,ordinary,13,30
+item_healing_scroll,Healing Scroll,Misc,ordinary,13,30
+item_venom_flask,Venom Flask,Misc,ordinary,13,30
+item_treasure_gem,Treasure Gem,Misc,ordinary,13,30
+item_empty_bottle,Empty Bottle,Misc,ordinary,13,30
+item_recall_token,Recall Token,Misc,ordinary,13,30
+item_bellkeeper_blade,Bellkeeper Blade,special,notable_reward,13,30
+item_cistern_carapace,Cistern Carapace,special,notable_reward,13,30
+item_regulator_lens,Regulator Lens,special,notable_reward,13,30
+item_quayward_charm,Quayward Charm,special,notable_reward,13,30
+item_echo_staff,Echo Staff,special,notable_reward,13,30
+item_glass_thorn,Glass Thorn,special,notable_reward,13,30
+item_custodian_seal,Custodian Seal,special,notable_reward,13,30
+item_tessa_silver_brooch,Tessa Silver Brooch,special,notable_reward,13,30

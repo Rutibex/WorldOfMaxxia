@@ -1,0 +1,42 @@
+{
+  "format": "maxxia-conditions",
+  "version": 1,
+  "conditions": [
+    {
+      "id": "poisoned",
+      "name": "Poisoned",
+      "description": "Poisoned status used by existing game mechanics.",
+      "reapply": "replace"
+    },
+    {
+      "id": "asleep",
+      "name": "Asleep",
+      "description": "Asleep status used by existing game mechanics.",
+      "reapply": "replace"
+    },
+    {
+      "id": "frightened",
+      "name": "Frightened",
+      "description": "Frightened status used by existing game mechanics.",
+      "reapply": "replace"
+    },
+    {
+      "id": "cursed",
+      "name": "Cursed",
+      "description": "Cursed status used by existing game mechanics.",
+      "reapply": "replace"
+    },
+    {
+      "id": "drunk",
+      "name": "Drunk",
+      "description": "Drunk status used by existing game mechanics.",
+      "reapply": "replace"
+    },
+    {
+      "id": "hungry",
+      "name": "Hungry",
+      "description": "Hungry status used by existing game mechanics.",
+      "reapply": "replace"
+    }
+  ]
+}

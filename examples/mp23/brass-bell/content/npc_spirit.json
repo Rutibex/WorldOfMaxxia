@@ -1,0 +1,12 @@
+{
+  "format": "maxxia-authored-npc",
+  "formatVersion": 1,
+  "id": "bell:npc:spirit",
+  "record": {
+    "name": "Maintenance Spirit",
+    "dialogueId": "bell:dialogue:spirit",
+    "initialAttitude": 0,
+    "services": [],
+    "id": "bell:npc:spirit"
+  }
+}

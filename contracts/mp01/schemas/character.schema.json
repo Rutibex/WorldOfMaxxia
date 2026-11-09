@@ -1,0 +1,244 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maxxia.invalid/contracts/mp01/character.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "const": "maxxia-character"
+    },
+    "formatVersion": {
+      "const": 1
+    },
+    "characterId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "pattern": "^c_[a-z0-9_]{1,100}$"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "compatibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "rules": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[a-z][a-z0-9_]{0,47}:rules:[a-z][a-z0-9_]{0,79}$"
+            },
+            "version": {
+              "$ref": "common.schema.json#/$defs/version"
+            }
+          },
+          "required": [
+            "id",
+            "version"
+          ]
+        },
+        "requiredPacks": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/packPin"
+          },
+          "minItems": 1,
+          "maxItems": 128
+        }
+      },
+      "required": [
+        "rules",
+        "requiredPacks"
+      ]
+    },
+    "raceId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "classId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1000
+    },
+    "xp": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "abilities": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/id"
+      },
+      "minItems": 0,
+      "maxItems": 1024
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "instanceId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^i_[a-z0-9_]{1,100}$"
+          },
+          "definitionId": {
+            "$ref": "common.schema.json#/$defs/id"
+          },
+          "quantity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 999999
+          },
+          "charges": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 999999
+          },
+          "binding": {
+            "enum": [
+              "portable",
+              "campaign"
+            ]
+          },
+          "originCampaignId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 120,
+            "minLength": 1
+          },
+          "state": {
+            "type": "object",
+            "maxProperties": 128
+          }
+        },
+        "required": [
+          "instanceId",
+          "definitionId",
+          "quantity",
+          "charges",
+          "binding",
+          "originCampaignId",
+          "state"
+        ]
+      },
+      "minItems": 0,
+      "maxItems": 4096
+    },
+    "equipment": {
+      "type": "object",
+      "maxProperties": 32,
+      "propertyNames": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 120,
+        "pattern": "^[a-z][a-z0-9_]{0,39}$"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 120,
+        "pattern": "^i_[a-z0-9_]{1,100}$"
+      }
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "definitionId": {
+            "$ref": "common.schema.json#/$defs/id"
+          },
+          "remaining": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 999999
+          },
+          "unit": {
+            "enum": [
+              "turns",
+              "minutes",
+              "persistent"
+            ]
+          },
+          "portable": {
+            "type": "boolean"
+          },
+          "state": {
+            "type": "object",
+            "maxProperties": 128
+          }
+        },
+        "required": [
+          "definitionId",
+          "remaining",
+          "unit",
+          "portable",
+          "state"
+        ]
+      },
+      "minItems": 0,
+      "maxItems": 256
+    },
+    "resources": {
+      "type": "object",
+      "maxProperties": 128,
+      "propertyNames": {
+        "$ref": "common.schema.json#/$defs/id"
+      },
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 999999
+      }
+    },
+    "state": {
+      "type": "object",
+      "maxProperties": 128
+    }
+  },
+  "required": [
+    "format",
+    "formatVersion",
+    "characterId",
+    "revision",
+    "name",
+    "compatibility",
+    "raceId",
+    "classId",
+    "level",
+    "xp",
+    "abilities",
+    "items",
+    "equipment",
+    "conditions",
+    "resources",
+    "state"
+  ]
+}

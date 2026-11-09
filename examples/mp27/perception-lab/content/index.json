@@ -1,0 +1,53 @@
+{
+  "format": "maxxia-content-index",
+  "formatVersion": 1,
+  "definitions": [
+    {
+      "id": "mirror_lab:resource:lever_idle",
+      "kind": "resource",
+      "visibility": "exported",
+      "file": "content/resource_lever_idle.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "mirror_lab:resource:lever_used",
+      "kind": "resource",
+      "visibility": "exported",
+      "file": "content/resource_lever_used.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "mirror_lab:environment:waterworks",
+      "kind": "environment",
+      "visibility": "exported",
+      "file": "content/environment_waterworks.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "mirror_lab:resource:lever_idle"
+        },
+        {
+          "id": "mirror_lab:resource:lever_used"
+        }
+      ]
+    },
+    {
+      "id": "mirror_lab:map:maze",
+      "kind": "map",
+      "visibility": "local",
+      "file": "content/map_maze.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "mirror_lab:environment:waterworks"
+        }
+      ]
+    }
+  ]
+}

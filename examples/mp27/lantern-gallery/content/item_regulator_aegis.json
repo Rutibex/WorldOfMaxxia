@@ -1,0 +1,39 @@
+{
+  "format": "maxxia-authored-item",
+  "formatVersion": 1,
+  "id": "lantern:item:regulator_aegis",
+  "record": {
+    "id": "lantern:item:regulator_aegis",
+    "name": "Regulator Aegis",
+    "category": "armor",
+    "price": 160,
+    "maxDurability": 80,
+    "maxCharges": 2,
+    "effect": "ward",
+    "power": 4,
+    "unique": true,
+    "slot": "offhand",
+    "weight": "light",
+    "armor": 1,
+    "dice": null,
+    "accuracy": 0,
+    "resistance": null,
+    "resistBonus": 0,
+    "description": "Crafted brass shield. Requires level 2 Bellwarden or Echo Sentinel, attunement and one item action for a four-minute ward. Passive +1 Defense while equipped. Two charges persist across adventures.",
+    "portability": "exportable",
+    "equipmentTags": [
+      "shield"
+    ],
+    "attunement": true,
+    "equipRequirements": {
+      "minLevel": 2,
+      "classIds": [
+        "lantern:class:bellwarden",
+        "lantern:class:echo_sentinel"
+      ]
+    },
+    "passive": {
+      "defense": 1
+    }
+  }
+}

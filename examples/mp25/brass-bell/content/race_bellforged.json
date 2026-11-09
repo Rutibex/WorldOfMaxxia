@@ -1,0 +1,25 @@
+{
+  "format": "maxxia-authored-race",
+  "formatVersion": 1,
+  "id": "bell:race:bellforged",
+  "record": {
+    "id": "bell:race:bellforged",
+    "name": "Bellforged",
+    "description": "A bronze-resonant folk of the old cistern. Their conductive bodies favor Constitution and endure lightning, and their Chime Instinct travels with them between adventures.",
+    "attributeBonuses": {
+      "CON": 1
+    },
+    "resistances": {
+      "lightning": 15
+    },
+    "traits": [
+      "bell:trait:echo_blood"
+    ],
+    "abilityGrants": [
+      {
+        "id": "bell:ability:chime_instinct",
+        "minLevel": 1
+      }
+    ]
+  }
+}

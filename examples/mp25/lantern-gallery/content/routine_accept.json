@@ -1,0 +1,24 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 2,
+  "id": "lantern:routine:accept",
+  "parameters": {},
+  "actions": [
+    {
+      "op": "quest",
+      "action": "transition",
+      "questId": "lantern:quest:clapper",
+      "transitionId": "accept"
+    },
+    {
+      "op": "quest",
+      "action": "claim",
+      "questId": "lantern:quest:clapper",
+      "rewardId": "admission"
+    },
+    {
+      "op": "message",
+      "text": "Edda gives you the well key and a three-charge Siltglass Charm. Search the keeper\u2019s alcove for the maintenance record."
+    }
+  ]
+}

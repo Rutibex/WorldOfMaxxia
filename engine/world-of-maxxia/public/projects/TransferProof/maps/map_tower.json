@@ -1,0 +1,80 @@
+{
+  "format": "maxxia-map",
+  "version": 1,
+  "id": "map_tower",
+  "name": "MM18 Tower",
+  "width": 9,
+  "height": 7,
+  "geometry": {
+    "rows": [
+      "#########",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#########"
+    ]
+  },
+  "materials": {
+    "floor": {
+      "default": "material_floor_default",
+      "overrides": []
+    },
+    "wall": {
+      "default": "material_wall_default",
+      "overrides": [
+        {
+          "x": 0,
+          "y": 2,
+          "materialId": "material_wall_brass"
+        }
+      ]
+    },
+    "ceiling": {
+      "default": "material_ceiling_default",
+      "overrides": []
+    }
+  },
+  "scenery": [],
+  "objects": {
+    "doors": [],
+    "secrets": [],
+    "traps": [],
+    "fountains": [],
+    "portals": [
+      {
+        "id": "portal_descending",
+        "x": 3,
+        "y": 4,
+        "targetMapId": "map_landing",
+        "targetArrivalId": "arrival_start",
+        "targetX": 4,
+        "targetY": 3,
+        "targetFacing": 1,
+        "activation": "interact"
+      }
+    ]
+  },
+  "arrivals": [
+    {
+      "id": "arrival_start",
+      "name": "Tower Start",
+      "x": 4,
+      "y": 3,
+      "facing": 2
+    },
+    {
+      "id": "arrival_top_of_stairs",
+      "name": "Top of Stairs",
+      "x": 3,
+      "y": 4,
+      "facing": 3
+    }
+  ],
+  "events": [],
+  "settings": {
+    "environmentId": "environment_ruins",
+    "notes": ""
+  }
+}

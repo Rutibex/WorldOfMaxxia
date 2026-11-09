@@ -1,0 +1,62 @@
+{
+  "impact_physical": {
+    "frames": 6,
+    "cell": 96,
+    "source_family": "physical",
+    "art_type": "image-generated rendered sequence"
+  },
+  "impact_fire": {
+    "frames": 6,
+    "cell": 96,
+    "source_family": "fire",
+    "art_type": "image-generated rendered sequence"
+  },
+  "impact_cold": {
+    "frames": 6,
+    "cell": 96,
+    "source_family": "cold",
+    "art_type": "image-generated rendered sequence"
+  },
+  "impact_lightning": {
+    "frames": 6,
+    "cell": 96,
+    "source_family": "lightning",
+    "art_type": "image-generated rendered sequence"
+  },
+  "impact_poison": {
+    "frames": 6,
+    "cell": 96,
+    "source_family": "poison",
+    "art_type": "image-generated rendered sequence"
+  },
+  "impact_arcane": {
+    "frames": 6,
+    "cell": 96,
+    "source_family": "arcane",
+    "art_type": "image-generated rendered sequence"
+  },
+  "impact_holy": {
+    "frames": 6,
+    "cell": 96,
+    "source_family": "holy",
+    "art_type": "image-generated rendered sequence"
+  },
+  "impact_necrotic": {
+    "frames": 6,
+    "cell": 96,
+    "source_family": "necrotic",
+    "art_type": "image-generated rendered sequence"
+  },
+  "impact_heal": {
+    "frames": 6,
+    "cell": 96,
+    "source_family": "heal",
+    "art_type": "image-generated rendered sequence"
+  },
+  "impact_guard": {
+    "frames": 6,
+    "cell": 96,
+    "source_family": "guard",
+    "art_type": "image-generated rendered sequence"
+  }
+}

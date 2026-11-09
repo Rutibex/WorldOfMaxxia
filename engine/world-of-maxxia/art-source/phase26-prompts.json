@@ -1,0 +1,51 @@
+{
+  "phase": "26",
+  "title": "Resonator Vault dungeon art",
+  "textures": [
+    "wall",
+    "wet-wall",
+    "brass-wall",
+    "floor",
+    "channel-floor",
+    "grate-floor",
+    "ceiling",
+    "seal-door",
+    "door-open",
+    "maintenance-score",
+    "copper-valve",
+    "copper-valve-on",
+    "moon-valve",
+    "moon-valve-on",
+    "glass-valve",
+    "glass-valve-on",
+    "echo-shrine",
+    "echo-empty",
+    "regulator",
+    "regulator-empty",
+    "rest-alcove",
+    "bypass-sign",
+    "warning-tablet",
+    "chest-closed",
+    "chest-open",
+    "secret-open",
+    "leech-spent",
+    "spark-spent",
+    "spring",
+    "spring-spent",
+    "stair-up"
+  ],
+  "notes": {
+    "palette": "violet-blue stone, wet channels, brass machinery, cyan shrine/regulator highlights",
+    "style": "pixel-art, 128x128 gameplay textures and props for first-person dungeon rendering",
+    "stateful_variants": [
+      "copper-valve-on",
+      "moon-valve-on",
+      "glass-valve-on",
+      "echo-empty",
+      "regulator-empty",
+      "chest-open",
+      "secret-open",
+      "spring-spent"
+    ]
+  }
+}

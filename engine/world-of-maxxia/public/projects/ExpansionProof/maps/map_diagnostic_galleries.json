@@ -1,0 +1,294 @@
+{
+  "format": "maxxia-map",
+  "version": 1,
+  "id": "map_diagnostic_galleries",
+  "name": "Upper Cistern — Bellwether Waterworks",
+  "width": 16,
+  "height": 16,
+  "geometry": {
+    "rows": [
+      "################",
+      "#...#.....#....#",
+      "#...D.....#....#",
+      "#...#.....D....#",
+      "##.###.#####.#.#",
+      "#.........D....#",
+      "#.###.###.##.#.#",
+      "#...#...#.##.#.#",
+      "#...D...#......#",
+      "#...#.....##.#.#",
+      "######.#####.#.#",
+      "######......D..#",
+      "###..#.##.#..#.#",
+      "###..#.........#",
+      "###########....#",
+      "################"
+    ]
+  },
+  "materials": {
+    "floor": {
+      "default": "material_floor_default",
+      "overrides": []
+    },
+    "wall": {
+      "default": "material_wall_default",
+      "overrides": []
+    },
+    "ceiling": {
+      "default": "material_ceiling_default",
+      "overrides": []
+    }
+  },
+  "scenery": [
+    {
+      "id": "prop_mirror",
+      "kind": "mirror",
+      "x": 7,
+      "y": 8,
+      "name": "The silver mirror",
+      "description": "A mirror waits beyond the southern door."
+    },
+    {
+      "id": "prop_brazier",
+      "kind": "brazier",
+      "x": 2,
+      "y": 2,
+      "name": "The first light",
+      "description": "Warm light spills over the gallery stones."
+    },
+    {
+      "id": "prop_crystal",
+      "kind": "crystal",
+      "x": 8,
+      "y": 2,
+      "name": "The glass star",
+      "description": "A cold star hangs above its pedestal."
+    },
+    {
+      "id": "prop_banner",
+      "kind": "banner",
+      "x": 5,
+      "y": 5,
+      "name": "A faded banner",
+      "description": "Six small marks surround an impossible sun."
+    },
+    {
+      "id": "scene_upper_copper",
+      "kind": "banner",
+      "x": 2,
+      "y": 2,
+      "name": "Copper Bell Inscription",
+      "description": "The oldest bell is first: COPPER. Three strikes open the downward way."
+    },
+    {
+      "id": "scene_upper_moon",
+      "kind": "crystal",
+      "x": 8,
+      "y": 2,
+      "name": "Moon-Cut Plaque",
+      "description": "The second tone is MOON. The water once answered the silver bell."
+    },
+    {
+      "id": "scene_upper_glass",
+      "kind": "mirror",
+      "x": 13,
+      "y": 3,
+      "name": "Glass Chime Diagram",
+      "description": "The final tone is GLASS. Remember the order: Copper, Moon, Glass."
+    },
+    {
+      "id": "scene_upper_ledger",
+      "kind": "banner",
+      "x": 4,
+      "y": 12,
+      "name": "Ink-Stained Ledger",
+      "description": "The Silver Lantern ledger is pinned under a loose flagstone beyond the secret arch."
+    },
+    {
+      "id": "scene_upper_tools",
+      "kind": "brazier",
+      "x": 12,
+      "y": 12,
+      "name": "Smith’s Tool Roll",
+      "description": "A well-oiled leather roll rests on the floor of a trapped side room."
+    },
+    {
+      "id": "scene_upper_descent",
+      "kind": "crystal",
+      "x": 13,
+      "y": 13,
+      "name": "Resonator Stair",
+      "description": "A downward stair hums beneath three bells. Their sequence must be understood before entering."
+    },
+    {
+      "id": "scene_upper_waterwheel",
+      "kind": "brazier",
+      "x": 12,
+      "y": 5,
+      "name": "Copper Waterwheel",
+      "description": "A groaning wheel drives the locked bell archive above, sending green water into the lower galleries."
+    },
+    {
+      "id": "scene_upper_cistern_map",
+      "kind": "banner",
+      "x": 8,
+      "y": 11,
+      "name": "Cistern Survey",
+      "description": "A painted plan indicates a secret archive west of the old gallery and a trapped room south of the pumps."
+    },
+    {
+      "id": "scene_upper_echo_chamber",
+      "kind": "mirror",
+      "x": 14,
+      "y": 8,
+      "name": "Echo Chamber",
+      "description": "Three hollow channels carry distant notes from a chamber below the cistern."
+    }
+  ],
+  "objects": {
+    "doors": [
+      {
+        "id": "door_south",
+        "x": 4,
+        "y": 8
+      },
+      {
+        "id": "door_north",
+        "lockDC": 14,
+        "x": 4,
+        "y": 2
+      },
+      {
+        "id": "door_pump_grate",
+        "x": 10,
+        "y": 5
+      },
+      {
+        "id": "door_bell_archive",
+        "x": 10,
+        "y": 3,
+        "lockDC": 15
+      },
+      {
+        "id": "door_tool_ward",
+        "x": 12,
+        "y": 11,
+        "lockDC": 12
+      }
+    ],
+    "secrets": [
+      {
+        "id": "gallery_hidden_arch",
+        "x": 4,
+        "y": 7,
+        "description": "A loose stone gives way to a concealed east-west passage."
+      },
+      {
+        "id": "upper_smuggler_niche",
+        "x": 10,
+        "y": 12,
+        "description": "A hidden door slides aside, joining the tools path to the southern water channel."
+      },
+      {
+        "id": "upper_ledger_arch",
+        "x": 5,
+        "y": 12,
+        "description": "A loose survey plaque gives way to a hidden ledger vault."
+      }
+    ],
+    "traps": [
+      {
+        "id": "gallery_spring_needle",
+        "x": 2,
+        "y": 7,
+        "dc": 12,
+        "damage": 4,
+        "description": "A spring-loaded needle flicks from the masonry."
+      },
+      {
+        "id": "gallery_sigil_snare",
+        "x": 7,
+        "y": 5,
+        "dc": 13,
+        "damage": 5,
+        "description": "A crackling rune burns across the floor."
+      },
+      {
+        "id": "upper_needle_lattice",
+        "x": 12,
+        "y": 10,
+        "dc": 14,
+        "damage": 5,
+        "description": "A lattice of spring needles fires from the flooded grating."
+      },
+      {
+        "id": "upper_sluice_bolt",
+        "x": 14,
+        "y": 11,
+        "dc": 13,
+        "damage": 4,
+        "description": "A pressure switch unleashes a brass dart across the walkway."
+      },
+      {
+        "id": "upper_tool_snare",
+        "x": 12,
+        "y": 12,
+        "dc": 14,
+        "damage": 6,
+        "description": "The tool cabinet releases a cluster of spring-loaded brass spikes."
+      }
+    ],
+    "fountains": [
+      {
+        "id": "gallery_moon_pool",
+        "x": 8,
+        "y": 2,
+        "name": "Moon Pool",
+        "heal": 7,
+        "sp": 3
+      },
+      {
+        "id": "upper_spring",
+        "x": 14,
+        "y": 4,
+        "name": "Cistern Spring",
+        "heal": 5,
+        "sp": 2
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_dungeon_to_town",
+        "x": 6,
+        "y": 8,
+        "targetMapId": "map_town",
+        "targetX": 13,
+        "targetY": 2,
+        "targetFacing": 3
+      },
+      {
+        "id": "portal_upper_to_vault",
+        "x": 13,
+        "y": 13,
+        "targetMapId": "map_resonator_vault",
+        "targetX": 2,
+        "targetY": 13,
+        "targetFacing": 0
+      }
+    ]
+  },
+  "arrivals": [
+    {
+      "id": "arrival_start",
+      "name": "Start",
+      "x": 2,
+      "y": 8,
+      "facing": 1
+    }
+  ],
+  "events": [],
+  "settings": {
+    "environmentId": "environment_default",
+    "notes": ""
+  }
+}

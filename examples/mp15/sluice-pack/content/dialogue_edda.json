@@ -1,0 +1,287 @@
+{
+  "format": "maxxia-authored-dialogue",
+  "formatVersion": 1,
+  "id": "mp15:dialogue:edda",
+  "record": {
+    "id": "mp15:dialogue:edda",
+    "entry": "entry",
+    "nodes": [
+      {
+        "id": "entry",
+        "text": "The sluice is broken. Inspect it, then decide who its power should serve. The key box and the maintenance spirit provide alternative routes. Your journal records each request separately.",
+        "choices": [
+          {
+            "id": "accept",
+            "text": "Accept the sluice request",
+            "next": "entry",
+            "routine": {
+              "routineId": "mp15:routine:accept",
+              "args": {}
+            },
+            "condition": {
+              "op": "eq",
+              "left": {
+                "query": "quest-state",
+                "questId": "mp15:quest:broken_sluice"
+              },
+              "right": "offered"
+            },
+            "once": true
+          },
+          {
+            "id": "refuse",
+            "text": "Refuse the request permanently",
+            "next": "entry",
+            "routine": {
+              "routineId": "mp15:routine:refuse",
+              "args": {}
+            },
+            "condition": {
+              "op": "eq",
+              "left": {
+                "query": "quest-state",
+                "questId": "mp15:quest:broken_sluice"
+              },
+              "right": "offered"
+            },
+            "once": true
+          },
+          {
+            "id": "repair",
+            "text": "Restore village water \u2014 final choice",
+            "next": "entry",
+            "routine": {
+              "routineId": "mp15:routine:repair",
+              "args": {}
+            },
+            "condition": {
+              "all": [
+                {
+                  "op": "eq",
+                  "left": {
+                    "query": "quest-state",
+                    "questId": "mp15:quest:broken_sluice"
+                  },
+                  "right": "active"
+                },
+                {
+                  "all": [
+                    {
+                      "op": "eq",
+                      "left": {
+                        "query": "objective",
+                        "questId": "mp15:quest:broken_sluice",
+                        "objectiveId": "inspection"
+                      },
+                      "right": true
+                    },
+                    {
+                      "any": [
+                        {
+                          "op": "eq",
+                          "left": {
+                            "query": "objective",
+                            "questId": "mp15:quest:broken_sluice",
+                            "objectiveId": "key"
+                          },
+                          "right": true
+                        },
+                        {
+                          "op": "eq",
+                          "left": {
+                            "query": "objective",
+                            "questId": "mp15:quest:broken_sluice",
+                            "objectiveId": "spirit"
+                          },
+                          "right": true
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "once": true
+          },
+          {
+            "id": "divert",
+            "text": "Power the infirmary \u2014 final choice",
+            "next": "entry",
+            "routine": {
+              "routineId": "mp15:routine:divert",
+              "args": {}
+            },
+            "condition": {
+              "all": [
+                {
+                  "op": "eq",
+                  "left": {
+                    "query": "quest-state",
+                    "questId": "mp15:quest:broken_sluice"
+                  },
+                  "right": "active"
+                },
+                {
+                  "all": [
+                    {
+                      "op": "eq",
+                      "left": {
+                        "query": "objective",
+                        "questId": "mp15:quest:broken_sluice",
+                        "objectiveId": "inspection"
+                      },
+                      "right": true
+                    },
+                    {
+                      "any": [
+                        {
+                          "op": "eq",
+                          "left": {
+                            "query": "objective",
+                            "questId": "mp15:quest:broken_sluice",
+                            "objectiveId": "key"
+                          },
+                          "right": true
+                        },
+                        {
+                          "op": "eq",
+                          "left": {
+                            "query": "objective",
+                            "questId": "mp15:quest:broken_sluice",
+                            "objectiveId": "spirit"
+                          },
+                          "right": true
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "once": true
+          },
+          {
+            "id": "ruin",
+            "text": "Destroy the regulator \u2014 permanent failure",
+            "next": "entry",
+            "routine": {
+              "routineId": "mp15:routine:ruin",
+              "args": {}
+            },
+            "condition": {
+              "all": [
+                {
+                  "op": "eq",
+                  "left": {
+                    "query": "quest-state",
+                    "questId": "mp15:quest:broken_sluice"
+                  },
+                  "right": "active"
+                },
+                {
+                  "op": "eq",
+                  "left": {
+                    "query": "objective",
+                    "questId": "mp15:quest:broken_sluice",
+                    "objectiveId": "inspection"
+                  },
+                  "right": true
+                }
+              ]
+            },
+            "once": true
+          },
+          {
+            "id": "tools",
+            "text": "Ask about the lost tools",
+            "next": "entry",
+            "routine": {
+              "routineId": "mp15:routine:accept_tools",
+              "args": {}
+            },
+            "condition": {
+              "all": [
+                {
+                  "op": "eq",
+                  "left": {
+                    "query": "quest-state",
+                    "questId": "mp15:quest:lost_tools"
+                  },
+                  "right": "offered"
+                },
+                {
+                  "any": [
+                    {
+                      "op": "eq",
+                      "left": {
+                        "query": "quest-state",
+                        "questId": "mp15:quest:broken_sluice"
+                      },
+                      "right": "active"
+                    },
+                    {
+                      "op": "eq",
+                      "left": {
+                        "query": "quest-state",
+                        "questId": "mp15:quest:broken_sluice"
+                      },
+                      "right": "repaired"
+                    },
+                    {
+                      "op": "eq",
+                      "left": {
+                        "query": "quest-state",
+                        "questId": "mp15:quest:broken_sluice"
+                      },
+                      "right": "diverted"
+                    }
+                  ]
+                }
+              ]
+            },
+            "once": true
+          },
+          {
+            "id": "return_tools",
+            "text": "Return the tool roll and claim thanks",
+            "next": "entry",
+            "routine": {
+              "routineId": "mp15:routine:return_tools",
+              "args": {}
+            },
+            "condition": {
+              "all": [
+                {
+                  "op": "eq",
+                  "left": {
+                    "query": "quest-state",
+                    "questId": "mp15:quest:lost_tools"
+                  },
+                  "right": "active"
+                },
+                {
+                  "op": "eq",
+                  "left": {
+                    "query": "objective",
+                    "questId": "mp15:quest:lost_tools",
+                    "objectiveId": "found"
+                  },
+                  "right": true
+                },
+                {
+                  "op": "eq",
+                  "left": {
+                    "query": "has-item",
+                    "item": "mp15:item:tool_roll"
+                  },
+                  "right": true
+                }
+              ]
+            },
+            "once": true
+          }
+        ]
+      }
+    ]
+  }
+}

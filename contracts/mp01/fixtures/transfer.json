@@ -1,0 +1,13 @@
+{
+  "format": "maxxia-character-transfer",
+  "formatVersion": 1,
+  "transferId": "t_example",
+  "operation": "move",
+  "sourceCampaignId": "campaign_a",
+  "destinationCampaignId": "campaign_b",
+  "sourceCharacterId": "c_example",
+  "destinationCharacterId": "c_example",
+  "sourceRevision": 3,
+  "characterSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "stage": "prepared"
+}

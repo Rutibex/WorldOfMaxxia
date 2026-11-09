@@ -1,0 +1,25 @@
+{
+  "format": "maxxia-authored-item",
+  "formatVersion": 1,
+  "id": "bell:item:brass_filament",
+  "record": {
+    "id": "bell:item:brass_filament",
+    "name": "Brass Filament",
+    "category": "misc",
+    "price": 8,
+    "maxDurability": 0,
+    "maxCharges": 0,
+    "effect": "none",
+    "power": 0,
+    "unique": false,
+    "slot": null,
+    "weight": null,
+    "armor": 0,
+    "dice": null,
+    "accuracy": 0,
+    "resistance": null,
+    "resistBonus": 0,
+    "description": "Flexible salvage from the bell pump, used in a calibrated wardstone recipe.",
+    "portability": "exportable"
+  }
+}

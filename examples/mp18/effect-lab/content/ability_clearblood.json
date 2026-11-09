@@ -1,0 +1,19 @@
+{
+  "format": "maxxia-authored-ability",
+  "formatVersion": 1,
+  "id": "effect_lab:ability:clearblood",
+  "record": {
+    "name": "Clearblood Ward",
+    "description": "Clearblood Ward through the shared MP18 effect kernel.",
+    "target": "self",
+    "context": "both",
+    "operations": [
+      {
+        "op": "condition",
+        "conditionId": "effect_lab:condition:clearblood",
+        "duration": 8
+      }
+    ],
+    "id": "effect_lab:ability:clearblood"
+  }
+}

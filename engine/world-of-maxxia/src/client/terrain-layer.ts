@@ -1,0 +1,12 @@
+/** Exact procedural terrain marks and bounded logical-height floor projection. */
+import {castRay,CAMERA_PLANE,type ViewPose} from '../shared/rules/perspective.ts';import type {GridMap,GridState} from '../shared/rules/grid.ts';import {configuration,elevationAt} from '../shared/project/terrain-contracts.ts';
+const W=440,H=280;
+export function drawTerrain(ctx:CanvasRenderingContext2D,map:GridMap,state:GridState,pose:ViewPose):void{
+ const c=configuration(map,state);if(!c)return;const fx=Math.sin(pose.angle),fy=-Math.cos(pose.angle),rx=Math.cos(pose.angle),ry=Math.sin(pose.angle),viewer=elevationAt(map,state,state.x,state.y),rays=Array.from({length:W},(_,x)=>{const k=2*(x+.5)/W-1;return castRay(map,state,pose.x,pose.y,fx+rx*CAMERA_PLANE*k,fy+ry*CAMERA_PLANE*k).distance;});
+ const project=(x:number,y:number,height:number)=>{const dx=x-pose.x,dy=y-pose.y,d=dx*fx+dy*fy,l=dx*rx+dy*ry;return {x:W*.5*(1+l/(d*CAMERA_PLANE)),y:H*.5+H*(.5+.16*(viewer-height))/d,d};};
+ const cells=c.cells.filter(cell=>cell.kind!=='wall').map(cell=>({cell,depth:(cell.x+.5-pose.x)*fx+(cell.y+.5-pose.y)*fy})).filter(v=>v.depth>.25&&v.depth<5).sort((a,b)=>b.depth-a.depth);
+ for(const {cell,depth}of cells){const points=[[cell.x,cell.y],[cell.x+1,cell.y],[cell.x+1,cell.y+1],[cell.x,cell.y+1]].map(([x,y])=>project(x,y,cell.elevation??0));if(points.some(p=>p.d<=.15))continue;ctx.save();ctx.beginPath();for(let x=0;x<W;x++)if(depth<rays[x]+.02)ctx.rect(x,0,1,H);ctx.clip();ctx.beginPath();ctx.moveTo(points[0].x,points[0].y);for(const p of points.slice(1))ctx.lineTo(p.x,p.y);ctx.closePath();ctx.globalAlpha=.85;ctx.fillStyle=cell.kind==='pit'?'#070b10':cell.kind==='liquid'?'#24667a':cell.kind==='bridge'?'#806043':cell.kind==='teleporter'?'#564b8c':cell.kind==='conveyor'?'#616973':'#556b64';ctx.fill();ctx.globalAlpha=1;ctx.strokeStyle='#c6b482';ctx.lineWidth=1;ctx.stroke();
+  const p=project(cell.x+.5,cell.y+.5,cell.elevation??0),glyph=cell.kind==='pit'?'▼':cell.kind==='conveyor'?['↑','→','↓','←'][cell.direction!]:cell.kind==='teleporter'?'✧':cell.kind==='liquid'?'≈':cell.kind==='bridge'?'═':'';ctx.fillStyle='#efe4bd';ctx.textAlign='center';ctx.font=`bold ${Math.max(10,Math.min(26,26/depth))}px serif`;ctx.fillText(glyph,p.x,p.y);if(cell.elevation){ctx.font='11px monospace';ctx.fillText((cell.elevation>0?'+':'')+cell.elevation,p.x,p.y+12);}ctx.restore();
+ }
+ ctx.save();ctx.font='10px monospace';ctx.textAlign='left';ctx.fillStyle='#111c25d9';ctx.fillRect(0,H-16,W,16);ctx.fillStyle='#eedfb2';ctx.fillText(c.name+' · elevation '+viewer,6,H-5);ctx.restore();
+}

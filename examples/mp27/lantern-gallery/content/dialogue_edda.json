@@ -1,0 +1,107 @@
+{
+  "format": "maxxia-authored-dialogue",
+  "formatVersion": 1,
+  "id": "lantern:dialogue:edda",
+  "record": {
+    "entry": "entry",
+    "nodes": [
+      {
+        "id": "entry",
+        "text": "The bell rings under a dry well. Recover its clapper. Find the sabotage record, resolve the maintenance spirit, and prepare regulator power. I will respect either final choice. Optional rewards and the final payment are in your journal.",
+        "choices": [
+          {
+            "id": "accept",
+            "text": "Accept the request; take the key and field kit",
+            "next": "entry",
+            "routine": {
+              "routineId": "lantern:routine:accept",
+              "args": {}
+            },
+            "condition": {
+              "op": "eq",
+              "left": {
+                "query": "quest-state",
+                "questId": "lantern:quest:clapper"
+              },
+              "right": "offered"
+            },
+            "once": true
+          },
+          {
+            "id": "village",
+            "text": "Restore the village supply",
+            "next": "entry",
+            "routine": {
+              "routineId": "lantern:routine:village",
+              "args": {}
+            },
+            "condition": {
+              "op": "eq",
+              "left": {
+                "query": "quest-state",
+                "questId": "lantern:quest:clapper"
+              },
+              "right": "active"
+            }
+          },
+          {
+            "id": "infirmary",
+            "text": "Power the abandoned infirmary",
+            "next": "entry",
+            "routine": {
+              "routineId": "lantern:routine:infirmary",
+              "args": {}
+            },
+            "condition": {
+              "op": "eq",
+              "left": {
+                "query": "quest-state",
+                "questId": "lantern:quest:clapper"
+              },
+              "right": "active"
+            }
+          },
+          {
+            "id": "after_village",
+            "text": "Discuss the restored village supply",
+            "next": "village",
+            "condition": {
+              "op": "eq",
+              "left": {
+                "query": "quest-state",
+                "questId": "lantern:quest:clapper"
+              },
+              "right": "village"
+            }
+          },
+          {
+            "id": "after_infirmary",
+            "text": "Discuss the reopened infirmary",
+            "next": "infirmary",
+            "condition": {
+              "op": "eq",
+              "left": {
+                "query": "quest-state",
+                "questId": "lantern:quest:clapper"
+              },
+              "right": "infirmary"
+            }
+          }
+        ]
+      },
+      {
+        "id": "village",
+        "text": "The well is full again. We will rebuild the infirmary line next, openly and honestly.",
+        "choices": [],
+        "terminal": true
+      },
+      {
+        "id": "infirmary",
+        "text": "The infirmary has light. We will share the rationed water and keep its doors open.",
+        "choices": [],
+        "terminal": true
+      }
+    ],
+    "id": "lantern:dialogue:edda"
+  }
+}

@@ -1,0 +1,441 @@
+{
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "maxxia-authored-ability"
+    },
+    "formatVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "record": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        },
+        "context": {
+          "enum": [
+            "both",
+            "combat",
+            "exploration"
+          ]
+        },
+        "target": {
+          "enum": [
+            "self",
+            "hero",
+            "party",
+            "enemy",
+            "enemies"
+          ]
+        },
+        "operations": {
+          "type": "array",
+          "minItems": 0,
+          "maxItems": 8,
+          "items": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "op": {
+                    "const": "condition"
+                  },
+                  "conditionId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 128
+                  },
+                  "duration": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 60
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "op",
+                  "conditionId",
+                  "duration"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "op": {
+                    "const": "damage"
+                  },
+                  "amount": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100
+                  },
+                  "damageType": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 20
+                  },
+                  "save": {
+                    "type": "object",
+                    "properties": {
+                      "ability": {
+                        "enum": [
+                          "CON",
+                          "DEX",
+                          "WIS"
+                        ]
+                      },
+                      "dc": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 30
+                      },
+                      "half": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "ability",
+                      "dc",
+                      "half"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "op",
+                  "amount",
+                  "damageType"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "op": {
+                    "const": "heal"
+                  },
+                  "amount": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100
+                  }
+                },
+                "required": [
+                  "op",
+                  "amount"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "op": {
+                    "const": "dispel"
+                  },
+                  "tags": {
+                    "type": "array",
+                    "maxItems": 8,
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[a-z][a-z0-9_]{0,31}$"
+                    },
+                    "minItems": 1
+                  },
+                  "max": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 16
+                  }
+                },
+                "required": [
+                  "op",
+                  "tags",
+                  "max"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "op",
+                  "kindId",
+                  "lifetimeRounds"
+                ],
+                "properties": {
+                  "op": {
+                    "const": "summon-companion"
+                  },
+                  "kindId": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_]{0,47}:monster:[a-z][a-z0-9_]{0,79}$"
+                  },
+                  "lifetimeRounds": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 6
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "activation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "mode",
+            "classes",
+            "minLevel"
+          ],
+          "properties": {
+            "mode": {
+              "enum": [
+                "active",
+                "passive",
+                "triggered"
+              ]
+            },
+            "classes": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 16,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              }
+            },
+            "minLevel": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20
+            },
+            "resource": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "base",
+                "perLevel",
+                "maximum",
+                "recovery"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9_]{0,31}:pool:[a-z][a-z0-9_]{0,31}$"
+                },
+                "base": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 100
+                },
+                "perLevel": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 30
+                },
+                "maximum": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 300
+                },
+                "recovery": {
+                  "const": "rest"
+                }
+              }
+            },
+            "cost": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "amount"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9_]{0,31}:pool:[a-z][a-z0-9_]{0,31}$"
+                },
+                "amount": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 100
+                }
+              }
+            },
+            "cooldown": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "clock",
+                "amount"
+              ],
+              "properties": {
+                "clock": {
+                  "enum": [
+                    "minutes",
+                    "rounds"
+                  ]
+                },
+                "amount": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 1000
+                }
+              }
+            },
+            "passive": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "attack",
+                "defense"
+              ],
+              "properties": {
+                "attack": {
+                  "type": "integer",
+                  "minimum": -5,
+                  "maximum": 5
+                },
+                "defense": {
+                  "type": "integer",
+                  "minimum": -5,
+                  "maximum": 5
+                }
+              }
+            },
+            "trigger": {
+              "const": "block"
+            }
+          }
+        },
+        "exploration": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "tags",
+            "range",
+            "requiresSight"
+          ],
+          "properties": {
+            "tags": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 8,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]{0,31}$"
+              }
+            },
+            "range": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 4
+            },
+            "requiresSight": {
+              "type": "boolean"
+            }
+          }
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "description",
+        "context",
+        "target",
+        "operations"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "anyOf": [
+              {
+                "required": [
+                  "exploration"
+                ],
+                "properties": {
+                  "exploration": {}
+                }
+              },
+              {
+                "properties": {
+                  "activation": {
+                    "properties": {
+                      "mode": {
+                        "const": "passive"
+                      }
+                    },
+                    "required": [
+                      "mode"
+                    ],
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "activation"
+                ]
+              }
+            ]
+          },
+          "then": {
+            "properties": {
+              "operations": {
+                "maxItems": 0,
+                "type": "array"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "operations": {
+                "minItems": 1,
+                "type": "array"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "required": [
+    "format",
+    "formatVersion",
+    "id",
+    "record"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://maxxia.invalid/toolkit/mp22/ability.schema.json"
+}

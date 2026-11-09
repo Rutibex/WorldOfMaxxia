@@ -1,0 +1,14 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 2,
+  "id": "mp15:routine:accept_tools",
+  "parameters": {},
+  "actions": [
+    {
+      "op": "quest",
+      "questId": "mp15:quest:lost_tools",
+      "action": "transition",
+      "transitionId": "accept"
+    }
+  ]
+}

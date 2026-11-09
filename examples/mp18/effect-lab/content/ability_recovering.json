@@ -1,0 +1,19 @@
+{
+  "format": "maxxia-authored-ability",
+  "formatVersion": 1,
+  "id": "effect_lab:ability:recovering",
+  "record": {
+    "name": "Test Per-Minute Saves",
+    "description": "Test Per-Minute Saves through the shared MP18 effect kernel.",
+    "target": "self",
+    "context": "exploration",
+    "operations": [
+      {
+        "op": "condition",
+        "conditionId": "effect_lab:condition:recovering",
+        "duration": 6
+      }
+    ],
+    "id": "effect_lab:ability:recovering"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "format": "maxxia-authored-item",
+  "formatVersion": 1,
+  "id": "bell:item:resonant_buckler",
+  "record": {
+    "id": "bell:item:resonant_buckler",
+    "name": "Resonant Buckler",
+    "category": "armor",
+    "price": 80,
+    "maxDurability": 60,
+    "maxCharges": 3,
+    "effect": "ward",
+    "power": 5,
+    "unique": false,
+    "slot": "offhand",
+    "weight": "light",
+    "armor": 1,
+    "dice": null,
+    "accuracy": 0,
+    "resistance": null,
+    "resistBonus": 0,
+    "description": "Shield: +1 armor while equipped. Activate for +2 party defense for five minutes, one charge, three charges total. Cannot stack Stone Skin. In combat it spends the normal item action; no automatic recharge.",
+    "equipmentTags": [
+      "shield"
+    ],
+    "portability": "exportable"
+  }
+}

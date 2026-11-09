@@ -1,0 +1,110 @@
+{
+  "format": "maxxia-authored-map",
+  "formatVersion": 2,
+  "id": "mp15:map:sluice",
+  "record": {
+    "id": "map_mp15_sluice",
+    "name": "The Sluice Room",
+    "rows": [
+      "#########",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#.......#",
+      "#########"
+    ],
+    "spawn": {
+      "x": 4,
+      "y": 3,
+      "facing": 0
+    },
+    "doors": [],
+    "props": [],
+    "arrivals": [
+      {
+        "id": "arrival_start",
+        "name": "Sluice entrance",
+        "x": 4,
+        "y": 3,
+        "facing": 0
+      }
+    ],
+    "entities": [
+      {
+        "id": "mp15:object:edda",
+        "name": "Keeper Edda",
+        "description": "Keeper Edda in the sluice room.",
+        "x": 4,
+        "y": 2,
+        "kind": "npc",
+        "npcId": "mp15:npc:edda"
+      },
+      {
+        "id": "mp15:object:inspection",
+        "name": "Inspection mechanism",
+        "description": "Inspection mechanism in the sluice room.",
+        "x": 3,
+        "y": 3,
+        "kind": "object",
+        "onUse": {
+          "routineId": "mp15:routine:inspect",
+          "args": {}
+        }
+      },
+      {
+        "id": "mp15:object:key_box",
+        "name": "Maintenance key box",
+        "description": "Maintenance key box in the sluice room.",
+        "x": 2,
+        "y": 3,
+        "kind": "container",
+        "rewards": [
+          {
+            "itemId": "mp15:item:sluice_key",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "mp15:object:tool_box",
+        "name": "Lost tool box",
+        "description": "Lost tool box in the sluice room.",
+        "x": 6,
+        "y": 3,
+        "kind": "container",
+        "rewards": [
+          {
+            "itemId": "mp15:item:tool_roll",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "mp15:object:ledger_box",
+        "name": "Archive box",
+        "description": "Archive box in the sluice room.",
+        "x": 4,
+        "y": 5,
+        "kind": "container",
+        "rewards": [
+          {
+            "itemId": "mp15:item:ledger",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "mp15:object:spirit",
+        "name": "Maintenance spirit",
+        "description": "Maintenance spirit in the sluice room.",
+        "x": 6,
+        "y": 2,
+        "kind": "npc",
+        "npcId": "mp15:npc:spirit"
+      }
+    ]
+  }
+}

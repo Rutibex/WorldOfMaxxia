@@ -1,0 +1,38 @@
+name: Bug report
+description: Report a reproducible bug in the browser game, editor or module toolkit.
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [Browser game, Windows editor, Pack authoring, Save/import, Rendering, Build/CI, Other]
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: "MP27 / engine 0.72.0"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Include the selected project/catalogue, game state and relevant browser/OS information. Do not share sensitive save data.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and logs
+    validations:
+      required: true

@@ -1,0 +1,11 @@
+# Phase 15 — Town Services Contract
+
+Every service is a stable `npc_` definition in `src/shared/rules/services.ts`. Proximity requires the player's position to coincide with the service cell or their immediate unobstructed facing cell. If two NPCs are adjacent, the one underfoot wins. All mutations are pure `serviceAction(state,registry,request)` results; failed actions return unchanged state. Services are disabled in active combat and on party defeat.
+
+Eight roles: tavern, merchant, temple, trainer, Wizard/Priest/Witch guild, quest giver. Each uses its own subset of requests (`buy`, `heal`, `train`, `learn`, etc.) and rejects verbs belonging to another service. Banked gold is not accepted at shops; all prices use carried `party.resources.gold`. The tavern offers amount-entry controls with validation; no negative/zero/unbounded quantity changes. Merchant stock is finite and saved. Purchases never commit unless money and bag capacity are sufficient. Sold items and their entire stack are removed once.
+
+The temple may not normally heal dead heroes; `revive` restores full HP and zero SP for `50 * level`. Donations cost ten gold, give +1 party Defense and do not stack until the sixty-minute effect ends. Trainer uses existing `training()` XP thresholds and costs `25 * newLevel`; level 3/5 requires a chosen attribute below 18. Spells must match the student class, be at/below current level and not already be known; cost `15 * spell.level`. Iona's initial request is accepted once, producing a persistent `flag_` and note.
+
+Tavern `dismiss` retains the hero record, item ownership, known spells and equipped gear. Active `party.order` is at most six, and a dismissal may not leave zero living active heroes. Stored heroes do not participate in combat, XP, rest or spell target selection, and cannot buy items until recruited again. Phase 19 adds creating and managing additional characters.
+
+State v10 adds `services.stock` and `services.rumorsHeard`. v9 → v10 migration adds that record without touching previous gameplay state. Existing v1–v9 migrations remain chained. Validate all untrusted imported data before storage. Later phases expand the town, quest content, roster controls and art; existing NPC IDs remain stable.

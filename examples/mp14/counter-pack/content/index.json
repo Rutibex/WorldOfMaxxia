@@ -1,0 +1,128 @@
+{
+  "format": "maxxia-content-index",
+  "formatVersion": 1,
+  "definitions": [
+    {
+      "id": "mp14:map:counter",
+      "kind": "map",
+      "visibility": "local",
+      "file": "content/counter.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp14:npc:keeper"
+        },
+        {
+          "id": "mp14:npc:apprentice"
+        },
+        {
+          "id": "mp14:item:trade_token"
+        }
+      ]
+    },
+    {
+      "id": "mp14:npc:keeper",
+      "kind": "npc",
+      "visibility": "local",
+      "file": "content/keeper.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp14:dialogue:counter"
+        },
+        {
+          "id": "mp14:item:trade_token"
+        },
+        {
+          "id": "mp14:item:tonic"
+        }
+      ]
+    },
+    {
+      "id": "mp14:npc:apprentice",
+      "kind": "npc",
+      "visibility": "local",
+      "file": "content/apprentice.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp14:dialogue:counter"
+        },
+        {
+          "id": "mp14:item:trade_token"
+        },
+        {
+          "id": "mp14:item:tonic"
+        }
+      ]
+    },
+    {
+      "id": "mp14:dialogue:counter",
+      "kind": "dialogue",
+      "visibility": "local",
+      "file": "content/dialogue.json",
+      "placement": "none",
+      "tags": [],
+      "references": [
+        {
+          "id": "mp14:item:permit"
+        },
+        {
+          "id": "mp14:routine:approved"
+        }
+      ]
+    },
+    {
+      "id": "mp14:routine:approved",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/approved.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "mp14:item:tonic",
+      "kind": "item",
+      "visibility": "exported",
+      "file": "content/tonic.json",
+      "placement": "eligible",
+      "tags": [
+        "shop:counter"
+      ],
+      "references": []
+    },
+    {
+      "id": "mp14:item:trade_token",
+      "kind": "item",
+      "visibility": "local",
+      "file": "content/trade_token.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "mp14:item:permit",
+      "kind": "item",
+      "visibility": "local",
+      "file": "content/permit.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    },
+    {
+      "id": "mp14:item:relic",
+      "kind": "item",
+      "visibility": "exported",
+      "file": "content/relic.json",
+      "placement": "none",
+      "tags": [
+        "shop:counter"
+      ],
+      "references": []
+    }
+  ]
+}

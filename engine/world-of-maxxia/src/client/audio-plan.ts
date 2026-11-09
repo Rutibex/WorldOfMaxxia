@@ -1,0 +1,11 @@
+import type {CampaignState} from '../shared/rules/campaign.ts';
+import type {PresentationEvent} from '../shared/rules/presentation.ts';
+import {effectsForEvent} from './spell-effects.ts';
+export type MusicScene='title'|'town'|'cistern'|'vault'|'combat'|'boss'|'ending'|'defeat';
+export interface AudioSettings{master:number;music:number;sfx:number;ambience:number;muted:boolean;}
+export const DEFAULT_AUDIO:AudioSettings={master:.7,music:.5,sfx:.65,ambience:.28,muted:false};
+export function validateAudio(value:unknown):AudioSettings{const v=value&&typeof value==='object'?value as Partial<AudioSettings>:{};const volume=(key:'master'|'music'|'sfx'|'ambience')=>typeof v[key]==='number'&&Number.isFinite(v[key])?Math.max(0,Math.min(1,v[key]!)):DEFAULT_AUDIO[key];return {master:volume('master'),music:volume('music'),sfx:volume('sfx'),ambience:volume('ambience'),muted:typeof v.muted==='boolean'?v.muted:false};}
+export function musicScene(state:CampaignState|undefined,entered:boolean):MusicScene{if(!entered||!state)return 'title';if(state.combat.defeated)return 'defeat';if(state.combat.active)return state.combat.active.encounterId==='enc_bell_heart'?'boss':'combat';return state.currentMapId==='map_town'?'town':state.currentMapId==='map_resonator_vault'?'vault':'cistern';}
+export interface SoundCue{id:string;delay:number;}
+const families=['physical','arcane','fire','cold','lightning','poison','holy','necrotic','heal','guard'];
+export function soundCues(events:readonly PresentationEvent[],reduced=false):SoundCue[]{const cues:SoundCue[]=[];let delay=0;for(const event of events){const family=families.includes(event.family)?event.family:'physical';const missile=event.missile||effectsForEvent(event).some(e=>e.role==='missile');if(event.spellId)cues.push({id:'cast_'+(family==='physical'?'arcane':family),delay});else if(missile)cues.push({id:'shot',delay});else if(event.actorId.startsWith('hero_'))cues.push({id:'attack',delay});else cues.push({id:'enemy',delay});if(event.hit!==false)cues.push({id:'hit_'+(event.guarded?'guard':family),delay:delay+(missile&&!reduced?.24:0)});else cues.push({id:event.guarded?'hit_guard':'miss',delay:delay+(missile&&!reduced?.24:0)});delay+=.09;}return cues;}

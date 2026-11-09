@@ -1,0 +1,44 @@
+{
+  "format": "maxxia-authored-encounter",
+  "formatVersion": 1,
+  "id": "mp16:encounter:warden",
+  "record": {
+    "id": "mp16:encounter:warden",
+    "name": "The Silt Warden",
+    "description": "At the north end, the warden rises once from the silt, then shatters into its final form.",
+    "mapId": "mp16:map:watch",
+    "nativeMapId": "map_mp16_watch",
+    "x": 4,
+    "y": 1,
+    "range": 0,
+    "trigger": {
+      "kind": "proximity",
+      "interval": 1,
+      "table": "warden"
+    },
+    "weight": 1,
+    "members": [
+      {
+        "kindId": "mp16:monster:watchman",
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "bribe": null,
+    "avoidDC": null,
+    "respawn": {
+      "kind": "never",
+      "minutes": 1
+    },
+    "phases": [
+      {
+        "title": "Silt shell",
+        "healthPercent": 100
+      },
+      {
+        "title": "Exposed heart",
+        "healthPercent": 50
+      }
+    ]
+  }
+}

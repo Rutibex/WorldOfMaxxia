@@ -1,0 +1,14 @@
+{
+  "format": "maxxia-map-index",
+  "version": 1,
+  "maps": [
+    {
+      "id": "map_landing",
+      "path": "map_landing.json"
+    },
+    {
+      "id": "map_tower",
+      "path": "map_tower.json"
+    }
+  ]
+}

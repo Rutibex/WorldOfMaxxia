@@ -1,0 +1,36 @@
+{
+  "format": "maxxia-resource-catalog",
+  "version": 1,
+  "resources": [
+    {
+      "id": "asset_mm19_floor",
+      "kind": "image",
+      "path": "art/mm19/floor.png",
+      "name": "Stone mosaic"
+    },
+    {
+      "id": "asset_mm19_wall",
+      "kind": "image",
+      "path": "art/mm19/wall.png",
+      "name": "Vault masonry"
+    },
+    {
+      "id": "asset_mm19_ceiling",
+      "kind": "image",
+      "path": "art/mm19/ceiling.png",
+      "name": "Ribbed ceiling"
+    },
+    {
+      "id": "asset_mm19_brass",
+      "kind": "image",
+      "path": "art/mm19/brass-wall.png",
+      "name": "Brass relief"
+    },
+    {
+      "id": "asset_mm19_sky",
+      "kind": "image",
+      "path": "art/mm19/sky.png",
+      "name": "Sky"
+    }
+  ]
+}

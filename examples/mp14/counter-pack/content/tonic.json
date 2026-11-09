@@ -1,0 +1,24 @@
+{
+  "format": "maxxia-authored-item",
+  "formatVersion": 1,
+  "id": "mp14:item:tonic",
+  "record": {
+    "id": "mp14:item:tonic",
+    "name": "Counter Tonic",
+    "category": "misc",
+    "price": 24,
+    "maxDurability": 0,
+    "maxCharges": 0,
+    "effect": "heal",
+    "power": 10,
+    "unique": false,
+    "slot": null,
+    "weight": null,
+    "armor": 0,
+    "dice": null,
+    "accuracy": 0,
+    "resistance": null,
+    "resistBonus": 0,
+    "description": "Counter Tonic from the Brass Counter."
+  }
+}

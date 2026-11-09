@@ -1,0 +1,28 @@
+{
+  "format": "maxxia-content-index",
+  "formatVersion": 1,
+  "definitions": [
+    {
+      "id": "entry_chamber:map:entry",
+      "kind": "map",
+      "visibility": "local",
+      "file": "content/entry.json",
+      "placement": "authored",
+      "tags": [],
+      "references": [
+        {
+          "id": "entry_chamber:routine:read_plaque"
+        }
+      ]
+    },
+    {
+      "id": "entry_chamber:routine:read_plaque",
+      "kind": "routine",
+      "visibility": "local",
+      "file": "content/read-plaque.json",
+      "placement": "none",
+      "tags": [],
+      "references": []
+    }
+  ]
+}

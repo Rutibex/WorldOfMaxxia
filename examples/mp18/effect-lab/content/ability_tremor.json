@@ -1,0 +1,19 @@
+{
+  "format": "maxxia-authored-ability",
+  "formatVersion": 1,
+  "id": "effect_lab:ability:tremor",
+  "record": {
+    "name": "Curse the Practice Sentinel",
+    "description": "Curse the Practice Sentinel through the shared MP18 effect kernel.",
+    "target": "enemy",
+    "context": "combat",
+    "operations": [
+      {
+        "op": "condition",
+        "conditionId": "effect_lab:condition:tremor",
+        "duration": 3
+      }
+    ],
+    "id": "effect_lab:ability:tremor"
+  }
+}

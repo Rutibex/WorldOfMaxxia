@@ -1,0 +1,21 @@
+{
+  "format": "maxxia-authored-routine",
+  "formatVersion": 2,
+  "id": "mp14:routine:approved",
+  "parameters": {},
+  "actions": [
+    {
+      "op": "state",
+      "kind": "flag",
+      "address": {
+        "scope": "campaign"
+      },
+      "key": "mp14:flag:inspection_approved",
+      "value": true
+    },
+    {
+      "op": "message",
+      "text": "The counter records your inspection approval."
+    }
+  ]
+}
